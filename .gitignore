@@ -23,3 +23,5 @@ pnpm-debug.log*
 # Vim files
 *~
 *.swp
+
+*.docx
