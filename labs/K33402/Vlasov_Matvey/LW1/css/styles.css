@@ -24,3 +24,35 @@ figcaption {
 .fa-instagram {
     color: violet;
 }
+
+footer {
+    margin-top: 1rem;
+}
+
+.form-control, .btn {
+    margin: 1.5rem 0.3rem;
+}
+
+.card-location {
+    color: blue;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.card-body p {
+    line-height: 0.8rem;
+}
+
+.red-star {
+    color: red;
+}
+
+.reviews {
+    color: gray;
+}
+
+.fa-map-marker {
+    padding-right: 1.5rem;
+}
