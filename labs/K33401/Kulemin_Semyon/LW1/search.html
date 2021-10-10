@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+  <meta charset="utf-8">
+
+  <title>Погода</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+  </head>
+  <body>
+    <div class="container">
+    <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
+      <a href="/" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+        <span class="fs-4">Моя погода</span>
+      </a>
+
+      <ul class="nav nav-pills">
+        <li class="nav-item"><a href="home.html" class="nav-link">Главная</a></li>
+        <li class="nav-item"><a href="#" class="nav-link">Настройки</a></li>
+        <li class="nav-item"><a href="index.html" class="nav-link">Выйти</a></li>
+      </ul>
+    </header>
+
+    <label for="address" class="form-label">Введите город</label>
+    <div class="input-group ">
+      <span class="input-group-text">@</span>
+      <input type="text" class="form-control" id="address" placeholder="Санкт-Петербург" required>
+    </div>
+
+    <label for="address" class="form-label">Выберите населенный пункт</label>
+    <div class="input-group ">
+      <span class="input-group-text">@</span>
+      <select class="form-select" name="">
+        <option value>Выберите...</option>
+        <option>Пушкин</option>
+        <option>Кронштадт</option>
+      </select>
+    </div>
+
+    <hr class="my-4">
+    
+    <form action="">
+      <button class="w-100 btn btn-primary btn-lg" type="submit">Выбрать</button>
+    </form>
+
+    <hr class="my-4">
+
+    <div class="col">
+      <div class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg" style="background-image: url('photos/kron.jpg');">
+        <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+          <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Кронштадт</h2>
+          <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">+7 C</h2>
+        </div>
+      </div>
+    </div>
+
+    </div>
+  </body>
+</html>
