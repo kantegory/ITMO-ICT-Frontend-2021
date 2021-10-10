@@ -1,0 +1,26 @@
+/* Move down content because we have a fixed navbar that is 3.5rem tall */
+body {
+    padding-top: 3.5rem;
+}
+  
+p {
+    text-align: justify;
+} 
+
+figcaption {
+    font-size: 1.5rem;
+}
+
+.fa {
+    padding-right: 2rem;
+    font-size: 1.5rem;
+    width: 1rem;
+}
+
+.fa-google {
+    color: red;
+}
+
+.fa-instagram {
+    color: violet;
+}
