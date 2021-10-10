@@ -29,7 +29,7 @@ footer {
     margin-top: 1rem;
 }
 
-.form-control, .btn {
+.form-control, .search-form .btn {
     margin: 1.5rem 0.3rem;
 }
 
@@ -55,4 +55,12 @@ footer {
 
 .fa-map-marker {
     padding-right: 1.5rem;
+}
+
+.input-field input {
+    margin: 0.5rem;
+}
+
+.registration-main {
+    background-color: #e9ecef;
 }
