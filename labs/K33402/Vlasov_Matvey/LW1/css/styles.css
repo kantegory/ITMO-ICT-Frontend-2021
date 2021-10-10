@@ -25,12 +25,12 @@ figcaption {
     color: violet;
 }
 
-footer {
-    margin-top: 1rem;
-}
-
 .form-control, .search-form .btn {
     margin: 1.5rem 0.3rem;
+}
+
+.card-img-top {
+    margin-top: 1rem;
 }
 
 .card-location {
@@ -61,7 +61,7 @@ footer {
     margin: 0.5rem;
 }
 
-.registration-main {
+.registration-main, .login-main {
     background-color: #e9ecef;
 }
 
