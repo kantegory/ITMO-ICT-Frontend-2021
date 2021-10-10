@@ -10,7 +10,7 @@
 
     <!-- Custom styles for this template -->
     <link href="header.css" rel="stylesheet">
-    <link href="login.css" rel="stylesheet">
+    <link href="register.css" rel="stylesheet">
 </head>
 
 <body class="text-center">
@@ -42,22 +42,28 @@
 
     <main class="form-signin">
         <form action="index.html">
-            <h1 class="h3 mb-3 fw-normal">Вход в аккаунт</h1>
+            <h1 class="h3 mb-3 fw-normal">Регистрация</h1>
 
             <div class="form-floating">
                 <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
                 <label for="floatingInput">Адрес электронной почты</label>
             </div>
+
             <div class="form-floating">
                 <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
                 <label for="floatingPassword">Пароль</label>
             </div>
 
+            <div class="form-floating">
+                <input type="password" class="form-control" id="floatingRePassword" placeholder="Password">
+                <label for="floatingRePassword">Повторите пароль</label>
+            </div>
+
             <div class="checkbox mb-3">
                 <label>
-                    <input type="checkbox" value="remember-me"> Запомнить меня
+                    <input type="checkbox" value="remember-me"> Соглашаюсь с условиями обслуживания
                 </label>
             </div>
-            <button class="w-100 btn btn-lg" type="submit">Войти</button>
+            <button class="w-100 btn btn-lg" type="submit">Зарегистрироваться</button>
         </form>
     </main>
