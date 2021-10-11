@@ -5,7 +5,7 @@ html, body {
 
 body {
     display: flex;
-    align-items: center;
+    margin-top: 5rem;
     justify-content: center;
 }
 
@@ -28,7 +28,7 @@ header {
 }
 
 .card-block {
-    margin: 1px;
+    margin: 2px;
     display: flex;
     align-items: center;
     justify-content: center;
