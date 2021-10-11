@@ -6,8 +6,46 @@ body {
 main {
     height: 90%;
 }
+
 .main-search {
-    height: 100%;
+    position: relative;
+    top: 35%
+}
+
+.search-params {
     position: relative;
     top: 40%
+}
+
+.title {
+    position: relative;
+    top: 25%
+}
+
+.search-button {
+    position: relative;
+    top: 45%
+}
+
+#numberOfGuests {
+    width: 50%;
+}
+
+#city {
+    width: 70%;
+}
+
+.btn {
+    background-color: #2e7a17;
+    color: #f5f5f5;
+    margin: 10px auto;
+    font-size: calc(1.3rem + .6vw);
+    border-radius: 10px;
+    padding: 5px 40px;
+}
+
+.btn:hover {
+    background-color: #256312;
+    color: #f5f5f5;
+    
 }

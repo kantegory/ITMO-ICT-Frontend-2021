@@ -10,6 +10,10 @@
     </script>
     <link rel="stylesheet" href="header.css">
     <link rel="stylesheet" href="index.css">
+
+    <!-- https://www.cssscript.com/date-time-picker-dtsel/ -->
+    <link rel="stylesheet" href="dtsel/dtsel.css" />
+    <script src="dtsel/dtsel.js"></script>
 </head>
 
 <body>
@@ -41,12 +45,43 @@
     </header>
 
     <main>
-        <div class="container d-flex main-search  justify-content-center">
-            <form class="col-8">
-                <input type="search" class="form-control " placeholder="Поиск жилья" aria-label="Search">
+        <div class="d-flex title justify-content-center">
+            <h3>Поиск жилья</h3>
+        </div>
+        <div class="container d-flex main-search justify-content-center">
+            <form class="col-9">
+                <input type="search" class="form-control " placeholder="Начните вводить ключевые слова"
+                    aria-label="Search">
             </form>
         </div>
+        <div class="container d-flex search-params justify-content-center">
+            <form class="col-3">
+                <label for="numberOfGuests" class="form-label">Количество гостей</label>
+                <input type="number" class="form-control small-input" id="numberOfGuests">
+            </form>
+            <form class="col-3">
+                <label for="city" class="form-label">Город</label>
+                <input type="text" class="form-control small-input" id="city">
+            </form>
+            <form class="col-3">
+                <label for="arrival-datetime" class="form-label">Время заезда</label>
+                <input type="datetime" class="form-control small-input" id="arrival-datetime" name="dateTimePicker">
+            </form>
+        </div>
+
+        <div class="container d-flex search-button justify-content-center">
+            <button class="btn" type="submit">Найти</button>
+        </div>
+
     </main>
+
+    <script>
+        instance = new dtsel.DTS('input[name="dateTimePicker"]', {
+            showTime: true,
+            timeFormat: "HH:MM",
+            dateFormat: "dd-mm-yyyy",
+        });
+    </script>
 
 </body>
 
