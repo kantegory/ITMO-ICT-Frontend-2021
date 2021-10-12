@@ -9,23 +9,28 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
 </head>
-<body>
+<body class="d-flex flex-column min-vh-100">
 <!-- Navigation -->
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-sm navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="#">Weather</a>
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Login</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Register</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Register</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
 </header>
@@ -34,23 +39,58 @@
 <main class="mx-2 my-3">
     <h1 class="display-4">Weather forecast for St. Petersburg</h1>
     <div class="row g-2">
+        <!-- Weather today -->
         <div class="col-12 col-lg-5">
             <div class="card">
                 <div class="card-header">
                     <h2 class="fs-4">Weather today</h2>
                 </div>
                 <div class="card-body">
-                    Foo bar
+                    <div class="container">
+                        <img src="img/clouds.svg" alt="cloudy" width="100px">
+                        <p>15℃ cloudy
+                        <p>
+                    </div>
                 </div>
             </div>
         </div>
+
+        <!-- Weather this week -->
         <div class="col-12 col-lg-7">
             <div class="card">
                 <div class="card-header">
                     <h2 class="fs-4">Weather this week</h2>
                 </div>
                 <div class="card-body">
-                    Foo bar
+                    <table class="table table-borderless text-center align-middle">
+                        <tr>
+                            <th>MON</th>
+                            <th>TUE</th>
+                            <th>WED</th>
+                            <th>THU</th>
+                            <th>FRI</th>
+                            <th>SAT</th>
+                            <th>SUN</th>
+                        </tr>
+                        <tr>
+                            <td>15℃</td>
+                            <td>13℃</td>
+                            <td>11℃</td>
+                            <td>16℃</td>
+                            <td>16℃</td>
+                            <td>14℃</td>
+                            <td>15℃</td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/clouds.svg" alt="cloudy" width="50px"></td>
+                            <td><img src="img/day-cloudy.svg" alt="part cloudy" width="50px"></td>
+                            <td><img src="img/day-cloudy.svg" alt="part cloudy" width="50px"></td>
+                            <td><img src="img/clouds.svg" alt="cloudy" width="50px"></td>
+                            <td><img src="img/day-sunny.svg" alt="sunny" width="50px"></td>
+                            <td><img src="img/day-cloudy.svg" alt="part cloudy" width="50px"></td>
+                            <td><img src="img/clouds.svg" alt="cloudy" width="50px"></td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
@@ -58,7 +98,7 @@
 </main>
 
 <!-- Footer -->
-<footer class="fixed-bottom">
+<footer class="mt-auto">
     <ul class="nav justify-content-center border-top border-bottom">
         <li class="nav-item">
             <a href="#" class="nav-link">Weather API</a>
