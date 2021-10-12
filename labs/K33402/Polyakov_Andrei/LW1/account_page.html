@@ -42,33 +42,64 @@
     </header>
 
     <main role="main">
+        <div class="modal" id="myModal" tabindex="-1">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">Добавить город</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                          <label for="recipient-name" class="col-form-label">Страна:</label>
+                          <input type="text" class="form-control" id="recipient-name">
+                        </div>
+                        <div class="form-group">
+                            <label for="recipient-name" class="col-form-label">Город:</label>
+                            <input type="text" class="form-control" id="recipient-name">
+                          </div>
+                      </form>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Закрыть</button>
+                  <button type="button" class="btn btn-info">Сохранить</button>
+                </div>
+              </div>
+            </div>
+          </div>
         <div class="container">
             <div class="pt-3 d-flex justify-content-center">
                 <h2>Сохраненные города</h2>
             </div>
+            <div class="pt-3 mb-3 d-flex justify-content-center">
+                <a href="#" class="btn btn-info info" data-toggle="modal" data-target="#myModal"><i class="bi bi-plus"></i>Добавить город</a>
+            </div>
             <div class="row d-flex justify-content-center">
-                <div class="card-block border col-md-3 bg-light">
+                <div class="card-block border rounded col-md-3 bg-light">
                     <div class="card-body text-center">
                         <p class="card-location"><i class="bi bi-geo-alt-fill"></i>Санкт-Петербург, Россия</p>
                         <p class="card-cur-temp"><i class="bi bi-thermometer-half"></i>9 градусов</p>
                         <p class="card-cur-weather"><i class="bi bi-cloud-sun"></i>Переменная облачность</p>
                     </div>
                 </div>
-                <div class="card-block border col-md-3 bg-light">
+                <div class="card-block border rounded col-md-3 bg-light">
                     <div class="card-body text-center">
                         <p class="card-location"><i class="bi bi-geo-alt-fill"></i>Москва, Россия</p>
                         <p class="card-cur-temp"><i class="bi bi-thermometer-half"></i>8 градусов</p>
                         <p class="card-cur-weather"><i class="bi bi-cloudy"></i>Облачно</p>
                     </div>
                 </div>
-                <div class="card-block border col-md-3 bg-light">
+                <div class="card-block border rounded col-md-3 bg-light">
                     <div class="card-body text-center">
                         <p class="card-location"><i class="bi bi-geo-alt-fill"></i>Казань, Россия</p>
                         <p class="card-cur-temp"><i class="bi bi-thermometer-half"></i>9 градусов</p>
                         <p class="card-cur-weather"><i class="bi bi-brightness-high"></i>Ясно</p>
                     </div>
                 </div>
-                <div class="card-block border col-md-3 bg-light">
+                <div class="card-block border rounded col-md-3 bg-light">
                     <div class="card-body text-center">
                         <p class="card-location"><i class="bi bi-geo-alt-fill"></i>Владивосток, Россия</p>
                         <p class="card-cur-temp"><i class="bi bi-thermometer-half"></i>10 градусов</p>
@@ -86,6 +117,11 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js" integrity="sha384-+YQ4JLhjyBLPDQt//I+STsc9iw4uQqACwlvpslubQzn4u2UU2UFM80nGisd026JF" crossorigin="anonymous"></script>
+    <script>
+        $('#myModal').on('shown.bs.modal', function () {
+  $('#myInput').trigger('focus')
+})
+    </script>
 
   </body>
 </html>

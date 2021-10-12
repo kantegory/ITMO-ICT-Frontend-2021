@@ -20,7 +20,7 @@ header {
 }
 
 .card-location {
-    color: rgb(54, 1, 54);
+    color: black;
     font-size: 1.5rem;
 }
 .card-body {
@@ -36,6 +36,9 @@ header {
 
 .input-field {
     padding-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .form-control {
