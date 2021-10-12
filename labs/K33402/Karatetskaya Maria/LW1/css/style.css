@@ -1,0 +1,133 @@
+body {
+	background-image: url("../images/travel.jpg");
+ 	background-color: #cccccc;
+}
+
+a {
+	font: 18px "Montserrat";
+	color: #3C3C3B;}
+
+h5{
+	font: 18px "Montserrat";
+	color: #3C3C3B;
+	margin-bottom: 16px;
+}
+
+.card-body p, p, .foot a, span{
+	font: 14px "Montserrat";
+	color: #3C3C3B;
+}
+
+.card{
+	width: 100%;
+	height: 500px;
+	background-color: #E5E5E5;
+}
+.navbar-brand{
+	margin-top:-20px;
+}
+
+.active{
+	color:#379683;
+}
+
+.menu{
+	margin-left: -200px;
+}
+
+
+.show{
+	margin-top: 50px;
+}
+
+.form-control{
+	background-color: #E5E5E5;
+	border: none;
+	border-radius: 10px;
+	height: 60px;
+	font: 24px "Montserrat";
+	color: #3C3C3B;
+}
+
+.form-fly{
+	margin-top:100px;
+}
+
+.btn{
+	font: 24px "Montserrat";
+	color: #3C3C3B;
+	padding-top: 15px;
+	background-color: #379683;
+	color: white;
+	height: 60px;
+	width:300px;
+	border-radius: 30px;
+	border: none;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.little{
+	margin-bottom: 15px;
+	padding-top: 10px;
+	height: 40px;
+	width:150px;
+	font: 18px "Montserrat";
+	position:absolute; /* добавили */
+	bottom:0;
+	left: 0;
+    right: 0;
+}
+
+select{
+	appearance: none;
+	background: url(../images/arrow.svg) no-repeat right;
+	background-position-x: calc(100% - 20px);
+}
+
+
+.title a{
+	font: 36px "Montserrat";
+}
+.title{
+	margin-bottom:30px;
+	text-align: center;
+}
+
+.login{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+footer{
+	
+	height: 330px;
+	background-color: #E5E5E5;
+}
+.foot{
+	margin-top: 20px;
+}
+.mt-3 {
+    margin-top: 5rem!important;
+}
+
+.around {
+	margin-top:20px;
+}
+
+.center{
+	width: 500px; 
+	margin: auto;
+	margin-top: 20px;
+	padding-bottom: 20px;
+}
+
+.center a{
+	margin-right: 15px; 
+}
+
+.center ::before{
+	margin-right: 10px; 
+}
