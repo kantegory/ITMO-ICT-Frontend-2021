@@ -1,0 +1,8 @@
+/* Custom class to change opacity on hover */
+.hover-opacity {
+    opacity: 0.6;
+}
+
+.hover-opacity:hover {
+    opacity: 1;
+}
