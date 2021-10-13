@@ -12,24 +12,30 @@
 <body class="d-flex flex-column min-vh-100">
 <!-- Navigation -->
 <header>
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
+    <nav class="navbar navbar-expand-sm navbar-light bg-primary">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">Weather</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">
+                <img src="img/umbrella-line.svg" alt="logo" width="25px" class="d-inline-block align-text-top">
+                Weather
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Login</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Register</a>
-                    </li>
-                </ul>
+                <div class="w-100 d-flex justify-content-end">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Register</a>
+                        </li>
+                    </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -46,10 +52,13 @@
                     <h2 class="fs-4">Weather today</h2>
                 </div>
                 <div class="card-body">
-                    <div class="container">
-                        <img src="img/clouds.svg" alt="cloudy" width="100px">
-                        <p>15℃ cloudy
-                        <p>
+                    <div class="row g-4">
+                        <div class="col-sm-6"><img src="img/clouds.svg" alt="cloudy" width="200px"></div>
+                        <div class="col-sm-6">
+                            <h3>15℃</h3>
+                            <p>Cloudy</p>
+                            <p>Wind 5 m/s</p>
+                        </div>
                     </div>
                 </div>
             </div>
