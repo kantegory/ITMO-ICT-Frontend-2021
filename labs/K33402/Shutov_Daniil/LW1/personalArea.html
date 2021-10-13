@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="mysite.css">
+    <title>Погода</title>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <div class="row">
+                <img class="col" src="public/zontik.png">
+                <h3 class="col mt-3">Погода</h3>
+            </div>
+        </div>
+    </nav>
+</header>
+<maAreal>
+    <div class="container" id="body">
+        <div class="row">
+            <div class="col-lg">
+            <h1 id="title">Мой профиль</h1>
+                <div class="windowMe row">
+                    <img class="col" src="public/Me.png">
+                    <div class="col">
+                        <h5 class="mt-5">Санкт-Петербург</h5>
+                        <h6 class="mt-2">mail@.ru</h6>
+                        <a href="login.html" class="link"><button type="submit" class="mt-5 btn btn-success">Выйти</button></a>
+                    </div>
+                </div>
+                <div class="filter row">
+                    <h5 style="margin-left: 15px">Фильтр по районам</h5>
+                    <div class="">
+                        <a href="#" class="list-group-item list-group-item-action ">
+                            Адмиралтейский район
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">Василеостровский район</a>
+                        <a href="#" class="list-group-item list-group-item-action">Выборгский район</a>
+                        <a href="#" class="list-group-item list-group-item-action">Калининский район</a>
+                        <a href="#" class="list-group-item list-group-item-action">Кировский район</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 mt-5">
+                <div class="row">
+                    <nav class="navbar navbar-light bg-light">
+                        <div class="container-fluid">
+                            <form class="search d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </nav>
+                    <div class="col-lg-2 me-2 cardWeather">
+                        <div class="row justify-content-center">
+                            <img src="public/plain.png">
+                            <p>24 сентября</p>
+                            <p>ясно</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 me-2 cardWeather">
+                        <div class="row justify-content-center">
+                            <img src="public/lightning.png">
+                            <p>25 сентября</p>
+                            <p>гроза</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 me-2 cardWeather">
+                        <div class="row justify-content-center">
+                            <img src="public/cloudy.png">
+                            <p>26 сентября</p>
+                            <p>пасмурно</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 me-2 cardWeather">
+                        <div class="row justify-content-center">
+                            <img src="public/plain.png">
+                            <p>27 сентября</p>
+                            <p>ясно</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 me-2 cardWeather">
+                        <div class="row justify-content-center">
+                            <img src="public/lightning.png">
+                            <p>28 сентября</p>
+                            <p>гроза</p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 me-2 cardWeather">
+                        <div class="row justify-content-center">
+                            <img src="public/cloudy.png">
+                            <p>29 сентября</p>
+                            <p>дождь</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<footer>
+    <nav class="navbar navbar-light bg-light mt-5" >
+        <div class="container">
+            <div class="row" id="footer">
+                <div class="col-3">
+                    <h6 class="mt-4">
+                        Поддержка
+                    </h6>
+
+                </div>
+                <div class="col-2">
+                    <h6 class="mt-4">
+                        Обратная связь
+                    </h6>
+                </div>
+                <div class="col img">
+                    <a href="https://github.com/danyashutov">
+                        <img src="public/Github.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</footer>
+</maAreal>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</body>
+</html>
