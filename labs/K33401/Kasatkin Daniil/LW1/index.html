@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&family=Work+Sans:wght@300;400&display=swap"
+          rel="stylesheet">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/styles/index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Hotel</title>
+</head>
+<body>
+<nav>
+    <div class="logo"><a href="#">HotelLab<i class="ri-vip-diamond-line"></i></a></div>
+    <button class="btn-menu" id="btn-menu" onclick="toggleMenu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </button>
+    <div class="menu" id="list-menu">
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#" id="login-ref" onclick="toggleLogin()">Sign in</a></li>
+            <li><a href="#">Your bookings</a></li>
+            <li><a href="#">Support</a></li>
+            <li><a href="#">Feedback</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div class="login-container" id="login-menu">
+    <label for="" id="login-close-btn" class="close-btn ri-close-line" onclick="toggleLogin()"></label>
+    <div class="text">Login</div>
+    <form action="#" id="sign-in">
+        <div class="data">
+            <i class="ri-user-line"></i>
+            <input type="text" placeholder="Email or username" required>
+        </div>
+        <div class="data">
+            <i class="ri-key-fill"></i>
+            <input type="text" placeholder="Password" required>
+        </div>
+        <div class="forgot-pas"><a href="#">Forgot password?</a></div>
+        <div class="btn">
+            <div class="inner"></div>
+            <button type="submit">Login</button>
+        </div>
+        <div class="form-change-link">Don't have an account? <a href="#" id="sign-in-link">Sign up now</a></div>
+    </form>
+    <form action="#" id="sign-up" class="form--hidden">
+        <div class="data">
+            <i class="ri-user-line"></i>
+            <input type="text" placeholder="Username" required>
+        </div>
+        <div class="data">
+            <i class="ri-mail-line"></i>
+            <input type="text" placeholder="Email" required>
+        </div>
+        <div class="data">
+            <i class="ri-key-fill"></i>
+            <input type="text" placeholder="Password" required>
+        </div>
+        <div class="data">
+            <i class="ri-key-fill"></i>
+            <input type="text" placeholder="Confirm password" required>
+        </div>
+        <div class="btn">
+            <div class="inner"></div>
+            <button type="submit">Create account</button>
+        </div>
+        <div class="form-change-link">Already have an account? <a id="signup-link" href="#">Sign in now</a></div>
+    </form>
+</div>
+
+<div class="filter-window" id="filter-menu">
+    <div class="filter-blocks">
+        <div class="filter-box">
+            <div class="text">Location</div>
+            <input type="text" placeholder="Where are you going?">
+        </div>
+        <div class="filter-box">
+            <div class="text">Check in</div>
+            <input type="text" placeholder="Add dates">
+        </div>
+        <div class="filter-box">
+            <div class="text">Guests</div>
+            <input type="text" placeholder="Add guests">
+        </div>
+
+        <div class="search-btn">
+            <button class="ri-search-line" type="submit"></button>
+        </div>
+
+    </div>
+</div>
+<div class="hotels-blocks">
+    <form action="">
+        <div class="hotel-window">
+            <div class="image"><img src="https://a0.muscache.com/im/pictures/65953e73-b1bf-4ee5-ac34-bc68a76406cc.jpg?im_w=1200" alt=""></div>
+            <div class="name">Lagom-House</div>
+            <div class="description">4 guests, · 1 bedroom, · 2 beds, · 1 bath</div>
+            <div class="rating">5.0<i class="ri-star-fill"></i></div>
+            <div class="price">7,279₽ / night</div>
+            <div class="follow-button"><button class="ri-heart-fill"></button></div>
+        </div>
+    </form>
+</div>
+
+<script src="./index.js"></script>
+</body>
+</html>
