@@ -1,0 +1,8 @@
+.rounded-5 {
+    border-radius: 1rem;
+}
+.card-cover {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
