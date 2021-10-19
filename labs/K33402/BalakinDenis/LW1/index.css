@@ -1,0 +1,55 @@
+body {
+    background: #0c73fe;
+    color: white;
+}
+
+.bg-orange {
+    background: #ff6f32;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.ticket_submit {
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 10px 40px;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+    background: #ff6f32;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+}
+.ticket_input {
+    margin-top: 50px;
+    padding: 10px;
+    height: 50px;
+    border: 0;
+    border-right: 2px solid #0c73fe;
+}
+.ticket_input:first-child {
+    border-radius: 10px 0 0 10px;
+}
+.ticket_input:last-child {
+    border-radius:0 10px 10px 0;
+}
+.form-text {
+    color: white;
+}
+.avatar {
+    border-radius: 25px;
+}
+.card {
+    background: rgb(255, 255, 255);
+    color: black;
+    border-radius: 25px;
+    padding: 0 10px;
+    margin-top: 20px;
+
+}
+.card img {
+    height: 50px;
+}
+.card .price {
+    margin-top: 10px;
+}
