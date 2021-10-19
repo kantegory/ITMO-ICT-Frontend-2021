@@ -2,3 +2,41 @@
     position:relative; 
     top:2px;
 }
+
+nav{
+    margin-bottom: 100px;
+}
+
+.card .Day{
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+}
+
+.Cloud-Fog {
+    font-weight: normal;
+    cursor: pointer;
+    text-shadow: 0 0 3px #999;
+    color: transparent;
+    transition: all .5s;
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em
+  }
+  
+.Cloud-Fog:hover {
+    text-shadow: 0 0 0 #333;
+  }
+
+
+.city .container{
+    padding-bottom: 15px;
+}
+
+.city .row{
+    padding-right: 400px;
+
+}
+.city .form-select{
+    color: rgba(0, 0, 0, 0.5)
+}
