@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+    }
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: #00203FFF;
+    }
+nav {
+    background-color: #00203FFF;
+    }
+
+section{
+    background-color: #00539CFF;
+}
