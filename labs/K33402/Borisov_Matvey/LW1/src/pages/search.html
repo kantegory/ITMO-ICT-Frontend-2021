@@ -28,7 +28,7 @@
             <div
                 class="container d-flex flex-wrap align-items-center justify-content-center justify-content-md-between"
             >
-                <a href="/" class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
+                <a class="d-flex align-items-center col-md-3 mb-2 mb-md-0 text-dark text-decoration-none">
                     <img alt="" width="40" height="40" src="../images/free-icon-cloudy-1146808.png" />
                 </a>
                 <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
@@ -36,9 +36,14 @@
                     <li><a class="nav-link px-2 link-secondary">Search</a></li>
                 </ul>
 
-<!--                <a class="col-md-3 text-end" href="./src/pages/login.html">-->
-                    <button type="button" class="btn btn-outline-danger me-2" data-bs-toggle="modal" data-bs-target="#exampleModal">Logout</button>
-<!--                </a>-->
+                <a class="col-md-3 text-end" href="./login.html">
+                    <button
+                        type="button"
+                        class="btn btn-outline-danger me-2"
+                    >
+                        Logout
+                    </button>
+                </a>
             </div>
         </header>
         <main>
@@ -65,37 +70,22 @@
                 </section>
             </div>
             <div class="container pb-5" id="custom-cards">
-                <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-5">
+                <div class="row row-cols-3 align-items-stretch py-5">
                     <div class="col">
                         <div
-                            class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
+                            class="card card-cover overflow-hidden text-white bg-dark rounded-5 shadow-lg"
                             style="
                                 background-image: url('https://getbootstrap.com/docs/5.0/examples/features/unsplash-photo-1.jpg');
                             "
                         >
-                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Short title, long jacket</h2>
-                                <ul class="d-flex list-unstyled mt-auto">
-                                    <li class="me-auto">
-                                        <img
-                                            src="https://github.com/twbs.png"
-                                            alt="Bootstrap"
-                                            width="32"
-                                            height="32"
-                                            class="rounded-circle border border-white"
-                                        />
-                                    </li>
-                                    <li class="d-flex align-items-center me-3">
-                                        <svg class="bi me-2" width="1em" height="1em">
-                                            <use xlink:href="#geo-fill"></use>
-                                        </svg>
-                                        <small>Earth</small>
+                            <div class="d-flex flex-column p-5 pb-3 text-white text-shadow-1">
+                                <h2 class="mb-4 display-6 fw-bold">MOON</h2>
+                                <ul class="d-flex list-unstyled mt-auto justify-content-between me-3">
+                                    <li>
+                                        <small>Sudden temperature changes are possible</small>
                                     </li>
                                     <li class="d-flex align-items-center">
-                                        <svg class="bi me-2" width="1em" height="1em">
-                                            <use xlink:href="#calendar3"></use>
-                                        </svg>
-                                        <small>3d</small>
+                                        <small>+127°C</small>
                                     </li>
                                 </ul>
                             </div>
@@ -106,34 +96,17 @@
                         <div
                             class="card card-cover h-100 overflow-hidden text-white bg-dark rounded-5 shadow-lg"
                             style="
-                                background-image: url('https://getbootstrap.com/docs/5.0/examples/features/unsplash-photo-2.jpg');
+                                background-image: url('https://images.unsplash.com/photo-1562743227-dbfb8875c61b?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=2352&q=80');
                             "
                         >
-                            <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">
-                                    Much longer title that wraps to multiple lines
-                                </h2>
-                                <ul class="d-flex list-unstyled mt-auto">
-                                    <li class="me-auto">
-                                        <img
-                                            src="https://github.com/twbs.png"
-                                            alt="Bootstrap"
-                                            width="32"
-                                            height="32"
-                                            class="rounded-circle border border-white"
-                                        />
-                                    </li>
-                                    <li class="d-flex align-items-center me-3">
-                                        <svg class="bi me-2" width="1em" height="1em">
-                                            <use xlink:href="#geo-fill"></use>
-                                        </svg>
-                                        <small>Pakistan</small>
+                            <div class="d-flex flex-column p-5 pb-3 text-white text-shadow-1">
+                                <h2 class="mb-4 display-6 fw-bold">SOUTH POLE</h2>
+                                <ul class="d-flex list-unstyled mt-auto me-3 justify-content-between">
+                                    <li>
+                                        <small>It's going to be a long night</small>
                                     </li>
                                     <li class="d-flex align-items-center">
-                                        <svg class="bi me-2" width="1em" height="1em">
-                                            <use xlink:href="#calendar3"></use>
-                                        </svg>
-                                        <small>4d</small>
+                                        <small>-2°C</small>
                                     </li>
                                 </ul>
                             </div>
@@ -147,29 +120,14 @@
                                 background-image: url('https://getbootstrap.com/docs/5.0/examples/features/unsplash-photo-3.jpg');
                             "
                         >
-                            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
-                                <h2 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">Another longer title belongs here</h2>
+                            <div class="d-flex flex-column p-5 pb-3 text-shadow-1">
+                                <h2 class="mb-4 display-6 fw-bold">SEA</h2>
                                 <ul class="d-flex list-unstyled mt-auto">
-                                    <li class="me-auto">
-                                        <img
-                                            src="https://github.com/twbs.png"
-                                            alt="Bootstrap"
-                                            width="32"
-                                            height="32"
-                                            class="rounded-circle border border-white"
-                                        />
+                                    <li class="d-flex align-items-center justify-content-between me-3">
+                                        <small>High pressure area</small>
                                     </li>
-                                    <li class="d-flex align-items-center me-3">
-                                        <svg class="bi me-2" width="1em" height="1em">
-                                            <use xlink:href="#geo-fill"></use>
-                                        </svg>
-                                        <small>California</small>
-                                    </li>
-                                    <li class="d-flex align-items-center">
-                                        <svg class="bi me-2" width="1em" height="1em">
-                                            <use xlink:href="#calendar3"></use>
-                                        </svg>
-                                        <small>5d</small>
+                                    <li class="d-flex align-items-top">
+                                        <small>+17°C</small>
                                     </li>
                                 </ul>
                             </div>
