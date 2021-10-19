@@ -30,13 +30,47 @@ nav{
 
 
 .city .container{
-    padding-bottom: 15px;
+    margin-bottom: 15px;
 }
 
-.city .row{
-    padding-right: 400px;
+.city .text-start{
+    padding-right: 0px;
 
+}
+.city .row{
+    padding-right: 200px;
 }
 .city .form-select{
     color: rgba(0, 0, 0, 0.5)
+}
+
+footer{
+    background-color: #f0f0f0;
+    padding: 40px 0;
+    color: #000
+}
+main{
+    margin-bottom: 310px;
+}
+a{
+	color: #b4ad9e;
+}
+a:hover{
+	color: #898377;
+}
+body{
+	min-width: 320px;
+	font-size: 14px;
+	color: #1c1b1c;
+}
+.footer-left{
+    margin-left: 20px;
+}
+.footer-right a{
+	color: #626262;
+	margin-left: 200px;
+}
+.container .footer-right{
+    padding: 0px;
+    margin: 0px;
 }
