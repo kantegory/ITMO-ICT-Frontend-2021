@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Организовывай встречи</title>
+  
+</head>
+<style>
+body { 
+  display: grid;
+  grid-template-areas: 
+    "header header header"
+    "nav article ads"
+    "footer footer footer";
+  grid-template-rows: 80px 1fr 70px;  
+  grid-template-columns: 20% 1fr 15%;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  height: 100vh;
+  margin: 0;
+  }  
+/* Stack the layout on small devices/viewports. */
+@media all and (max-width: 575px) {
+  body { 
+    grid-template-areas: 
+      "header"
+      "article"
+      "ads"
+      "nav"
+      "footer";
+    grid-template-rows: 80px 1fr 70px 1fr 70px;  
+    grid-template-columns: 1fr;
+ }
+}
+header, footer, article, nav, div {
+  padding: 1.2em;
+  background: white;
+  }
+#pageHeader {
+  grid-row: header;
+  }
+#pageFooter {
+  grid-row: footer;
+  }
+#mainArticle { 
+  grid-area: article;      
+  }
+#mainNav { 
+  grid-area: nav; 
+  }
+#siteAds { 
+  grid-row: ads; 
+  } 
+</style>
+<body>
+  <header>
+    <div id="logo" onclick="slowScroll('#top')">
+      <span>Meetup</span>
+    </div>
+    <div id="about">
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Войти</a>
+      <a href="#" title="Возможности" onclick="slowScroll('#main')">Зарегистрироваться</a>
+    </div>
+  </header>
+
+  <div id="top">
+    <h1>Meetup</h1>
+    <h3>Погружайтесь! На Meetup есть множество интересных занятий</h3>
+  </div>
+
+  <div id="main">
+    <div class="intro">
+      <h2>Наши услуги помогут вам!</h2>
+      <span>Большой выбор всего, что может вам пригодиться</span>
+    </div>
+    <div class="text">
+      <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos impedit, ut vero commodi voluptate? Ipsam reiciendis, necessitatibus incidunt ipsa quis sapiente excepturi, optio iusto voluptatibus dolorem officia quidem, numquam eaque minus, autem praesentium rem architecto dolores. Ipsa unde id velit optio magni enim! Illum obcaecati, dolorem distinctio nemo, ipsum iure.</span>
+    </div>
+  </div>
+
+  <div id="overview">
+    <h2>Преимущества</h2>
+    <h4>с нами все проще</h4>
+
+    <div class="img">
+      <img src="https://secure-content.meetupstatic.com/images/next/images/indexPage/category1.jpg/360x200.jpg?w=1920" alt="">
+      <span>Поиск новых людей</span>
+    </div>
+    <div class="img">
+      <img src="https://secure-content.meetupstatic.com/images/next/images/indexPage/category2.jpg/360x200.jpg?w=1920" alt="">
+      <span>Уроки PhotoShop для начинающих</span>
+    </div>
+    <div class="img">
+      <img src="https://secure-content.meetupstatic.com/images/next/images/indexPage/category3.jpg/360x200.jpg?w=1920" alt="">
+      <span>Изучение языка Ruby для начинающих</span>
+    </div>
+  </div>
+</body>
+</html>
