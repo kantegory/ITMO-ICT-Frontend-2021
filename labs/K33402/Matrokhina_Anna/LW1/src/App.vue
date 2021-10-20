@@ -15,6 +15,9 @@
             <b-nav-item :to="{name: 'Authorization'}">
               Авторизация
             </b-nav-item>
+            <b-nav-item :to="{name: 'Account'}">
+              ЛК
+            </b-nav-item>
           </b-navbar-nav>
         </b-collapse>
       </b-container>

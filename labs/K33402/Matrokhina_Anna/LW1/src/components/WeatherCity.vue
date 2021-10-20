@@ -9,6 +9,11 @@
       </p>
       <p>
         <i class="bi bi-wind"></i> {{ windDirection }}, {{ wind }} м/с</p>
+
+      <div class="d-flex justify-content-center">
+        <b-button v-if="saveButton" size="sm" variant="outline-dark">Сохранить</b-button>
+        <b-button v-else size="sm" variant="outline-danger">Удалить</b-button>
+      </div>
     </b-card-text>
   </b-card>
 </template>
@@ -21,7 +26,8 @@ export default {
     weather: String,
     pressure: Number,
     wind: String,
-    windDirection: String
+    windDirection: String,
+    saveButton: Boolean,
   }
 }
 </script>
