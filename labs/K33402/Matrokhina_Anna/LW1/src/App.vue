@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      <b-navbar toggleable="sm" type="light" variant="light">
+      <b-navbar toggleable="sm" type="dark" variant="dark">
           <b-navbar-brand :to="{name: 'Home'}">Прогноз погоды</b-navbar-brand>
 
           <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
