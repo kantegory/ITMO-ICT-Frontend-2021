@@ -25,7 +25,7 @@
         <ul>
             <li><a href="#">Home</a></li>
             <li><a href="#" id="login-ref" onclick="toggleLogin()">Sign in</a></li>
-            <li><a href="#">Your bookings</a></li>
+            <li><a href="#" id="book-ref" onclick="toggleBookings()">Your bookings</a></li>
             <li><a href="#">Support</a></li>
             <li><a href="#">Feedback</a></li>
         </ul>
@@ -109,7 +109,7 @@
         </div>
     </div>
 </div>
-<div class="hotels-blocks">
+<div class="hotels-blocks" id="hotels-id">
     <div class="hotel-window">
         <img
             src="https://a0.muscache.com/im/pictures/65953e73-b1bf-4ee5-ac34-bc68a76406cc.jpg?im_w=1200" alt="">
@@ -120,7 +120,18 @@
         </div>
     </div>
 </div>
-
+<div id="book" class="bookings">
+    <div class="book-window">
+        <div class="book-title">Bookings</div>
+        <div class="book-container">
+            <div class="description">
+                <div class="name">Lagom-House</div>
+            </div>
+            <img
+                src="https://a0.muscache.com/im/pictures/65953e73-b1bf-4ee5-ac34-bc68a76406cc.jpg?im_w=1200" alt="">
+        </div>
+    </div>
+</div>
 <script src="./index.js"></script>
 </body>
 </html>
