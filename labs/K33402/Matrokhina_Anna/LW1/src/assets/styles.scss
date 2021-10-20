@@ -1,0 +1,46 @@
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+
+@import 'node_modules/bootstrap-vue/src/index.scss';
+
+body {
+  display: flex;
+
+  min-height: 100vh;
+
+  #app {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    main {
+      flex: 1;
+    }
+  }
+}
+
+.registration-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+
+  .container {
+    padding-bottom: 200px;
+  }
+}
+
+.auth-card-wrapper {
+  .auth-card {
+    max-width: 500px;
+    margin: 0 auto;
+
+    .card-title {
+      text-align: center;
+    }
+
+    .card-header {
+      input {
+      }
+    }
+  }
+}
