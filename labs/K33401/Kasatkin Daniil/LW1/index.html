@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&family=Work+Sans:wght@300;400&display=swap"
           rel="stylesheet">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="/styles/index.css">
+    <link rel="stylesheet" href="./styles/index.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>Hotel</title>
 </head>
 <body>
+
 <nav>
     <div class="logo"><a href="#">HotelLab<i class="ri-vip-diamond-line"></i></a></div>
     <button class="btn-menu" id="btn-menu" onclick="toggleMenu()">
@@ -82,7 +84,7 @@
         </div>
         <div class="filter-box">
             <div class="text">Check in</div>
-            <input type="text" placeholder="Add dates">
+            <input type="date">
         </div>
         <div class="filter-box">
             <div class="text">Guests</div>
@@ -93,19 +95,30 @@
             <button class="ri-search-line" type="submit"></button>
         </div>
 
+
+    </div>
+
+</div>
+<div class="filter-window-mobile">
+    <div class="filter-block-mobile">
+        <div class="search-mobile">
+            <input type="text" placeholder="Type to search...">
+        </div>
+        <div class="search-btn-mobile">
+            <button class="ri-search-line" type="submit"></button>
+        </div>
     </div>
 </div>
 <div class="hotels-blocks">
-    <form action="">
-        <div class="hotel-window">
-            <div class="image"><img src="https://a0.muscache.com/im/pictures/65953e73-b1bf-4ee5-ac34-bc68a76406cc.jpg?im_w=1200" alt=""></div>
+    <div class="hotel-window">
+        <img
+            src="https://a0.muscache.com/im/pictures/65953e73-b1bf-4ee5-ac34-bc68a76406cc.jpg?im_w=1200" alt="">
+        <div class="description">
             <div class="name">Lagom-House</div>
-            <div class="description">4 guests, · 1 bedroom, · 2 beds, · 1 bath</div>
-            <div class="rating">5.0<i class="ri-star-fill"></i></div>
             <div class="price">7,279₽ / night</div>
-            <div class="follow-button"><button class="ri-heart-fill"></button></div>
+            <div class="rating">5.0<i class="ri-star-fill"></i></div>
         </div>
-    </form>
+    </div>
 </div>
 
 <script src="./index.js"></script>
