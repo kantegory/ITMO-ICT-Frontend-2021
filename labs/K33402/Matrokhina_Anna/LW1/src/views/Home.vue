@@ -10,6 +10,14 @@
             <b-button>Поиск</b-button>
           </div>
         </div>
+        <b-form-group label="Фильтр" class="mt-3">
+          <div class="d-flex flex-wrap">
+            <b-button variant="outline-dark">Сегодня</b-button>
+            <b-button variant="outline-dark" class="ml-2">Завтра</b-button>
+            <b-button variant="outline-dark" class="ml-2">Выходные</b-button>
+            <b-button variant="outline-dark" class="ml-2">Средняя за месяц</b-button>
+          </div>
+        </b-form-group>
       </b-form>
 
       <b-row cols="1" cols-md="2" cols-lg="3" cols-xl="4" class="mt-5">
