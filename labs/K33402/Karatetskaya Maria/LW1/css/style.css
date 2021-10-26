@@ -3,7 +3,7 @@ body {
  	background-color: #cccccc;
 }
 
-a{
+a, .title  a{
 	font: 18px "Montserrat";
 	color: #3C3C3B;}
 
@@ -18,16 +18,20 @@ h5{
 	color: #3C3C3B;
 }
 
+
 .card{
 	width: 100%;
-	height: 500px;
+	max-width: 400px;
+	height: 520px;
 	background-color: #E5E5E5;
+	margin-left: auto;
+    margin-right: auto;
 }
 .navbar-brand{
 	margin-top:-20px;
 }
 
-.active{
+.active, .navbar-light .navbar-nav .nav-link.active{
 	color:#379683;
 }
 
@@ -36,7 +40,7 @@ h5{
 }
 
 
-.show{
+.show_btn{
 	margin-top: 50px;
 }
 
@@ -95,7 +99,8 @@ select{
 	text-align: center;
 }
 
-.login{
+.login, .around{
+
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
@@ -108,6 +113,9 @@ footer{
 }
 .foot{
 	margin-top: 20px;
+	padding-left: 10%;
+	padding-right: auto;
+
 }
 .mt-3 {
     margin-top: 5rem!important;
@@ -130,4 +138,104 @@ footer{
 
 .center ::before{
 	margin-right: 10px; 
+}
+
+.menu_ul{
+	padding-top: 2%; 
+	margin-left: auto;
+    margin-right: 0;
+}
+
+.me-auto {
+    margin-right: 0!important;
+    margin-rleft: auto!important;
+}
+.col-card{
+	margin-bottom: 30px;
+}
+
+@media(max-width:1190px){
+	.card{
+		height: 450px;
+	}
+}
+
+@media(max-width:1000px){
+	.card{
+		height: 480px;
+	}
+}
+
+@media(max-width:974px) {
+	.menu_nav{
+		text-align: right;
+		padding-top: 0em;
+	}
+	.navbar-nav {
+		display: block;
+		margin-top: 2%;
+	}
+	.menu_ul{
+		top: 1em;
+		right: 5em;
+	}
+	.navbar-toggler{
+		position: absolute;
+		right: 5%;
+		top:2em;
+	}
+	.form-fly, .login{
+		max-width: 500px;
+		margin-left: auto;
+    	margin-right: auto;
+	}
+	.card{
+		height: 440px;
+	}
+	
+}
+
+@media(max-width:750px){
+	.card{
+		height: 520px;
+	}
+}
+
+@media(max-width:650px){
+	.navbar-toggler{
+		right: 3%;
+	}
+
+	.foot a{
+		font: 12px "Montserrat";
+	}
+
+	h5{
+		font:14px "Montserrat";
+	}
+
+	span{
+		display: none;
+	}
+
+	.center, p.around{
+	width: 200px; 
+	}	
+}
+
+
+@media(max-width:445px){
+	.card{
+		height: 490px;
+	}
+}
+
+@media(max-width:400px){
+	.card{
+		height: 460px;
+	}
+}
+
+.log{
+	padding-left: 10em;
 }
