@@ -149,7 +149,6 @@ header.fixed #logo {
   flex-flow: row, wrap
 }
 
-/* Блок с преимуществами */
 
 #overview {
   float: left;
@@ -210,86 +209,11 @@ header.fixed #logo {
   }
 }
 
-/* Блок с контактами */
-#contacts {
-  width: 100%;
-  float: left;
-  padding-bottom: 40px;
-  padding-top: 70px;
-  border-top: 4px solid #ccc;
-  background: #f4f4f4;
-}
-
 h1, h2, h3, h4, h5 {
   font-family: 'Acme', sans-serif;
   font-weight: lighter;
 }
 
-#contacts h5 {font-size: 3em; color: #4f4f4f}
-
-.btn {
-  float: left;
-  border-radius: 5px;
-  padding: 5px 9px;
-  font-size: 1.2em;
-  background-color: #ec6550;
-  text-shadow: #454545 0 0 2px;
-  cursor: pointer;
-  color: white;
-  font-family: 'Acme', sans-serif;
-}
-
-.btn:hover {
-  background-color: #c15443;
-}
-
-/* Вопросы и ответы */
-
-#faq {
-  background-color: #fff;
-  border-top: 2px dashed #e4e3e3;
-  width: 100%;
-  float: left;
-  padding-top: 70px;
-  padding-bottom: 70px;
-}
-
-@media (min-width: 801px) {
-  #faq div {
-    width: 25%;
-    margin-left: 6%;
-    float: left;
-  }
-}
-
-@media (max-width: 800px) {
-  #faq div {
-    width: 80%;
-    margin-left: 10%;
-    float: left;
-  }
-}
-
-#faq .title {
-  font-weight: lighter;
-  color: #a3a0ad;
-  margin-bottom: 20px;
-  font-size: 2.2em;
-}
-
-#faq .heading {
-  color: #7d7d7d;
-  font-size: 1.3em;
-  font-weight: bold;
-}
-
-#faq p {
-  font-family: Arimo, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  color: #4a4a4a;
-  font-size: 0.95em;
-  margin-bottom: 40px;
-}
 
 .footer{
   background: rgb(0, 0, 0);
@@ -310,6 +234,8 @@ h1, h2, h3, h4, h5 {
   text-decoration:none;
 }
 .social-icons li{
+  display: flex;
+  flex-direction: row;
   margin:0 10px 0 0;width:50px;
   height:50px;
   background: #da8608;
@@ -319,12 +245,8 @@ h1, h2, h3, h4, h5 {
 }
 .social-icons li:hover{
   background: #fff;color:#2e2e2e;
+}
 
-}
-.contact-item span{
-  display:grid;
-  grid-template-rows: auto;
-}
 @media(min-width:900px){
   .footer-container{
       display:grid;
@@ -341,11 +263,5 @@ h1, h2, h3, h4, h5 {
   }
   .footer-container div:nth-child(1) p{
       padding-right: 20px;
-  }
-  .contact-item{
-      display:grid;
-      grid-template-rows: 10% 90%;
-      margin-bottom:15px;
-      align-items: center;
   }
 }
