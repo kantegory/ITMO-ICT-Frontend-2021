@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 30px; /* устанавливает внутренние отступы/поля со всех сторон*/
+    background-color: black;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.logo {
+    color: #4c0f64;
+    letter-spacing: 2px; /*определяет межбуквенное расстояние в тексте*/
+}
+
+body {
+    background: url('https://data.1freewallpapers.com/download/mountains-night-dark-nature-1600x1200.jpg') no-repeat fixed center center;
+    background-size: cover;
+}
+.main-head {
+    top: 10%;
+    left: 25%;
+    position: absolute;
+    color: lightgray;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+
+.cell-text span{
+    color: #d603f6;
+}
+
+
+
+.cell {
+    top: 10%;
+    left: 30%;
+    color: #070606;
+    line-height: 1.5;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cell .cell-text{
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 8px;
+    width: 600px;
+    height: 100px;
+    background: rgba(76, 15, 100,0.3);
+    color: lightgray;
+}
