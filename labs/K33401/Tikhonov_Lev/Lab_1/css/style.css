@@ -149,45 +149,6 @@ header.fixed #logo {
   flex-flow: row, wrap
 }
 
-
-#main {
-  float: left;
-  background-color: #f6f6f6;
-  border-top: 2px solid silver;
-  color: #484848;
-  font-size: 1.3em;
-}
-
-@media (min-width: 1401px) {
-  #main {
-    padding: 100px 20%;
-    width: 60%;
-  }
-}
-
-@media (max-width: 1400px) {
-  #main {
-    padding: 100px 10%;
-    width: 80%;
-  }
-}
-
-@media (max-width: 700px) {
-  #main div {
-    width: 98%!important;
-    margin-bottom: 20px;
-  }
-}
-
-#main div {
-  width: 48%;
-  margin-right: 2%;
-  float: left;
-}
-
-#main h2 {font-size: 3em}
-#main span {color: #0e0d0d}
-
 /* Блок с преимуществами */
 
 #overview {
@@ -328,4 +289,63 @@ h1, h2, h3, h4, h5 {
   color: #4a4a4a;
   font-size: 0.95em;
   margin-bottom: 40px;
+}
+
+.footer{
+  background: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-align: center;
+}
+.footer-container{
+  width: 85vw;
+  margin: 0 auto;
+  padding: 30px 0;
+}
+.footer-container p, .footer-container a, .footer-container span{
+  opacity: 0.8;
+}
+.footer a{
+  display:block;
+  color:#fff;
+  text-decoration:none;
+}
+.social-icons li{
+  margin:0 10px 0 0;width:50px;
+  height:50px;
+  background: #da8608;
+  border-radius: 50%;
+  transition: var(--transition);
+  cursor: pointer;
+}
+.social-icons li:hover{
+  background: #fff;color:#2e2e2e;
+
+}
+.contact-item span{
+  display:grid;
+  grid-template-rows: auto;
+}
+@media(min-width:900px){
+  .footer-container{
+      display:grid;
+      grid-template-columns: repeat(2,1fr);
+      grid-gap: 20px;
+  }
+}
+@media(min-width: 1170px){
+  .footer{
+      text-align: left;
+  }
+  .footer-container{
+      grid-template-columns: repeat(4,1fr);
+  }
+  .footer-container div:nth-child(1) p{
+      padding-right: 20px;
+  }
+  .contact-item{
+      display:grid;
+      grid-template-rows: 10% 90%;
+      margin-bottom:15px;
+      align-items: center;
+  }
 }
