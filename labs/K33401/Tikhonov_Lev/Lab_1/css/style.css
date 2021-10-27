@@ -23,7 +23,7 @@ header {
   padding: 10px 0.5% 0px 0.5%;
   background: transparent;
   float: left;
-  position: fixed;
+  position: static;
 }
 
 header #logo {
@@ -59,23 +59,23 @@ header #logo span {
   }
 
   #about {
-    float: left;
+    float: right;
     width: 100%;
   }
 }
 
 #about {
-  text-align: center;
+  text-align: right;
   font-size: 1em;
   line-height: 40px;
   margin-bottom: 10px;
+  margin-right: 30px;
 }
 
 #about > a {color: rgb(0, 0, 0)}
 
 #about > a:hover {
   color: #b0b0b0;
-  text-decoration: underline;
 }
 
 #about > a:not(:last-child) {
@@ -101,12 +101,33 @@ header.fixed #logo {
 
 #top {
   width: 100%;
-  /*background-image: url(https://www.lovelymockups.com/wp-content/uploads/2017/01/mackbook-on-table.jpg);*/
-  background-blend-mode: multiply;
+  background-image: url(https://secure.meetup.com/_next/image?url=%2Fimages%2Fshared%2Fonline_events.svg&w=640&q=75);
+  background-position: right center;
   background-color: #ffffff;
-  background-size: cover;
+  background-size: 67%;
   text-align: left;
+  background-repeat: no-repeat;
   color: rgb(0, 0, 0);
+}
+
+/* код для фотки в top*/
+  {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    box-sizing: border-box;
+    padding: 0;
+    border: none;
+    margin: auto;
+    display: block;
+    width: 0;
+    height: 0;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
 }
 
 @media (min-width: 1001px) {
@@ -116,42 +137,18 @@ header.fixed #logo {
   }
 }
 
-@media (max-width: 1000px) and (min-width: 651px) {
-  #top {
-    font-size: 2em;
-    height: 600px;
-  }
-}
-
-@media (max-width: 650px) {
-  #top {
-    font-size: 1.3em;
-    padding-top: 50%;
-    height: 500px;
-  }
-}
-
-@media (max-width: 450px) {
-  #top {
-    font-size: 0.9em;
-  }
-}
-
 #top h1 {
   padding-top: 20%;
 }
 
 #top h3 {
   color: rgb(8, 8, 8);
+  width: 35%;
 }
 .img{
-  flex-direction: row
+  flex-flow: row, wrap
 }
 
-.img{
-  flex-wrap: wrap
-}
-/* Блок с возможностями */
 
 #main {
   float: left;
@@ -195,8 +192,6 @@ header.fixed #logo {
 
 #overview {
   float: left;
-  /*background-image: url(https://images.unsplash.com/1/work-station-straight-on-view.jpg?ixlib=rb-0.3.5&s=d055e15d0b8fd2de7295b726274d312b&dpr=1&auto=format&fit=crop&w=1000&q=80&cs=tinysrgb);*/
-
   background-blend-mode: multiply;
   background-color: #9e999e;
   background-size: cover;
@@ -270,50 +265,6 @@ h1, h2, h3, h4, h5 {
 }
 
 #contacts h5 {font-size: 3em; color: #4f4f4f}
-
-#form_input {
-  margin-top: 15px;
-  font-size: 1.1em;
-}
-
-@media (min-width: 1051px) {
-  #form_input {
-    width: 35%;
-    margin-left: 38%;
-  }
-}
-
-@media (max-width: 1050px) {
-  #form_input {
-    width: 90%;
-    margin-left: 10%;
-  }
-}
-
-#form_input label {
-  color: #505050;
-  cursor: pointer;
-  font-size: 1.4em;
-  font-family: 'Acme', sans-serif;
-}
-
-#form_input label > span {
-  color: #e87e7e;
-}
-
-#form_input input,#form_input textarea {
-  margin-bottom: 10px;
-  width: 70%;
-  padding: 10px 2%;
-  border-radius: 7px;
-  border: 2px solid silver;
-  font-size: 0.9em;
-  color: #4a4a4a;
-}
-
-#form_input input:focus, #form_input textarea:focus {
-  border-color: #333;
-}
 
 .btn {
   float: left;

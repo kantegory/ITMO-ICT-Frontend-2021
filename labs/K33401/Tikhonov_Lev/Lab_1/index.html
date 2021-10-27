@@ -5,54 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Организовывай встречи</title>
-  
+   <link rel="stylesheet" href="C:\Users\Crond\ITMO-ICT-Frontend-2021\labs\K33401\Tikhonov_Lev\Lab_1\css\style.css">
 </head>
 <style>
-body { 
-  display: grid;
-  grid-template-areas: 
-    "header header header"
-    "nav article ads"
-    "footer footer footer";
-  grid-template-rows: 80px 1fr 70px;  
-  grid-template-columns: 20% 1fr 15%;
-  grid-row-gap: 10px;
-  grid-column-gap: 10px;
-  height: 100vh;
-  margin: 0;
+img { 
+  display: flex;
+  flex-flow: row wrap;
+  flex: 1;
+  align-items: center;
+  justify-content: space-around, center;
   }  
-/* Stack the layout on small devices/viewports. */
-@media all and (max-width: 575px) {
-  body { 
-    grid-template-areas: 
-      "header"
-      "article"
-      "ads"
-      "nav"
-      "footer";
-    grid-template-rows: 80px 1fr 70px 1fr 70px;  
-    grid-template-columns: 1fr;
- }
-}
-header, footer, article, nav, div {
-  padding: 1.2em;
-  background: white;
-  }
-#pageHeader {
-  grid-row: header;
-  }
-#pageFooter {
-  grid-row: footer;
-  }
-#mainArticle { 
-  grid-area: article;      
-  }
-#mainNav { 
-  grid-area: nav; 
-  }
-#siteAds { 
-  grid-row: ads; 
-  } 
 </style>
 <body>
   <header>
