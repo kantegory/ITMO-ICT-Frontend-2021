@@ -6,10 +6,11 @@ html, body {
 body {
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 header {
-    position: absolute;
+    position: sticky;
     width: 100%;
     top: 0;
 }
@@ -45,13 +46,25 @@ header {
 }
 
 .container-city {
-    font-size: 7rem;
+    font-size: 5rem;
 }
 
 .container-temp {
-    font-size: 5rem;
+    font-size: 2rem;
 }
 
 .container-desc {
     font-size: 2rem;
+}
+
+.container-feels_temp {
+    font-size: 2rem;
+}
+
+.footer {
+    flex: 0 0 auto;
+}
+
+main {
+    flex: 1 0 auto;
 }
