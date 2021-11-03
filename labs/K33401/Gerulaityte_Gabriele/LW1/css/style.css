@@ -1,0 +1,80 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Dancing+Script:400,700&display=swap");
+
+body {
+    background-color: #f2f2f2;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    color: #555;
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+    
+}
+
+.carousel{
+    padding-top: 60px;
+}
+.carousel-size {
+    height: 500px;
+    width: 100%;
+}
+
+.carousel-item-size, .carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+    font-family: sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #f2f2f2;
+    
+}
+
+h3 {
+    font-family: 'Roboto';
+    font-size: 32px;
+    font-weight: 400;
+    color: #1b1b2c;
+}
+
+login{
+    background: #f2f2f2;
+}
+login .form{
+    width: 320px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 150px;
+}
+
+registration .form{
+    width: 320px;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: 150px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.footer {
+    background: #ffffff;
+    height: 50px;
+    width: 100%;
+    text-align: center;
+    padding: 15px;
+}
+
+.profile{
+    margin: 20px;
+    padding-top: 50px;
+}
