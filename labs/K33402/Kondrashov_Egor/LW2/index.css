@@ -9,12 +9,12 @@ main {
 
 .main-search {
     position: relative;
-    top: 35%
+    top: 28%
 }
 
 .search-params {
     position: relative;
-    top: 40%
+    top: 35%
 }
 
 .title {
@@ -25,14 +25,6 @@ main {
 .search-button {
     position: relative;
     top: 45%
-}
-
-#numberOfGuests {
-    width: 50%;
-}
-
-#city {
-    width: 70%;
 }
 
 .btn {
