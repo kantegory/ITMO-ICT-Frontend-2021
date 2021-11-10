@@ -7,28 +7,33 @@ async function getCityIdByName(city) {
         }
     }
     )
-    data = await res.json();
-    return data[0].dest_id;
+    let data = await res.json();
+    if (data) {
+        return data[0].dest_id;
+    }
+    else {
+        return null;
+    }
 }
 
 async function getHotels() {
     const urlSearchParams = new URLSearchParams(window.location.search);
-    var city = urlSearchParams.get("city");
+    let city = urlSearchParams.get("city");
     if (!city) {
         city = "-553173";
     }
     else {
         city = await getCityIdByName(city);
     }
-    var numberOfGuests = urlSearchParams.get("number-of-guests");
+    let numberOfGuests = urlSearchParams.get("number-of-guests");
     if (!numberOfGuests) {
         numberOfGuests = 1;
     }
-    var arrivalDatetime = urlSearchParams.get("arrival-datetime");
+    let arrivalDatetime = urlSearchParams.get("arrival-datetime");
     if (!arrivalDatetime) {
         arrivalDatetime = "2022-07-24";
     }
-    var departureDatetime = urlSearchParams.get("departure-datetime");
+    let departureDatetime = urlSearchParams.get("departure-datetime");
     if (!departureDatetime) {
         departureDatetime = "2022-07-25";
     }
@@ -45,7 +50,7 @@ async function getHotels() {
                 }
             }
         );
-        data = await res.json();
+        let data = await res.json();
         return data.result;
     } catch (error) {
         console.log(error);
@@ -56,12 +61,13 @@ async function getHotels() {
 async function renderHotels() {
     let hotels = await getHotels();
     let html = "<div class='container'><h1 class='text-center'>Результаты поиска</h2></div>";
+    let htmlSegment = ""
 
     if (hotels) {
         html += `<div class="container">`;
 
         html += '<div class="row">';
-        var htmlSegment = `<div class="column hotel-item">
+        htmlSegment = `<div class="column hotel-item">
             <img src="${hotels[0].main_photo_url}" >
             <h2>${hotels[0].hotel_name}</h2>
             <p>${hotels[0].country_trans}, ${hotels[0].city_trans}</p>
@@ -72,8 +78,8 @@ async function renderHotels() {
         html += '</div>';
 
         html += '<div class="row">';
-        for (var i = 1; i < 4; i++) {
-            var htmlSegment = `<div class="col hotel-item">
+        for (let i = 1; i < 4; i++) {
+            htmlSegment = `<div class="col hotel-item">
                 <img src="${hotels[i].main_photo_url}" >
                 <h3>${hotels[i].hotel_name}</h2>
                 <p>${hotels[i].country_trans}, ${hotels[i].city_trans}</p>
@@ -85,8 +91,8 @@ async function renderHotels() {
         html += '</div>';
 
         html += '<div class="row">';
-        for (var i = 4; i < 8; i++) {
-            var htmlSegment = `<div class="col hotel-item">
+        for (let i = 4; i < 8; i++) {
+            htmlSegment = `<div class="col hotel-item">
                 <img src="${hotels[i].main_photo_url}" >
                 <h4>${hotels[i].hotel_name}</h2>
                 <p>${hotels[i].country_trans}, ${hotels[i].city_trans}</p>
