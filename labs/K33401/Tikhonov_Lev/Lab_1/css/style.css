@@ -110,25 +110,6 @@ header.fixed #logo {
   color: rgb(0, 0, 0);
 }
 
-/* код для фотки в top*/
-  {
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    box-sizing: border-box;
-    padding: 0;
-    border: none;
-    margin: auto;
-    display: block;
-    width: 0;
-    height: 0;
-    min-width: 100%;
-    max-width: 100%;
-    min-height: 100%;
-    max-height: 100%;
-}
 
 @media (min-width: 1001px) {
   #top {
@@ -145,13 +126,11 @@ header.fixed #logo {
   color: rgb(8, 8, 8);
   width: 35%;
 }
-.img{
-  flex-flow: row, wrap
-}
 
 
 #overview {
-  float: left;
+  display: flex;
+  justify-content:space-between;
   background-blend-mode: multiply;
   background-color: #9e999e;
   background-size: cover;
@@ -175,34 +154,22 @@ header.fixed #logo {
 }
 
 #overview .img {
-  float: left;
-  width: 30%;
-  margin-right: 5%;
-  margin-top: 50px;
+    width: 30%;
+    margin-top: 50px;
 }
 
 #overview .img:nth-child(odd) {
-  margin-left: 18%;
-}
-
-#overview img {
-  background: #fafafa;
-  padding: 5px;
-  border: 2px solid silver;
-  float: left;
-  width: 100%;
-  max-width: 500px;
+  margin-left: 10%;
 }
 
 #overview span {
-  float: left;
   width: 100%;
   font-size: 2em;
   margin-top: 10px;
 }
 
 @media (max-width: 700px) {
-  #overview .img {
+  #overview{
     width: 80%!important;
     margin-right: 0!important;
     margin-left: 10%!important;
