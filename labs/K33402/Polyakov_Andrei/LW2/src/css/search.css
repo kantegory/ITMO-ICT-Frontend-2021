@@ -7,16 +7,13 @@ body {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    background-color: var(--back-color);
 }
 
 header {
     position: sticky;
     width: 100%;
     top: 0;
-}
-
-.navbar {
-    background-color: rgb(24, 162, 184);
 }
 
 .card-location {
@@ -67,4 +64,12 @@ header {
 
 main {
     flex: 1 0 auto;
+}
+
+.head-text {
+    color: var(--head-text-color);
+}
+
+.navbar {
+    background-color: #343434;
 }

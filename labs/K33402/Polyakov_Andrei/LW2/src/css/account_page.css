@@ -7,16 +7,13 @@ body {
     display: flex;
     margin-top: 5rem;
     justify-content: center;
+    background-color: var(--back-color);
 }
 
 header {
     position: absolute;
     width: 100%;
     top: 0;
-}
-
-.navbar {
-    background-color: rgb(24, 162, 184);
 }
 
 .card-location {
@@ -32,6 +29,7 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--card-color);
 }
 
 .input-field {
@@ -40,4 +38,16 @@ header {
 
 .form-control {
     margin: 2px;
+}
+
+.head-text {
+    color: var(--head-text-color);
+}
+
+.modal-content {
+    background-color: var(--card-color);
+}
+
+.navbar {
+    background-color: #343434;
 }

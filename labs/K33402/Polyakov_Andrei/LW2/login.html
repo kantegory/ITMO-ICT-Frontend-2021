@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css" integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
     <link rel="stylesheet" href="src/css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="src/css/light.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="src/css/dark.css" media="(prefers-color-scheme: dark)">
 
     <title>Прогноз погоды</title>
   </head>
@@ -44,18 +46,18 @@
     <main role="main" class="login-main">
         <div class="container">
                 <div class="pt-3 d-flex justify-content-center">
-                    <h2>Войти в личный кабинет</h2>
+                    <h2 class="head-text">Войти в личный кабинет</h2>
                 </div>
                 <div class="login-form d-flex justify-content-center">
                     <form>
-                        <div class="input-field"> <span><i class="bi bi-envelope"></i></span>
+                        <div class="input-field"> <span><i class="head-text bi bi-envelope"></i></span>
                         <input class="form-control" size="25rem" type="email" name="email" placeholder="Email" required />
                     </div>
-                    <div class="input-field"> <span><i class="bi bi-lock"></i></span>
+                    <div class="input-field"> <span><i class="head-text bi bi-lock"></i></span>
                         <input class="form-control" size="25rem" type="password" name="password" placeholder="Пароль" required />
                     </div>
                         <div class="row mt-3 d-flex justify-content-center">
-                            <input class="btn btn-info mb-3" type="submit" value="Войти" />
+                            <input class="btn btn-success mb-3" type="submit" value="Войти" />
                         </div>
                     </form>
                 </div>
@@ -63,7 +65,7 @@
     </main>
 
     <footer class="container mt-3 text-center fixed-bottom">
-        <p>&copy; Forecast Company 2021</p>
+        <p class="head-text">&copy; Forecast Company 2021</p>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
