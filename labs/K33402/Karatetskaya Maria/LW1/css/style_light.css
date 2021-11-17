@@ -1,0 +1,11 @@
+:root {
+  --main-bg-img: url("../images/travel_light.jpg");
+  --main-bg-color: #B4D1E8;
+  --main-text-color: #3C3C3B;
+  --footer-color: #E5E5E5;
+  --main-text:#3C3C3B;
+  --main-card-color:#E5E5E5;
+  --logo: url("../images/logo.png");
+  --border-color: none;
+
+}
