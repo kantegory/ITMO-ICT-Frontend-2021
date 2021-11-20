@@ -1,6 +1,6 @@
 .hotel-item {
     padding: 10px;
-    border: 2px solid #2e7a17;
+    border: 2px solid var(--accent-color);
     margin: 15px;
     border-radius: 7px;
 }
