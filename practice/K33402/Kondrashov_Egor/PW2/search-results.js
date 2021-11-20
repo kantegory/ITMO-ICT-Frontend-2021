@@ -68,7 +68,7 @@ async function renderHotels() {
 
         html += '<div class="row">';
         htmlSegment = `<div class="column hotel-item">
-            <img src="${hotels[0].main_photo_url}" >
+            <img src="${hotels[0].main_photo_url}" alt="">
             <h2>${hotels[0].hotel_name}</h2>
             <p>${hotels[0].country_trans}, ${hotels[0].city_trans}</p>
             <p>Рейтинг: ${hotels[0].review_score}</p>
@@ -80,7 +80,7 @@ async function renderHotels() {
         html += '<div class="row">';
         for (let i = 1; i < 4; i++) {
             htmlSegment = `<div class="col hotel-item">
-                <img src="${hotels[i].main_photo_url}" >
+                <img src="${hotels[i].main_photo_url}" alt="">
                 <h3>${hotels[i].hotel_name}</h2>
                 <p>${hotels[i].country_trans}, ${hotels[i].city_trans}</p>
                 <p>Рейтинг: ${hotels[i].review_score}</p>
@@ -93,7 +93,7 @@ async function renderHotels() {
         html += '<div class="row">';
         for (let i = 4; i < 8; i++) {
             htmlSegment = `<div class="col hotel-item">
-                <img src="${hotels[i].main_photo_url}" >
+                <img src="${hotels[i].main_photo_url}" alt="">
                 <h4>${hotels[i].hotel_name}</h2>
                 <p>${hotels[i].country_trans}, ${hotels[i].city_trans}</p>
                 <p>Рейтинг: ${hotels[i].review_score}</p>
