@@ -6,6 +6,7 @@
   --main-text:#3C3C3B;
   --main-card-color:#E5E5E5;
   --logo: url("../images/logo.png");
-  --border-color: none;
+  --border-color: #3C3C3B;
+  --close: url("../images/close_light.svg");
 
 }

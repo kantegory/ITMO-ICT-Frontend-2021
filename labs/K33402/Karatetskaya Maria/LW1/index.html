@@ -22,10 +22,10 @@
 
 </head>
 <body>
-  <div class="container container-fluid">
+  <header class="container container-fluid mb-5">
     <nav class="navbar navbar-expand-lg navbar-light mt-1 ">    
       <a class="navbar-brand" href="index.html">
-        <img src="images/logo1.png" width="250" height="66" class="d-inline-block img align-text-top mt-4">
+        <img src="images/logo1.png" width="250" height="66" alt="logo" class="d-inline-block img align-text-top mt-4">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -51,19 +51,22 @@
         </ul>
       </div>    
     </nav>
-  </div>
+  </header>
   <main>
     <div class="container">
       <div class="col-12 col-lg-5">
         <form class="form-fly">
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Откуда">
+            <label class="label_text" for="from">Пункт отправления:</label>
+            <input type="text" class="form-control" id="from" name="from" placeholder="Откуда">
           </div>
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Куда">
+            <label class="label_text" for="to">Пункт назначения:</label>
+            <input type="text" class="form-control" id="to" name="to" placeholder="Куда">
           </div>
           <div class="mb-3">
-            <input type="date" class="form-control" placeholder="Когда">
+            <label class="label_text" for="from">Дата отправления:</label>
+            <input type="date" class="form-control" id="date" name="date" placeholder="Когда">
           </div>
 
           <div class="mb-3">
@@ -82,7 +85,7 @@
               <option value="3">Эконом-класс</option>
             </select>
           </div>
-          <a href="tickets.html" class="btn btn-primary show">Смотреть билеты</a>
+          <button class="btn btn-primary show"><a href="tickets.html">Смотреть билеты</a></button>
         </form>
       </div>
       <div class="col-lg-7"></div>

@@ -41,6 +41,19 @@ h5{
     margin-right: auto;
     border-color:var(--border-color);
 }
+
+button.close{
+	width: 20px;
+	height: 20px;
+	background: var(--close);
+	border:none;
+}
+
+.modal-footer, .modal-header{
+	border-top: none;
+	border-bottom: none;
+}
+
 .navbar-brand{
 	margin-top:-20px;
 }
@@ -73,14 +86,16 @@ h5{
 	color: #3C3C3B;
 }
 
+.label_text{
+	margin-bottom: 10px;
+}
 .form-fly{
-	margin-top:100px;
+	margin-top:50px;
 }
 
 .btn{
 	font: 24px "Montserrat";
 	color: var(--main-text-color);
-	padding-top: 15px;
 	background-color: #379683;
 	color: white;
 	height: 60px;
@@ -90,6 +105,19 @@ h5{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.btn a{
+	font: 24px "Montserrat";
+	color: #E5E5E5;
+	text-decoration: none;
+}
+
+.little a{
+	font: 18px "Montserrat";}
+
+.modal-content{
+	background-color: var(--footer-color);
 }
 
 .little{
@@ -115,7 +143,7 @@ select{
 	font: 36px "Montserrat";
 }
 .title{
-	margin-bottom:30px;
+	margin-bottom:20px;
 	text-align: center;
 }
 
@@ -135,6 +163,11 @@ footer{
 	height: 330px;
 	background-color: var(--footer-color);
 }
+
+main{
+	min-height: calc(45vh - 50px);
+}
+
 .foot{
 	margin-top: 20px;
 	padding-left: 10%;

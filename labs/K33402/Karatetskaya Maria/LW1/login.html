@@ -21,10 +21,10 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="without">
-  <div class="container container-fluid">
+  <header class="container container-fluid mb-5">
     <nav class="navbar navbar-expand-lg navbar-light mt-1 ">    
       <a class="navbar-brand" href="index.html">
-        <img src="images/logo1.png" width="250" height="66" class="d-inline-block img align-text-top mt-4">
+        <img src="images/logo1.png" width="250" height="66" alt="logo" class="d-inline-block img align-text-top mt-4">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -50,7 +50,7 @@
         </ul>
       </div>    
     </nav>
-  </div>
+  </header>
   <main>
     <div class="container">
       <div class="col-lg-3"></div>
@@ -59,10 +59,10 @@
         <form class="form-fly">
           <div class="title"><a>Вход</a></div>
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Логин">
+            <input type="text" name="login" id="login" class="form-control" placeholder="Логин">
           </div>
           <div class="mb-3">
-            <input type="password" class="form-control" placeholder="Пароль"></div>
+            <input type="password" class="form-control" name="passw" id="passw" placeholder="Пароль"></div>
           <button type="submit" class="btn btn-primary show_btn">Войти</button>
         </form>
       </div>

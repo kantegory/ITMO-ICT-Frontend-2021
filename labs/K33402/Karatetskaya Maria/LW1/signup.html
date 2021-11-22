@@ -21,10 +21,10 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body class="without">
-  <div class="container container-fluid">
+  <header class="container container-fluid mb-5">
     <nav class="navbar navbar-expand-lg navbar-light mt-1 ">    
       <a class="navbar-brand" href="index.html">
-        <img src="images/logo1.png" width="250" height="66" class="d-inline-block img align-text-top mt-4">
+        <img src="images/logo1.png" width="250" height="66" alt="logo" class="d-inline-block img align-text-top mt-4">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -50,7 +50,7 @@
         </ul>
       </div>    
     </nav>
-  </div>
+  </header>
   <main>
     <div class="container">
       <div class="col-lg-3"></div>
@@ -59,25 +59,25 @@
         <form class="form-fly">
           <div class="title"><a>Регистрация</a></div>
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="ФИО">
+            <input type="text" name="name" id="name" class="form-control" placeholder="ФИО">
           </div>
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Логин">
+            <input type="text" name="email" id="login" class="form-control" placeholder="Логин">
           </div>
           <div class="mb-3">
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
         </div>
           <div class="mb-3">
-            <input type="password" class="form-control" placeholder="Пароль"></div>
+            <input type="password" name="passw1" id="passw1"  class="form-control" placeholder="Пароль"></div>
             <div class="mb-3">
-            <input type="password" class="form-control" placeholder="Повторите пароль"></div>
+            <input type="password" name="passw2" id="passw2" class="form-control" placeholder="Повторите пароль"></div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox">
             <label class="form-check-label" for="flexCheckDefault">
               Согласие на обработку персональных данных
             </label>
           </div>
-          <a href="tickets.html" class="btn btn-primary show_btn">Зарегистрироваться</a>
+          <button class="btn btn-primary show_btn"><a href="tickets.html">Купить</a></button>
         </form>
       </div>
       <div class="col-lg-3"></div>
