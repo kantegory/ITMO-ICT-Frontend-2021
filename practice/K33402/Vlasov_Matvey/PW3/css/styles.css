@@ -1,5 +1,6 @@
 body {
     padding-top: 3.5rem;
+    color: var(--color-main);
 }
   
 p {
@@ -33,7 +34,7 @@ figcaption {
 }
 
 .card-location {
-    color: blue;
+    color: #0091ff;
 }
 
 .price {
@@ -53,7 +54,7 @@ p.card-text {
 }
 
 .reviews {
-    color: gray;
+    color: var(--color-main);
 }
 
 .fa-map-marker {
@@ -64,14 +65,34 @@ p.card-text {
     margin: 0.5rem;
 }
 
-.registration-main, .login-main {
-    background-color: #e9ecef;
+main {
+    background-color: var(--background-color);
+}
+
+.jumbotron {
+    background-color: var(--background-color-jumbotron);
 }
 
 .input-field input[type='checkbox'], input[type='radio'] {
     margin-left: 3rem;
 }
 
-.nav-item a {
-    color: #CCFFFF !important;
+.nav-item a, .navbar-brand {
+    color: var(--color-navbar) !important;
+}
+
+.navbar, footer {
+    background-color: var(--background-color-navbar)
+}
+
+.card {
+    background-color: var(--background-color-card);
+}
+
+footer {
+    height: 100px;
+}
+
+::placeholder, input, select, textarea {
+    color: var(--color-placeholder)
 }
