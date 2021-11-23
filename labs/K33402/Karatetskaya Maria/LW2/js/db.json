@@ -19,15 +19,47 @@
       "time": "17:00",
         "price": "20000"
     },
+
+
     {
       "id": 3,
       "isActive": true,
-      "from": "Москва",
-      "to": "Дублин",
-      "date": "23.12.2021",
-      "pass": 1,
+      "from": "Moskow",
+      "to": "Dublin",
+      "date": "2021-12-23",
+      "pass": 2,
       "time": "17:00",
-        "price": "20000"
+        "price": "25000"
+    },
+      {
+      "id": 4,
+      "isActive": true,
+      "from": "Moskow",
+      "to": "Dublin",
+      "date": "2021-12-23",
+      "pass": 2,
+      "time": "09:00",
+        "price": "29000"
+    },
+       {
+      "id": 5,
+      "isActive": true,
+      "from": "Moskow",
+      "to": "Dublin",
+      "date": "2021-12-23",
+      "pass": 2,
+      "time": "11:00",
+        "price": "24000"
+    },
+      {
+      "id": 6,
+      "isActive": true,
+      "from": "Moskow",
+      "to": "Dublin",
+      "date": "2021-12-23",
+      "pass": 2,
+      "time": "13:00",
+        "price": "28000"
     }
   ]
 }
