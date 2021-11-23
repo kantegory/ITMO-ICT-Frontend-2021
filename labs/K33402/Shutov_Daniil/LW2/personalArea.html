@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="mysite.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Yozh</title>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <div class="row">
+                <img class="col" src="public/zontik.png">
+                <h3 class="col mt-3">Погода</h3>
+            </div>
+        </div>
+    </nav>
+</header>
+<maAreal>
+    <div class="container" id="body">
+        <div class="row">
+            <div class="col-lg">
+            <h1 id="title">Мой профиль</h1>
+                <div class="windowMe row">
+                    <img class="col" src="public/Me.png">
+                    <div class="col">
+                        <h5 class="mt-5 city"> -- </h5>
+                        <h6 class="mt-2">mail@bk.ru</h6>
+                        <a href="login.html" class="link"><button type="submit" class="mt-5 btn btn-success">Выйти</button></a>
+                    </div>
+                </div>
+                <div class="filter row">
+                    <h5 style="margin-left: 15px">Фильтр по районам</h5>
+                    <div class="">
+                        <a href="#" class="list-group-item list-group-item-action ">
+                            Адмиралтейский район
+                        </a>
+                        <a href="#" class="list-group-item list-group-item-action">Василеостровский район</a>
+                        <a href="#" class="list-group-item list-group-item-action">Выборгский район</a>
+                        <a href="#" class="list-group-item list-group-item-action">Калининский район</a>
+                        <a href="#" class="list-group-item list-group-item-action disabled">VКировский район
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-8 mt-5">
+                <div class="row">
+                    <nav class="navbar navbar-light bg-light">
+                        <div class="container-fluid">
+                            <form class="search d-flex">
+                                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                                <button class="btn btn-outline-success" type="submit">Search</button>
+                            </form>
+                        </div>
+                    </nav>
+
+                    <div class="col-lg-2 me-5 cardWeather">
+                        <div class="row justify-content-center">
+<!--                            <div src="public/plain.png">-->
+                            <p><span class="date"></span>.<span class="month"></span></p>
+                            <p>Погода: <span class="temp"></span>°C</p>
+                            <p>Влажность: <span class="humidity"></span>%</p>
+                            <p>Ветер: <span class="wind"></span> км/ч</p>
+                            <p><span class="wearther"></span></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 me-5 cardWeather">
+                        <div class="row justify-content-center">
+<!--                            <img src="public/lightning.png">-->
+                            <p><span class="date"></span>.<span class="month"></span></p>
+                            <p>Погода: <span class="temp"></span>°C</p>
+                            <p>Влажность: <span class="humidity"></span>%</p>
+                            <p>Ветер: <span class="wind"></span> км/ч</p>
+                            <p><span class="wearther"></span></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 me-5 cardWeather">
+                        <div class="row justify-content-center">
+<!--                            <img src="public/cloudy.png">-->
+                            <p><span class="date"></span>.<span class="month"></span></p>
+                            <p>Погода: <span class="temp"></span>°C</p>
+                            <p>Влажность: <span class="humidity"></span>%</p>
+                            <p>Ветер: <span class="wind"></span> км/ч</p>
+                            <p><span class="wearther"></span></p>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 me-2 cardWeather">
+                        <div class="row justify-content-center">
+<!--                            <img src="public/plain.png">-->
+                            <p><span class="date"></span>.<span class="month"></span></p>
+                            <p>Погода: <span class="temp"></span>°C</p>
+                            <p>Влажность: <span class="humidity"></span>%</p>
+                            <p>Ветер: <span class="wind"></span> км/ч</p>
+                            <p><span class="wearther"></span></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+<footer>
+    <nav class="navbar navbar-light bg-light mt-5" >
+        <div class="container">
+            <div class="row" id="footer">
+                <div class="col-3">
+                    <h6 class="mt-4">
+                        Лабораторная работа №1
+                    </h6>
+
+                </div>
+                <div class="col-2">
+                    <h6 class="mt-4">
+                        Шутов Данил К33402
+                    </h6>
+                </div>
+                <div class="col img">
+                    <a href="https://github.com/danyashutov">
+                        <img src="public/Github.png">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+</footer>
+</maAreal>
+<script type="module" src='js/weather.js'></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</body>
+</html>
