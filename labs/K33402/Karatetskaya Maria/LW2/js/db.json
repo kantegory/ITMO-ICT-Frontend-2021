@@ -3,8 +3,8 @@
     {
       "id": 1,
       "isActive": true,
-      "from": "Москва",
-      "to": "Омск",
+      "from": "Moskow",
+      "to": "Omsk",
       "date": "2022-01-12",
       "pass": 1,
       "time": "17:00",
@@ -37,7 +37,7 @@
       "from": "Moskow",
       "to": "Dublin",
       "date": "2021-12-23",
-      "pass": 2,
+      "pass": 3,
       "time": "09:00",
         "price": "29000"
     },
