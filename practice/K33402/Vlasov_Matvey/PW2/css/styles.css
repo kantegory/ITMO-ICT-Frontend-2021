@@ -71,3 +71,7 @@ p.card-text {
 .input-field input[type='checkbox'], input[type='radio'] {
     margin-left: 3rem;
 }
+
+.nav-item a {
+    color: #CCFFFF !important;
+}
