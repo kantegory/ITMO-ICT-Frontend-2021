@@ -1,9 +1,10 @@
 /* Sky */
 
 :root {
-    --back-color: #ffffff;
+    --back-color: #ffffffb0;
     --sky-image: url('/lap1/img/bg-login.jpg');
     --body-color: #fff566;
+    --tab-color: #000;
     --vien-color: #000;
     --body-shadow: rgb(222 168 33 / 0.4);
     --body-glow: rgb(70 130 180 / 0.4);

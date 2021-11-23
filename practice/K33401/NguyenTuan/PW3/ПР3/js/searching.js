@@ -17,7 +17,7 @@ function getImages(){
                     <div class="col" id = ${hotel.id}>
                         <a href="#" class="hotel-link" >
                             <img src="${hotel.urls.regular}" alt="hotel" class="hotel-img">
-                            <p class="hotel-price">${hotel.description}</p>
+                            <p class="hotel-name">${hotel.description}</p>
                         </a>
                     </div>
                 `
