@@ -1,21 +1,35 @@
 body {
-	background-image: url("../images/travel.jpg");
- 	background-color: #cccccc;
+	background-image: var(--main-bg-img);
+	color:var(--main-text);
+}
+
+.img{
+	background-image: var(--logo);
+}
+.without{
+	background:none;
+	background-color: var(--main-bg-color);
 }
 
 a, .title  a{
 	font: 18px "Montserrat";
-	color: #3C3C3B;}
+	color: var(--main-text-color);
+	text-decoration: none;
+}
+
+a:not([href]):not([class]){
+	color: :#ffffff;
+}
 
 h5{
 	font: 18px "Montserrat";
-	color: #3C3C3B;
+	color: var(--main-text-color);
 	margin-bottom: 16px;
 }
 
 .card-body p, p, .foot a, span{
 	font: 14px "Montserrat";
-	color: #3C3C3B;
+	color: var(--main-text-color);
 }
 
 
@@ -23,10 +37,24 @@ h5{
 	width: 100%;
 	max-width: 400px;
 	height: 520px;
-	background-color: #E5E5E5;
+	background-color: var(--main-card-color);
 	margin-left: auto;
     margin-right: auto;
+    border-color:var(--border-color);
 }
+
+button.close{
+	width: 20px;
+	height: 20px;
+	background: var(--close);
+	border:none;
+}
+
+.modal-footer, .modal-header{
+	border-top: none;
+	border-bottom: none;
+}
+
 .navbar-brand{
 	margin-top:-20px;
 }
@@ -39,7 +67,13 @@ h5{
 	margin-left: -200px;
 }
 
+.navbar-light .navbar-nav .nav-link:focus, .navbar-light .navbar-nav .nav-link{
+    color: var(--main-text-color);
+}
 
+.navbar-light .navbar-nav .nav-link:hover{
+	color: #C4C4C4;
+}
 .show_btn{
 	margin-top: 50px;
 }
@@ -53,14 +87,16 @@ h5{
 	color: #3C3C3B;
 }
 
+.label_text{
+	margin-bottom: 10px;
+}
 .form-fly{
-	margin-top:100px;
+	margin-top:50px;
 }
 
 .btn{
 	font: 24px "Montserrat";
-	color: #3C3C3B;
-	padding-top: 15px;
+	color: var(--main-text-color);
 	background-color: #379683;
 	color: white;
 	height: 60px;
@@ -70,6 +106,19 @@ h5{
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+}
+
+.btn a{
+	font: 24px "Montserrat";
+	color: #E5E5E5;
+	text-decoration: none;
+}
+
+.little a{
+	font: 18px "Montserrat";}
+
+.modal-content{
+	background-color: var(--footer-color);
 }
 
 .little{
@@ -95,11 +144,15 @@ select{
 	font: 36px "Montserrat";
 }
 .title{
-	margin-bottom:30px;
+	margin-bottom:20px;
 	text-align: center;
 }
 
-.login, .around{
+.around{
+	text-align: center;
+}
+
+.login{
 
 	display: block;
 	margin-left: auto;
@@ -109,8 +162,13 @@ select{
 footer{
 	
 	height: 330px;
-	background-color: #E5E5E5;
+	background-color: var(--footer-color);
 }
+
+main{
+	min-height: calc(45vh - 50px);
+}
+
 .foot{
 	margin-top: 20px;
 	padding-left: 10%;

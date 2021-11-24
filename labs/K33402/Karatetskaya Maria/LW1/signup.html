@@ -8,6 +8,9 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+  <link href="css/style_light.css" rel="stylesheet" media="(prefers-color-scheme: light)">
+  <link href="css/style_dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
+
   <link href="css/style.css" rel="stylesheet">
 
   <!-- JavaScript Bundle with Popper -->
@@ -17,11 +20,11 @@
 
   <link href="css/style.css" rel="stylesheet">
 </head>
-<body style=" background:none; background-color: #AED1E8;">
-  <div class="container container-fluid">
+<body class="without">
+  <header class="container container-fluid mb-5">
     <nav class="navbar navbar-expand-lg navbar-light mt-1 ">    
       <a class="navbar-brand" href="index.html">
-        <img src="images/logo.png" width="250" height="66" class="d-inline-block align-text-top mt-4">
+        <img src="images/logo1.png" width="250" height="66" alt="logo" class="d-inline-block img align-text-top mt-4">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -30,7 +33,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto menu_ul mb-2 mb-lg-0 ">
           <li class="nav-item menu_nav">
-            <a class="nav-link active" href="index.html">Главная</a>
+            <a class="nav-link" href="index.html">Главная</a>
           </li>
           <li class="nav-item menu_nav">
             <a class="nav-link" href="my_ticket.html">Мои билеты</a>
@@ -42,12 +45,12 @@
             <a class="nav-link"  href="login.html">Login</a>
           </li>
           <li class="nav-item menu_nav">
-            <a class="nav-link" href="signup.html">Sign up</a>
+            <a class="nav-link active" href="signup.html">Sign up</a>
           </li>
         </ul>
       </div>    
     </nav>
-  </div>
+  </header>
   <main>
     <div class="container">
       <div class="col-lg-3"></div>
@@ -56,25 +59,25 @@
         <form class="form-fly">
           <div class="title"><a>Регистрация</a></div>
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="ФИО">
+            <input type="text" name="name" id="name" class="form-control" placeholder="ФИО">
           </div>
           <div class="mb-3">
-            <input type="text" class="form-control" placeholder="Логин">
+            <input type="text" name="email" id="login" class="form-control" placeholder="Логин">
           </div>
           <div class="mb-3">
-          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+          <input type="email" class="form-control" name="email" id="email" placeholder="name@example.com">
         </div>
           <div class="mb-3">
-            <input type="password" class="form-control" placeholder="Пароль"></div>
+            <input type="password" name="passw1" id="passw1"  class="form-control" placeholder="Пароль"></div>
             <div class="mb-3">
-            <input type="password" class="form-control" placeholder="Повторите пароль"></div>
+            <input type="password" name="passw2" id="passw2" class="form-control" placeholder="Повторите пароль"></div>
           <div class="form-check">
             <input class="form-check-input" type="checkbox">
             <label class="form-check-label" for="flexCheckDefault">
               Согласие на обработку персональных данных
             </label>
           </div>
-          <a href="tickets.html" class="btn btn-primary show_btn">Зарегистрироваться</a>
+          <button class="btn btn-primary show_btn"><a href="tickets.html">Купить</a></button>
         </form>
       </div>
       <div class="col-lg-3"></div>

@@ -8,6 +8,9 @@
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
+  <link href="css/style_light.css" rel="stylesheet" media="(prefers-color-scheme: light)">
+  <link href="css/style_dark.css" rel="stylesheet" media="(prefers-color-scheme: dark)">
+
   <link href="css/style.css" rel="stylesheet">
 
   <!-- JavaScript Bundle with Popper -->
@@ -19,19 +22,13 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
-    <script>
-        $(document).ready(function(){
-    $(".show-modal").click(function(){
-        $("#myModal").modal('show');
-    });
-});
-    </script>
+
 </head>
-<body style=" background:none; background-color: #AED1E8;"> 
-  <div class="container container-fluid">
+<body class="without"> 
+  <header class="container container-fluid mb-5">
     <nav class="navbar navbar-expand-lg navbar-light mt-1 ">    
       <a class="navbar-brand" href="index.html">
-        <img src="images/logo.png" width="250" height="66" class="d-inline-block align-text-top mt-4">
+        <img src="images/logo1.png" width="250" height="66" alt="logo" class="d-inline-block img align-text-top mt-4">
       </a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -57,7 +54,7 @@
         </ul>
       </div>    
     </nav>
-  </div>
+  </header>
 
   <main>
     <div class="container">
@@ -65,98 +62,81 @@
       <div class="row card-group form-fly">
         <div class="col-lg-4 col-md-6 col-sm-12 col-card">
           <div class="card">
-            <img src="images/plain.jpg" class="card-img-top" alt="...">
+            <img src="images/plain.jpg" class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">Санкт-Петербург - Москва</h5>
               <p class="card-text">Количество пассажиров - 2</p>
               <p class="card-text">Цена - 20000 руб</p>
               <p class="card-text">Дата вылета - 12.02.2021</p>
               <p class="card-text">Время вылета - 17:00</p>
-              <a href="#" class="btn btn-primary little " data-toggle="modal" data-target="#myModal">Подробнее</a>
+              <button class="btn btn-primary little"><a href="#" >Подробнее</a></button>
             </div>
 
           </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12  col-card">  
           <div class="card">
-            <img src="images/plain.jpg" class="card-img-top" alt="...">
+            <img src="images/plain.jpg" class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">Санкт-Петербург - Москва</h5>
               <p class="card-text">Количество пассажиров - 2</p>
               <p class="card-text">Цена - 20000 руб</p>
               <p class="card-text">Дата вылета - 12.02.2022</p>
               <p class="card-text">Время вылета - 17:00</p>
-              <a href="#" class="btn btn-primary little" data-toggle="modal" data-target="#myModal">Подробнее</a>
+              <button class="btn btn-primary little"><a href="#" >Подробнее</a></button>
               
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12 col-card">
           <div class="card">
-            <img src="images/plain.jpg" class="card-img-top" alt="...">
+            <img src="images/plain.jpg" class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">Санкт-Петербург - Нижний Новгород</h5>
               <p class="card-text">Количество пассажиров - 2</p>
               <p class="card-text">Цена - 20000 руб</p>
               <p class="card-text">Дата вылета - 12.02.2021</p>
               <p class="card-text">Время вылета - 17:00</p>
-              <a href="#" class="btn btn-primary little" data-toggle="modal" data-target="#myModal">Подробнее</a>
+              <button class="btn btn-primary little"><a href="#" >Подробнее</a></button>
             </div>
-          </div>
-        </div>
-
-        <div id="myModal" class="modal" tabindex="-1">
-          <div class="modal-dialog">
-              <div class="modal-content">
-                  <div class="modal-header">
-                      <h5 class="modal-title">Подтверждение</h5>
-                      <button type="button" class="close" data-dismiss="modal">×</button>                
-                  </div>
-                  <div class="modal-body">
-                      <p>Вы уверены, что хотите перейти к странице оплаты?</p>
-                  </div>
-                  <div class="modal-footer">
-                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Оплатить</button>
-                  </div>
-              </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12  col-card">
           <div class="card">
-            <img src="images/plain.jpg" class="card-img-top" alt="...">
+            <img src="images/plain.jpg" class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">Санкт-Петербург - Нижний Новгород</h5>
               <p class="card-text">Количество пассажиров - 2</p>
               <p class="card-text">Цена - 20000 руб</p>
               <p class="card-text">Дата вылета - 12.02.2022</p>
               <p class="card-text">Время вылета - 17:00</p>
-              <a href="#" class="btn btn-primary little" data-toggle="modal" data-target="#myModal">Подробнее</a>
+              <button class="btn btn-primary little"><a href="#" >Подробнее</a></button>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12  col-card">  
           <div class="card">
-            <img src="images/plain.jpg" class="card-img-top" alt="...">
+            <img src="images/plain.jpg" class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">Санкт-Петербург - Москва - Нижний Новгород</h5>
               <p class="card-text">Количество пассажиров - 2</p>
               <p class="card-text">Цена - 20000 руб</p>
               <p class="card-text">Дата вылета - 12.02.2022</p>
               <p class="card-text">Время вылета - 17:00</p>
-              <a href="#" class="btn btn-primary little">Подробнее</a>
+              <button class="btn btn-primary little"><a href="#" >Подробнее</a></button>
             </div>
           </div>
         </div>
         <div class="col-lg-4 col-md-6 col-sm-12  col-card">
           <div class="card">
-            <img src="images/plain.jpg" class="card-img-top" alt="...">
+            <img src="images/plain.jpg" class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">Санкт-Петербург - Москва</h5>
               <p class="card-text">Количество пассажиров - 2</p>
               <p class="card-text">Цена - 20000 руб</p>
               <p class="card-text">Дата вылета - 12.02.2021</p>
               <p class="card-text">Время вылета - 17:00</p>
-              <a href="#" class="btn btn-primary little" data-toggle="modal" data-target="#myModal">Подробнее</a>
+              <button class="btn btn-primary little"><a href="#" >Подробнее</a></button>
             </div>
           </div>
         </div>
