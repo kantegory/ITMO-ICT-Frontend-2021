@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="../static/css/auth.css">
+    <title>Document</title>
+</head>
+
+<body>
+  <form class="form" id="auth-submit-form">
+    <h1 class="logo">Delmitary</h1>
+    <div class="form-group">
+      <label for="username">Введите логин:</label>
+      <input type="text" name="username" id="username" autocomplete="off">
+    </div>
+
+    <div class="form-group">
+      <label for="password">Введите пароль:</label>
+      <input type="password" name="password" id="password">
+    </div>
+    
+    <button class="submit-button" type="submit">Отправить</button>
+  </form>
+
+
+  <!-- Ваши js файлы здесь   -->
+  <script src="../api/base.js" type="module" ></script>
+  <script src="../api/auth.js"></script>
+
+  <script>
+    const api = new AuthAPI();
+
+    window.addEventListener( "load", function () {
+      async function login() {
+        const login = document.getElementById('username').value
+        const password = document.getElementById('password').value
+
+        const response = await api.login(login, password);
+                
+        if(response.status == 200) {
+          const data = await response.json()
+          window.sessionStorage.setItem('auth_token', data['auth_token']);
+          alert('Auth token: ' + data['auth_token'])
+        }else {
+          alert('Error: ' + response.statusText)
+        }
+
+      }
+
+      const form = document.getElementById('auth-submit-form');
+
+      form.addEventListener("submit", function ( event ) {
+        event.preventDefault();
+
+  
+        login();
+      });
+    });
+  </script>
+</body>
+</html>
