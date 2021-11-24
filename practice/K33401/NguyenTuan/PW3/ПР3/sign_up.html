@@ -1,18 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE HTML>
+<html lang="en"></html>
 <head>
-    <meta charset = "utf-8">
-    <title> booking-hotel</title>
+<title>Login form </title>
+    <link rel="stylesheet" href="/lap1/css/signup.css">
     <link rel="stylesheet" href="/lap1/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/lap1/css/offers.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/lap1/css/light.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="/lap1/css/dark.css" media="(prefers-color-scheme: dark)">
 </head>
 <body>
     <header>
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg narbar-light bg-light nav">
+        <fieldset class="switcher">
+            <legend class="switcher__legend"></legend>
+            <input class="switcher__radio switcher__radio--light"
+            type="radio" name="color-scheme" value="light"
+            aria-label="Light">
+            <input class="switcher__radio switcher__radio--auto"
+            type="radio" name="color-scheme" value="auto"
+            aria-label="auto" checked>
+            <input class="switcher__radio switcher__radio--dark"
+            type="radio" name="color-scheme" value="dark"
+            aria-label="Dark">
+            <div class="switcher__status"></div>
+        </fieldset>
+        <script src="js/index.js"></script>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg narbar-light bg-light1">
             <a class="navbar_brand" href="#top">
                 <img src="img/logo.png" alt="logo">MyLab
             </a>
@@ -38,42 +52,31 @@
         </nav>
     </header>
     <main>
-        <!--bodymain-->
-        <div class="container">
-            <div class="tieude">
-                <h5 class="hotel-name">Where do you want to find ?</h5>
-            </div>
-            <div class="search">
-                <input type="text" name="" id="inputt" class="text1">
-                <button type="submit" class="btn btn-primary" id="search-btn"> Search </button>
-            </div>
-            <div class="row" id ="row">
-                <div class="col">
-                    <a href="#" class="hotel-link">
-                        <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
-                        <h5 class="hotel-name">Russia</h5>
-                    </a>
+        <!--body_main-->
+        <div class="header-main">
+            <h1>Sign Up Form</h1>
+            <div class="header-bottom">
+                <div class="header-right">
+                    <div class="header-left-bottom">     
+                        <form action="#" method="post">
+                            <input type="text"  value="First Name" name="name">
+                            <input type="text"  value="mail@example.com" name="mail">
+                            <input type="text"  value="Password" name="password">
+                            <input type="text"  value="Confirm Password" name="password">
+                            <div class="remember">
+                                <span class="checkbox1">
+                                </span>
+                                <div class="clear"> </div>
+                            </div>
+                            
+                                <input type="submit" value="Register">
+                        </form>		
+                    </div>
                 </div>
-                <div class="col">    
-                    <a href="#" class="hotel-link">
-                        <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
-                        <h5 class="hotel-name">Russia</h5>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#" class="hotel-link">
-                        <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
-                        <h5 class="hotel-name">Russia</h5>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#" class="hotel-link">
-                        <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
-                        <h5 class="hotel-name">Russia</h5>
-                    </a>
-                </div>
+            
             </div>
         </div>
+        <!--header end here-->
     </main>
     <footer>
     <!--footer-->
@@ -94,6 +97,5 @@
             <p class="copyright">Nguyentuan ©2021</p>
         </div>
     </footer>
-    <script src="js/searching.js"></script>
 </body>
 </html>

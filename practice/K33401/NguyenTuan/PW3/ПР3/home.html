@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset = "utf-8">
+    <title> booking-hotel</title>
+    <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.min.css">  
+    <link rel="stylesheet" href="/lap1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/lap1/css/tooplate-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="/lap1/css/light.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="/lap1/css/dark.css" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+    <fieldset class="switcher">
+        <legend class="switcher__legend"></legend>
+        <input class="switcher__radio switcher__radio--light"
+        type="radio" name="color-scheme" value="light"
+        aria-label="Light">
+        <input class="switcher__radio switcher__radio--auto"
+        type="radio" name="color-scheme" value="auto"
+        aria-label="auto" checked>
+        <input class="switcher__radio switcher__radio--dark"
+        type="radio" name="color-scheme" value="dark"
+        aria-label="Dark">
+        <div class="switcher__status"></div>
+    </fieldset>
+    <script src="js/index.js"></script>
+    <header class="header">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg narbar-light bg-light1">
+            <a class="navbar_brand" href="#top">
+                <img src="img/logo.png" alt="logo">MyLab
+            </a>
+            <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#top">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lap1/offers.html">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#fter">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lap1/login.html">Log In</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lap1/sign_up.html">Sign Up</a>
+                    </li> 
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!-- Option-->
+        <div class="bg-1 tm-bg-img tm-section">
+            <div class="tm-bg-white">
+                <div class="container ">
+                    <div class="row">
+                        <form action="index.html" method="get" class="tm-search-form">
+                            <div class="form-row tm-search-form-row">
+                                <div class="form-group tm-form-element tm-form-element-100">
+                                    <i class="fa fa-map-marker fa-2x tm-form-element-icon"></i>
+                                    <input name="city" type="text" class="form-control" id="inputCity" placeholder="Type your destination...">
+                                </div>
+                                <div class="form-group tm-form-element tm-form-element-50">
+                                    <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
+                                    <input name="check-in" type="date" class="form-control" id="inputCheckIn" placeholder="Check In">
+                                </div>
+                                <div class="form-group tm-form-element tm-form-element-50">
+                                    <i class="fa fa-calendar fa-2x tm-form-element-icon"></i>
+                                    <input name="check-out" type="date" class="form-control" id="inputCheckOut" placeholder="Check Out">
+                                </div>
+                            </div>
+                            <div class="form-row tm-search-form-row">
+                                <div class="form-group tm-form-element tm-form-element-2">                                            
+                                    <select name="adult" class="form-control tm-select" id="adult">
+                                        <option value="">Adult</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <i class="fa fa-2x fa-user tm-form-element-icon"></i>
+                                </div>
+                                <div class="form-group tm-form-element tm-form-element-2">                                            
+                                    <select name="children" class="form-control tm-select" id="children">
+                                        <option value="">Children</option>
+                                        <option value="0">0</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <i class="fa fa-user tm-form-element-icon tm-form-element-icon-small"></i>
+                                </div>
+                                <div class="form-group tm-form-element tm-form-element-2">
+                                    <select name="room" class="form-control tm-select" id="room">
+                                        <option value="">Room</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                    </select>
+                                    <i class="fa fa-2x fa-bed tm-form-element-icon"></i>
+                                </div>
+                                <div class="form-group tm-form-element tm-form-element-2">
+                                    <button type="submit" class="btn btn-primary tm-btn-search">Check Availability</button>
+                                </div>
+                            </div>
+                        </form>                        
+                    </div>      
+                </div>
+            </div>
+        </div>
+        <!--body-main-->
+    </main>
+    <footer>
+    <!--footer-->
+        <div class="footer-basic" id="fter">
+            <div class="social">
+                <a href="#"><i class="icon ion-social-instagram"></i></a>
+                <a href="#"><i class="icon ion-social-snapchat"></i></a>
+                <a href="#"><i class="icon ion-social-twitter"></i></a>
+                <a href="#"><i class="icon ion-social-facebook"></i></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Nguyentuan ©2021</p>
+        </div>
+    </footer>
+</body>
+</html>

@@ -8,11 +8,27 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/lap1/css/light.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="/lap1/css/dark.css" media="(prefers-color-scheme: dark)">
 </head>
 <body>
     <header>
+        <fieldset class="switcher">
+            <legend class="switcher__legend"></legend>
+            <input class="switcher__radio switcher__radio--light"
+            type="radio" name="color-scheme" value="light"
+            aria-label="Light">
+            <input class="switcher__radio switcher__radio--auto"
+            type="radio" name="color-scheme" value="auto"
+            aria-label="auto" checked>
+            <input class="switcher__radio switcher__radio--dark"
+            type="radio" name="color-scheme" value="dark"
+            aria-label="Dark">
+            <div class="switcher__status"></div>
+        </fieldset>
+        <script src="js/index.js"></script>
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg narbar-light bg-light nav">
+        <nav class="navbar navbar-expand-lg narbar-light bg-light1">
             <a class="navbar_brand" href="#top">
                 <img src="img/logo.png" alt="logo">MyLab
             </a>
@@ -39,38 +55,40 @@
     </header>
     <main>
         <!--bodymain-->
-        <div class="container">
-            <div class="tieude">
-                <h5 class="hotel-name">Where do you want to find ?</h5>
-            </div>
-            <div class="search">
-                <input type="text" name="" id="inputt" class="text1">
-                <button type="submit" class="btn btn-primary" id="search-btn"> Search </button>
-            </div>
-            <div class="row" id ="row">
-                <div class="col">
-                    <a href="#" class="hotel-link">
-                        <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
-                        <h5 class="hotel-name">Russia</h5>
-                    </a>
+        <div class="body">
+            <div class="container">
+                <div class="tieude">
+                    <h5 class="hotel-name">Where do you want to find ?</h5>
                 </div>
-                <div class="col">    
-                    <a href="#" class="hotel-link">
-                        <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
-                        <h5 class="hotel-name">Russia</h5>
-                    </a>
+                <div class="search">
+                    <input type="text" name="" id="inputt" class="text1">
+                    <button type="submit" class="btn btn-primary" id="search-btn"> Search </button>
                 </div>
-                <div class="col">
-                    <a href="#" class="hotel-link">
-                        <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
-                        <h5 class="hotel-name">Russia</h5>
-                    </a>
-                </div>
-                <div class="col">
-                    <a href="#" class="hotel-link">
-                        <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
-                        <h5 class="hotel-name">Russia</h5>
-                    </a>
+                <div class="row" id ="row">
+                    <div class="col">
+                        <a href="#" class="hotel-link">
+                            <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
+                            <h5 class="hotel-name">Russia</h5>
+                        </a>
+                    </div>
+                    <div class="col">    
+                        <a href="#" class="hotel-link">
+                            <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
+                            <h5 class="hotel-name">Russia</h5>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#" class="hotel-link">
+                            <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
+                            <h5 class="hotel-name">Russia</h5>
+                        </a>
+                    </div>
+                    <div class="col">
+                        <a href="#" class="hotel-link">
+                            <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
+                            <h5 class="hotel-name">Russia</h5>
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>
