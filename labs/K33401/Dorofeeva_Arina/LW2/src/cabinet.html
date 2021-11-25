@@ -12,6 +12,8 @@
 	<script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/light.css" media="(prefers-color-scheme: light)">
+	<link rel="stylesheet" href="css/dark.css" media="(prefers-color-scheme: dark)">
 </head>
 <body>
 <!-- шапка -->
@@ -50,7 +52,7 @@
 	<h2 class="text-center display-4 pb-3">VIDEOS</h2>
 	<input class="form-control" id="searchInput" type="text" placeholder="Search..">
 	<br>
-	<table class="table table-bordered table-striped">
+	<table class="table table-bordered table-striped cards">
 		<thead>
 		<tr>
 			<th class="text-center">TAGS</th>
@@ -58,81 +60,7 @@
 		</tr>
 		</thead>
 		<tbody id="videoTable">
-		<tr>
-			<td class="p-5 w-25">axolotls on mars meme</td>
-			<td>
-				<div class="card pull-right">
-					<div class="card-body">
-						<div class="embed-responsive embed-responsive-16by9">
-							<iframe src="https://www.youtube.com/embed/nX5SB_HQvBs"
-									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-									allowfullscreen></iframe>
-						</div>
-					</div>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td class="p-5 w-25">Axolotls Have The Best Smiles | The Dodo</td>
-			<td>
-				<div class="embed-responsive embed-responsive-16by9">
-					<iframe src="https://www.youtube.com/embed/cj0iq-bWnsg"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen></iframe>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td class="p-5 w-25">colored axolotls yellow black pink</td>
-			<td>
-				<div class="embed-responsive embed-responsive-16by9">
-					<iframe src="https://www.youtube.com/embed/uhdTmsKvtwU"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen></iframe>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td class="p-5 w-25">axolotl cartoon animation</td>
-			<td>
-				<div class="embed-responsive embed-responsive-16by9">
-					<iframe src="https://www.youtube.com/embed/y1GcLYsWHQw"
-							title="YouTube video player" frameborder="0"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen></iframe>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td class="p-5 w-25">axolotl education animation russian</td>
-			<td>
-				<div class="embed-responsive embed-responsive-16by9">
-					<iframe src="https://www.youtube.com/embed/easB9p8FwlM"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen></iframe>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td class="p-5 w-25">axolotl cute plays</td>
-			<td>
-				<div class="embed-responsive embed-responsive-16by9">
-					<iframe src="https://www.youtube.com/embed/Ag0BoS1ebJA"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen></iframe>
-				</div>
-			</td>
-		</tr>
-		<tr>
-			<td class="p-5 w-25">axolotl yawning meme</td>
-			<td>
-				<div class="embed-responsive embed-responsive-16by9">
-					<iframe src="https://www.youtube.com/embed/ow564GTkr3U"
-							allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-							allowfullscreen></iframe>
-				</div>
-			</td>
-		</tr>
+
 		</tbody>
 	</table>
 
@@ -154,7 +82,7 @@
 	<div class="row padding">
 		<div class="col-md-4">
 			<div class="card">
-				<div class="card-body">
+				<div class="card-body cards">
 					<h4 class="card-title">iStock</h4>
 					<p class="card-text">Axolotl stock videos and footage. Browse 129 axolotl stock videos and clips
 										 available to use in your projects, or search for aardvark or ostrich to find
@@ -167,7 +95,7 @@
 		</div>
 		<div class="col-md-4">
 			<div class="card">
-				<div class="card-body">
+				<div class="card-body cards">
 					<h4 class="card-title">Virtual Classroom</h4>
 					<p class="card-text">This space will offer a new place to learn more about a variety of topics. They
 										 may relate to the library itself, current hot topics, or subjects of general
@@ -180,7 +108,7 @@
 		<div class="col-md-4">
 			<div class="card">
 				<img src="" class="card-img-top"/>
-				<div class="card-body">
+				<div class="card-body cards">
 					<h4 class="card-title">SCIENTIFIC AMERICAN</h4>
 					<p class="card-text">Axolotls are used to study cancer development and organ regeneration, but their
 										 numbers in the wild are dwindling. Conserving wild salamanders could be vital
@@ -214,6 +142,7 @@
 <!-- скрипты -->
 <script src="js/script.js"></script>
 <script>
+	loadVideos();
     search();
 </script>
 </body>

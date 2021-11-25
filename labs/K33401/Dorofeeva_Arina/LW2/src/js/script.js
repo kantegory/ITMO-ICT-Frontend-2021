@@ -15,6 +15,30 @@ function eye(a, input, i) {
 }
 
 // my page
+let videoTable = document.getElementById("videoTable");
+
+function loadVideos(){
+    fetch("http://localhost:3000/videos/")
+        .then(resp => {
+            return resp.json()
+        })
+        .then(data => {
+            console.log(data)
+            for (let index = 0; index < data.length; index++) {
+                videoTable.innerHTML +=
+                    "<tr><td class=\"p-5 w-25\">" + data[index].tags + "</td>" +
+                    "<td><div class=\"card pull-right\"><div class=\"card-body\">" +
+                    "<div class=\"embed-responsive embed-responsive-16by9\">" +
+                    "<iframe src="+ data[index].src +
+                    " allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture\"\n" +
+                    "allowfullscreen></iframe></div></div></div></td></tr>"
+            }
+            console.log(videoTable.innerHTML);
+        }).catch((error) => {
+        console.log("ERROR: " + error);
+    });
+}
+
 function search() {
     $(document).ready(function () {
         $("#searchInput").on("keyup", function () {

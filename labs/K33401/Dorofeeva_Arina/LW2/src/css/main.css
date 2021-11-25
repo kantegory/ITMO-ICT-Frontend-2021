@@ -1,11 +1,19 @@
 body, html {
 	width: 100%;
 	height: 100%;
-	color: black;
+	background-color: var(--back-color);
+	color: var(--outline-text-color);
 }
 
 .bg-custom {
-	background-color: #E9ECEF;
+	background-color: var(--back-color);
+}
+
+.navbar li a {
+	color: var(--gray) !important;
+}
+.navbar li a:hover {
+	color: var(--outline-text-color) !important;
 }
 
 .navbar-brand .img {
@@ -20,7 +28,7 @@ body, html {
 }
 
 .nav-link {
-	font-size: 1.1em !important
+	font-size: 1.1em !important;
 }
 
 .carousel-size {
@@ -74,6 +82,8 @@ body, html {
 	border-radius: 0;
 	width: 70%;
 	margin: 20px auto 0;
+	color: var(--outline-text-color);
+	background-color: var(--back-back-color);
 }
 
 .padding {
@@ -138,8 +148,8 @@ body, html {
 
 #outline-text {
 	padding: 20px 20px 20px;
-	color: black;
-	background-color: #E9ECEF;
+	color: var(--outline-text-color);
+	background-color: var(--back-color);
 }
 
 .social a {
@@ -160,7 +170,7 @@ body, html {
 }
 
 .fa-github {
-	color: white;
+	color: var(--github-color);
 }
 
 .fa-telegram:hover, .fa-instagram:hover, .fa-vk:hover, .fa-github:hover {
@@ -168,9 +178,9 @@ body, html {
 }
 
 footer {
-	background-color: black;
+	background-color: var(--footer-back-color);
 	padding-top: 50px;
-	color: white;
+	color: var(--text-color);
 }
 
 /* регистрация и авторизация */
@@ -178,7 +188,7 @@ footer {
 #signIn, #register {
 	background: url("../img/bg.jpg");
 	font-size: 1em;
-	color: #E9ECEF;
+	color: white;
 }
 
 #authorizationForm, #registrationForm {
@@ -244,4 +254,9 @@ footer {
 	background-blend-mode: multiply;
 	background: url("../img/bg.jpg") fixed repeat;
 	min-height: 60%;
+}
+
+.cards{
+	color: var(--outline-text-color);
+	background-color: var(--back-back-color);
 }
