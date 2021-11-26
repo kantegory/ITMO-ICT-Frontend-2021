@@ -3,30 +3,24 @@
 <head>
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&family=Work+Sans:wght@300;400&display=swap"
-          rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta name="color-scheme" content="light dark">
     <meta name="theme-color" media="(prefers-color-scheme:lgiht)" content="color">
     <meta name="theme-color" media="(prefers-color-scheme:dark)" content="color">
-    <script>
-        if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
-            document.documentElement.style.display = 'none';
-            document.head.insertAdjacentHTML(
-                'beforeend',
-                '<link rel="stylesheet" href="./styles/light.css" onload="document.documentElement.style.display = \'\'">',
-            );
-        }
-    </script>
-    <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="./styles/light.css" media="(prefers-color-scheme:lgiht)">
-    <link rel="stylesheet" href="./styles/dark.css" media="(prefers-color-scheme:dark)">
+    <script>if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+  document.documentElement.style.display = 'none';
+  document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="/light.css" onload="document.documentElement.style.display = \'\'">');
+}</script>
+    <link rel="stylesheet" href="/styles.6145e9cd.css">
+    <link rel="stylesheet" href="/light.a03bf2dc.css" media="(prefers-color-scheme:lgiht)">
+    <link rel="stylesheet" href="/dark.c7629f57.css" media="(prefers-color-scheme:dark)">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>Hotel</title>
-</head>
+<script src="/styles.6145e9cd.js"></script></head>
 <body>
 
 <nav>
@@ -53,11 +47,11 @@
     <form action="#" id="sign-in">
         <div class="data">
             <i class="ri-user-line"></i>
-            <input type="text" placeholder="Email or username" required>
+            <input type="text" placeholder="Email or username" required="">
         </div>
         <div class="data">
             <i class="ri-key-fill"></i>
-            <input type="text" placeholder="Password" required>
+            <input type="text" placeholder="Password" required="">
         </div>
         <div class="forgot-pas"><a href="#">Forgot password?</a></div>
         <div class="btn">
@@ -69,19 +63,19 @@
     <form action="#" id="sign-up" class="form--hidden">
         <div class="data">
             <i class="ri-user-line"></i>
-            <input type="text" placeholder="Username" required>
+            <input type="text" placeholder="Username" required="">
         </div>
         <div class="data">
             <i class="ri-mail-line"></i>
-            <input type="text" placeholder="Email" required>
+            <input type="text" placeholder="Email" required="">
         </div>
         <div class="data">
             <i class="ri-key-fill"></i>
-            <input type="text" placeholder="Password" required>
+            <input type="text" placeholder="Password" required="">
         </div>
         <div class="data">
             <i class="ri-key-fill"></i>
-            <input type="text" placeholder="Confirm password" required>
+            <input type="text" placeholder="Confirm password" required="">
         </div>
         <div class="btn">
             <div class="inner"></div>
@@ -99,7 +93,7 @@
         </div>
         <div class="filter-box">
             <div class="text">Check in</div>
-            <input class="date" type="date">
+            <input type="date">
         </div>
         <div class="filter-box">
             <div class="text">Guests</div>
@@ -139,13 +133,12 @@
             <div class="description">
                 <div class="name">Lagom-House</div>
             </div>
-            <img
-                src="https://a0.muscache.com/im/pictures/65953e73-b1bf-4ee5-ac34-bc68a76406cc.jpg?im_w=1200" alt="">
+            <img src="https://a0.muscache.com/im/pictures/65953e73-b1bf-4ee5-ac34-bc68a76406cc.jpg?im_w=1200" alt="">
         </div>
     </div>
 </div>
-<script type="module" src="./node_modules/axios/dist/axios.js"></script>
-<script type="module" src="./parseApi.js"></script>
-<script type="module" src="/index.js"></script>
+<script type="module" src="/axios.c279df45.js"></script>
+<script type="module" src="/parseApi.f69c223a.js"></script>
+<script type="module" src="/LW1.e31bb0bc.js"></script>
 </body>
 </html>
