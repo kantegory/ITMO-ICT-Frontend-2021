@@ -15,6 +15,7 @@ async function getHotels(url) {
                 hotelImageContainer.classList.add('hotel-image')
                 const hotelImage = document.createElement('img')
                 hotelImage.src = element.img
+                hotelImage.alt = 'Image of hotel'
                 hotelImageContainer.appendChild(hotelImage)
                 hotelCard.appendChild(hotelImageContainer)
                 const hotelContent = document.createElement('div')
