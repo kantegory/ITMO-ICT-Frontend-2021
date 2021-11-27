@@ -1,20 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&family=Poppins&family=Work+Sans:wght@300;400&display=swap');
 
 :root {
-color-scheme:light dark;
+    color-scheme: light dark;
 }
 
-body{
+body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     background-color: var(--body-back);
 }
+
 nav {
     font-family: 'Space Mono', monospace;
     height: 80px;
     display: flex;
-    background-color: var(--color-dark);
+    background-color: var(--dark-color);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
     width: 100%;
 }
@@ -25,7 +26,7 @@ nav .menu {
     justify-content: right;
     height: 100%;
     width: 90%;
-    background-color: var(--color-dark);
+    background-color: var(--dark-color);
     margin: auto;
 }
 
@@ -37,7 +38,7 @@ nav .menu {
 }
 
 .logo a {
-    color: var(--color-align);
+    color: var(--text-color);
     font-size: 27px;
     font-weight: 600;
     text-decoration: 0;
@@ -56,7 +57,7 @@ nav .menu {
 }
 
 .menu a {
-    color: var(--color-align);
+    color: var(--text-color);
     font-size: 17px;
     font-weight: 600;
     text-decoration: 0;
@@ -66,9 +67,95 @@ nav .menu {
 }
 
 .menu li a:hover {
-    color: var(--menu-back);
-    background: var(--color-align);
+    color: var(--text-hover);
+    background: var(--text-color);
 
+}
+
+
+.switcher {
+    position: absolute;
+    bottom: 36px;
+    left: 50%;
+    margin: 0;
+    margin-left: -50px;
+    padding: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: none;
+}
+
+/* Switcher Legend */
+
+.switcher__legend {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Switcher Radio */
+
+.switcher__radio {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    transition: filter 0.1s ease-in;
+}
+
+.switcher__radio:focus {
+    outline: none;
+}
+
+.switcher__radio--light {
+    background-image: url('../icons/light.svg');
+}
+
+.switcher__radio--auto {
+    background-image: url('../icons/auto.svg');
+}
+
+.switcher__radio--dark {
+    background-image: url('../icons/dark.svg');
+}
+
+/* Switcher Status */
+
+.switcher__status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    box-shadow: 0 0 0 2px rgb(0 0 0 / 0.2);
+    border-radius: 18px;
+    background-color: rgb(255 255 255 / 0.5);
+    background-repeat: no-repeat;
+    background-image: url('../icons/status.svg');
+    background-size: 32px;
+    background-position: center;
+    transition: background-position 0.1s ease-in;
+}
+
+.switcher__radio:focus-visible ~ .switcher__status {
+    box-shadow: 0 0 0 2px black;
+}
+
+.switcher__radio--light:checked ~ .switcher__status {
+    background-position: left 2px center;
+}
+
+.switcher__radio--auto:checked ~ .switcher__status {
+    background-position: center center;
+}
+
+.switcher__radio--dark:checked ~ .switcher__status {
+    background-position: right 2px center;
 }
 
 .btn-menu {
@@ -81,10 +168,10 @@ nav .menu {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: var(--color-dark);
+    background: var(--text-color);
     width: 410px;
     padding: 30px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     font-family: 'Poppins', sans-serif;
 }
 
@@ -96,7 +183,7 @@ nav .menu {
     font-size: 35px;
     font-weight: 600;
     text-align: center;
-    color: var(--color-align);
+    color: black;
 }
 
 .login-container form {
@@ -115,8 +202,7 @@ form .data input {
     padding-left: 10px;
     font-size: 17px;
     border: 1px solid lightgrey;
-    background-color: var(--color-align);
-
+    background-color: var(--text-color);
 }
 
 .login-container .close-btn {
@@ -124,10 +210,11 @@ form .data input {
     right: 20px;
     top: 15px;
     font-size: 35px;
+    color: var(--button-color);
 }
 
 .login-container .close-btn:hover {
-    color: var(--color-light);
+    color: var(--text-hover);
 }
 
 form .btn {
@@ -144,7 +231,7 @@ form .btn .inner {
     position: absolute;
     left: -100%;
     z-index: -1;
-    background: var(--color-dark);
+    background: var(--dark-color);
 }
 
 form .btn button {
@@ -152,7 +239,7 @@ form .btn button {
     height: 100%;
     background: none;
     border: none;
-    color: var(--color-align);
+    color: var(--text-color);
     font-weight: 600;
     text-transform: uppercase;
     cursor: pointer;
@@ -163,7 +250,7 @@ form .forgot-pas {
 }
 
 form .forgot-pas a {
-    color: var(--color-light);
+    color: black;
     text-decoration: none;
 }
 
@@ -173,12 +260,12 @@ form .forgot-pas a:hover {
 
 form .form-change-link {
     text-align: center;
-    color: var(--color-align);
+    color: black;
 }
 
 form .form-change-link a {
     text-decoration: none;
-    color: var(--color-align);
+    color: black;
 }
 
 form .form-change-link a:hover {
@@ -196,8 +283,8 @@ form .form-change-link a:hover {
     transform: translate(-50%, -50%);
     width: 800px;
     padding: 30px;
-    background-color: var(--color-dark);
-    border: var(--color-align) solid 2px;
+    background-color: var(--text-color);
+    border: var(--dark-color) solid 1px;
     border-radius: 25px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     z-index: 2;
@@ -218,7 +305,6 @@ form .form-change-link a:hover {
     font-family: 'Poppins', sans-serif;
     text-align: left;
     align-items: center;
-
 }
 
 .filter-window-mobile {
@@ -230,7 +316,7 @@ form .form-change-link a:hover {
     width: 300px;
     height: 70px;
     padding: 15px;
-    border: var(--color-align) solid 2px;
+    border: var(--dark-color) solid 1px;
     border-radius: 25px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     z-index: 2;
@@ -256,8 +342,8 @@ form .form-change-link a:hover {
     padding-left: 10px;
     padding-right: 10px;
     margin-right: 5px;
-    background-color: var(--color-align);
-    border: solid var(--color-dark) 1px;
+    background-color: var(--text-color);
+    border: solid var(--dark-color) 1px;
     border-radius: 25px;
     font-size: 15px;
 }
@@ -282,14 +368,14 @@ form .form-change-link a:hover {
     padding-left: 10px;
     padding-right: 10px;
     margin-right: 15px;
-    background-color: var(--color-align);
-    border: solid var(--color-dark) 1px;
+    background-color: var(--text-color);
+    border: solid var(--dark-color) 1px;
     border-radius: 25px;
     font-size: 15px;
 }
 
-.search-btn {
 
+.search-btn {
     display: flex;
     align-items: center;
     justify-items: right;
@@ -306,8 +392,8 @@ form .form-change-link a:hover {
     border: none;
     width: 30px;
     height: 30px;
-    color: var(--color-align);
-    background-color: var(--color-dark);
+    color: var(--text-color);
+    background-color: var(--dark-color);
     border-radius: 32px;
     font-size: 15px;
 }
@@ -317,69 +403,76 @@ form .form-change-link a:hover {
     border: none;
     width: 60px;
     height: 60px;
-    color: var(--color-align);
-    background-color: var(--color-dark);
+    color: var(--text-color);
+    background-color: var(--dark-color);
     border-radius: 32px;
     font-size: 25px;
 
 }
 
 .search-btn button:hover {
-    color: var(--color-light);
+    color: var(--text-hover);
 }
 
 .hotels-container {
-
     margin: 210px auto;
     max-width: calc(100% - 80px);
 }
-.hotel-container{
+
+.hotel-container {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(400px,1fr));
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
     gap: 2rem;
 }
-.hotel-image{
+
+.hotel-image {
     margin: 0;
     padding: 0;
     overflow: hidden;
 }
-.hotel-image img{
+
+.hotel-image img {
     max-width: 100%;
     height: auto;
     border-radius: 20px 20px 0 0;
 }
-.hotel-card{
-    background: white;
+
+.hotel-card {
+    background: var(--card-color);
     border-radius: 20px;
     transition: 0.3s;
-    box-shadow: 0 4px 20px 0 rgba(34,68, 123, 0.2);
-    cursor:pointer;
+    box-shadow: 0 4px 20px 0 rgba(34, 68, 123, 0.2);
+    cursor: pointer;
 }
 
-.hotel-content{
+.hotel-content {
     padding: 2rem;
 }
-.hotel-content .hotel-title{
+
+.hotel-content .hotel-title {
     margin: 1rem 0;
-    color: var(--color-dark);
+    color: var(--card-text);
 }
-.hotel-content .hotel-address{
+
+.hotel-content .hotel-address {
     font-size: 1rem;
     line-height: 1.5rem;
-    color: var(--color-light);
+    color: var(--card-text);
     margin: 0;
 }
-.hotel-content .hotel-price{
+
+.hotel-content .hotel-price {
     font-size: 1.2rem;
     line-height: 1.5rem;
-    color: var(--color-light);
-    margin-top:10px;
+    color: var(--card-price-color);
+    margin-top: 10px;
 }
-.hotel-content .hotel-rating{
+
+.hotel-content .hotel-rating {
     align-: center;
     font-size: 1.5rem;
     letter-spacing: 0.1rem;
-    color:var(--star-color);
+    color: var(--star-color);
     display: block;
 }
 
@@ -450,13 +543,15 @@ form .form-change-link a:hover {
 }
 
 @media (max-width: 944px) {
-    .hotels-blocks{
+    .hotels-blocks {
         max-width: 608px;
     }
-    .hotel-card{
+
+    .hotel-card {
         display: grid;
         grid-template-rows: 220px 1fr;
     }
+
     .logo {
         display: flex;
         align-content: center;
@@ -482,7 +577,7 @@ form .form-change-link a:hover {
         width: 100%;
         padding-top: 45px;
         height: 100%;
-        background: var(--color-dark);
+        background: var(--dark-color);
         z-index: 12;
         transition: 0.3s;
     }
@@ -501,7 +596,7 @@ form .form-change-link a:hover {
         display: inline-block;
         position: absolute;
         cursor: pointer;
-        background: var(--color-dark);
+        background: var(--dark-color);
         border: none;
         margin: 15px;
         right: 0px;
@@ -512,7 +607,7 @@ form .form-change-link a:hover {
     .bar1, .bar2, .bar3 {
         width: 35px;
         height: 5px;
-        background-color: var(--color-align);
+        background-color: var(--text-color);
         margin: 6px 0;
         transition: 0.4s;
     }
@@ -539,7 +634,7 @@ form .form-change-link a:hover {
         visibility: visible;
     }
 
-    .hotels-blocks {
+    .hotels-container {
         visibility: hidden;
     }
 
