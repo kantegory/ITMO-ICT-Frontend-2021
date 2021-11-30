@@ -1,0 +1,36 @@
+.bg-color .navbar{
+    background: #111111;
+    color: #f4f4f4;
+}
+.bg-color{
+    background: grey;
+}
+maAreal #title {
+    color: #FFFFFF;
+}
+maAreal .windowMe {
+    color: white;
+    background: #373737;
+}
+.cite{
+    color: #f4f4f4;
+}
+.filter{
+    background: #373737;
+    color: #f4f4f4;
+}
+.filter a{
+    background: #373737;
+    color: #f4f4f4;
+}
+footer{
+    background: grey;
+    color: white;
+}
+maAreal .cardWeather{
+    color: white!important;
+    background: #373737!important;
+}
+#btnDark{
+    color: white;
+}
