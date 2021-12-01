@@ -1,13 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&family=Work+Sans:wght@300;400&display=swap"
           rel="stylesheet">
     <meta charset="UTF-8">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" media="(prefers-color-scheme:light)" content="#fff">
+    <meta name="theme-color" media="(prefers-color-scheme:dark)" content="#121212">
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+            document.documentElement.style.display = 'none';
+            document.head.insertAdjacentHTML(
+                'beforeend',
+                '<link rel="stylesheet" href="./styles/light.css" onload="document.documentElement.style.display = \'\'">',
+            );
+        }
+    </script>
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" href="./styles/light.css" media="(prefers-color-scheme:light)">
+    <link rel="stylesheet" href="./styles/dark.css" media="(prefers-color-scheme:dark)">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
     <title>Hotel</title>
@@ -31,75 +44,80 @@
         </ul>
     </div>
 </nav>
-
-<div class="login-container" id="login-menu">
+<fieldset class="switcher">
+    <legend class="switcher__legend">Scheme</legend>
+    <input class="switcher__radio switcher__radio--light" type="radio" name="color-scheme" value="light"
+           aria-label="Light">
+    <input class="switcher__radio switcher__radio--auto" type="radio" name="color-scheme" value="auto"
+           aria-label="System" checked>
+    <input class="switcher__radio switcher__radio--dark" type="radio" name="color-scheme" value="dark"
+           aria-label="Dark">
+    <div class="switcher__status"></div>
+</fieldset>
+<section class="login-container" id="login-menu">
     <label for="" id="login-close-btn" class="close-btn ri-close-line" onclick="toggleLogin()"></label>
-    <div class="text">Login</div>
+    <h1 class="text">Login</h1>
     <form action="#" id="sign-in">
         <div class="data">
-            <i class="ri-user-line"></i>
-            <input type="text" placeholder="Email or username" required>
+            <label for="username"><i class="ri-user-line"></i></label>
+            <input id="username" type="text" placeholder="Email or username" required>
         </div>
         <div class="data">
-            <i class="ri-key-fill"></i>
-            <input type="text" placeholder="Password" required>
+            <label for="password"><i class="ri-key-fill"></i></label>
+            <input id="password" type="password" placeholder="Password" required>
         </div>
-        <div class="forgot-pas"><a href="#">Forgot password?</a></div>
+        <p class="forgot-pas"><a href="#">Forgot password?</a></p>
         <div class="btn">
             <div class="inner"></div>
             <button type="submit">Login</button>
         </div>
-        <div class="form-change-link">Don't have an account? <a href="#" id="sign-in-link">Sign up now</a></div>
+        <p class="form-change-link">Don't have an account? <a href="#" id="sign-in-link">Sign up now</a></p>
     </form>
     <form action="#" id="sign-up" class="form--hidden">
         <div class="data">
-            <i class="ri-user-line"></i>
+            <label for="username"><i class="ri-user-line"></i></label>
             <input type="text" placeholder="Username" required>
         </div>
         <div class="data">
-            <i class="ri-mail-line"></i>
-            <input type="text" placeholder="Email" required>
+            <label for="email"><i class="ri-mail-line"></i></label>
+            <input id="email" type="text" placeholder="Email" required>
         </div>
         <div class="data">
-            <i class="ri-key-fill"></i>
-            <input type="text" placeholder="Password" required>
+            <label for="password-signup"> <i class="ri-key-fill"></i></label>
+            <input id="password-signup" type="password" placeholder="Password" required>
         </div>
         <div class="data">
-            <i class="ri-key-fill"></i>
-            <input type="text" placeholder="Confirm password" required>
+            <label for="password-signup2"><i class="ri-key-fill"></i></label>
+            <input id="password-signup2" type="text" placeholder="Confirm password" required>
         </div>
         <div class="btn">
             <div class="inner"></div>
             <button type="submit">Create account</button>
         </div>
-        <div class="form-change-link">Already have an account? <a id="signup-link" href="#">Sign in now</a></div>
+        <p class="form-change-link">Already have an account? <a id="signup-link" href="#">Sign in now</a></p>
     </form>
-</div>
+</section>
 
-<div class="filter-window" id="filter-menu">
+<section class="filter-window" id="filter-menu">
     <div class="filter-blocks">
         <div class="filter-box">
-            <div class="text">Location</div>
+            <h2 class="text">Location</h2>
             <input type="text" placeholder="Where are you going?">
         </div>
         <div class="filter-box">
-            <div class="text">Check in</div>
-            <input type="date">
+            <h2 class="text">Check in</h2>
+            <input class="date" type="text" placeholder="When you check in?">
         </div>
         <div class="filter-box">
-            <div class="text">Guests</div>
+            <h2 class="text">Guests</h2>
             <input type="text" placeholder="Add guests">
         </div>
-
         <div class="search-btn">
-            <button class="ri-search-line" type="submit"></button>
+            <button name="Search button" class="ri-search-line" type="submit"></button>
         </div>
-
-
     </div>
-
-</div>
-<div class="filter-window-mobile">
+</section>
+<section class="filter-window-mobile">
     <div class="filter-block-mobile">
         <div class="search-mobile">
             <input type="text" placeholder="Type to search...">
@@ -108,30 +126,27 @@
             <button class="ri-search-line" type="submit"></button>
         </div>
     </div>
-</div>
-<div class="hotels-blocks" id="hotels-id">
-    <div class="hotel-window">
-        <img
-            src="https://a0.muscache.com/im/pictures/65953e73-b1bf-4ee5-ac34-bc68a76406cc.jpg?im_w=1200" alt="">
-        <div class="description">
-            <div class="name">Lagom-House</div>
-            <div class="price">7,279₽ / night</div>
-            <div class="rating">5.0<i class="ri-star-fill"></i></div>
-        </div>
-    </div>
+</section>
+
+<div class="hotels-container">
+    <div class="hotel-container"></div>
 </div>
 <div id="book" class="bookings">
     <div class="book-window">
-        <div class="book-title">Bookings</div>
+        <p class="book-title">Bookings</p>
         <div class="book-container">
             <div class="description">
-                <div class="name">Lagom-House</div>
+                <h1 class="name">Lagom-House</h1>
             </div>
             <img
-                src="https://a0.muscache.com/im/pictures/65953e73-b1bf-4ee5-ac34-bc68a76406cc.jpg?im_w=1200" alt="">
+                src="https://a0.muscache.com/im/pictures/65953e73-b1bf-4ee5-ac34-bc68a76406cc.jpg?im_w=1200"
+                alt="Image of hotel">
         </div>
     </div>
 </div>
-<script src="./index.js"></script>
+<script type="module" src="./node_modules/axios/dist/axios.js"></script>
+<script type="module" src="./parseApi.js"></script>
+<script type="module" src="./themeSwitcher.js"></script>
+<script type="module" src="/index.js"></script>
 </body>
 </html>

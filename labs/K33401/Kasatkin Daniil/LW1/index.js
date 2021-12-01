@@ -1,3 +1,4 @@
+
 document.addEventListener("DOMContentLoaded", ()=>{
     const signInForm=document.querySelector('#sign-in')
     const signUpForm=document.querySelector('#sign-up')
@@ -13,13 +14,14 @@ document.addEventListener("DOMContentLoaded", ()=>{
         signInForm.classList.remove("form--hidden")
     })
 })
-toggleMenu = () => {
+
+window.toggleMenu = function toggleMenu() {
     const menu = document.getElementById('list-menu')
     const button = document.getElementById('btn-menu')
     menu.classList.toggle('active')
     button.classList.toggle('active')
 }
-toggleLogin=()=>{
+window.toggleLogin = function toggleLogin(){
     const ref=document.getElementById('login-ref')
     const menu=document.getElementById('login-menu')
     const resMenu=document.getElementById('list-menu')
@@ -31,3 +33,4 @@ toggleLogin=()=>{
     menuButton.classList.remove('active')
     filterMenu.classList.toggle('not-active')
 }
+
