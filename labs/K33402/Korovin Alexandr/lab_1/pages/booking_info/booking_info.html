@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" media="(prefers-color-scheme:light)" content="#fff">
+    <meta name="theme-color" media="(prefers-color-scheme:dark)" content="black">
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+            document.documentElement.style.display = 'none';
+            document.head.insertAdjacentHTML(
+                'beforeend',
+                '<link rel="stylesheet" href="light.css" onload="document.documentElement.style.display = \'\'">',
+            );
+        }
+    </script>
+    <link rel="stylesheet" href="light.css" media="(prefers-color-scheme:light)">
+    <link rel="stylesheet" href="dark.css" media="(prefers-color-scheme:dark)">
+    <link rel="stylesheet" href="booking_info.css">
+    <title>Profile</title>
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo"><h1>Keep it up</h1></div>
+    <div class="nav-menu"></div>
+    <ul>
+        <li><a href="../home/home.html" title="Home">HOME</a></li>
+        <li><a href="../login/login.html" title="Sign in">SIGN IN/REGISTRATION</a></li>
+        <li><a href="booking_info.html" title="Booking info">BOOKING INFO</a></li>
+    </ul>
+</nav>
+<fieldset class="switcher">
+    <legend class="switcher__legend">Scheme</legend>
+    <input class="switcher__radio switcher__radio--light" type="radio" name="color-scheme" value="light"
+           aria-label="Light">
+    <input class="switcher__radio switcher__radio--auto" type="radio" name="color-scheme" value="auto"
+           aria-label="System" checked>
+    <input class="switcher__radio switcher__radio--dark" type="radio" name="color-scheme" value="dark"
+           aria-label="Dark">
+    <div class="switcher__status"></div>
+</fieldset>
+<div class="hotels-container">
+    <h1 class="banner-text">ОТЕЛИ КОТОРЫЕ ВЫ ЗАБРОНИРОВАЛИ</h1>
+    <article class="cell">
+        <h3 class="cell-text">
+            Отель Four Seasons </h3>
+        <h4 class="cell-date">22.10.2020</h4>
+    </article>
+    <article class="cell">
+        <h3 class="cell-text">
+            Отель Deva Maria </h3>
+        <h4 class="cell-date">22.10.2020</h4>
+    </article>
+    <article class="cell">
+        <h3 class="cell-text">
+            Отель Five Stars </h3>
+        <h4 class="cell-date">22.10.2020</h4>
+    </article>
+</div>
+
+<script src="../../scripts/index.js"></script>
+</body>
+</html>

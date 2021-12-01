@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" media="(prefers-color-scheme:light)" content="#fff">
+    <meta name="theme-color" media="(prefers-color-scheme:dark)" content="black">
+    <script>
+        if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+            document.documentElement.style.display = 'none';
+            document.head.insertAdjacentHTML(
+                'beforeend',
+                '<link rel="stylesheet" href="light.css" onload="document.documentElement.style.display = \'\'">',
+            );
+        }
+    </script>
+    <link rel="stylesheet" href="light.css" media="(prefers-color-scheme:light)">
+    <link rel="stylesheet" href="dark.css" media="(prefers-color-scheme:dark)">
+    <link rel="stylesheet" href="register.css">
+    <title>Login</title>
+</head>
+<body>
+<!--Панель навигации-->
+<nav class="navbar">
+    <div class="logo"><h1>Keep it up</h1></div>
+    <div class="nav-menu"></div>
+    <ul>
+        <li><a href="../home/home.html" title="Home">HOME</a></li>
+        <li><a href="register.html" title="Sign in">SIGN IN/REGISTRATION</a></li>
+        <li><a href="../booking_info/booking_info.html" title="Booking info">BOOKING INFO</a></li>
+    </ul>
+</nav>
+<fieldset class="switcher">
+    <legend class="switcher__legend">Scheme</legend>
+    <input class="switcher__radio switcher__radio--light" type="radio" name="color-scheme" value="light"
+           aria-label="Light">
+    <input class="switcher__radio switcher__radio--auto" type="radio" name="color-scheme" value="auto"
+           aria-label="System" checked>
+    <input class="switcher__radio switcher__radio--dark" type="radio" name="color-scheme" value="dark"
+           aria-label="Dark">
+    <div class="switcher__status"></div>
+</fieldset>
+
+<div class="main-head">
+    <form class="form">
+        <h1>Registration</h1>
+        <label for="login"></label>
+        <input type="text" title="Login/email" placeholder="Login/email" id="login"/>
+        <label for="password"></label>
+        <input type="password" title="Password" placeholder="Password" id="password"/>
+        <label for="password2"></label>
+        <input type="password" title="Repeat password" placeholder="Repeat password" id="password2"/>
+        <button type="submit">Sign up</button>
+        <h2>Already have an account?, <a href="../login/login.html">Login</a></h2>
+    </form>
+</div>
+<script src="../../scripts/index.js"></script>
+</body>
+</html>
