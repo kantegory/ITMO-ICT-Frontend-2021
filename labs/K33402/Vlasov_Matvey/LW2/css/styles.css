@@ -1,0 +1,98 @@
+body {
+    padding-top: 3.5rem;
+    color: var(--color-main);
+}
+  
+p {
+    text-align: justify;
+} 
+
+figcaption {
+    font-size: 1.5rem;
+}
+
+.fa {
+    padding-right: 2rem;
+    font-size: 1.5rem;
+    width: 1rem;
+}
+
+.fa-google {
+    color: red;
+}
+
+.fa-instagram {
+    color: violet;
+}
+
+.form-control, .search-form .btn {
+    margin: 1.5rem 0.3rem;
+}
+
+.card-img-top {
+    margin-top: 1rem;
+}
+
+.card-location {
+    color: #0091ff;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.card-body p {
+    line-height: 0.8rem;
+}
+
+p.card-text {
+    line-height: 1.0rem;
+}
+
+.red-star {
+    color: red;
+}
+
+.reviews {
+    color: var(--color-main);
+}
+
+.fa-map-marker {
+    padding-right: 1.5rem;
+}
+
+.input-field input {
+    margin: 0.5rem;
+}
+
+main {
+    background-color: var(--background-color);
+}
+
+.jumbotron {
+    background-color: var(--background-color-jumbotron);
+}
+
+.input-field input[type='checkbox'], input[type='radio'] {
+    margin-left: 3rem;
+}
+
+.nav-item a, .navbar-brand {
+    color: var(--color-navbar) !important;
+}
+
+.navbar, footer {
+    background-color: var(--background-color-navbar)
+}
+
+.card {
+    background-color: var(--background-color-card);
+}
+
+footer {
+    height: 100px;
+}
+
+::placeholder, input, select, textarea {
+    color: var(--color-placeholder)
+}
