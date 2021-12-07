@@ -10,4 +10,3 @@ style_button.addEventListener('click', function () {
         is_light = true
     }
 })
-// document.querySelector('#theme_style').getAttribute('href') === '../css/light_theme.css'
