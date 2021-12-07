@@ -23,7 +23,7 @@
           <form class="needs-validation" novalidate>
             <div class="row g-3">
               <div class="col-sm-6">
-                <label for="firstName" class="form-label">Имя</label>
+                <label for="firstName" class="form-label" title="Укажите свое имя">Имя</label>
                 <input type="text" class="form-control" id="firstName" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   Пожалуйста, укажите своё имя.
@@ -31,7 +31,7 @@
               </div>
 
               <div class="col-sm-6">
-                <label for="lastName" class="form-label">Фамилия</label>
+                <label for="lastName" class="form-label" title="Укажите свою фамилию">Фамилия</label>
                 <input type="text" class="form-control" id="lastName" placeholder="" value="" required>
                 <div class="invalid-feedback">
                   Пожалуйста, укажите свою фамилию.
@@ -39,7 +39,7 @@
               </div>
 
               <div class="col-12">
-                <label for="username" class="form-label">Имя пользователя</label>
+                <label for="username" class="form-label" title="Придумайте себе имя пользователя на латинице">Имя пользователя</label>
                 <div class="input-group has-validation">
                   <span class="input-group-text">@</span>
                   <input type="text" class="form-control" id="username" placeholder="Username" required>
@@ -58,7 +58,7 @@
               </div>
 
               <div class="col-12">
-                <label for="address" class="form-label">Место жительства</label>
+                <label for="address" class="form-label" title="Укажите свое место жительства">Место жительства</label>
                 <input type="text" class="form-control" id="address" placeholder="Санкт-Петербург" required>
                 <div class="invalid-feedback">
                   Пожалуйста, укажите действующий город.
@@ -66,13 +66,13 @@
               </div>
 
               <div class="col-12">
-                <label for="address2" class="form-label">Место жительства 2<span class="text-muted"> (Опционально)</span></label>
+                <label for="address2" class="form-label" title="Укажите второй адрес, если хотите видеть погоду там тоже">Место жительства 2<span class="text-muted"> (Опционально)</span></label>
                 <input type="text" class="form-control" id="address2" placeholder="Выборг">
               </div>
             </div>
 
             <hr class="my-4">
-            <button id='register' class="w-100 btn btn-primary btn-lg" type="submit">Завершить регистрацию</button>
+            <button id='register' class="w-100 btn btn-primary btn-lg" type="submit" title="Когда заполните всю информацию, нажмите на кнопку Завершить регистрацию">Завершить регистрацию</button>
           </form>
         </div>
       </div>
