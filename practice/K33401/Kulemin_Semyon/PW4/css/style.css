@@ -35,3 +35,9 @@ table, tr, td {
 input {
     background-color: var(--main-bg-color);
 }
+
+.icon {
+    color: var(--main-text);
+    width: 50px;
+    height: 50px;
+}
