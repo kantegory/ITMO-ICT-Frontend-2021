@@ -1,5 +1,6 @@
-* {
+*, body {
     color: var(--main-text);
+    background-color: var(--main-bg-color);
 }
 
 header, .nav-link {
