@@ -29,4 +29,9 @@ table, tr, td {
 #location_button {
     background-color: var(--location-button-color);
     border-color: var(--location-button-color);
+    color: var(--main-text)
+}
+
+input {
+    background-color: var(--main-bg-color);
 }
