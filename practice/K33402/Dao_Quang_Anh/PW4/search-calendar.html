@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Search Page">
+    <meta name="theme-color" content="#f65858">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meetup Calendar</title>
+    <link rel="icon" href="/static/images/626px-Meetup_Logo.png" type="image/x-icon">
+    <link href="/static/css/main.css" type="text/css" rel="stylesheet">
+    <link href="/static/css/light.css" rel="stylesheet" id="theme-link">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body class="sticky-top search-background">
+    <header class="header">
+        <nav class="navbar navbar-expand nav text">
+            <div class="sticky-top d-flex container-fluid justify-content-start pt-1">
+                <div class="logo-meetup me-3 mt-2">
+                    <a  href="search-calendar.html"><img class="logo-meetup"src="static/images/meetup-1.svg" alt="logo"></a>
+                </div>
+                <button class="btn-toggle" aria-label="mode">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16">
+                        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                      </svg>
+                </button>
+                <script src="static/js/theme.js"></script>           
+            </div>
+            <a class="text-decoration-none a-nav pt-1 fw-bold pink" href="organizer.html"><span>Start a new group</span></a>
+            <a class="text-decoration-none a-nav-2 pt-2"href="login.html"><span>Login</span></a>
+            <a class="text-decoration-none a-nav-2 pt-2"href="register.html"><span>Register</span></a>
+        </nav>
+    </header>
+    <main style="height:29rem" class="d-flex flex-column">
+            <div class="d-flex flex-column search-section">
+                <span class="fw-bold h2 pt-5 pb-3 login-text">What do you want to find?</span>
+                <div class="d-flex search-container justify-content-center">
+                    <input class="search-box p-3 me-2" type="search" placeholder="Search for keywords" id="input">
+                    <input class="search-box p-3 me-2" type="search" placeholder="Enter location" id="input2">
+                    <button class="search-button me-3" type="submit" id='search-button' aria-label="search-button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <div class="wrapper">
+                        <input type="radio" name="select" id="option-1">
+                        <input type="radio" name="select" id="option-2" checked>
+                        <label for="option-1" class="option option-1">
+                            <span>Events</span>
+                            </label>
+                        <label for="option-2" class="option option-2">
+                            <span>Groups</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        <div class="d-flex flex-column align-items-center">
+            <!-- Events/Groups - Params -->
+            <div class="main-form d-flex flex-column align-items-center">
+                <div style="width:100%" class='d-flex flex-column'>
+                    <hr style="border-top: solid 1px white;">
+                    <div id="e"></div>
+                    <script src='/static/js/search.js'></script>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div style="width:100%" class="d-flex">
+            <div class="sections">
+                <form  class="d-flex flex-column form-container2">
+                    <div class="d-flex align-items-center">
+                        <div style="padding-right: 15px;">Create your own Meetup group.</div>
+                        <button class="button2">Get Started</button>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between text-decoration-none">
+                        <div class="d-flex flex-column align-items-stretch fs-6">
+                        <span class="h5">Your Account</span>  
+                        <div style="color: rgb(168, 161, 161);" class="d-flex flex-column justify-content-center fs-6 p-2">
+                            <a>Sign up</a>
+                            <a>Log in</a>
+                            <a>Help</a>
+                        </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-stretch fs-6">
+                        <span class="h5">Discover</span>
+                        <div style="color: rgb(168, 161, 161);" class="d-flex flex-column fs-6 p-2">
+                            <a>Groups</a>
+                            <a>Calendar</a>
+                            <a>Topics</a>
+                            <a>Citites</a>
+                            <a>Online Events</a>
+                            <a>Local Guides</a>
+                        </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-stretch fs-6">
+                        <span class="h5">Meetup</span>
+                        <div style="color: rgb(168, 161, 161);" class="d-flex flex-column fs-6 p-2">
+                            <a>About</a>
+                            <a>Blog</a>
+                            <a>Meetup Pro</a>
+                            <a>Careers</a>
+                            <a>Apps</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div class="h5">Follow us</div>
+                    <div class="d-flex">
+                      <svg style="fill:rgb(168, 161, 161)" class="svg svg-footer-facebook">
+                        <use xlink:href="/sprite.svg#fb"></use>
+                      </svg>                            
+                      <svg style="fill:rgb(168, 161, 161)" class="svg svg-footer-twitter">
+                        <use xlink:href="/sprite.svg#twitter"></use>
+                      </svg>                                            
+                      <svg style="fill:rgb(168, 161, 161)" class="svg svg-footer-youtube">
+                        <use xlink:href="/sprite.svg#youtube"></use>
+                      </svg>                                              
+                      <svg style="fill:rgb(168, 161, 161)" class="svg svg-footer-ig">
+                        <use xlink:href="/sprite.svg#ig"></use>
+                      </svg>                                          
+                    </div>
+                    <div class="d-flex justify-content-start">
+                      <div class="py-4 pe-3"><i class="fa fa-copyright"></i> 2021 Meetup</div>
+                      <div class="py-4 pe-3">Terms of Service</div>
+                      <div class="py-4 pe-3">Privacy Policy</div>
+                      <div class="py-4 pe-3">Cookie Policy</div>
+                      <div class="py-4 pe-3">Help</div>
+                  </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
