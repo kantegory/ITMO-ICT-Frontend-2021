@@ -12,6 +12,10 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
 
+    <link id="theme_style" href="../css/light_theme.css" rel="stylesheet">
+
+    <link href="../css/style.css" rel="stylesheet">
+
 </head>
 <body class="container">
     <header class="d-flex flex-wrap justify-content-center py-3 mb-4 border-bottom">
@@ -31,10 +35,13 @@
         <div class="col">
             <div class="card mb-4 rounded-3 shadow-sm">
                 <div class="card-header py-3">
-                    <h4 class="my-0 fw-normal">Москва</h4>
+                    <p class="h4">Москва</p>
                 </div>
                 <div class="card-body">
-                    <h1  id='c1_temp_now' class="card-title pricing-card-title">+4<small class="text-muted fw-light">°C</small></h1>
+                    <svg class="icon">
+                        <use xlink:href="../svg/sprite.svg#moscow"></use>
+                    </svg>
+                    <h1  id='c1_temp_now' class="card-title pricing-card-title">+4°C</h1>
                     <table class="table mt-3 mb-3">
                         <tr>
                             <td>сегодня</td>
@@ -58,10 +65,13 @@
         <div class="col">
             <div class="card mb-4 rounded-3 shadow-sm">
                 <div class="card-header py-3">
-                    <h4 class="my-0 fw-normal">Текущая геолокация</h4>
+                    <p class="h4">Текущая геолокация</p>
                 </div>
                 <div class="card-body">
-                    <h1 id='c_temp_now' class="card-title pricing-card-title">+4<small class="text-muted fw-light">°C</small></h1>
+                    <svg class="icon">
+                        <use xlink:href="../svg/sprite.svg#home"></use>
+                    </svg>
+                    <h1 id='c_temp_now' class="card-title pricing-card-title">+4°C</h1>
                     <table class="table mt-3 mb-3">
                         <tr>
                             <td>сегодня</td>
@@ -85,10 +95,13 @@
         <div class="col">
             <div class="card mb-4 rounded-3 shadow-sm">
                 <div class="card-header py-3">
-                    <h4 class="my-0 fw-normal">Лондон</h4>
+                    <p class="h4">Лондон</p>
                 </div>
                 <div class="card-body">
-                    <h1 id='c2_temp_now' class="card-title pricing-card-title">+4<small class="text-muted fw-light">°C</small></h1>
+                    <svg class="icon">
+                        <use xlink:href="../svg/sprite.svg#london"></use>
+                    </svg>
+                    <h1 id='c2_temp_now' class="card-title pricing-card-title">+4°C</h1>
                     <table class="table mt-3 mb-3">
                         <tr>
                             <td>сегодня</td>
@@ -108,8 +121,10 @@
                     </table>
                 </div>
             </div>
+            <button id="style_button" class="btn btn-primary" type="button">Сменить тему</button>
         </div>
     </main>
 </body>
 <script src="../js/api_search.js"></script>
+<script src="../js/style.js"></script>
 </html>
