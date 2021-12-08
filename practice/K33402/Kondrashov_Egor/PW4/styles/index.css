@@ -1,0 +1,37 @@
+html, 
+body {
+    height: 100%;
+}
+
+main {
+    height: 90%;
+}
+
+.main-search {
+    position: relative;
+    top: 28%
+}
+
+.search-params {
+    position: relative;
+    top: 35%
+}
+
+.title {
+    position: relative;
+    top: 25%
+}
+
+.search-button {
+    position: relative;
+    top: 45%
+}
+
+#search-icon {
+    width: 1em;
+    height: 1em;
+    fill: var(--accent-text);
+    margin: 0px 0px 0px 10px;
+}
+
+

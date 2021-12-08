@@ -1,0 +1,11 @@
+:root {
+    --accent-color: #2e7a17;
+    --accent-on-hover: #256312;
+    --background-color: #f5f5f5;
+    --nav-link-on-hover: #34dfeb;
+    --text-color: #212529;
+    --accent-text: white;
+    --form-background: white;
+    --form-border-color: #86b7fe;
+    --link-color: #3221d9;
+}
