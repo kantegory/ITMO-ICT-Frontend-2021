@@ -1,0 +1,128 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FLOWERY</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://use.fontawesome.com/releases/v5.0.8/js/all.js"></script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/light.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="css/dark.css" media="(prefers-color-scheme: dark)">
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-md navbar-custom bg-custom fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="eposhop.html">FLOWERY</a>
+                <ul class="navbar-nav me-auto md-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="shop.html">Shop</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+
+    </header>
+    <main>
+
+        <div class='profile'>
+            <p class="lead">
+                <strong>Personal area</strong>
+            </p>
+            <hr>
+            <div class="d-flex align-items-start">
+                <div class="nav flex-column nav-pills me-3" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <button class="btn btn-outline active my-2" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home"
+                        type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Profile</button>
+                    <button class="btn btn-outline my-2" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile"
+                        type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Liked</button>
+                    <button class="btn btn-outline my-2" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages"
+                        type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Chart</button>
+                </div>
+                <div class="tab-content" id="v-pills-tabContent">
+                    <div class="tab-pane fade show active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                        <div class='container'>
+                            <form class="row g-3 needs-validation" novalidate>
+                                <div class="col-md-4 position-relative">
+                                    <label for="validationTooltip01" class="form-label">First name</label>
+                                    <input type="text" class="form-control" id="validationTooltip01" value="Mark" required>
+                                    <div class="valid-tooltip">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="col-md-4 position-relative">
+                                    <label for="validationTooltip02" class="form-label">Last name</label>
+                                    <input type="text" class="form-control" id="validationTooltip02" value="Otto" required>
+                                    <div class="valid-tooltip">
+                                        Looks good!
+                                    </div>
+                                </div>
+                                <div class="col-md-4 position-relative">
+                                    <label for="validationTooltipUsername" class="form-label">Username</label>
+                                    <div class="input-group has-validation">
+                                        <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
+                                        <input type="text" class="form-control" id="validationTooltipUsername" aria-describedby="validationTooltipUsernamePrepend"
+                                            required>
+                                        <div class="invalid-tooltip">
+                                            Please choose a unique and valid username.
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6 position-relative">
+                                    <label for="validationTooltip03" class="form-label">City</label>
+                                    <input type="text" class="form-control" id="validationTooltip03" required>
+                                    <div class="invalid-tooltip">
+                                        Please provide a valid city.
+                                    </div>
+                                </div>
+                                <div class="col-md-3 position-relative">
+                                    <label for="validationTooltip04" class="form-label">State</label>
+                                    <select class="form-select" id="validationTooltip04" required>
+                                        <option selected disabled value="">Choose...</option>
+                                        <option>...</option>
+                                    </select>
+                                    <div class="invalid-tooltip">
+                                        Please select a valid state.
+                                    </div>
+                                </div>
+                                <div class="col-md-3 position-relative">
+                                    <label for="validationTooltip05" class="form-label">Zip</label>
+                                    <input type="text" class="form-control" id="validationTooltip05" required>
+                                    <div class="invalid-tooltip">
+                                        Please provide a valid zip.
+                                    </div>
+                                </div>
+                                <div class="text-center">
+                                    <div class="col-12">
+                                        <button class="btn btn-outline-dark" type="submit">Save changes</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                        <p class="lead">Тут будут понравившиеся вам товары</p>
+                    </div>
+                    <div class="tab-pane fade" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                        <p class="lead">Тут будет отображён ваш выбор</p>
+                    </div>
+                </div>
+            </div>
+            <hr>
+        </div>
+    </main>
+
+</body>
+
+
+
+</html>
