@@ -8,6 +8,8 @@
         "lint": "export NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service lint"
     },
     "dependencies": {
+        "bootstrap-vue": "^2.21.2",
+        "bootstrap4": "^0.0.1-security",
         "core-js": "^3.6.5",
         "vue": "^2.6.11",
         "vue-router": "^3.2.0"

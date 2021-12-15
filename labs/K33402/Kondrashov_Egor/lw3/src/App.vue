@@ -1,32 +1,61 @@
 <template>
   <div id="app">
-    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
+:root {
+  --accent-color: #2e7a17;
+  --accent-on-hover: #256312;
+  --background-color: #f5f5f5;
+  --nav-link-on-hover: #34dfeb;
+  --text-color: #212529;
+  --accent-text: white;
+  --form-background: white;
+  --form-border-color: #86b7fe;
+  --link-color: #3221d9;
+}
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+header {
+  background-color: var(--accent-color);
+  height: 50px;
 }
 
-#nav {
-  padding: 30px;
+.nav-link:hover {
+  color: var(--nav-link-on-hover) !important;
 }
 
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
+.text-white {
+  color: var(--accent-text) !important;
 }
 
-#nav a.router-link-exact-active {
-  color: #42b983;
+.form-control {
+  background-color: var(--form-background);
+  color: var(--text-color);
+}
+
+.form-control:focus {
+  background-color: var(--form-background);
+  color: var(--text-color);
+}
+.btn {
+  background-color: var(--accent-color);
+  color: var(--accent-text);
+  margin: 10px auto;
+  font-size: calc(1.3rem + 0.6vw);
+  border-radius: 10px;
+  padding: 5px 40px;
+}
+
+.btn:hover {
+  background-color: var(--accent-on-hover);
+  color: var(--accent-text);
+}
+.link-primary {
+  color: var(--link-color);
 }
 </style>
