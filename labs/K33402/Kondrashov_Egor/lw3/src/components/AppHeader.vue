@@ -1,34 +1,25 @@
 <template>
   <header>
-    <b-nav class="navbar navbar-expand navbar-light">
+    <b-navbar>
       <div class="container">
-        <a class="navbar-brand text-white" href="index.html"
-          >Бронирование жилья</a
-        >
-
-        <ul class="navbar-nav justify-content-end">
-          <li class="nav-item">
-            <a class="nav-link text-white px-3" href="login.html"> Вход </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white px-3" href="register.html">
-              Регистрация
-            </a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link text-white px-3" href="my-bookings.html">
-              Мои бронирования
-            </a>
-          </li>
-        </ul>
+        <header-nav-brand />
+        <b-navbar-nav class="justify-content-end">
+          <header-nav-item navLink="login" navText="Вход" />
+          <header-nav-item navLink="register" navText="Регистрация" />
+          <header-nav-item navLink="my-bookings" navText="Мои бронирования" />
+        </b-navbar-nav>
       </div>
-    </b-nav>
+    </b-navbar>
   </header>
 </template>
 
 <script>
+import HeaderNavItem from "../components/HeaderNavItem.vue"
+import HeaderNavBrand from "../components/HeaderBrand.vue"
+
 export default {
-  name: "AppHeader"
+  name: "AppHeader",
+  components: { HeaderNavItem, HeaderNavBrand }
 }
 </script>
 

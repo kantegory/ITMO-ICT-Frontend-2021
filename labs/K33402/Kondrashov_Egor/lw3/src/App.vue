@@ -20,14 +20,6 @@ body {
   background-color: var(--background-color);
   color: var(--text-color);
 }
-header {
-  background-color: var(--accent-color);
-  height: 50px;
-}
-
-.nav-link:hover {
-  color: var(--nav-link-on-hover) !important;
-}
 
 .text-white {
   color: var(--accent-text) !important;
