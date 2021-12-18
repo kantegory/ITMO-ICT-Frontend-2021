@@ -1,6 +1,6 @@
 <template>
   <main>
-    <index-heading />
+    <heading text="Бронирование жилья" />
     <index-big-form />
     <index-small-forms />
     <search-button />
@@ -8,7 +8,7 @@
 </template>
 
 <script>
-import IndexHeading from "../components/IndexHeading.vue"
+import Heading from "./Heading.vue"
 import IndexBigForm from "../components/IndexBigForm.vue"
 import IndexSmallForms from "../components/IndexSmallForms.vue"
 import SearchButton from "../components/SearchButton.vue"
@@ -17,7 +17,7 @@ export default {
   name: "IndexMain",
 
   components: {
-    IndexHeading,
+    Heading,
     IndexBigForm,
     IndexSmallForms,
     SearchButton

@@ -1,11 +1,14 @@
 <template>
   <div class="d-flex title justify-content-center">
-    <h3>Поиск жилья</h3>
+    <h3>{{ text }}</h3>
   </div>
 </template>
 <script>
 export default {
-  name: "IndexHeading"
+  name: "Heading",
+  props: {
+    text: String
+  }
 }
 </script>
 <style>
