@@ -13,7 +13,7 @@ export default {
 }
 </script>
 <style>
-.form-signin .checkbox {
+.checkbox {
   font-weight: 400;
 }
 </style>

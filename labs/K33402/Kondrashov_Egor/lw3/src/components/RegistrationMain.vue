@@ -1,7 +1,7 @@
 <template>
   <main class="form-signin">
     <form>
-      <centered-heading text="Вход в аккаунт" />
+      <centered-heading text="Регистрация" />
 
       <centered-form-input
         labelText="Адрес электронной почты"
@@ -11,22 +11,30 @@
       <centered-form-input
         labelText="Пароль"
         type="password"
-        id="passwordInput"
+        id="registerPasswordInput"
       />
-      <checkbox text="Запомнить меня" value="remember-me" />
-      <big-button text="Войти" />
+      <centered-form-input
+        labelText="Повторите пароль"
+        type="password"
+        id="rePasswordInput"
+      />
+      <checkbox
+        text="Соглашаюсь с условиями обслуживания"
+        value="accept-terms"
+      />
+      <big-button text="Зарегистрироваться" />
     </form>
   </main>
 </template>
 
 <script>
 import CenteredHeading from "./CenteredHeading.vue"
-import CenteredFormInput from "../components/CenteredFormInput.vue"
-import Checkbox from "../components/Checkbox.vue"
+import CenteredFormInput from "./CenteredFormInput.vue"
+import Checkbox from "./Checkbox.vue"
 import BigButton from "./BigButton.vue"
 
 export default {
-  name: "IndexMain",
+  name: "RegistrationMain",
 
   components: {
     CenteredHeading,
@@ -39,17 +47,24 @@ export default {
 
 <style>
 .form-signin {
-  max-width: 330px;
+  max-width: 400px;
   padding: 15px;
   margin: auto;
 }
+
 .form-signin input[type="email"] {
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
 
-.form-signin input[type="password"] {
+#registerPasswordInput {
+  margin-bottom: -1px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+#rePasswordInput {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;

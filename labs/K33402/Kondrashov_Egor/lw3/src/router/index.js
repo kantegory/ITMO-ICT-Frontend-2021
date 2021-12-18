@@ -1,5 +1,6 @@
 import Index from "@/views/Index.vue"
 import Login from "@/views/Login.vue"
+import Registration from "@/views/Registration.vue"
 import Vue from "vue"
 import VueRouter from "vue-router"
 
@@ -15,6 +16,11 @@ const routes = [
     path: "/login",
     name: "Login",
     component: Login
+  },
+  {
+    path: "/register",
+    name: "Registration",
+    component: Registration
   }
 ]
 
