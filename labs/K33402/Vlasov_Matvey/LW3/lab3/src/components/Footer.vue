@@ -20,7 +20,7 @@
     </footer>
 </template>
 
-<style scoped>
+<style>
 footer {
     background-color: var(--background-color-navbar) !important;
 }
@@ -36,10 +36,5 @@ footer {
 
 .fa-instagram {
     color: violet;
-}
-
-a {
-    display: inline-block;
-    white-space: pre;
 }
 </style>

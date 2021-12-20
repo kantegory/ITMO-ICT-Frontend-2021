@@ -46,14 +46,10 @@
     margin-left: 3rem;
 }
 
-::placeholder, input[type='email'], input[type='password'], input[type='text'], select, textarea {
+::placeholder, input[type='email'], input[type='password'], input[type='text'], select {
     color: var(--color-placeholder);
     background-color: var(--background-color-input);
     border-width: 0.8px;
-}
-
-input[type='submit'] {
-    color: white;
 }
 
 .fa {

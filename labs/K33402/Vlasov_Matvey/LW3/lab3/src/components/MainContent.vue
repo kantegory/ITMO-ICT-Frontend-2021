@@ -30,12 +30,7 @@
     </main>
 </template>
 
-<script>
-export default {
-}
-</script>
-
-<style>
+<style scoped>
 .jumbotron {
     background-color: var(--background-color-jumbotron) !important;
 }

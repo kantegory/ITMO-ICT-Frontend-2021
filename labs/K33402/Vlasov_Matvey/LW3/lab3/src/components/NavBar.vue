@@ -46,7 +46,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 .nav-item a, .navbar-brand {
     color: var(--color-navbar) !important;
 }
