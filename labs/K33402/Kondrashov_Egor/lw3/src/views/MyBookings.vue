@@ -10,7 +10,7 @@ import AppHeader from "../components/AppHeader"
 import MyBookingsMain from "../components/MyBookingsMain.vue"
 
 export default {
-  name: "Index",
+  name: "MyBookings",
 
   components: {
     AppHeader,

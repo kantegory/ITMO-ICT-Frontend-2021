@@ -2,6 +2,7 @@ import Index from "@/views/Index.vue"
 import Login from "@/views/Login.vue"
 import MyBookings from "@/views/MyBookings.vue"
 import Registration from "@/views/Registration.vue"
+import SearchResults from "@/views/SearchResults.vue"
 import Vue from "vue"
 import VueRouter from "vue-router"
 
@@ -27,6 +28,11 @@ const routes = [
     path: "/my-bookings",
     name: "MyBookings",
     component: MyBookings
+  },
+  {
+    path: "/search-results",
+    name: "SearchResults",
+    component: SearchResults
   }
 ]
 

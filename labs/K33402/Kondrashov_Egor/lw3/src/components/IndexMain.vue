@@ -1,9 +1,11 @@
 <template>
   <main>
     <heading text="Бронирование жилья" />
-    <index-big-form />
-    <index-small-forms />
-    <search-button />
+    <b-form @submit="onSubmit">
+      <index-big-form v-model="city" />
+      <index-small-forms v-model="details" />
+      <search-button />
+    </b-form>
   </main>
 </template>
 
@@ -21,6 +23,23 @@ export default {
     IndexBigForm,
     IndexSmallForms,
     SearchButton
+  },
+
+  data: () => {
+    return {
+      city: "",
+      details: {
+        numberOfGuests: "",
+        arrivalDatetime: "",
+        departureDatetime: ""
+      }
+    }
+  },
+  methods: {
+    onSubmit(event) {
+      event.preventDefault()
+      // Redirect to search results
+    }
   }
 }
 </script>
