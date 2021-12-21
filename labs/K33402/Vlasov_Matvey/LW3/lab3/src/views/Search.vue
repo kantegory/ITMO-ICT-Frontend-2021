@@ -3,7 +3,8 @@
         <search-form @search="this.getHotels"/>
         <b-container class="pb-4">
             <div class="pb-3" v-if="isLoaded == false">Loading...</div>
-            <v-row v-for="index in 5" :key="index">
+            <div class="pb-3" v-if="isNotFound == true">Results not found</div>
+            <v-row v-for="index in 5" :key="index" v-else>
                 <property-card
                     v-for="propertyItem in propertyItems.slice((index - 1) * 3, Math.min((index - 1) * 3 + 3, propertyItems.length))"
                     :key="propertyItem.id"
@@ -28,7 +29,8 @@ export default {
 
     data: () => ({
         propertyItems: [],
-        isLoaded: false
+        isLoaded: false,
+        isNotFound: false
     }),
 
     created () {
@@ -108,6 +110,7 @@ export default {
             const data = await response.json()
 
             this.propertyItems = data.result
+            this.isNotFound = this.propertyItems === undefined
             this.isLoaded = true
         }
     }
