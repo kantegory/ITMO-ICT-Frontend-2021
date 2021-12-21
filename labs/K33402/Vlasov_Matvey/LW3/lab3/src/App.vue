@@ -35,4 +35,8 @@ main {
 p {
     text-align: justify;
 }
+
+button, [type=button], [type=reset], [type=submit], [role=button] {
+    color: white !important;
+}
 </style>

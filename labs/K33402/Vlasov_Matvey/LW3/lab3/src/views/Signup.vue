@@ -1,11 +1,11 @@
 <template>
     <main role="main" class="registration-main">
-        <div class="container">
+        <b-container>
             <div class="pt-3 d-flex justify-content-center">
                 <h2>Sign up</h2>
             </div>
-            <SignupForm />
-        </div>
+            <signup-form />
+        </b-container>
     </main>
 </template>
 

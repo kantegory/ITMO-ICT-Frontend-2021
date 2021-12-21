@@ -1,7 +1,8 @@
 <template>
     <main role="main">
-        <SearchForm @search="this.getHotels"/>
-        <div class="container">
+        <search-form @search="this.getHotels"/>
+        <b-container class="pb-4">
+            <div class="pb-3" v-if="isLoaded == false">Loading...</div>
             <v-row v-for="index in 5" :key="index">
                 <property-card
                     v-for="propertyItem in propertyItems.slice((index - 1) * 3, Math.min((index - 1) * 3 + 3, propertyItems.length))"
@@ -10,7 +11,7 @@
                     class=""
                 />
             </v-row>
-        </div>
+        </b-container>
     </main>
 </template>
 
@@ -26,11 +27,12 @@ export default {
     },
 
     data: () => ({
-        propertyItems: []
+        propertyItems: [],
+        isLoaded: false
     }),
 
     created () {
-        // this.getHotels()
+        this.getHotels()
     },
 
     methods: {
@@ -53,6 +55,7 @@ export default {
         },
 
         async getHotels (params = null) {
+            this.isLoaded = false
             let location = null
             let guests = null
             let checkin = null
@@ -105,6 +108,7 @@ export default {
             const data = await response.json()
 
             this.propertyItems = data.result
+            this.isLoaded = true
         }
     }
 }

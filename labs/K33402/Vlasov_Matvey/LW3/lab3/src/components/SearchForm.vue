@@ -24,7 +24,6 @@ export default {
 
     methods: {
         search () {
-            console.log('FORM LOCATION', this.location)
             this.$emit('search', {
                 location: this.location,
                 guests: this.guests,
@@ -42,6 +41,7 @@ export default {
 }
 
 ::placeholder, input, textarea {
-    color: var(--color-placeholder)
+    color: var(--color-placeholder);
+    background-color: var(--background-color-input);
 }
 </style>

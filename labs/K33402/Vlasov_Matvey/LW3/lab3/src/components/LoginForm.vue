@@ -1,18 +1,26 @@
 <template>
-    <div class="login-form d-flex justify-content-center">
+    <div class="d-flex justify-content-center">
         <form>
-            <div class="input-field"> <span class="fa"><b-icon icon="envelope-fill"></b-icon></span>
-                <input size="25rem" type="email" name="email" placeholder="Email" required />
-            </div>
-            <div class="input-field"> <span class="fa"><b-icon icon="lock-fill"></b-icon></span>
-                <input size="25rem" type="password" name="password" placeholder="Password" required />
-            </div>
-            <div class="row mt-3 d-flex justify-content-center">
+            <input-field type="email" placeholder="Email" icon="envelope-fill" />
+            <input-field type="password" placeholder="Password" icon="lock-fill" />
+
+            <b-row class="mt-3 d-flex justify-content-center">
                 <input class="btn btn-primary mb-3" type="submit" value="Log in" />
-            </div>
+            </b-row>
         </form>
     </div>
 </template>
+
+<script>
+import InputField from '@/components/InputField.vue'
+
+export default {
+    name: 'LoginForm',
+    components: {
+        InputField
+    }
+}
+</script>
 
 <style scoped>
 .input-field input {
@@ -26,7 +34,7 @@
 ::placeholder, input[type='email'], input[type='password'] {
     color: var(--color-placeholder);
     background-color: var(--background-color-input);
-    border-width: 0.8px;
+    text-indent: 0.3rem;
 }
 
 .fa {

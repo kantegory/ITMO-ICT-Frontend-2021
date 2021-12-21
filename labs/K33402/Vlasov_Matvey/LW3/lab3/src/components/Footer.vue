@@ -1,6 +1,6 @@
 <template>
     <footer>
-        <div class="container pt-3">
+        <b-container class="pt-3">
             <div class="float-right ml-4">
                 <a href="https://mail.google.com/mail">
                     <b-icon icon="google" class="fa fa-google"></b-icon>
@@ -16,7 +16,7 @@
                 </a>
             </div>
             <p class="mb-0 pb-3">&copy; Home4Night Company 2017-2021</p>
-        </div>
+        </b-container>
     </footer>
 </template>
 

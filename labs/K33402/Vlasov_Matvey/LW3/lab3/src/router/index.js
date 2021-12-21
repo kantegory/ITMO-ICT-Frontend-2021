@@ -12,22 +12,34 @@ const routes = [
     {
         path: '/',
         name: 'Main',
-        component: Main
+        component: Main,
+        meta: {
+            title: 'Home4Night: Housing for Vacation'
+        }
     },
     {
         path: '/signup',
         name: 'Signup',
-        component: Signup
+        component: Signup,
+        meta: {
+            title: 'Home4Night: Sign Up'
+        }
     },
     {
         path: '/login',
         name: 'Login',
-        component: Login
+        component: Login,
+        meta: {
+            title: 'Home4Night: Log in'
+        }
     },
     {
         path: '/search',
         name: 'Search',
-        component: Search
+        component: Search,
+        meta: {
+            title: 'Home4Night: Housing for Vacation'
+        }
     }
 ]
 
@@ -35,6 +47,12 @@ const router = new VueRouter({
     mode: 'history',
     base: process.env.BASE_URL,
     routes
+})
+
+router.afterEach((page) => {
+    Vue.nextTick(() => {
+        document.title = page.meta.title
+    })
 })
 
 export default router

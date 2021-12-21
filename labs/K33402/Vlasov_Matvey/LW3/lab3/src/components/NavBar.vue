@@ -1,37 +1,25 @@
 <template>
      <header>
-        <nav class="navbar navbar-expand-md fixed-top">
-            <a class="navbar-brand" href="main.html">Home4Night</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarMain"
-                aria-controls="navbarMain" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        <b-navbar  toggleable="md" fixed="top">
+            <b-navbar-brand href="/">Home4Night</b-navbar-brand>
+            <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
-            <div class="collapse navbar-collapse" id="navbarMain">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <ThemeToggler />
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="main.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="search.html">
-                            <b-icon icon="search" font-scale="0.99"></b-icon>
-                            Search
-                        </a>
-                    </li>
-                </ul>
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="login.html">Log in</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="signup.html">Sign up</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+            <b-collapse id="nav-collapse" is-nav>
+                <b-navbar-nav>
+                    <theme-toggler />
+                    <b-nav-item href="/">Home</b-nav-item>
+                    <b-nav-item href="search">
+                        <b-icon icon='search' font-scale='0.99'></b-icon>
+                        Search
+                    </b-nav-item>
+                </b-navbar-nav>
+
+                <b-navbar-nav class="ml-auto">
+                    <b-nav-item href="login">Log In</b-nav-item>
+                    <b-nav-item href="signup">Sign Up</b-nav-item>
+                </b-navbar-nav>
+            </b-collapse>
+        </b-navbar>
     </header>
 </template>
 
@@ -47,7 +35,7 @@ export default {
 </script>
 
 <style scoped>
-.nav-item a, .navbar-brand {
+ .navbar-brand, a {
     color: var(--color-navbar) !important;
 }
 
