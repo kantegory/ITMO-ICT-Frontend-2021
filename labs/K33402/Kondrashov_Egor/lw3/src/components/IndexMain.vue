@@ -1,7 +1,7 @@
 <template>
   <main>
-    <heading text="Поиск жилья" />
-    <b-form @submit="onSubmit">
+    <b-form class="index-search-form" @submit="onSubmit">
+      <heading text="Поиск жилья" />
       <index-big-form />
       <index-small-forms />
       <search-button />
@@ -44,6 +44,9 @@ export default {
 
 <style>
 main {
-  height: 90%;
+  height: 100%;
+}
+.index-search-form {
+  height: 100%;
 }
 </style>
