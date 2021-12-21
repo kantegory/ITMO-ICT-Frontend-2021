@@ -1,7 +1,7 @@
 <template>
   <div class="col-3">
     <label :for="inputId" class="form-label">{{ labelText }}</label>
-    <b-form-input :type="inputType" :id="inputId" v-model="value" />
+    <b-form-input :type="inputType" :id="inputId" />
   </div>
 </template>
 
@@ -11,16 +11,7 @@ export default {
   props: {
     labelText: String,
     inputId: String,
-    inputType: String,
-    value: {
-      type: String,
-      required: true
-    }
-  },
-  watch: {
-    value() {
-      this.$emit("input", this.value)
-    }
+    inputType: String
   }
 }
 </script>

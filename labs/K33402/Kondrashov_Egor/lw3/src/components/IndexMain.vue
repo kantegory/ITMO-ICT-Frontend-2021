@@ -1,9 +1,9 @@
 <template>
   <main>
-    <heading text="Бронирование жилья" />
+    <heading text="Поиск жилья" />
     <b-form @submit="onSubmit">
-      <index-big-form v-model="city" />
-      <index-small-forms v-model="details" />
+      <index-big-form />
+      <index-small-forms />
       <search-button />
     </b-form>
   </main>
@@ -25,20 +25,18 @@ export default {
     SearchButton
   },
 
-  data: () => {
-    return {
-      city: "",
-      details: {
-        numberOfGuests: "",
-        arrivalDatetime: "",
-        departureDatetime: ""
-      }
-    }
-  },
   methods: {
     onSubmit(event) {
       event.preventDefault()
-      // Redirect to search results
+      this.$router.push({
+        name: "SearchResults",
+        query: {
+          city: document.getElementById("city").value,
+          numberOfGuests: document.getElementById("numberOfGuests").value,
+          arrivalDatetime: document.getElementById("arrivalDatetime").value,
+          departureDatetime: document.getElementById("departureDatetime").value
+        }
+      })
     }
   }
 }

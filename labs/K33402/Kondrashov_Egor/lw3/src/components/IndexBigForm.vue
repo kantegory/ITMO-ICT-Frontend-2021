@@ -1,24 +1,15 @@
 <template>
   <div class="container d-flex main-search justify-content-center">
     <label for="city" class="form-label">Город</label>
-    <input
-      type="search"
-      class="form-control"
-      aria-label="Search"
-      id="city"
-      v-model="city"
-    />
+    <input type="search" class="form-control" aria-label="Search" id="city" />
   </div>
 </template>
 
 <script>
 export default {
   name: "IndexBigForm",
-  props: ["city"],
-  watch: {
-    city() {
-      this.$emit("input", this.value)
-    }
+  props: {
+    city: String
   }
 }
 </script>
