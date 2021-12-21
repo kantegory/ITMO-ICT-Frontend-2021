@@ -59,10 +59,9 @@ export default {
       }
     },
     async getCityIdByName(city) {
-      const res = await fetch(
+      const res = await this.axios.get(
         `https://booking-com.p.rapidapi.com/v1/hotels/locations?locale=en-gb&name=${city}`,
         {
-          method: "GET",
           headers: {
             "x-rapidapi-host": "booking-com.p.rapidapi.com",
             "x-rapidapi-key":
@@ -70,9 +69,8 @@ export default {
           }
         }
       )
-      const data = await res.json()
-      if (data) {
-        return data[0].dest_id
+      if (res.status === 200) {
+        return res.data[0].dest_id
       } else {
         return null
       }
