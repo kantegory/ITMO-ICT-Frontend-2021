@@ -45,7 +45,6 @@
 
 <script>
 import {mapMutations} from "vuex";
-import SignIn from "../components/SignIn"
 
 export default {
   name: "Login",
