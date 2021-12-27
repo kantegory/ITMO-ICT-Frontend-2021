@@ -1,13 +1,13 @@
 <template>
 
   <div class="videoContent">
-    <header/>
+    <Header/>
     <iframe :src="this.allVideos[this.$route.params.id]?.link"
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             allowfullscreen=""
             class="video"
     ></iframe>
-    <footer/>
+    <Footer/>
   </div>
 
 </template>
@@ -19,8 +19,8 @@ import Header from "../components/Header";
 export default {
   name: "Videos",
   components: {
-    header: Header,
-    footer: Footer
+    Header,
+    Footer
   },
   props: {},
   mounted() {

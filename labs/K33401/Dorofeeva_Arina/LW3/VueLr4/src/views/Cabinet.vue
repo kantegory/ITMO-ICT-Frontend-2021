@@ -1,5 +1,5 @@
 <template>
-  <header/>
+  <Header/>
 
   <!-- картинка -->
   <figure>
@@ -102,7 +102,7 @@
     </div>
   </div>
 
-  <footer/>
+  <Footer/>
 </template>
 
 
@@ -114,8 +114,8 @@ import Footer from "../components/Footer";
 export default {
   name: "Cabinet",
   components: {
-    footer: Footer,
-    header: Header
+    Footer,
+    Header
   },
   data() {
     return {

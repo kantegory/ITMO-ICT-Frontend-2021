@@ -1,6 +1,6 @@
 <template>
 
-  <header/>
+  <Header/>
 
   <!-- картинка -->
   <figure>
@@ -101,7 +101,7 @@
     </div>
   </div>
 
-  <footer/>
+  <Footer/>
 
 </template>
 
@@ -114,8 +114,8 @@ import {mapMutations} from "vuex";
 export default {
   name: "MyVideos",
   components: {
-    header: Header,
-    footer: Footer,
+    Header,
+    Footer,
   },
   data() {
     return {

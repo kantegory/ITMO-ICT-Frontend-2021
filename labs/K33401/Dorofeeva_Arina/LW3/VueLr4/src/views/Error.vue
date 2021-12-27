@@ -1,10 +1,10 @@
 <template>
   <div class="errorContainer">
-    <header/>
+    <Header/>
     <div class="error">
       <img src="../assets/error.jpg" class="errorImg" alt=""/>
     </div>
-    <footer/>
+    <Footer/>
   </div>
 
 </template>
@@ -15,8 +15,8 @@ import  Footer from "../components/Footer";
 export default {
   name: "Error",
   components: {
-    footer: Footer,
-    header: Header
+    Footer,
+    Header
   },
 }
 </script>

@@ -1,5 +1,5 @@
 <template>
-  <header/>
+  <Header/>
 
   <!-- картинки -->
   <div class="container-fluid" id="imgBg">
@@ -11,7 +11,7 @@
     </div>
   </div>
 
-  <footer/>
+  <Footer/>
 
 </template>
 
@@ -22,8 +22,8 @@ import {mapMutations} from "vuex";
 export default {
   name: "Images",
   components: {
-    header: Header,
-    footer: Footer,
+    Header,
+    Footer,
   },
   data() {
     return {

@@ -1,5 +1,5 @@
 <template>
-  <header>
+  <Header>
     <nav class="navbar navbar-expand-md bg-custom sticky-top">
       <div class="container-fluid">
         <a href="#" class="navbar-brand">
@@ -20,7 +20,7 @@
         </div>
       </div>
     </nav>
-  </header>
+  </Header>
 
   <!-- слайдер -->
   <div class="carousel slide" data-ride="carousel" id="slides">
@@ -204,7 +204,7 @@
     </div>
   </div>
 
-  <footer/>
+  <Footer/>
 </template>
 
 <script>
@@ -214,8 +214,8 @@ import Header from "../components/Header"
 export default {
   name: 'Home',
   components: {
-    footer: Footer,
-    header: Header
+    Footer,
+    Header
   }
 }
 </script>

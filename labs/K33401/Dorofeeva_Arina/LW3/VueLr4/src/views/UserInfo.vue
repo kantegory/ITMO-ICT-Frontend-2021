@@ -1,5 +1,5 @@
 <template>
-  <header/>
+  <Header/>
   <div class="userInfo" v-if="getUserData && Object.keys(userData).length > 0">
     <div class="mb-3 userFields" v-for="(item, i) in Object.keys(getUserData)" :key="i">
       <span class="userField input-group-text mr-3" id="basic-addon3">{{ item }}</span>
@@ -11,7 +11,7 @@
     <button class="btn btn-outline-light btn-lg btn-block" id="signInBtn" type="submit" v-on:click="submit">Сохранить
     </button>
   </div>
-  <footer/>
+  <Footer/>
 </template>
 
 <script>
@@ -28,8 +28,8 @@ export default {
     };
   },
   components: {
-    header: Header,
-    footer: Footer,
+    Header,
+    Footer,
   },
   computed: {
     getUserData() {
