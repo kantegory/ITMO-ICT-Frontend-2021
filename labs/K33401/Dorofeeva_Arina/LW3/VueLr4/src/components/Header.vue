@@ -2,7 +2,7 @@
   <header>
     <nav class="navbar navbar-expand-md navbar-light bg-custom sticky-top">
       <div class="container-fluid">
-        <a href="#" class="navbar-brand">
+        <a href="/" class="navbar-brand">
           <div class="img"></div>
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">

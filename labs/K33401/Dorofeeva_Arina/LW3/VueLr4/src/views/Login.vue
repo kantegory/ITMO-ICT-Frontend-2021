@@ -5,7 +5,7 @@
     <form class="needs-validation" novalidate>
       <a href="/" class="btn btn-dark btn-lg m-3">back</a>
       <div class="container-fluid padding" id="authorizationForm">
-        <h1 class="display-3 text-center">Login</h1>
+        <h1 class="display-3 text-center">login</h1>
 
         <!-- логин -->
         <div class="form-group m-3">
@@ -47,7 +47,7 @@
 import {mapMutations} from "vuex";
 
 export default {
-  name: "Login",
+  name: "login",
   data() {
     return {
       searchInput: "",
