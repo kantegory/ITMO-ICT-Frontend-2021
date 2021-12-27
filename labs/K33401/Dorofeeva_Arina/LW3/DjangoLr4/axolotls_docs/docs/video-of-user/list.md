@@ -1,4 +1,4 @@
-#Возвращает список видео пользователя
+#List of user videos
 
 **URL** : `/video-of-user/list/`
 

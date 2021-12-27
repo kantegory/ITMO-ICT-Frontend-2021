@@ -4,6 +4,6 @@
 - User list
 - User creation
 ### VideoOfUser:
-The list of VideoOfUser
+- User video list
 - Save video to user's video list
 

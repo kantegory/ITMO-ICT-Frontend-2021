@@ -9,7 +9,7 @@ manage.py runserver
 
 
 
-#Просомтр документации
+#просмотр документации
 ```
 cd axolotls_docs
 mkdocs serve 

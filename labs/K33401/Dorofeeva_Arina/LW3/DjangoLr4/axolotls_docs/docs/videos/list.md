@@ -1,6 +1,4 @@
-# List of all breeds
-
-Выводит информацию о всех видео
+#All videos
 
 **URL** : `/videos/list/`
 

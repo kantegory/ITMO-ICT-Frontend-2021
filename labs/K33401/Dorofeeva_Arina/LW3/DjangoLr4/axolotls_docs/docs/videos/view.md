@@ -1,8 +1,6 @@
-# Create Airline
+#Create video
 
-Создает новое видео
-
-**URL** : `/Hotel/create/`
+**URL** : `/Video/create/`
 
 **Methods** : `PUT, POST, DELETE`
 
