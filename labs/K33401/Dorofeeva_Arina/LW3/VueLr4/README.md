@@ -1,4 +1,4 @@
-# axolotles
+# axolotl
 
 ## Project setup
 ```
