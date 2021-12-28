@@ -29,7 +29,12 @@
 </script>
 
 <style scoped>
-.form-text {
-    color: white;
-}
+    .form-text {
+        color: white;
+    }
+    .bg-orange {
+         background: #ff6f32;
+         padding-left: 20px;
+         padding-right: 20px;
+     }
 </style>
