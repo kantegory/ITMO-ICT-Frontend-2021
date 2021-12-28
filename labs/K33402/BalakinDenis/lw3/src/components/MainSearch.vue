@@ -66,8 +66,8 @@
         height: 50px;
         border: 0;
         border-radius: 10px;
-        background: #ff6f32;
-        color: white;
+        background: var(--btn-color);
+        color: var(--body-color);
         font-size: 20px;
         font-weight: bold;
     }
@@ -76,7 +76,8 @@
         padding: 10px;
         height: 50px;
         border: 0;
-        border-right: 2px solid #0c73fe;
+        background: var(--body-color);
+        border-right: 2px solid var(--back-color);
     }
     .ticket_input:first-child {
         border-radius: 10px 0 0 10px;

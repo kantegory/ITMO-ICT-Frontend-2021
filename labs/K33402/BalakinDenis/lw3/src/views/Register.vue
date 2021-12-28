@@ -39,10 +39,10 @@
 
 <style scoped>
     .form-text {
-        color: white;
+        color: var(--body-color);
     }
     .bg-orange {
-        background: #ff6f32;
+        background: var(--btn-color);
         padding-left: 20px;
         padding-right: 20px;
     }

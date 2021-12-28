@@ -6,7 +6,6 @@
 </template>
 
 <script>
-
 import Header from "@/components/Header";
 export default {
 
@@ -19,8 +18,8 @@ export default {
 
 <style>
     #app {
-        background: #0c73fe;
-        color: white;
+        background: var(--back-color);
+        color: var(--body-color);
         min-height: 100vh;
     }
 </style>

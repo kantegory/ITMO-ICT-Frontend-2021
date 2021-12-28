@@ -40,7 +40,7 @@
 
 <style scoped>
     .bg-orange {
-        background: #ff6f32;
+        background: var(--btn-color);
         padding-left: 20px;
         padding-right: 20px;
     }

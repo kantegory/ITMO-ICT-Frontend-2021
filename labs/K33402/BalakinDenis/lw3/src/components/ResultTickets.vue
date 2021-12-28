@@ -51,12 +51,12 @@
 
 <style scoped>
     .bg-orange {
-         background: #ff6f32;
+         background: var(--btn-color);
          padding-left: 20px;
          padding-right: 20px;
      }
     .card {
-        background: rgb(255, 255, 255);
+        background: var(--body-color);
         color: black;
         border-radius: 25px;
         padding: 0 10px;
