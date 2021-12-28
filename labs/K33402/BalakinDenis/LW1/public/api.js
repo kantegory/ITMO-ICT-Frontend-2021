@@ -40,7 +40,6 @@ formElement.onsubmit = function() {
         }
     }
 
-    console.log(url)
     fetch(url, {
         method: 'get',
     })
