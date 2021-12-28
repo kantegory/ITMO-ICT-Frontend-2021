@@ -1,10 +1,14 @@
+:root {
+    color-scheme: light dark;
+}
+
 body {
-    background: #0c73fe;
-    color: white;
+    background: var(--back-color);
+    color: var(--body-color);
 }
 
 .bg-orange {
-    background: #ff6f32;
+    background: var(--btn-color);
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -15,8 +19,8 @@ body {
     height: 50px;
     border: 0;
     border-radius: 10px;
-    background: #ff6f32;
-    color: white;
+    background: var(--btn-color);
+    color: var(--body-color);
     font-size: 20px;
     font-weight: bold;
 }
@@ -25,7 +29,8 @@ body {
     padding: 10px;
     height: 50px;
     border: 0;
-    border-right: 2px solid #0c73fe;
+    background: var(--body-color);
+    border-right: 2px solid var(--back-color);
 }
 .ticket_input:first-child {
     border-radius: 10px 0 0 10px;
@@ -34,18 +39,24 @@ body {
     border-radius:0 10px 10px 0;
 }
 .form-text {
-    color: white;
+    color: var(--body-color);
 }
 .avatar {
     border-radius: 25px;
 }
 .card {
-    background: rgb(255, 255, 255);
+    background: var(--body-color);
     color: black;
     border-radius: 25px;
     padding: 0 10px;
     margin-top: 20px;
 
+}
+svg {
+    width: 30px;
+    max-height: 50px;
+    margin-right: 20px;
+    fill:  var(--body-color);
 }
 .card img {
     height: 50px;
