@@ -1,0 +1,72 @@
+:root {
+    color-scheme: light dark;
+}
+
+body {
+    background: var(--back-color);
+    color: var(--body-color);
+}
+
+.bg-orange {
+    background: var(--btn-color);
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.ticket_submit {
+    margin-top: 50px;
+    margin-left: 50px;
+    padding: 10px 40px;
+    height: 50px;
+    border: 0;
+    border-radius: 10px;
+    background: var(--btn-color);
+    color: var(--body-color);
+    font-size: 20px;
+    font-weight: bold;
+}
+.ticket_input {
+    margin-top: 50px;
+    padding: 10px;
+    height: 50px;
+    border: 0;
+    background: var(--body-color);
+    border-right: 2px solid var(--back-color);
+}
+.ticket_input:first-child {
+    border-radius: 10px 0 0 10px;
+}
+.ticket_input:last-child {
+    border-radius:0 10px 10px 0;
+}
+.form-text {
+    color: var(--body-color);
+}
+.avatar {
+    border-radius: 25px;
+}
+.card {
+    background: var(--body-color);
+    color: black;
+    border-radius: 25px;
+    padding: 0 10px;
+    margin-top: 20px;
+
+}
+svg {
+    width: 30px;
+    max-height: 50px;
+    margin-right: 20px;
+    fill:  var(--body-color);
+}
+.card img {
+    height: 50px;
+}
+.card .price {
+    margin-top: 10px;
+}
+.mr-2 {
+    margin-right: 20px;
+}
+.ml-2 {
+    margin-left: 20px;
+}
