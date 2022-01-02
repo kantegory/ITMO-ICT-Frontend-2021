@@ -3,19 +3,41 @@
     <b-container>
       <h1 class="mt-4">Поиск прогноза погоды по городу</h1>
 
-      <b-form>
+      <b-form @submit.prevent="getWeather">
         <div class="d-sm-flex mt-4">
-          <b-form-input placeholder="Введите город..."/>
+          <b-form-input v-model="filterCity"
+                        placeholder="Введите город..."
+          />
           <div class="d-flex justify-content-center mt-2 mt-sm-0 ml-sm-2">
-            <b-button>Поиск</b-button>
+            <b-button type="submit">Поиск</b-button>
           </div>
         </div>
         <b-form-group label="Фильтр" class="mt-3">
           <div class="d-flex flex-wrap">
-            <b-button variant="outline-dark">Сегодня</b-button>
-            <b-button variant="outline-dark" class="ml-2">Завтра</b-button>
-            <b-button variant="outline-dark" class="ml-2">Выходные</b-button>
-            <b-button variant="outline-dark" class="ml-2">Средняя за месяц</b-button>
+            <b-button variant="outline-dark"
+                      :pressed="filterDate === 'today'"
+                      @click="setFilterDate('today')"
+            >
+              Сегодня
+            </b-button>
+            <b-button variant="outline-dark" class="ml-2"
+                      :pressed="filterDate === 'tomorrow'"
+                      @click="setFilterDate('tomorrow')"
+            >
+              Завтра
+            </b-button>
+            <b-button variant="outline-dark" class="ml-2"
+                      :pressed="filterDate === 'weekends'"
+                      @click="setFilterDate('weekends')"
+            >
+              Выходные
+            </b-button>
+            <b-button variant="outline-dark" class="ml-2"
+                      :pressed="filterDate === 'monthlyAvg'"
+                      @click="setFilterDate('monthlyAvg')"
+            >
+              Средняя за месяц
+            </b-button>
           </div>
         </b-form-group>
       </b-form>
@@ -37,17 +59,31 @@
 
 <script>
 import WeatherCity from "../components/WeatherCity";
+
 export default {
   name: 'Home',
-  components: { WeatherCity },
-  data () {
+  components: {WeatherCity},
+  data() {
     return {
+      filterDate: 'today',
+      filterCity: null,
       weatherInCities: [
         {city: 'Москва', weather: '+18', pressure: 754, wind: 4, windDirection: 'Юго-западный'},
         {city: 'Санкт-Петербург', weather: '+11', pressure: 748, wind: 7, windDirection: 'Северный'},
         {city: 'Казань', weather: '+23', pressure: 789, wind: 2, windDirection: 'Северо-восточный'},
         {city: 'Новгород', weather: '+15', pressure: 756, wind: 5, windDirection: 'Южный'},
       ]
+    }
+  },
+
+  methods: {
+    getWeather() {
+      console.log(`get wearher for ${this.filterCity} on ${this.filterDate}`)
+    },
+
+    setFilterDate(value) {
+      this.filterDate = value
+      this.getWeather()
     }
   }
 }
