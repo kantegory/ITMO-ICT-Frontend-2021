@@ -2,7 +2,8 @@
   <b-card :title="city" class="weather-card">
     <b-card-text>
       <p class="mt-4">
-        <b-icon-brightness-high /> Температура: {{ weather }}
+        <b-icon-brightness-high/>
+        Температура: {{ weather }}
       </p>
       <p>
         <i class="bi bi-thermometer-half"></i> Давление: {{ pressure }}
@@ -11,8 +12,16 @@
         <i class="bi bi-wind"></i> {{ windDirection }}, {{ wind }} м/с</p>
 
       <div class="d-flex justify-content-center">
-        <b-button v-if="saveButton" size="sm" variant="outline-dark">Сохранить</b-button>
-        <b-button v-else size="sm" variant="outline-danger">Удалить</b-button>
+        <b-button v-if="saveButton" size="sm" variant="outline-dark"
+                  @click="$emit('save-city', city)"
+        >
+          Сохранить
+        </b-button>
+        <b-button v-if="deleteButton" size="sm" variant="outline-danger" class="ml-2"
+                  @click="$emit('delete-city', city)"
+        >
+          Удалить
+        </b-button>
       </div>
     </b-card-text>
   </b-card>
@@ -28,6 +37,7 @@ export default {
     wind: String,
     windDirection: String,
     saveButton: Boolean,
-  }
+    deleteButton: Boolean,
+  },
 }
 </script>

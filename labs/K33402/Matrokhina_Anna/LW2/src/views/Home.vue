@@ -49,17 +49,21 @@
         </b-form-group>
       </b-form>
 
-      <b-row cols="1" cols-md="2" cols-lg="3" cols-xl="4" class="mt-5">
+      <b-row v-if="weatherInCities.length !== 0" cols="1" cols-md="2" cols-lg="3" cols-xl="4" class="mt-5">
         <b-col v-for="city in weatherInCities" class="mb-3">
           <weather-city :city="city.city"
                         :weather="city.weather"
                         :pressure="city.pressure"
                         :wind="city.wind"
                         :wind-direction="city.windDirection"
-                        :save-button="true"
+                        :save-button="true" :delete-button="true"
+                        @delete-city="deleteCity"
           />
         </b-col>
       </b-row>
+      <h5 v-else class="mt-4">
+        Введите название города чтобы добавить карточку с погодой
+      </h5>
     </b-container>
   </div>
 </template>
@@ -77,15 +81,19 @@ export default {
       filterDate: 'today',
       filterCity: null,
       filterError: null,
-      weatherInCities: [
-      ]
+      weatherInCities: []
     }
   },
 
   methods: {
+    deleteCity(city) {
+      this.weatherInCities = this.weatherInCities.filter(weaher => weaher.city !== city)
+    },
+
     addCityWeather(data) {
-      console.log(data)
-      this.weatherInCities = this.weatherInCities.filter(city => city.city !== data.name)
+      console.log('Weather data', data)
+
+      this.deleteCity(data.name)
 
       let city = data.name
       let weather = data.main.temp
@@ -100,6 +108,7 @@ export default {
       console.log(`get wearher for ${this.filterCity} on ${this.filterDate}`)
       let data = await this.apiCityWeather(this.filterCity)
       this.filterError = data.error
+      this.filterCity = null
 
       if (data.status) {
         this.addCityWeather(data.data)
@@ -108,7 +117,7 @@ export default {
 
     setFilterDate(value) {
       this.filterDate = value
-      this.getWeather()
+      this.weatherInCities = []
     }
   }
 }
