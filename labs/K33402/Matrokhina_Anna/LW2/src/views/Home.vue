@@ -96,17 +96,18 @@ export default {
       this.deleteCity(data.name)
 
       let city = data.name
-      let weather = data.main.temp
-      let pressure = data.main.pressure
-      let wind = parseInt(data.wind.speed)
-      let windDirection = this.getWindDirection(data.wind.deg)
+      let weather = data.temp
+      let pressure = data.pressure
+      let wind = parseInt(data.wind_speed)
+      let windDirection = this.getWindDirection(data.wind_deg)
 
       this.weatherInCities = [{city, weather, pressure, wind, windDirection}, ...this.weatherInCities]
     },
 
     async getWeather() {
       console.log(`get wearher for ${this.filterCity} on ${this.filterDate}`)
-      let data = await this.apiCityWeather(this.filterCity)
+      let data = await this.apiCityWeather(this.filterCity, this.filterDate)
+
       this.filterError = data.error
       this.filterCity = null
 

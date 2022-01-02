@@ -6,7 +6,6 @@
 export default {
   data() {
     return {
-      openweathermapURL: 'https://api.openweathermap.org/data/2.5',
       openweathermapKey: '5ae749cc2df923e8e65a27f4fdc3eccf'
     }
   },
@@ -27,16 +26,50 @@ export default {
       return arr[(val % 16)];
     },
 
-    async apiCityWeather(city) {
+    async resolveCityName(city) {
       let result = {status: true, data: null, error: null}
 
-      await this.axios.get(`${this.openweathermapURL}/weather?q=${city}&appid=${this.openweathermapKey}&units=metric `)
+      let url = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${this.openweathermapKey}`
+      await this.axios.get(url)
           .then(response => {
-            result.data = response.data
+            result.data = response.data[0]
           })
           .catch(error => {
             result.status = false
             result.error = 'Ошибка! Указанный город не найден'
+          })
+
+      return result
+    },
+
+    async apiCityWeather(city, date) {
+      let result = {status: true, data: null, error: null}
+
+      let cityResolved = await this.resolveCityName(city)
+
+      if (!cityResolved.status) {
+        return cityResolved
+      }
+
+      let params = new URLSearchParams()
+      params.append('lat', cityResolved.data.lat)
+      params.append('lon', cityResolved.data.lon)
+      params.append('exclude', 'hourly,minutely')
+      params.append('units', 'metric')
+      params.append('appid', this.openweathermapKey)
+
+      let url = `https://api.openweathermap.org/data/2.5/onecall`
+      await this.axios.get(url, {params: params})
+          .then(response => {
+            if (date === 'today') {
+              result.data = response.data.current
+              result.data.name = cityResolved.data.local_names.ru
+            }
+
+          })
+          .catch(error => {
+            result.status = false
+            result.error = 'Ошибка! Не удалось получить прогноз погоды'
           })
 
       return result
