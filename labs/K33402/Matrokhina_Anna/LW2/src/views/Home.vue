@@ -4,10 +4,17 @@
       <h1 class="mt-4">Поиск прогноза погоды по городу</h1>
 
       <b-form @submit.prevent="getWeather">
-        <div class="d-sm-flex mt-4">
-          <b-form-input v-model="filterCity"
-                        placeholder="Введите город..."
-          />
+        <div class="d-sm-flex align-items-start mt-4">
+          <b-form-group class="flex-grow-1">
+            <b-form-input v-model="filterCity"
+                          placeholder="Введите город..."
+                          :state="filterError === null ? null : false"
+            />
+            <b-form-invalid-feedback>
+              {{ filterError }}
+            </b-form-invalid-feedback>
+          </b-form-group>
+
           <div class="d-flex justify-content-center mt-2 mt-sm-0 ml-sm-2">
             <b-button type="submit">Поиск</b-button>
           </div>
@@ -59,26 +66,44 @@
 
 <script>
 import WeatherCity from "../components/WeatherCity";
+import WeatherMixin from "../mixins/WeatherMixin";
 
 export default {
   name: 'Home',
+  mixins: [WeatherMixin],
   components: {WeatherCity},
   data() {
     return {
       filterDate: 'today',
       filterCity: null,
+      filterError: null,
       weatherInCities: [
-        {city: 'Москва', weather: '+18', pressure: 754, wind: 4, windDirection: 'Юго-западный'},
-        {city: 'Санкт-Петербург', weather: '+11', pressure: 748, wind: 7, windDirection: 'Северный'},
-        {city: 'Казань', weather: '+23', pressure: 789, wind: 2, windDirection: 'Северо-восточный'},
-        {city: 'Новгород', weather: '+15', pressure: 756, wind: 5, windDirection: 'Южный'},
       ]
     }
   },
 
   methods: {
-    getWeather() {
+    addCityWeather(data) {
+      console.log(data)
+      this.weatherInCities = this.weatherInCities.filter(city => city.city !== data.name)
+
+      let city = data.name
+      let weather = data.main.temp
+      let pressure = data.main.pressure
+      let wind = parseInt(data.wind.speed)
+      let windDirection = this.getWindDirection(data.wind.deg)
+
+      this.weatherInCities = [{city, weather, pressure, wind, windDirection}, ...this.weatherInCities]
+    },
+
+    async getWeather() {
       console.log(`get wearher for ${this.filterCity} on ${this.filterDate}`)
+      let data = await this.apiCityWeather(this.filterCity)
+      this.filterError = data.error
+
+      if (data.status) {
+        this.addCityWeather(data.data)
+      }
     },
 
     setFilterDate(value) {
