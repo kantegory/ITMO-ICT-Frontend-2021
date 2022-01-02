@@ -1,0 +1,68 @@
+.main-head {
+    margin: 20px auto auto auto;
+    width: 600px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    display: flex;
+    flex-direction: column;
+}
+
+.form {
+    position: center;
+    height: 400px;
+    max-width: 600px;
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+
+.form h1 {
+    text-align: center;
+}
+
+.form input {
+    width: 100%;
+    height: 42px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    outline: none;
+}
+
+.form button {
+    width: 100%;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+
+.form input#login {
+    background-size: 16px 80px;
+}
+
+.form input#login:focus {
+    background-size: 16px 80px;
+}
+
+.form input#password {
+    background-size: 16px 80px;
+}
+
+
+.form input#password:focus {
+    background-size: 16px 80px;
+}
+
+.form h2 {
+    margin-top: 10px;
+    font-size: 20px;
+    text-align: right;
+}
+
+.form h2 a {
+    text-decoration: none;
+}

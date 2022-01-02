@@ -1,0 +1,37 @@
+.hotel-reserve {
+    width: 100%;
+    padding: 50px;
+}
+
+.hotel {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.content{
+    display: flex;
+    flex-direction: column;
+}
+.content div{
+    padding: 10px;
+    font-size: 20px;
+}
+.reserve-params{
+    display: flex;
+    flex-direction: column;
+}
+.reserve-params input{
+    padding: 10px;
+    margin: 10px;
+    height: 60px;
+    width: 270px;
+    font-size: 20px;
+}
+.reserve-button{
+    margin: 10px;
+    height: 50px;
+    width: 270px;
+    cursor: pointer;
+    font-size: 20px;
+}
