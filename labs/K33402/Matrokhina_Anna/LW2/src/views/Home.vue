@@ -39,12 +39,12 @@
             >
               Выходные
             </b-button>
-            <b-button variant="outline-dark" class="ml-2"
-                      :pressed="filterDate === 'monthlyAvg'"
-                      @click="setFilterDate('monthlyAvg')"
-            >
-              Средняя за месяц
-            </b-button>
+            <!--            <b-button variant="outline-dark" class="ml-2"-->
+            <!--                      :pressed="filterDate === 'monthlyAvg'"-->
+            <!--                      @click="setFilterDate('monthlyAvg')"-->
+            <!--            >-->
+            <!--              Средняя за месяц-->
+            <!--            </b-button>-->
           </div>
         </b-form-group>
       </b-form>

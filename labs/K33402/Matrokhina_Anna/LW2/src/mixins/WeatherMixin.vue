@@ -63,11 +63,26 @@ export default {
           .then(response => {
             if (date === 'today') {
               result.data = response.data.current
-              result.data.name = cityResolved.data.local_names.ru
+            } else if (date === 'tomorrow') {
+              result.data = response.data.daily[1]
+              result.data.temp = result.data.temp.day
+            } else if (date === 'weekends') {
+              let today = new Date().getDay()
+              let weekend = 7
+              let diff = weekend - today
+
+              if (diff === 0) {
+                diff = 7
+              }
+
+              result.data = response.data.daily[diff]
+              result.data.temp = result.data.temp.day
             }
 
+            result.data.name = cityResolved.data.local_names.ru
           })
           .catch(error => {
+            console.log('error getting weather', error)
             result.status = false
             result.error = 'Ошибка! Не удалось получить прогноз погоды'
           })
