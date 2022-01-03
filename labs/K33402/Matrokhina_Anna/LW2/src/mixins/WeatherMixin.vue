@@ -32,7 +32,12 @@ export default {
       let url = `https://api.openweathermap.org/geo/1.0/direct?q=${city}&appid=${this.openweathermapKey}`
       await this.axios.get(url)
           .then(response => {
-            result.data = response.data[0]
+            if (response.data.length === 0) {
+              result.status = false
+              result.error = 'Ошибка! Указанный город не найден'
+            } else {
+              result.data = response.data[0]
+            }
           })
           .catch(error => {
             result.status = false
