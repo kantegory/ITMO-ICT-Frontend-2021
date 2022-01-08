@@ -1,4 +1,4 @@
-# denlabvue
+# labvue
 
 ## Project setup
 ```
