@@ -1,5 +1,7 @@
 # 3kurs-front
 
+Отчет о курсовой работе: https://docs.google.com/document/d/1d-VkC-cWunSsMXDYP2yXv64U2eU9NKuj/edit?usp=sharing&ouid=115470013785729779425&rtpof=true&sd=true
+
 ## Project setup
 ```
 yarn install
