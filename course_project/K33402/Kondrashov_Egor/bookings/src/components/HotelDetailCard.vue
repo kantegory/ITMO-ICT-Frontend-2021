@@ -6,17 +6,13 @@
       <p>{{ hotel.address }}</p>
       <p>Рейтинг: {{ hotel.rating }}</p>
       <p>Бронирование от {{ hotel.cost_from }} Р</p>
-      <b-link
-        :to="{ name: 'HotelDetail', params: { id: hotel.id } }"
-        class="link-primary"
-        >Подробнее</b-link
-      >
+      <p>{{ hotel.description }}</p>
     </div>
   </div>
 </template>
 <script>
 export default {
-  name: "HotelCard",
+  name: "HotelDetailCard",
   props: {
     hotel: Object
   }

@@ -1,5 +1,5 @@
 <template>
-  <b-nav-item class="px-3" :to="navLink">
+  <b-nav-item class="px-3" :to="{ name: routeName }">
     {{ navText }}
   </b-nav-item>
 </template>
@@ -8,7 +8,7 @@
 export default {
   name: "HeaderNavItem",
   props: {
-    navLink: String,
+    routeName: String,
     navText: String
   }
 }

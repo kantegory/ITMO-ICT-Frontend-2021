@@ -1,3 +1,4 @@
+import HotelDetail from "@/views/HotelDetail.vue"
 import Index from "@/views/Index.vue"
 import Login from "@/views/Login.vue"
 import MyBookings from "@/views/MyBookings.vue"
@@ -32,6 +33,11 @@ const routes = [
     path: "/search-results",
     name: "SearchResults",
     component: SearchResults
+  },
+  {
+    path: "/hotels/:id",
+    name: "HotelDetail",
+    component: HotelDetail
   }
 ]
 

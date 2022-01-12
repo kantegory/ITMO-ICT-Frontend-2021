@@ -1,7 +1,7 @@
 <template>
   <section class="page-content">
     <app-header />
-    <search-results-main :hotelItems="hotelItems" />
+    <search-results-main :hotels="hotels" />
   </section>
 </template>
 
@@ -18,13 +18,11 @@ export default {
   },
 
   methods: {
-    async getHotelItems() {
+    async getHotels() {
       try {
         let city = this.$route.query.city
         if (!city) {
-          city = "-553173"
-        } else {
-          city = await this.getCityIdByName(city)
+          city = "Москва"
         }
         let numberOfGuests = this.$route.query.numberOfGuests
         if (!numberOfGuests) {
@@ -39,48 +37,24 @@ export default {
           departureDatetime = "2022-07-25"
         }
         const response = await this.axios.get(
-          `https://booking-com.p.rapidapi.com/v1/hotels/search?dest_type=city&checkin_date=${arrivalDatetime}&room_number=1&checkout_date=${departureDatetime}&order_by=popularity&dest_id=${city}&adults_number=${numberOfGuests}&units=metric&filter_by_currency=AED&locale=en-gb`,
-          {
-            headers: {
-              "x-rapidapi-host": "booking-com.p.rapidapi.com",
-              "x-rapidapi-key":
-                "7364d7fb71msh2d462a6fff9d1b1p102b53jsnff2949c01c27"
-            }
-          }
+          `http://localhost:8000/api/hotels?checkin_date=${arrivalDatetime}&checkout_date=${departureDatetime}&city=${city}&adults_number=${numberOfGuests}`
         )
 
         if (response.status !== 200) {
           throw new Error(response.error)
         }
-        this.hotelItems = response.data.result
-        console.log(this.hotelItems)
+
+        this.hotels = response.data
       } catch (e) {
-        console.error("Error from Booking API: ", e)
-      }
-    },
-    async getCityIdByName(city) {
-      const res = await this.axios.get(
-        `https://booking-com.p.rapidapi.com/v1/hotels/locations?locale=en-gb&name=${city}`,
-        {
-          headers: {
-            "x-rapidapi-host": "booking-com.p.rapidapi.com",
-            "x-rapidapi-key":
-              "7364d7fb71msh2d462a6fff9d1b1p102b53jsnff2949c01c27"
-          }
-        }
-      )
-      if (res.status === 200) {
-        return res.data[0].dest_id
-      } else {
-        return null
+        console.error("Error from API: ", e)
       }
     }
   },
   beforeMount() {
-    this.getHotelItems()
+    this.getHotels()
   },
   data: () => ({
-    hotelItems: []
+    hotels: []
   })
 }
 </script>

@@ -4,9 +4,9 @@
       <div class="container">
         <header-nav-brand />
         <b-navbar-nav class="justify-content-end">
-          <header-nav-item navLink="login" navText="Вход" />
-          <header-nav-item navLink="register" navText="Регистрация" />
-          <header-nav-item navLink="my-bookings" navText="Мои бронирования" />
+          <header-nav-item routeName="Login" navText="Вход" />
+          <header-nav-item routeName="Registration" navText="Регистрация" />
+          <header-nav-item routeName="MyBookings" navText="Мои бронирования" />
         </b-navbar-nav>
       </div>
     </b-navbar>

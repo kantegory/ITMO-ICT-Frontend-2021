@@ -1,11 +1,7 @@
 <template>
   <main>
     <div class="container search-results">
-      <hotel-card
-        v-for="hotelItem in hotelItems"
-        :key="hotelItem.id"
-        :hotelItem="hotelItem"
-      />
+      <hotel-card v-for="hotel in hotels" :key="hotel.id" :hotel="hotel" />
     </div>
   </main>
 </template>
@@ -15,7 +11,7 @@ import HotelCard from "./HotelCard.vue"
 
 export default {
   name: "SearchResultsMain",
-  props: ["hotelItems"],
+  props: ["hotels"],
 
   components: {
     HotelCard
