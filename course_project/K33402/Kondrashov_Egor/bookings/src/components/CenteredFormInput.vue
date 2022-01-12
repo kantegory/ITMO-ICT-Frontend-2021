@@ -5,6 +5,7 @@
       class="form-control"
       :id="id"
       :placeholder="labelText"
+      required
     />
     <label :for="id" hidden> {{ labelText }}</label>
   </div>
