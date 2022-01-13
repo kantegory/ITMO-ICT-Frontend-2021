@@ -11,6 +11,7 @@
           placeholder="Адрес электронной почты"
           v-model="email"
           required
+          autocomplete="email"
         />
         <label for="emailInput" hidden>Адрес электронной почты</label>
       </div>
@@ -22,6 +23,7 @@
           id="passwordInput"
           placeholder="Пароль"
           v-model="password"
+          autocomplete="password"
           required
         />
         <label for="passwordInput" hidden>Пароль</label>

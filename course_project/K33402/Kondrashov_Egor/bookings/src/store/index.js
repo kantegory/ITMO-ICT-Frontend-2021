@@ -7,12 +7,12 @@ Vue.use(Vuex)
 export default new Vuex.Store({
   state: {
     status: "",
-    token: localStorage.getItem("token") || "",
-    user: {}
+    token: localStorage.getItem("token") || ""
   },
   getters: {
     isLoggedIn: state => !!state.token,
-    authStatus: state => state.status
+    authStatus: state => state.status,
+    authHeader: state => `Bearer ${state.token}`
   },
   mutations: {
     auth_request(state) {
@@ -46,7 +46,6 @@ export default new Vuex.Store({
           .then(resp => {
             const token = resp.data.access_token
             localStorage.setItem("token", token)
-            axios.defaults.headers.common.Authorization = token
             commit("auth_success", { token: token })
             resolve(resp)
           })
@@ -55,6 +54,13 @@ export default new Vuex.Store({
             localStorage.removeItem("token")
             reject(err)
           })
+      })
+    },
+    logout({ commit }) {
+      return new Promise((resolve, reject) => {
+        commit("logout")
+        localStorage.removeItem("token")
+        resolve()
       })
     }
   },

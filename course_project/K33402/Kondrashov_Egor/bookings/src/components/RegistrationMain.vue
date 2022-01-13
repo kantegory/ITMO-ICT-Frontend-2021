@@ -1,23 +1,43 @@
 <template>
   <main class="form-signin">
-    <form>
+    <form @submit.prevent="register">
       <centered-heading text="Регистрация" />
 
-      <centered-form-input
-        labelText="Адрес электронной почты"
-        type="email"
-        id="emailInput"
-      />
-      <centered-form-input
-        labelText="Пароль"
-        type="password"
-        id="registerPasswordInput"
-      />
-      <centered-form-input
-        labelText="Повторите пароль"
-        type="password"
-        id="rePasswordInput"
-      />
+      <div class="form-floating">
+        <input
+          type="email"
+          class="form-control"
+          id="emailInput"
+          placeholder="Адрес электронной почты"
+          v-model="email"
+          required
+        />
+        <label for="emailInput" hidden>Адрес электронной почты</label>
+      </div>
+
+      <div class="form-floating">
+        <input
+          type="password"
+          class="form-control"
+          id="registerPasswordInput"
+          placeholder="Пароль"
+          v-model="password"
+          required
+        />
+        <label for="registerPasswordInput" hidden>Пароль</label>
+      </div>
+
+      <div class="form-floating">
+        <input
+          type="password"
+          class="form-control"
+          id="rePasswordInput"
+          placeholder="Повторите пароль"
+          v-model="rePassword"
+          required
+        />
+        <label for="rePasswordInput" hidden>Повторите пароль</label>
+      </div>
       <checkbox
         text="Соглашаюсь с условиями обслуживания"
         value="accept-terms"
@@ -29,7 +49,6 @@
 
 <script>
 import CenteredHeading from "./CenteredHeading.vue"
-import CenteredFormInput from "./CenteredFormInput.vue"
 import Checkbox from "./Checkbox.vue"
 import BigButton from "./BigButton.vue"
 
@@ -38,9 +57,39 @@ export default {
 
   components: {
     CenteredHeading,
-    CenteredFormInput,
     Checkbox,
     BigButton
+  },
+
+  data() {
+    return {
+      email: "",
+      password: "",
+      rePassword: ""
+    }
+  },
+
+  methods: {
+    async register() {
+      if (this.password === this.rePassword) {
+        const registrationData = {
+          email: this.email,
+          password: this.password
+        }
+
+        const resp = await this.axios({
+          url: "http://localhost:8000/api/auth/register",
+          data: registrationData,
+          method: "POST"
+        })
+
+        if (resp.status !== 201) {
+          throw new Error(resp.error)
+        }
+
+        this.$router.push("/")
+      }
+    }
   }
 }
 </script>
@@ -68,5 +117,17 @@ export default {
   margin-bottom: 10px;
   border-top-left-radius: 0;
   border-top-right-radius: 0;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+.form-floating > .form-control {
+  padding: 1rem 0.75rem;
+}
+.form-floating > .form-control,
+.form-floating > .form-select {
+  height: calc(3.5rem + 2px);
+  line-height: 1.25;
 }
 </style>

@@ -1,26 +1,22 @@
 <template>
   <div class="container-md booking-item">
-    <h3>{{ heading }}</h3>
-    <img :src="imgSrc" class="img-fluid booking-img" alt="" />
-    <p class="place-date">{{ placeDate }}</p>
-    <p>Хозяин: {{ host }}</p>
-    <p>Адрес: {{ address }}</p>
-    <p>Количество гостей: {{ guestsNum }}</p>
-    <p>Общая стоимость: {{ totalCost }}</p>
-    <a href="#" class="link-primary">Подробнее</a>
+    <h3>{{ booking.hotel.name }}</h3>
+    <img :src="booking.hotel.img_src" class="img-fluid booking-img" alt="" />
+    <p class="date">С {{ booking.starts_at }} по {{ booking.ends_at }}</p>
+    <p>Адрес: {{ booking.hotel.address }}</p>
+    <p>Количество гостей: {{ booking.number_of_guests }}</p>
+    <b-link
+      :to="{ name: 'HotelDetail', params: { id: booking.hotel.id } }"
+      class="link-primary"
+      >Перейти на страницу отеля</b-link
+    >
   </div>
 </template>
 <script>
 export default {
   name: "BookingCard",
   props: {
-    heading: String,
-    imgSrc: String,
-    placeDate: String,
-    host: String,
-    address: String,
-    guestsNum: Number,
-    totalCost: String
+    booking: Object
   }
 }
 </script>
@@ -37,7 +33,7 @@ export default {
   padding: 25px 0px;
 }
 
-p.place-date {
+p.date {
   font-size: small;
 }
 </style>

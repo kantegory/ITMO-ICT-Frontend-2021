@@ -3,7 +3,6 @@
     <b-form class="index-search-form" @submit="onSubmit">
       <heading text="Поиск жилья" />
       <index-big-form />
-      <index-small-forms />
       <search-button />
     </b-form>
   </main>
@@ -12,7 +11,6 @@
 <script>
 import Heading from "./Heading.vue"
 import IndexBigForm from "../components/IndexBigForm.vue"
-import IndexSmallForms from "../components/IndexSmallForms.vue"
 import SearchButton from "../components/SearchButton.vue"
 
 export default {
@@ -21,7 +19,6 @@ export default {
   components: {
     Heading,
     IndexBigForm,
-    IndexSmallForms,
     SearchButton
   },
 
@@ -31,10 +28,7 @@ export default {
       this.$router.push({
         name: "SearchResults",
         query: {
-          city: document.getElementById("city").value,
-          numberOfGuests: document.getElementById("numberOfGuests").value,
-          arrivalDatetime: document.getElementById("arrivalDatetime").value,
-          departureDatetime: document.getElementById("departureDatetime").value
+          city: document.getElementById("city").value
         }
       })
     }

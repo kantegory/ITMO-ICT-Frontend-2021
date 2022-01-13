@@ -6,6 +6,7 @@ import Registration from "@/views/Registration.vue"
 import SearchResults from "@/views/SearchResults.vue"
 import Vue from "vue"
 import VueRouter from "vue-router"
+import store from "../store/index.js"
 
 Vue.use(VueRouter)
 const routes = [
@@ -27,7 +28,10 @@ const routes = [
   {
     path: "/my-bookings",
     name: "MyBookings",
-    component: MyBookings
+    component: MyBookings,
+    meta: {
+      requiresAuth: true
+    }
   },
   {
     path: "/search-results",
@@ -45,6 +49,18 @@ const router = new VueRouter({
   mode: "history",
   base: process.env.BASE_URL,
   routes
+})
+
+router.beforeEach((to, from, next) => {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    if (store.getters.isLoggedIn) {
+      next()
+      return
+    }
+    next("/login")
+  } else {
+    next()
+  }
 })
 
 export default router
