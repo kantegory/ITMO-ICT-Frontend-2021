@@ -71,7 +71,6 @@ export default {
   methods: {
     async makeBooking(event) {
       event.preventDefault()
-      console.log(this.form)
       const postData = this.form
       postData.hotel_id = this.$route.params.id
       try {

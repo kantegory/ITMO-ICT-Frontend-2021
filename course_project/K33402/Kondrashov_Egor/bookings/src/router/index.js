@@ -1,3 +1,4 @@
+import EditProfile from "@/views/EditProfile.vue"
 import HotelDetail from "@/views/HotelDetail.vue"
 import Index from "@/views/Index.vue"
 import Login from "@/views/Login.vue"
@@ -48,6 +49,14 @@ const routes = [
     path: "/my-profile",
     name: "MyProfile",
     component: MyProfile,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: "/my-profile/edit",
+    name: "EditProfile",
+    component: EditProfile,
     meta: {
       requiresAuth: true
     }

@@ -3,6 +3,11 @@
     <b-row class="justify-content-center"><h2>Ваш профиль</h2></b-row>
     <b-row class="justify-content-center">
       <div class="col-10">
+        <p>
+          <b-link :to="{ name: 'EditProfile' }"
+            ><em>Редактировать профиль</em></b-link
+          >
+        </p>
         <p><strong>Email: </strong> {{ profile.email }}</p>
         <p><strong>Имя: </strong> {{ profile.first_name }}</p>
         <p><strong>Фамилия: </strong> {{ profile.last_name }}</p>
