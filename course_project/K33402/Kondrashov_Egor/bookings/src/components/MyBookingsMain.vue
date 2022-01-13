@@ -1,6 +1,6 @@
 <template>
   <main class="container">
-    <h1 class="text-center">Ваши бронирования</h1>
+    <h2 class="text-center">Ваши бронирования</h2>
     <booking-card
       v-for="booking in bookings"
       :key="booking.id"
@@ -23,7 +23,7 @@ export default {
 </script>
 
 <style scoped>
-h1 {
+h2 {
   margin: 30px 0;
 }
 </style>>

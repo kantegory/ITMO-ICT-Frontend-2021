@@ -2,6 +2,7 @@ import HotelDetail from "@/views/HotelDetail.vue"
 import Index from "@/views/Index.vue"
 import Login from "@/views/Login.vue"
 import MyBookings from "@/views/MyBookings.vue"
+import MyProfile from "@/views/MyProfile.vue"
 import Registration from "@/views/Registration.vue"
 import SearchResults from "@/views/SearchResults.vue"
 import Vue from "vue"
@@ -42,6 +43,14 @@ const routes = [
     path: "/hotels/:id",
     name: "HotelDetail",
     component: HotelDetail
+  },
+  {
+    path: "/my-profile",
+    name: "MyProfile",
+    component: MyProfile,
+    meta: {
+      requiresAuth: true
+    }
   }
 ]
 

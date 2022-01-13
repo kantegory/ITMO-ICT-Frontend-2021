@@ -19,6 +19,11 @@
             routeName="MyBookings"
             navText="Мои бронирования"
           />
+          <header-nav-item
+            v-if="this.$store.getters.isLoggedIn"
+            routeName="MyProfile"
+            navText="Мои профиль"
+          />
           <span v-if="this.$store.getters.isLoggedIn"
             ><b-nav-item @click="logout">Выйти</b-nav-item></span
           >
