@@ -3,30 +3,17 @@
     <b-navbar>
       <div class="container">
         <header-nav-brand />
-        <b-navbar-nav class="justify-content-end">
-          <header-nav-item
-            v-if="!this.$store.getters.isLoggedIn"
-            routeName="Login"
-            navText="Вход"
-          />
-          <header-nav-item
-            v-if="!this.$store.getters.isLoggedIn"
-            routeName="Registration"
-            navText="Регистрация"
-          />
-          <header-nav-item
-            v-if="this.$store.getters.isLoggedIn"
-            routeName="MyBookings"
-            navText="Мои бронирования"
-          />
-          <header-nav-item
-            v-if="this.$store.getters.isLoggedIn"
-            routeName="MyProfile"
-            navText="Мои профиль"
-          />
-          <span v-if="this.$store.getters.isLoggedIn"
-            ><b-nav-item @click="logout">Выйти</b-nav-item></span
-          >
+        <b-navbar-nav
+          class="justify-content-end"
+          v-if="!this.$store.getters.isLoggedIn"
+        >
+          <header-nav-item routeName="Login" navText="Вход" />
+          <header-nav-item routeName="Registration" navText="Регистрация" />
+        </b-navbar-nav>
+        <b-navbar-nav class="justify-content-end" v-else>
+          <header-nav-item routeName="MyBookings" navText="Мои бронирования" />
+          <header-nav-item routeName="MyProfile" navText="Мои профиль" />
+          <span><b-nav-item @click="logout">Выйти</b-nav-item></span>
         </b-navbar-nav>
       </div>
     </b-navbar>

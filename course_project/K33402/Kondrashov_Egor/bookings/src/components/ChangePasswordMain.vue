@@ -13,6 +13,7 @@
               id="password-input"
               type="password"
               class="col-4"
+              v-model="password"
               placeholder="Введите новый пароль"
             ></b-form-input>
           </b-form-group>
@@ -26,6 +27,7 @@
               id="repassword-input"
               type="password"
               class="col-4"
+              v-model="rePassword"
               placeholder="Повторите ввод нового пароля"
             ></b-form-input>
           </b-form-group>
@@ -59,6 +61,7 @@ export default {
           const patchData = {
             password: this.password
           }
+          console.log(patchData)
 
           const resp = await this.axios.patch(
             "http://localhost:8000/api/users/me",
