@@ -13,6 +13,10 @@
         <p><strong>Фамилия: </strong> {{ profile.last_name }}</p>
         <p><strong>Отчество: </strong> {{ profile.middle_name }}</p>
         <p><strong>Дата рождения: </strong> {{ profile.birthdate }}</p>
+        <br />
+        <b-link :to="{ name: 'ChangePassword' }"
+          ><em>Поменять пароль для входа</em></b-link
+        >
       </div>
     </b-row>
   </b-container>

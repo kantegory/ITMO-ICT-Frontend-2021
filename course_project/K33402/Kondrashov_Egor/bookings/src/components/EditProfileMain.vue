@@ -7,6 +7,20 @@
       <div class="col-10">
         <b-form @submit="onSubmit">
           <b-form-group
+            id="email-group"
+            label="Адрес электронной почты"
+            label-for="email-input"
+          >
+            <b-form-input
+              id="email-input"
+              v-model="profile.email"
+              type="email"
+              class="col-4"
+              placeholder="Адрес электронной почты"
+            ></b-form-input>
+          </b-form-group>
+
+          <b-form-group
             id="first-name-group"
             label="Имя"
             label-for="first-name-input"
