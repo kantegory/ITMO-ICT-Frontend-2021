@@ -1,5 +1,5 @@
 <template>
-  <div v-if="this.$store.getters.isLoggedIn">
+  <div>
     <b-form @submit="makeBooking" v-if="!sentSuccess">
       <h4>Забронировать отель</h4>
 
