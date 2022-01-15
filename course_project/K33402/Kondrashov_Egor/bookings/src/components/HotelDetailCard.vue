@@ -25,7 +25,8 @@
       <span v-if="!this.$store.getters.isLoggedIn"
         ><p class="text-info make-booking">
           Для того чтобы забронировать,
-          <b-link :to="{ name: 'Login' }">войдите в систему</b-link>.
+          <b-link :to="{ name: 'Login' }">войдите в систему</b-link> или
+          <b-link :to="{ name: 'Registration' }">зарегистрируйтесь</b-link>.
         </p></span
       >
     </div>

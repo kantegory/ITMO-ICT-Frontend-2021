@@ -60,7 +60,7 @@ export default {
 
       this.$store
         .dispatch("login", { username, password })
-        .then(() => this.$router.go(-1))
+        .then(() => this.$router.push({ name: "Index" }))
         .catch((err) => console.log(err))
     }
   }

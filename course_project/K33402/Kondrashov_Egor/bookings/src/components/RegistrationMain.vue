@@ -87,7 +87,7 @@ export default {
           throw new Error(resp.error)
         }
 
-        this.$router.push("/")
+        this.$router.push({ name: "Login" })
       }
     }
   }
