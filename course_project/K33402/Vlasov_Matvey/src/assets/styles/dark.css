@@ -1,0 +1,10 @@
+:root.dark-theme {
+    --background-color: #343a40;
+    --background-color-navbar: #121220;
+    --background-color-jumbotron: #750035;
+    --background-color-card: #121212;
+    --background-color-input: rgb(59, 59, 59);
+    --color-main: #ffffdd;
+    --color-navbar: #ccffff;
+    --color-placeholder: #fde3e3;
+}
