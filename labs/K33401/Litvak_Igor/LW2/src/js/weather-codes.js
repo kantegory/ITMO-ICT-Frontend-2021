@@ -72,7 +72,7 @@ const codeMappings = {
     804: brokenClouds
 }
 
-function weatherCodeToIcon(code) {
+export function weatherCodeToIcon(code) {
     if (!codeMappings.hasOwnProperty(code)) {
         return defaultIcon
     }
