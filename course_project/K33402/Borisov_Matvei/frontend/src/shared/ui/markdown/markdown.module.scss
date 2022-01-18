@@ -1,0 +1,29 @@
+.editor {
+  :global(.EasyMDEContainer) {
+    border: 1px solid var(--border-color);
+  }
+
+  :global(.editor-toolbar) {
+    border: none;
+  }
+
+  :global(.CodeMirror) {
+    color: var(--text-color);
+    background: var(--body-color);
+    border-top: 1px solid var(--border-color);
+    border-right: none;
+    border-bottom: 1px solid var(--border-color);
+    border-left: none;
+    border-radius: 0;
+  }
+
+  :global(.CodeMirror-cursor) {
+    border-color: var(--text-color);
+  }
+}
+
+.viewer {
+  > *:last-child {
+    margin-bottom: 0;
+  }
+}
