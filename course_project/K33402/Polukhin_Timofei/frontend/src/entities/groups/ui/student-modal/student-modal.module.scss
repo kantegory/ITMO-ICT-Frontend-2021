@@ -1,0 +1,16 @@
+.radios {
+  display: flex;
+  flex-direction: column;
+
+  :global(.ant-radio-button-wrapper) {
+    border: 1px solid #d9d9d9;
+
+    &:not(:first-of-type) {
+      margin-top: -1px;
+    }
+
+    &::before {
+      content: none;
+    }
+  }
+}
