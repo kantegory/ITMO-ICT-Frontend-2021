@@ -1,0 +1,30 @@
+html, 
+body {
+    height: 100%;
+}
+
+main {
+    height: 90%;
+}
+
+.main-search {
+    position: relative;
+    top: 28%
+}
+
+.search-params {
+    position: relative;
+    top: 35%
+}
+
+.title {
+    position: relative;
+    top: 25%
+}
+
+.search-button {
+    position: relative;
+    top: 45%
+}
+
+

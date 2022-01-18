@@ -1,0 +1,13 @@
+:root {
+    --back-color: #273a43;
+    --back-image: url('../dark.jpg');
+    --body-color: #fffff0;
+    --body-shadow: rgba(255, 160 ,122 ,0.6);
+    --body-glow: rgba(255, 255, 255 , 0.7);
+    --a-color: #fff;
+    --text-color: #fff;
+    --a-hover-color: #848484;
+    --a-active-color: #848484;
+    --a-bg-color: #00070a;
+    --body-item-color: #fff;
+}

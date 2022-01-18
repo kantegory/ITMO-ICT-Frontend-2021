@@ -1,0 +1,10 @@
+:root {
+    --nav-bg: #ffffff;
+    --brand-color: rgba(0,0,0,.55);
+    --back-color: #f2f2f2;
+	--text-color: #555;
+    --footer-color: #ffffff;
+    --btn-color: #212529;
+    --btn-border-color: #212529;
+    --card-bg: #fff;
+}

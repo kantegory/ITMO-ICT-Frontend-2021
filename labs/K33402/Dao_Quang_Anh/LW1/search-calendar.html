@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewpoint" content="width=device-width, initial-scale=1.0">
+    <title>Meetup Calendar</title>
+    <link rel="icon" href="/static/images/626px-Meetup_Logo.png" type="image/x-icon">
+    <link href="/static/main.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <nav class="sticky-top navbar navbar-expand nav">
+        <div class="d-flex container-fluid justify-content-start pt-1">
+            <div class="logo-meetup me-3 mt-2">
+                <a  href="search-calendar.html"><img class="logo-meetup"src="static/images/meetup-1.svg" alt="logo"></a>
+            </div>
+            <form class="d-flex">
+                <input class="form-control" type="search" placeholder="Search for keywords" aria-label="Search">
+                <input class="form-control" type="search" placeholder="Enter location">
+                <button class="button3" type="submit">
+                    <i class="fa fa-search"></i>
+                </button>
+            </form>
+        </div>
+        <a class="text-decoration-none a-nav pt-1" href="organizer.html">
+            <span class="fw-bold pink">Start a new group</span>
+        </a>
+        <a class="text-decoration-none a-nav pt-2"href="login.html">
+            <span class="fw-bold black">Login</span>
+        </a>
+        <a class="text-decoration-none a-nav pt-2"href="register.html">
+            <span class="fw-bold black">Register</span>
+        </a>
+    </nav>
+    <div class="d-flex flex-column align-items-center flex-grow-1">
+        <main class="d-flex flex-column align-items-center flex-grow-1">
+            <div class="main-form d-flex flex-column align-items-center"> <!-- ev- sugg-any -->
+                <div class="d-flex flex-column">
+                    <div class="wrapper">
+                        <input type="radio" name="select" id="option-1" checked>
+                        <input type="radio" name="select" id="option-2">
+                        <label for="option-1" class="option option-1">
+                            <span>Events</span>
+                            </label>
+                        <label for="option-2" class="option option-2">
+                            <span>Groups</span>
+                        </label>
+                    </div>
+
+                    <h3 style="margin-left:1rem">Suggested Events near St.Petersburg, RU</h3>
+
+                    <div class="d-flex">
+                        <div class="ms-3">
+                            <select class=" pe-2 dd-l" name="days">
+                                <option class="dd-option" value="">Any days</option>
+                                <option value="">Starting soon</option>
+                                <option value="">Today</option>
+                                <option value="">Tomorrow</option>
+                                <option value="">This week</option>
+                                <option value="">This weekend</option>
+                                <option value="">Next week</option>
+                                <option value="">Custom</option>    
+                            </select>
+                        </div>
+                        <div style="padding-left: 1rem">
+                            <select class="dd-l" name="type">
+                                <option value="">Any type</option>
+                                <option value="">Online</option>
+                                <option value="">In person</option>
+                            </select>
+                        </div>
+                        <div style="padding-left: 1rem">                                
+                            <select class="dd-l" name="distance">
+                                <option value="">Any distance</option>
+                                <option value="">2 miles</option>
+                                <option value="">5 miles</option>
+                                <option value="">10 miles</option>
+                                <option value="">25 miles</option>
+                                <option value="">50 miles</option>
+                                <option value="">100 miles</option>  
+                            </select>
+                        </div>
+                        <div style="padding-left: 1rem">
+                            <select class="dd-l" name="category">
+                                <option value="">Any category</option>
+                                <option value="">Art & Culture</option>
+                                <option value="">Career & Business</option>
+                                <option value="">Community & Environment</option>
+                                <option value="">Dancing</option>
+                            </select>
+                        </div>
+                        <div  style="padding-left: 1rem">
+                            <select class="dd-l" name="sortby">
+                                <option value="">Date</option>
+                                <option value="">Relevance</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class='d-flex flex-column'>
+                        <hr>
+                        <div class="d-flex justify-content-start">
+                            <div style="margin: 0 0.75rem 0 0.75rem">
+                                <img  class="e-image" style="margin:5px;" src=static/images/flex1.png>
+                            </div>
+                            <div class="d-flex flex-column flex-grow-0 justify-content-evenly">
+                                <span style="color:gray;" class="fw-bold"> FRI, OCT 15 @ 2:30 AM MSK</span>
+                                <span style="color: black;" class="fw-bold">Feeling Well:Using 8 Dimensions of Wellness to Find Happiness and Security </span>
+                                <span style="color:rgb(104, 91, 91);" class="fw-light">myTherapyNYC Mental Health & Wellness Events . New York, NY</span>
+                                <div class='d-flex justify-content-between'>
+                                    <span style="color:rgb(104, 91, 91);" class="fw-light">125 attendees</span>
+                                    <svg style="color:rgb(104, 91, 91);margin-right:10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z"/>
+                                        <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                                    </svg> 
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-start">
+                            <div style="margin: 0 0.75rem 0 0.75rem">
+                                <img  class="e-image" style="margin:5px;" src=static/images/flex2.png>
+                            </div>
+                            <div class="d-flex flex-column flex-grow-0 justify-content-evenly">
+                                <span style="color:gray;" class="fw-bold"> TUE, OCT 12 @ 2:00 AM MSK</span>
+                                <span style="color: black;" class="fw-bold">New Old-Time Slow Jam NYC</span>
+                                <span style="color:rgb(104, 91, 91);" class="fw-light">Classical Music Show in the middle of NYC . Old Time Slow Jam NYC . New York, NY</span>
+                                <div class='d-flex justify-content-between'>
+                                    <span style="color:rgb(104, 91, 91);" class="fw-light">25 attendees</span>
+                                    <svg style="color:rgb(104, 91, 91);margin-right:10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z"/>
+                                        <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                                    </svg> 
+                                </div>
+                            </div>
+                        </div>
+                        <hr>
+                        <div class="d-flex justify-content-start">
+                            <div style="margin: 0 0.75rem 0 0.75rem">
+                                <img  class="e-image" style="margin:5px;" src=static/images/flex4.png>
+                            </div>
+                            <div class="d-flex flex-column flex-grow-0 justify-content-evenly">
+                                <span style="color:gray;" class="fw-bold"> TUE, OCT 14 @ 1:00 AM MSK</span>
+                                <span style="color: black;" class="fw-bold">NYAGIM event: Dr.Connor W. Coley</span>
+                                <span style="color:rgb(104, 91, 91);" class="fw-light">New York Area Group for Informatics and Modeling (NYAGIM) . New...</span>
+                                <div class='d-flex justify-content-between'>
+                                    <span style="color:rgb(104, 91, 91);" class="fw-light">59 attendees</span>
+                                    <svg style="color:rgb(104, 91, 91);margin-right:10px" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-up" viewBox="0 0 16 16">
+                                        <path fill-rule="evenodd" d="M3.5 6a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h9a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5h-2a.5.5 0 0 1 0-1h2A1.5 1.5 0 0 1 14 6.5v8a1.5 1.5 0 0 1-1.5 1.5h-9A1.5 1.5 0 0 1 2 14.5v-8A1.5 1.5 0 0 1 3.5 5h2a.5.5 0 0 1 0 1h-2z"/>
+                                        <path fill-rule="evenodd" d="M7.646.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 1.707V10.5a.5.5 0 0 1-1 0V1.707L5.354 3.854a.5.5 0 1 1-.708-.708l3-3z"/>
+                                    </svg> 
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        </div>
+</body>
+<hr>
+<footer>
+    <div style="width:100%" class="d-flex">
+        <div class="pa"></div>
+        <div class="pa2">
+            <form  class="d-flex flex-column form-container2">
+                <div class="d-flex align-items-center">
+                    <div style="padding-right: 15px;">Create your own Meetup group.</div>
+                    <button class="button2">Get Started</button>
+                </div>
+            <hr>
+            <div class="d-flex justify-content-between text-decoration-none">
+                <div class="d-flex flex-column align-items-stretch fs-6">
+                Your Account  
+                <div class="d-flex flex-column justify-content-center fs-6 fw-lighter">
+                    <a>Sign up</a>
+                    <a>Log in</a>
+                    <a>Help</a>
+                </div>
+                </div>
+                <div class="d-flex flex-column align-items-stretch fs-6">
+                Discover
+                <div class="d-flex flex-column fs-6 fw-lighter">
+                    <a>Groups</a>
+                    <a>Calendar</a>
+                    <a>Topics</a>
+                    <a>Citites</a>
+                    <a>Online Events</a>
+                    <a>Local Guides</a>
+                </div>
+                </div>
+                <div class="d-flex flex-column align-items-stretch fs-6">
+                Meetup
+                <div class="d-flex flex-column fs-6 fw-lighter">
+                    <a>About</a>
+                    <a>Blog</a>
+                    <a>Meetup Pro</a>
+                    <a>Careers</a>
+                    <a>Apps</a>
+                </div>
+                </div>
+            </div>
+            <div style="padding-bottom:1rem;">Follow us</div>
+            <div class="d-flex align-items-baseline">
+                <i style="font-size: 24px;" class="-padding fa fa-facebook"></i>
+                <i style="font-size: 24px;" class="-padding fa fa-twitter icon-size"></i>
+                <i style="font-size: 24px;" class="-padding fa fa-youtube icon-size"></i>
+                <i style="font-size: 24px;" class="-padding fa fa-instagram icon-size"></i>
+            </div>
+            <div class="d-flex justify-content-start">
+                <div class="-padding"><i class="fa fa-copyright"></i> 2021 Meetup</div>
+                <div class="-padding">Terms of Service</div>
+                <div class="-padding">Privacy Policy</div>
+                <div class="-padding">Cookie Policy</div>
+                <div class="-padding">Help</div>
+            </div>
+            </form>
+        </div>
+        <div class="pa"></div>
+    </div>
+</footer>
+</html>

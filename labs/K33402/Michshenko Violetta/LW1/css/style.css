@@ -1,0 +1,258 @@
+body{
+    font-size: 14px;
+    min-width: 320px;
+    position: relative;
+    line-height: 1.65;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    opacity: 1;
+}
+
+header{
+    margin-top: 30px auto;
+    max-width: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgba(54, 53, 53, .56);
+    justify-content: space-between;
+}
+
+header .logo{
+    max-width: 250px;
+}
+
+header .logo img{
+    max-width: 100%;
+    
+}
+
+header .mnu_top{
+    list-style-type: none;
+}
+
+header .mnu_top li{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+header .mnu_top li a{
+    display: block;
+    text-decoration: none;
+    color: #363535;
+    font-size: 16px;
+    font-family: monospace
+    font-weight: 600;   
+}
+
+header .btns{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -ms-align-items:center;
+    align-items: center;
+}
+
+header .btns>a{
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+header .btns.btn_light{
+    font-size: 20px;
+    color: rgb(0, 54, 99);
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid rgb(0, 54, 99);
+    padding: 5px 48px;
+}
+
+.image {
+    position: relative;
+    width: 100%; 
+    }
+ 
+h1 {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    }
+h1 span {
+    color: white;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 55px;
+    padding: 5px;
+    }
+h2 {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    }
+h2 span {
+    color:white;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 55px;
+    padding: 5px;
+    }
+
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.btn-outline-secondary{
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    color: rgb(3, 3, 3);
+    font-family: 'Montserrat', sans-serif;
+    font-size: 18px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.form-control{
+    margin: 5px;
+	background-color: #E5E5E5;
+	border: none;
+	border-radius: 0;
+	height: 60px;
+	font: 24px "Montserrat";
+	color: #3C3C3B;
+    height: 30px;
+    font-size: 15px;
+}
+
+.btn-primary{
+    margin: 10px;
+    margin-left: 310px;
+	font: 15px "Montserrat";
+	color: #727171;
+    text-decoration: none;
+	background-color: rgb(122, 168, 206);
+	color: rgb(2, 2, 2);
+	height: 30px;
+	width: 100px;
+	border-radius: 0;
+	border: none;
+	display: block;
+    padding-top: 10px;
+    padding-left: 40px;
+}
+
+.mb-3{
+    margin-block: 20px;
+    margin-left: 300px;
+}
+
+.btn-primary-submit{
+    margin-left: 300px;
+    margin-top: 10px;
+    font: 15px "Montserrat";
+	background-color: rgb(122, 168, 206);
+	color: rgb(2, 2, 2);
+	height: 30px;
+	width: 100px;
+	border-radius: 0;
+	border: none;
+	display: block;
+}
+
+.btn-primary-login{
+    margin-left: 440px;
+    margin-top: -30px;
+    font: 15px "Montserrat";
+	background-color: rgb(3, 58, 102);
+	color: rgb(255, 255, 255);
+    text-decoration: none;
+    padding-top: 5px;
+    padding-left: 35px;
+	height: 23px;
+	width: 200px;
+	border-radius: 0;
+	border: none;
+	display: block;
+}
+
+.btn-primary-login1{
+    margin-top: 10px;
+    margin-left: 300px;
+    font: 15px "Montserrat";
+	background-color: rgb(122, 168, 206);
+	color: rgb(2, 2, 2);
+	height: 30px;
+	width: 250px;
+	border-radius: 0;
+	border: none;
+	display: block;
+}
+
+.form-label{
+    
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.hotels img{
+    margin-top: 20px;
+    margin-left: 40px;
+    border: 2px solid rgb(210, 228, 248);
+    padding: 2px;
+}
+
+.stars_1{
+    margin-top: -15px;
+    margin-left: 125px;
+}
+
+.stars_2{
+    margin-top: -50px;
+    margin-left: 470px;
+    border: 1px solid white;
+}
+
+.stars_3{
+    margin-top: -50px;
+    margin-left: 830px;
+    border: 1px solid white;
+}
+
+.label_1{
+    font: 13px "Montserrat";
+    margin-top: -16px;
+    margin-left: 50px;
+}
+
+.label_2{
+    font: 13px "Montserrat";
+    margin-top: -33px;
+    margin-left: 385px;
+}
+
+.label_3{
+    font: 13px "Montserrat";
+    margin-top: -35px;
+    margin-left: 760px;
+}
+
+
+
+
+
+
+
+
