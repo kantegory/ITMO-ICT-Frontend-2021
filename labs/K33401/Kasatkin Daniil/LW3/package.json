@@ -1,0 +1,72 @@
+{
+  "name": "hotel_project",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@testing-library/jest-dom": "^5.15.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "axios": "^0.24.0",
+    "dayjs": "^1.10.7",
+    "jwt-decode": "^3.1.2",
+    "multiselect-react-dropdown": "^2.0.17",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.22.2",
+    "react-icons": "^4.3.1",
+    "react-modern-calendar-datepicker": "^3.1.6",
+    "react-phone-number-input": "^3.1.44",
+    "react-rating-stars-component": "^2.2.0",
+    "react-router": "^6.1.1",
+    "react-router-dom": "^6.1.1",
+    "react-scripts": "4.0.3",
+    "react-select": "^5.2.1",
+    "react-transition-group": "^4.4.2",
+    "theme-ui": "^0.12.1",
+    "web-vitals": "^1.1.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 6006 -s public",
+    "build-storybook": "build-storybook -s public"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ],
+    "overrides": [
+      {
+        "files": [
+          "**/*.stories.*"
+        ],
+        "rules": {
+          "import/no-anonymous-default-export": "off"
+        }
+      }
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.4.13",
+    "@storybook/addon-essentials": "^6.4.13",
+    "@storybook/addon-links": "^6.4.13",
+    "@storybook/node-logger": "^6.4.13",
+    "@storybook/preset-create-react-app": "^3.2.0",
+    "@storybook/react": "^6.4.13"
+  }
+}

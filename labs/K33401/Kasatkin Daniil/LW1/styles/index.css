@@ -10,6 +10,11 @@ body {
     box-sizing: border-box;
     background-color: var(--body-back);
 }
+body::-webkit-scrollbar {
+    display: none;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
 
 nav {
     font-family: 'Space Mono', monospace;
@@ -74,7 +79,7 @@ nav .menu {
 
 
 .switcher {
-    position: absolute;
+    position: fixed;
     bottom: 36px;
     left: 50%;
     margin: 0;
@@ -380,7 +385,9 @@ form .form-change-link a:hover {
     align-items: center;
     justify-items: right;
 }
-
+.search-btn span{
+    visibility: hidden;
+}
 .filter-window-mobile .filter-block-mobile .search-btn-mobile {
     display: flex;
     align-items: center;
@@ -411,7 +418,7 @@ form .form-change-link a:hover {
 }
 
 .search-btn button:hover {
-    color: var(--text-hover);
+    color: var(--light-color);
 }
 
 .hotels-container {

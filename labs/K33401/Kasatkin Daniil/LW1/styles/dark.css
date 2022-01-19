@@ -12,14 +12,15 @@ body {
     --card-price-color: #fff;
 
 }
-.switcher__radio {
-    filter: invert(1);
-}
 
-.switcher__radio:checked {
+.switcher__radio {
     filter: invert(0);
 }
 
-.switcher__status {
+.switcher__radio:checked {
     filter: invert(1);
+}
+
+.switcher__status {
+    filter: invert(0);
 }

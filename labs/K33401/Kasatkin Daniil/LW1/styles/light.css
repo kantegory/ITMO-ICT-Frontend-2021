@@ -13,13 +13,13 @@ body {
 }
 
 .switcher__radio {
-    filter: invert(0);
-}
-
-.switcher__radio:checked {
     filter: invert(1);
 }
 
-.switcher__status {
+.switcher__radio:checked {
     filter: invert(0);
+}
+
+.switcher__status {
+    filter: invert(1);
 }
