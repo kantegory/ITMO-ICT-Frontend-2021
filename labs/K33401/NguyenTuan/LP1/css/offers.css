@@ -1,0 +1,148 @@
+
+.navbar { 
+	width: 100%; 
+	padding-top: 0;
+	position: fixed;
+	z-index: 1;
+}
+.nav
+{
+	background: black;
+}
+.nav-item {
+	background: transparent;
+	border-left: 1px solid #ccc;
+	cursor: pointer;
+	font-size: 0.8rem;
+	font-weight: 300;
+    text-transform: uppercase;
+    padding: 0;
+    transition: all 0.5s ease;
+}
+/* body */
+.tieude {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 3rem;
+}
+.text1 {
+	width: 100rem;
+	height: 36px;
+	border-radius: 10 rem;
+}
+.container {
+    padding: 5rem 1.5rem;
+    margin: 0 auto;
+}
+.bg-1 {
+	background-image:url("/lap1/img/bg-img-1.jpg");	
+	height: 600px;
+}
+.tm-bg-img {
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+            justify-content: center
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));;
+    grid-gap: 1.5rem;
+}
+.hotel-img{
+    width: 200px;
+    height: 200px;
+    border-radius: 1rem;
+	box-sizing: border-box;
+}
+.grid-item{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+.hotel-name{
+    font-size: 1.7rem;
+    color: rgb(54, 54, 54);
+    line-height: 2.2rem;
+    padding-top: .5rem;
+}
+/* footer */
+.footer-basic {
+	padding:40px 0;
+	background-color:#ffffff;
+	color:#4b4c4d;
+  }
+  
+  .footer-basic ul {
+	padding:0;
+	list-style:none;
+	text-align:center;
+	font-size:18px;
+	line-height:1.6;
+	margin-bottom:0;
+  }
+  
+  .footer-basic li {
+	padding:0 10px;
+  }
+  
+  .footer-basic ul a {
+	color:inherit;
+	text-decoration:none;
+	opacity:0.8;
+  }
+  
+  .footer-basic ul a:hover {
+	opacity:1;
+  }
+  
+  .footer-basic .social {
+	text-align:center;
+	padding-bottom:25px;
+  }
+  
+  .footer-basic .social > a {
+	font-size:24px;
+	width:40px;
+	height:40px;
+	line-height:40px;
+	display:inline-block;
+	text-align:center;
+	border-radius:50%;
+	border:1px solid #ccc;
+	margin:0 8px;
+	color:inherit;
+	opacity:0.75;
+  }
+  
+  .footer-basic .social > a:hover {
+	opacity:0.9;
+  }
+  
+  .footer-basic .copyright {
+	margin-top:15px;
+	text-align:center;
+	font-size:13px;
+	color:#aaa;
+	margin-bottom:0;
+  }
+  
+  /* Credit to https://epicbootstrap.com/snippets/footer-basic */
+  

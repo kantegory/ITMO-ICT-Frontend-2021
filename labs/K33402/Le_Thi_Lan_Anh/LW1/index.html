@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+     <meta charset="UTF-8">
+        <title>HOTEL HT</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="main.css">
+        <script src="https://kit.fontawesome.com/5f1577f152.js"
+        crossorigin="anonymous"></script>
+         <link rel = "icon" href="image/logo.png" type = "image/png"> 
+    </head>
+ 
+    <body>
+           <!--heaader-->
+        <header class = "header" id = "header">
+            <div class = "head-top">
+                <div class = "site-name">   
+                    <span>GREEKPROBIN </span>
+                </div>
+                <div class = "site-nav">
+                    <span id = "nav-btn">MENU <i class = "fas fa-bars"></i></span>
+                </div>    
+            </div>
+
+            <div class = "head-bottom flex">
+                <h2> NICE AND COMFORTABLE PLACE TO STAY</h2>
+                <p> Set in a chilled out,  quiet area of GREEK, GREEKPROBIN is baseed in a beautiful, traditional townhouse with rooms that are simple but classically decked out, deaturing whitewashed walls ans white linen for a bright, light feel.Hotels here have a high, stylish standard and are perfect for a quiet couple’s holiday or family city retreat. Eating in Cimiez is about French cafes and fantastic food in the district’s parks. Nice’s top nightlife spots are easily accessible by bus or the area’s railway stations.</p>
+                 <button type="button" class=" head-btn "> GET STARTED</button>
+            </div>
+        </header>
+        <!--end of the header-->
+
+        <!-- side navbar-->
+         <div class= "sidenav" id="sidenav">
+            <span class = "cancel-btn" id = "cancel-btn">
+                <i class="fas fa-times"></i>
+            </span>
+            <ul class = "navbar">
+                <li> <a href="#header" >Home</a></li>
+                <li> <a href="#services" >Services</a></li>
+                <li> <a href="#rooms" >Rooms</a></li>
+                <li> <a href="#customers" >Customers</a></li>
+            </ul>
+            <button class="btn sign-up"> 
+                <a  href="pages-register.html" > Register</a> </a>
+            </button>
+
+            
+            <button class="btn log-in">
+                <a  href="pages-login.html" > Log in </a>
+            </button>
+         </div> 
+        <!--end of the navbar-->
+
+        <!--full screen modal-->
+        <div id ="modal"></div>
+        <!--end of fullscreen modal-->
+
+        <!--body content-->
+        <section class = "services sec-width" id = services">
+            <div class ="title">
+                <h2>services</h2>    
+            </div>    
+            <div class ="services-container">
+                <!--single service-->
+                <article class = "services">
+                    <div class = "services-icon">
+                        <span>
+                            <i class="fas fa-utensils"></i>
+                        </span>
+                    </div>
+                    <div class = "services-content">
+                        <h2>Food Service/ Food Runners</h2> 
+                        <p> Set in a chilled out,  quiet area of GREEK, GREEKPROBIN is baseed in a beautiful, traditional townhouse with rooms that are simple but classically decked out, deaturing whitewashed walls ans white linen for a bright, light feel.Hotels here have a high, stylish standard and are perfect for a quiet couple’s holiday or family city retreat. Eating in Cimiez is about French cafes and fantastic food in the district’s parks. Nice’s top nightlife spots are easily accessible by bus or the area’s railway stations.</p>
+                        <button type="button" class = "btn">Know More</button>
+                    </div>
+                </article>
+                 <!-- End single service-->
+            
+                <!--single service-->
+                <article class = "services">
+                    <div class = "services-icon">
+                        <span>
+                            <i class="fas fa-swimming-pool"></i>
+                        </span>
+                    </div>
+                    <div class = "services-content">
+                        <h2>Refreshment</h2> 
+                        <p> Set in a chilled out,  quiet area of GREEK, GREEKPROBIN is baseed in a beautiful, traditional townhouse with rooms that are simple but classically decked out, deaturing whitewashed walls ans white linen for a bright, light feel.Hotels here have a high, stylish standard and are perfect for a quiet couple’s holiday or family city retreat. Eating in Cimiez is about French cafes and fantastic food in the district’s parks. Nice’s top nightlife spots are easily accessible by bus or the area’s railway stations.</p>
+                        <button type="button" class = "btn">Know More</button>
+                    </div>
+                </article>
+                <!-- End single service-->
+
+                <!--single service-->
+                <article class = "services">
+                    <div class = "services-icon">
+                        <span>
+                            <i class="fas fa-broom"></i>
+                        </span>
+                    </div>
+                    <div class = "services-content">
+                        <h2>Housekeeping</h2> 
+                        <p> Set in a chilled out,  quiet area of GREEK, GREEKPROBIN is baseed in a beautiful, traditional townhouse with rooms that are simple but classically decked out, deaturing whitewashed walls ans white linen for a bright, light feel.Hotels here have a high, stylish standard and are perfect for a quiet couple’s holiday or family city retreat. Eating in Cimiez is about French cafes and fantastic food in the district’s parks. Nice’s top nightlife spots are easily accessible by bus or the area’s railway stations.</p>
+                        <button type="button" class = "btn">Know More</button>
+                    </div>
+                </article>
+                 <!-- End single service-->
+
+                 <!--single service-->
+                <article class = "services">
+                    <div class = "services-icon">
+                        <span>
+                            <i class="fas fa-door-close"></i>
+                        </span>
+                    </div>
+                    <div class = "services-content">
+                        <h2>Room Security</h2> 
+                        <p> Set in a chilled out,  quiet area of GREEK, GREEKPROBIN is baseed in a beautiful, traditional townhouse with rooms that are simple but classically decked out, deaturing whitewashed walls ans white linen for a bright, light feel.Hotels here have a high, stylish standard and are perfect for a quiet couple’s holiday or family city retreat. Eating in Cimiez is about French cafes and fantastic food in the district’s parks. Nice’s top nightlife spots are easily accessible by bus or the area’s railway stations.</p>
+                        <button type="button" class = "btn">Know More</button>
+                    </div>
+                </article>
+                 <!-- End single service-->
+            </div>
+        </section>
+
+        <div class ="book">
+            <form class ="book-form">
+                <div class="form-item">
+                    <label for ="checkin-date">Check In Date</label>
+                    <input type ="date" id ="checkin-date">
+                </div>
+                <div class="form-item">
+                    <label for ="checkout-date">Check out Date</label>
+                    <input type ="date" id ="checkin-date">
+                </div>
+                <div class = "form-item">
+                    <label for ="adult" >Adult</label>
+                    <input type="number" min ="1" value ="1" id="adult">
+                </div>
+                <div class = "form-item">
+                    <label for ="childent" >childent</label>
+                    <input type="number" min ="1" value ="1" id="childent">
+                </div>
+                <div class = "form-item">
+                    <label for ="rooms" >rooms</label>
+                    <input type="number" min ="1" value ="1" id="rooms">
+                </div>
+                <div class = "form-item">
+                    <input type = "submit" class ="btn" value = "Book Now">
+                </div>
+            </form>
+        </div>
+
+        <section class = "rooms sec-width" id = "rooms">
+            <div class = "title">
+                <h2>rooms</h2>
+            </div>
+            <div class = "room-container">
+                <!--single room-->
+                <article class = "room">
+                    <div class = "room-image">
+                        <img src ="image/standard_ph04.jpg" alt = "room image">
+                    </div>
+                    <div class = "room-text">
+                        <h3> Luxury Rooms</h3>
+                        <ul>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Lorem ipsum dolor sit amet
+                            </li>
+                             <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Lorem ipsum dolor sit amet
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Lorem ipsum dolor sit amet
+                            </li>
+                        </ul>
+                        <p>Lorem Set in a chilled out,  quiet area of GREEK, GREEKPROBIN is baseed in a beautiful, traditional townhouse with rooms that are simple but classically decked out, deaturing whitewashed walls ans white linen for a bright, light feel.Hotels here have a high, stylish standard and are perfect for a quiet couple’s holiday or family city retreat. Eating in Cimiez is about French cafes and fantastic food in the district’s parks. Nice’s top nightlife spots are easily accessible by bus or the area’s railway stations. </p>
+                        <p>Lorem Set in a chilled out,  quiet area of GREEK, GREEKPROBIN is baseed in a beautiful, traditional townhouse with rooms that are simple but classically decked out, deaturing whitewashed walls ans white linen for a bright, light feel.Hotels here have a high, stylish standard and are perfect for a quiet couple’s holiday or family city retreat. Eating in Cimiez is about French cafes and fantastic food in the district’s parks. Nice’s top nightlife spots are easily accessible by bus or the area’s railway stations. </p>
+                        <p class ="rate">
+                            <span>$99.00 /</span> Per night
+                        </p>
+                        <button type = "button" class = "btn"> book now</button>
+                    </div>
+                </article>
+                <!--end of single room -->
+                <!--single room-->
+                <article class = "room">
+                    <div class = "room-image">
+                        <img src ="image/4833694_XL.jpg" alt = "room image">
+                    </div>
+                    <div class = "room-text">
+                        <h3> Luxury Rooms</h3>
+                        <ul>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Lorem ipsum dolor sit amet
+                            </li>
+                             <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Lorem ipsum dolor sit amet
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Lorem ipsum dolor sit amet
+                            </li>
+                        </ul>
+                        <p>Lorem Set in a chilled out,  quiet area of GREEK, GREEKPROBIN is baseed in a beautiful, traditional townhouse with rooms that are simple but classically decked out, deaturing whitewashed walls ans white linen for a bright, light feel.Hotels here have a high, stylish standard and are perfect for a quiet couple’s holiday or family city retreat. Eating in Cimiez is about French cafes and fantastic food in the district’s parks. Nice’s top nightlife spots are easily accessible by bus or the area’s railway stations. </p>
+                        <p>Lorem Set in a chilled out,  quiet area of GREEK, GREEKPROBIN is baseed in a beautiful, traditional townhouse with rooms that are simple but classically decked out, deaturing whitewashed walls ans white linen for a bright, light feel.Hotels here have a high, stylish standard and are perfect for a quiet couple’s holiday or family city retreat. Eating in Cimiez is about French cafes and fantastic food in the district’s parks. Nice’s top nightlife spots are easily accessible by bus or the area’s railway stations. </p>
+                        <p class ="rate">
+                            <span>$99.00 /</span> Per night
+                        </p>
+                        <button type = "button" class = "btn"> book now</button>
+                    </div>
+                </article>
+                <!--end of single room -->
+                <!--single room-->
+                <article class = "room">
+                    <div class = "room-image">
+                        <img src ="image/R.jpg" alt = "room image">
+                    </div>
+                    <div class = "room-text">
+                        <h3> Luxury Rooms</h3>
+                        <ul>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Lorem ipsum dolor sit amet
+                            </li>
+                             <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Lorem ipsum dolor sit amet
+                            </li>
+                            <li>
+                                <i class = "fas fa-arrow-alt-circle-right"></i>
+                                Lorem ipsum dolor sit amet
+                            </li>
+                        </ul>
+                        <p>Lorem Set in a chilled out,  quiet area of GREEK, GREEKPROBIN is baseed in a beautiful, traditional townhouse with rooms that are simple but classically decked out, deaturing whitewashed walls ans white linen for a bright, light feel.Hotels here have a high, stylish standard and are perfect for a quiet couple’s holiday or family city retreat. Eating in Cimiez is about French cafes and fantastic food in the district’s parks. Nice’s top nightlife spots are easily accessible by bus or the area’s railway stations. </p>
+                        <p>Lorem Set in a chilled out,  quiet area of GREEK, GREEKPROBIN is baseed in a beautiful, traditional townhouse with rooms that are simple but classically decked out, deaturing whitewashed walls ans white linen for a bright, light feel.Hotels here have a high, stylish standard and are perfect for a quiet couple’s holiday or family city retreat. Eating in Cimiez is about French cafes and fantastic food in the district’s parks. Nice’s top nightlife spots are easily accessible by bus or the area’s railway stations. </p>
+                        <p class ="rate">
+                            <span>$99.00 /</span> Per night
+                        </p>
+                        <button type = "button" class = "btn"> book now</button>
+                    </div>
+                </article>
+                <!--end of single room -->
+            </div>
+        </section>
+
+        <section class ="customers" id = "customers">
+            <div class =" sec-width">
+                <div class = "title">
+                    <h2>customers</h2>
+                </div>
+                <div class = "customers-container">
+                    <!--singgle customers-->
+                    <div class = "customers">
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                        </div>
+                        <h3>We loved it</h3>
+                        <p>Lorem Set in a chilled out,  quiet area of GREEK, GREEKPROBIN is baseed in a beautiful, traditional townhouse with rooms that are simple but classically decked out, deaturing whitewashed walls ans white linen for a bright, light feel.Hotels here have a high, stylish standard and are perfect for a quiet couple’s holiday or family city retreat. Eating in Cimiez is about French cafes and fantastic food in the district’s parks. Nice’s top nightlife spots are easily accessible by bus or the area’s railway stations. </p>
+                        <img src="image/serene-young-woman-pretty-relaxing-260nw-1477333970.jpg" alt ="customer image">
+                        <span>Customer Name, Country</span>
+                    </div>
+                    <!--end custom customers-->
+                    <!--singgle customers-->
+                    <div class = "customers">
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                        </div>
+                        <h3>Comfortable living</h3>
+                        <p>Lorem Set in a chilled out,  quiet area of GREEK, GREEKPROBIN is baseed in a beautiful, traditional townhouse with rooms that are simple but classically decked out, deaturing whitewashed walls ans white linen for a bright, light feel.Hotels here have a high, stylish standard and are perfect for a quiet couple’s holiday or family city retreat. Eating in Cimiez is about French cafes and fantastic food in the district’s parks. Nice’s top nightlife spots are easily accessible by bus or the area’s railway stations. </p>
+                        <img src="image/comfortable-bras-286889-1587585624718-main.700x0c.jpg" alt ="customer image">
+                        <span>Customer Name, Country</span>
+                    </div>
+                    <!--end custom customers-->
+                    <!--singgle customers-->
+                    <div class = "customers">
+                        <div class = "rating">
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                            <span><i class = "fas fa-star"></i></span>
+                        </div>
+                        <h3>Nice Place</h3>
+                        <p>Lorem Set in a chilled out,  quiet area of GREEK, GREEKPROBIN is baseed in a beautiful, traditional townhouse with rooms that are simple but classically decked out, deaturing whitewashed walls ans white linen for a bright, light feel.Hotels here have a high, stylish standard and are perfect for a quiet couple’s holiday or family city retreat. Eating in Cimiez is about French cafes and fantastic food in the district’s parks. Nice’s top nightlife spots are easily accessible by bus or the area’s railway stations. </p>
+                        <img src="image/fama-sofa.jpg" alt ="customer image">
+                        <span>Customer Name, Country</span>
+                    </div>
+                    <!--end custom customers-->
+                </div>
+            </div>
+        </section>
+
+        <!--end of body content-->
+
+        <!--Footer-->
+        <footer class="footer">
+            <div class = "footer-container">
+                <div>
+                    <h2>About us</h2>
+                    <p>Lorem Set in a chilled out,  quiet area of GREEK, GREEKPROBIN is baseed in a beautiful, traditional townhouse with rooms that are simple but classically decked out, deaturing whitewashed walls ans white linen for a bright, light feel.Hotels here have a high, stylish standard and are perfect for a quiet couple’s holiday or family city retreat. Eating in Cimiez is about French cafes and fantastic food in the district’s parks. Nice’s top nightlife spots are easily accessible by bus or the area’s railway stations. </p>
+                    <ul class = "social-icons">
+                        <li class ="flex">
+                            <i class = "fa fa-twitter fa-2x"></i>
+                        </li>
+                        <li class ="flex">
+                            <i class = "fa fa-facebook fa-2x"></i>
+                        </li>
+                        <li class ="flex">
+                            <i class = "fa fa-instagram fa-2x"></i>
+                        </li>
+                    </ul>
+                </div>
+
+                <div>
+                    <h2> Useful Links</h2>
+                    <a href = "#">Blog</a>
+                    <a href = "#">Rooms</a>
+                    <a href = "#">Subsription</a>
+                    <a href = "#">Gift card</a>
+                </div>
+                <div>
+                    <h2> Privacy</h2>
+                    <a href = "#">Carreer</a>
+                    <a href = "#">About Us</a>
+                    <a href = "#">Contact Us</a>
+                    <a href = "#">Survices</a>
+                </div>
+
+                <div>
+                    <h2>Have A Question?</h2>
+                    <div class = "contact-item">
+                        <span>
+                            <i class = "fas fa-map-market-alt"></i>
+                        </span>
+                        <span>
+                            203 Fake St.Mountain View, USA, California.
+                        </span>
+                    </div>
+                    <div class = "contact-item">
+                        <span>
+                            <i class = "fas fa-map-phone-alt"></i>
+                        </span>
+                        <span>
+                            +79582455682
+                        </span>
+                    </div>
+                    <div class = "contact-item">
+                        <span>
+                            <i class = "fas fa-map-envelope"></i>
+                        </span>
+                        <span>
+                            info@domain.com
+                        </span>
+                    </div>
+                </div>
+            </div>
+        <script src="script.js"></script>
+
+        
+
+     
+    </body>
+
+</html>

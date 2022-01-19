@@ -1,0 +1,20 @@
+body {
+    --body-back: #515151;
+    --nav-back: #3b3b3b;
+    --text-color: #bdbdbd;
+    --rating-color:#fff;
+    --input-color:#333232;
+    --cell-color: rgba(76, 15, 100,0.3);
+}
+
+.switcher__radio {
+    filter: invert(0);
+}
+
+.switcher__radio:checked {
+    filter: invert(1);
+}
+
+.switcher__status {
+    filter: invert(0);
+}

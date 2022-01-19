@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Homepage">
+    <meta name="theme-color" content="#f65858">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meetup</title>
+    <link rel="icon" href="/static/images/626px-Meetup_Logo.png" type="image/x-icon">
+    <link href="/static/css/light.css" rel="stylesheet" id="theme-link">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body class="d-flex flex-column">
+    <header class="sticky-top header">
+        <nav class="navbar navbar-expand nav">
+            <div class="d-flex container-fluid justify-content-start pt-1">
+                <div class="logo-meetup me-3 mt-2">
+                    <a href="search-calendar.html"><img class="logo-meetup"src="static/images/meetup-1.svg" alt="logo"></a>
+                </div>
+                <button class="btn-toggle me-3" aria-label="Dark-Light mode">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16">
+                        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                    </svg>
+                </button>
+                <script src="static/js/theme.js"></script>  
+                <form class="d-flex">
+                    <input class="nav-search ps-3" type="search" placeholder="Search for keywords" aria-label="Search">
+                    <button class="button3" type="submit" aria-label="search-btn" id="search-button">
+                        <i style="font-size: 20px;"class="fa fa-search"></i>
+                    </button>  
+                </form>
+
+            </div>
+            <a class="text-decoration-none a-nav pt-1 fw-bold pink" href="organizer.html"><span>Start a new group</span></a>
+            <a class="text-decoration-none a-nav-2 pt-2 black"href="login.html"><span>Login</span></a>
+            <a class="text-decoration-none a-nav-2 pt-2 black"href="register.html"><span>Register</span></a>
+        </nav>
+    </header>
+    <main>
+        <section class="d-flex align-items-center">
+            <div class='section1'></div>
+            <div class="d-flex flex-column sections py-5">
+                <div class="fw-bold fs-4 pink m-1 pb-2"> BECOME AN ORGANIZER</div>
+                <span class="m-1 fs-3 fw-bolder pb-5 section1-text"> We'll walk you through a few steps to build your local community</span>
+                <button class="b4 fw-bold ms-1" type="submit" href="organizer.html">Get started</button>
+            </div>
+        </section>
+        <!-- Section 2 -->
+        <section class="py-5 mode">
+            <div class="d-flex flex-column sections">
+                <h1 class="pw-bold pb-3">Organize your way, on your schedule</h1>
+                <div class="container">
+                    <div class="row row-cols-3">
+                        <div class="col">
+                            <div class="d-flex flex-column justify-content-evenly">
+                                <img class="or-i" src="/static/images/section3-1.png" alt="s3-i1">
+                                <span class="he2">Find your members</span>
+                                <p>We’ll help you find interested members and you can approve them to be sure they’ll be a good fit for your community.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex flex-column">
+                                <img class="or-i" src="/static/images/section3-2.png" alt="s3-i2">
+                                <span class="he2">Schedule events in minutes</span>
+                                <p>Organizer tools make it easy to schedule and manage your events. You decide when, where, and how often your group meets.</p>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex flex-column">
+                                <img class="or-i" src="/static/images/section3-3.png" alt="s3-i3">
+                                <span class="he2">Have others help you host</span>
+                                <p>You don’t have to do it alone. Recruit a leadership team to help you host events and manage your group.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section 3 -->
+        <section class="d-flex align-items-start py-5 mode">
+            <div class="d-flex flex-column justify-content-center sections">
+                <h1 class="pw-bold pb-3">What would you like your group to do?</h1>
+                <p>Try starting simple with one of these common event formats</p>
+                <div class="container">
+                    <div class="row row-cols-2">
+                        <div class="col">
+                            <div class="d-flex flex-column">
+                                <img class="i-s2 mb-3" src="/static/images/section4-1.jpg" alt="s4-i1">
+                                <h2>Hang out</h2>
+                                <p>Organize a get-together at a bar or local coffee shop to discuss something you're interested in</p>
+                                <a class="text-decoration-none text-viridian">Start a group that hangs out ></a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex flex-column">
+                                <img class="i-s2 mb-3" src="/static/images/section4-2.jpg" alt="s4-i2">
+                                <h2>Learn</h2>
+                                <p>Teach a class, host a workshop, or invite guest speakers to share their expertise with the group.</p>
+                                <a class="text-decoration-none text-viridian">Start a group that learns ></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section 4 -->
+        <section class="d-flex align-items-start py-5 mode">
+            <div class="d-flex flex-column justify-content-center sections">
+                <h1 class="pw-bold pb-3">Need more inspiration?</h1>
+                <p>Check out some of these great groups meeting all over the world. Start your own in your city.</p>
+                <div class="cards">
+                    <div class="grid-card">
+                        <div class="d-flex flex-column card-items">
+                            <img class="card-image mb-3" src="/static/images/section5-1.jpg" alt="s5-i1">
+                            <p style="color:rgb(85, 85, 85)">OUTDOORS & ADVENTURE</p>
+                            <span class="fw-bold">Hyderabad Trekking Club - HTC</span>
+                            <p>Hyderabad, India</p>
+                            <p style="color:rgb(126, 125, 125)">33,075 Trekkers</p>
+                        </div>
+                    </div>
+                    <div class="grid-card">
+                        <div class="d-flex flex-column">
+                            <img class="card-image mb-3" src="/static/images/section5-2.jpg" alt="s5-i2">
+                            <p style="color:rgb(85, 85, 85)">ARTS</p>
+                            <span class="fw-bold">The Edmonton TheatreGoers Club</span>
+                            <p>Edmonton, Canada</p>
+                            <p style="color:rgb(126, 125, 125)">1,392 TheatreGoers</p>
+                        </div>
+                    </div>
+                    <div class="grid-card">
+                        <div class="d-flex flex-column">
+                            <img class="card-image mb-3" src="/static/images/section5-3.jpeg" alt="s5-i3">
+                            <p style="color:rgb(85, 85, 85)">TECH</p>
+                            <span class="fw-bold">Silicon Valley Entrepreneurs & ...</span>
+                            <p>Palo Alto, USA</p>
+                            <p style="color:rgb(126, 125, 125)">36,660 Founders</p>
+                        </div>
+                    </div>
+                    <div class="grid-card">
+                        <div class="d-flex flex-column">
+                            <img class="card-image mb-3" src="/static/images/section5-4.jpg" alt="s5-i4">
+                            <p style="color:rgb(85, 85, 85)">WRITING</p>
+                            <span class="fw-bold">Short Form Writing Workshops (Toronto)</span>
+                            <p>Toronto, Canada</p>
+                            <p style="color:rgb(126, 125, 125)">158 Members</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- section -->
+        <section class="d-flex align-items-start py-5 mode">
+            <div class="d-flex flex-column justify-content-center sections">
+                <h1 class="pw-bold pb-3">We're here to help</h1>
+                <p>The Meetup Organizer Guide will help you learn how to build a succesful community.</p>
+                <div class="container">
+                    <div class="row row-cols-3">
+                        <div class="col">
+                            <div class="d-flex flex-column">
+                                <img class="i-s2 mb-3" src="/static/images/section6-1.jpg" alt="s6-i1">
+                                <span style class="h5 fw-bold">Ideas for your first Meetup group</span>
+                                <p style="color:rgb(77, 77, 77)">Have a fuzzy idea about the group you'd create? Here are a few tips to help you create a group that will stand out.</p>
+                                <a class="text-decoration-none text-viridian">Read</a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex flex-column">
+                                <img class="i-s2 mb-3" src="/static/images/section6-2.jpg" alt="s6-i2">
+                                <span style class="h5 fw-bold">Finding the right people</span>
+                                <p style="color:rgb(77, 77, 77)">Learn how to create a group that will attract the people you're hoping to meet.</p>
+                                <a class="text-decoration-none text-viridian">Read</a>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="d-flex flex-column">
+                                <img class="i-s2 mb-3" src="/static/images/section6-3.jpeg" alt="s6-i3">
+                                <span style class="h5 fw-bold" class="fw-bold">Mastering online events</span>
+                                <p style="color:rgb(77, 77, 77)">An inside look at hosting an online event on Meetup.</p>
+                                <a class="text-decoration-none text-viridian">Watch</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section style="background-color: #00455d;" class="d-flex align-items-center py-4">
+            <div class="d-flex flex-column sections">
+                <h1 style="color: white;" class=" fw-bold">Subscribe to find people who share your interests</h1>
+                <div class="d-flex justify-content-around">
+                    <div style="color:white;"class="d-flex flex-column justify-content-center">
+                        <span class="pb-2 h4">With your subscriptions, you can:</span>
+                        <div class="d-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                            <p>Start up to 3 local groups with unlimited members</p>
+                        </div>
+                        <div class="d-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                            <p>Assign co-organizers to help you host events</p>
+                        </div>
+                        <div class="d-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                            <p>Get support from our community experts 7 days a week</p>
+                        </div>
+                        <div class="d-flex">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.267.267 0 0 1 .02-.022z"/>
+                            </svg>
+                            <p>Schedule events and manage your attendee lists</p>
+                        </div>
+                    </div>
+                    <div style="color: white;" class="d-flex flex-column ">
+                        <span class="h4">Starting at:</span>
+                        <div class="d-flex">
+                            <span class="h3">$9.99</span>
+                            <span class="h4">/month</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div style="width:100%" class="d-flex">
+            <div class="sections">
+                <form  class="d-flex flex-column form-container2">
+                    <div class="d-flex align-items-center">
+                        <div style="padding-right: 15px;">Create your own Meetup group.</div>
+                        <button class="button2">Get Started</button>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between text-decoration-none">
+                        <div class="d-flex flex-column align-items-stretch fs-6">
+                        <span class="h5">Your Account</span>  
+                        <div style="color: rgb(168, 161, 161);" class="d-flex flex-column justify-content-center fs-6 p-2">
+                            <a>Sign up</a>
+                            <a>Log in</a>
+                            <a>Help</a>
+                        </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-stretch fs-6">
+                        <span class="h5">Discover</span>
+                        <div style="color: rgb(168, 161, 161);" class="d-flex flex-column fs-6 p-2">
+                            <a>Groups</a>
+                            <a>Calendar</a>
+                            <a>Topics</a>
+                            <a>Local Guides</a>
+                        </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-stretch fs-6">
+                        <span class="h5">Meetup</span>
+                        <div style="color: rgb(168, 161, 161);" class="d-flex flex-column fs-6 p-2">
+                            <a>About</a>
+                            <a>Blog</a>
+                            <a>Meetup Pro</a>
+                            <a>Careers</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div style="padding-bottom:0.5rem;" class="h5">Follow us</div>
+                    <div class="d-flex align-items-baseline">
+                        <i style="font-size: 30px;" class="pe-4 fa fa-facebook"></i>
+                        <i style="font-size: 30px;" class="pe-4 fa fa-twitter icon-size"></i>
+                        <i style="font-size: 30px;" class="pe-4 fa fa-youtube icon-size"></i>
+                        <i style="font-size: 30px;" class="pe-4 fa fa-instagram icon-size"></i>
+                    </div>
+                    <div class="d-flex justify-content-start">
+                        <div class="py-4 pe-3"><i class="fa fa-copyright"></i> 2021 Meetup</div>
+                        <div class="py-4 pe-3">Terms of Service</div>
+                        <div class="py-4 pe-3">Privacy Policy</div>
+                        <div class="py-4 pe-3">Cookie Policy</div>
+                        <div class="py-4 pe-3">Help</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

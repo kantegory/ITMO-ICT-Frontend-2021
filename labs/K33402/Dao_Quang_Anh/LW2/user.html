@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="User Profile">
+    <meta name="theme-color" content="#f65858">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D Bep | Meetup</title>
+    <link rel="icon" href="/static/images/626px-Meetup_Logo.png" type="image/x-icon">
+    <link href="/static/main.css" type="text/css" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand nav">
+            <div class="d-flex container-fluid justify-content-start pt-1">
+                <div class="logo-meetup me-3 mt-2">
+                    <a  href="search-calendar.html"><img class="logo-meetup"src="static/images/meetup-1.svg" alt="logo"></a>
+                </div>
+                <form class="d-flex">
+                    <input class="nav-search ps-3" type="search" placeholder="Search for keywords" aria-label="Search">
+                    <button class="button3" type="submit" name="search-btn" id="search-btn">
+                        <i class="fa fa-search"></i>
+                    </button>
+                </form>
+            </div>
+            <a class="text-decoration-none a-nav pt-1 fw-bold " href="organizer.html"><span class="pink">Start a new group</span></a>
+            <a class="text-decoration-none a-nav pt-2"href="login.html"><span class="black">Login</span></a>
+            <a class="text-decoration-none a-nav pt-2"href="register.html"><span class="black">Register</span></a>
+        </nav>
+    </header>
+    <main>
+        <div class="d-flex justify-content-center align-items-center">
+            <img class="px-3 pt-5 pb-5"src="/static/images/avatar.png">
+            <div class="d-flex flex-column p-3">
+                <h1 class="fw-bold pb-2">D Bep</h1>
+                <h3 class="fw-bold pb-3"> Member since September 2021</h3>
+                <div style="color:grey" class="d-flex">
+                    <ion-icon class="px-3" name="location"></ion-icon>
+                    <span class="pa-1">St. Petersburg</span>
+                </div>
+                <div style="color:grey" class="d-flex">
+                    <ion-icon class="px-3" name="people"></ion-icon>
+                    <span>Attended 0 Events</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex">
+            <div class="d-flex sections">
+                <div class="d-flex align-items-center">
+                    <h6 class="b5">2</h6>
+                    <h6 class="fw-normal">Groups</h6>
+                </div>
+                <div class="m-3"></div>
+                <div class=" d-flex align-items-center">
+                    <h6 class="b5">5</h6>
+                    <h6 class="fw-normal">Interests</h6>
+                </div>
+                <button class="b4 ms-auto">Edit Profile</button>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex">
+            <div class="d-flex flex-column sections pb-5 fw-bold">
+                <h2 class=" mt-5 mb-3">Groups</h2>
+                <div class="d-flex fw-bold flex-wrap">
+                    <div class="d-flex g-box i-g me-2 mb-2">
+                        <img src="/static/images/group1.jpg">
+                        <h5 style="color: black;" class="align-self-center he2 hiddy">Piter International </h5>
+                    </div>
+                    <div class="d-flex g-box i-g me-2 mb-2">
+                        <img src="/static/images/group2.jpg">
+                        <h5 style="color: black;" class="align-self-center he2 hiddy">Robonomics network Meetup Group </h5>
+                    </div>
+                </div>
+                <h2 class="my-3">Interests</h2>
+                <div class="d-flex fw-normal flex-wrap">
+                    <span class="b6 me-2 mb-2">Photography</span>
+                    <span class="b6 me-2 mb-2">Web Design</span>
+                    <span class="b6 me-2 mb-2">Python</span>
+                    <span class="b6 me-2 mb-2">Online Marketing</span>
+                    <span class="b6 me-2 mb-2">Nature Photography</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div style="width:100%" class="d-flex">
+            <div class="sections">
+                <form  class="d-flex flex-column form-container2">
+                    <div class="d-flex align-items-center">
+                        <div style="padding-right: 15px;">Create your own Meetup group.</div>
+                        <button class="button2">Get Started</button>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between text-decoration-none">
+                        <div class="d-flex flex-column align-items-stretch fs-6">
+                        <span class="h5">Your Account</span>  
+                        <div style="color: rgb(168, 161, 161);" class="d-flex flex-column justify-content-center fs-6 p-2">
+                            <a>Sign up</a>
+                            <a>Log in</a>
+                            <a>Help</a>
+                        </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-stretch fs-6">
+                        <span class="h5">Discover</span>
+                        <div style="color: rgb(168, 161, 161);" class="d-flex flex-column fs-6 p-2">
+                            <a>Groups</a>
+                            <a>Calendar</a>
+                            <a>Topics</a>
+                            <a>Citites</a>
+                            <a>Online Events</a>
+                            <a>Local Guides</a>
+                        </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-stretch fs-6">
+                        <span class="h5">Meetup</span>
+                        <div style="color: rgb(168, 161, 161);" class="d-flex flex-column fs-6 p-2">
+                            <a>About</a>
+                            <a>Blog</a>
+                            <a>Meetup Pro</a>
+                            <a>Careers</a>
+                            <a>Apps</a>
+                        </div>
+                        </div>
+                    </div>
+                    <div style="padding-bottom:0.5rem;" class="h5">Follow us</div>
+                    <div class="d-flex align-items-baseline">
+                        <i style="font-size: 30px;" class="pe-4 fa fa-facebook"></i>
+                        <i style="font-size: 30px;" class="pe-4 fa fa-twitter icon-size"></i>
+                        <i style="font-size: 30px;" class="pe-4 fa fa-youtube icon-size"></i>
+                        <i style="font-size: 30px;" class="pe-4 fa fa-instagram icon-size"></i>
+                    </div>
+                    <div class="d-flex justify-content-start">
+                        <div class="py-4 pe-3"><i class="fa fa-copyright"></i> 2021 Meetup</div>
+                        <div class="py-4 pe-3">Terms of Service</div>
+                        <div class="py-4 pe-3">Privacy Policy</div>
+                        <div class="py-4 pe-3">Cookie Policy</div>
+                        <div class="py-4 pe-3">Help</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,48 @@
+header {
+    background-color: var(--accent-color);
+    height: 50px;
+}
+
+.nav-link:hover {
+    color: var(--nav-link-on-hover) !important;
+}
+
+body {
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+.text-white {
+    color: var(--accent-text) !important;
+}
+
+.form-control {
+    background-color: var(--form-background);
+    color: var(--text-color);
+}
+
+.form-control:focus {
+    background-color: var(--form-background);
+    color: var(--text-color);
+    border-color: var(--form-border-color);
+}
+
+.btn {
+    background-color: var(--accent-color);
+    color: var(--accent-text);
+    margin: 10px auto;
+    font-size: calc(1.3rem + .6vw);
+    border-radius: 10px;
+    padding: 5px 40px;
+}
+
+.btn:hover {
+    background-color: var(--accent-on-hover);
+    color: var(--accent-text);
+}
+
+.link-primary {
+    color: var(--link-color)
+}
+
+

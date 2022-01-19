@@ -1,0 +1,371 @@
+@import url("https://fonts.googleapis.com/css?family=Courgette|Open+Sans:400,800&display=swap");
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dark-color: #262525;
+    --green-vintage-1:  #2F5D62;
+    --green-vintage-2:  #5E8B7E;
+    --green-vintage-3:  #A7C4BC;
+    --green-vintage-4:  #DFEEEA;
+    --gadient-color: linear-gradient(to right, var(--green-vintage-2), var(--green-vintage-3), var(--green-vintage-4));
+    --gadient-color-alt: linear-gradient(to left, var(--green-vintage-2), var(--green-vintage-3), var(--green-vintage-4));
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family:Circular, -apple-system, BlinkMacSystemFont, Roboto, Helvetica Neue, sans-serif;
+    font-size: 1.6rem;
+    color: var(--dark-color);
+}
+
+a {
+    text-decoration: none; /*set decorative line on text*/
+    color:  inherit; /*take the property from it's parent*/
+}
+
+a:hover {
+    text-decoration: none; /*set decorative line on text*/
+    color: inherit;
+}
+
+ul {
+    list-style: none; /*set all the list stype properties */
+}
+
+section {
+    padding: 2.5rem 0;
+}
+
+/*Reusable style*/
+.btn{
+    color: #fff;
+    font-size: 1.9rem;
+    font-weight: bold;
+    padding: 1.5rem 4rem;
+    border: none;
+    border-radius: 8rem;
+    display: inline-flex;
+    align-items: center;
+}
+
+.container {
+    width: 100%;
+    max-width: 130rem;
+    padding: 0 1.5rem;
+    margin: 0 auto;
+}
+
+.section-head{
+    text-align: start;
+    margin: 2.5rem 2.5rem 2.5rem 0;
+    font-size: 3.5rem;
+}
+
+/*Header style*/
+.header {
+    width: 100%;
+    height: 6rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--green-vintage-1);
+    z-index: 1;
+}
+
+/*style nav*/
+.nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo{
+    max-width: 5rem;
+}
+
+.logo img{
+    width: 100%;
+    padding-top: 0.5rem;
+    object-fit: cover;
+}
+
+.hamburger-menu{
+    font-size: 2.6rem;
+    color: #fff;
+    cursor: pointer;
+    z-index: 3;
+}
+
+.hamburger-menu .fa-times{
+    display:  none;
+}
+
+.menu-open .hamburger-menu .fa-times{
+    display: block;
+}
+
+.menu-open .hamburger-menu .fa-bars{
+    display: none;
+}
+
+.nav-list{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--green-vintage-2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    opacity: 0;
+    transform: scale(0);
+    transition: opacity 0.5s;
+}
+
+.menu-open .nav-list{
+    opacity: 1;
+    transform: scale(1.0);
+}
+
+.nav-item:not(:last-child){
+    margin-bottom: 1rem;
+}
+
+.nav-link{
+    display: block;
+    color:  #fff;
+    font-size: 3rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    padding: 1rem;
+}
+
+
+/* Featured hotels - styles */
+.hotels{
+    margin-top: 7rem;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid-gap: 1.5rem;
+}
+
+.list-options{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-bottom: rgb(175, 175, 175) solid .5px;
+}
+
+.list-item{
+    display: inline-block;
+}
+
+.list-item .list-link{
+    display: block;
+    text-align: center;
+    padding: 1rem;
+    text-decoration: none;
+}
+
+
+.hotel-img{
+    width: 100%;
+    height: 100%;
+    max-width: 30.6rem;
+    max-height: 30.6rem;
+    border-radius: 1rem;
+    object-fit: cover;
+}
+
+.grid-item{
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.hotel-name{
+    font-size: 1.7rem;
+    color: rgb(54, 54, 54);
+    line-height: 2.2rem;
+    padding-top: .5rem;
+}
+
+
+/* Footer - styles */
+.footer{
+    margin-top: 3rem;
+    padding: 5rem 0 0;
+    background-color: rgb(248, 248, 248);
+}
+
+.footer .head-footer{
+    margin-top: 0;
+    margin-bottom: 1.2rem;
+    font-weight: bold;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+.footer .list-footer {
+    padding: 0;
+    line-height: 2.2;
+}
+
+.link-footer{
+    text-decoration: none;
+    opacity: 0.75;
+    font-size: 1.3rem;
+}
+
+.link-footer:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.copyright{
+    padding: 2rem;
+}
+
+.text-copyright .link-icon{
+    opacity: 0.75;
+}
+
+.copyright-{
+    text-align: center;
+}
+
+.copyright-menu{
+    padding-top: 2rem;
+    text-align: center;
+    margin: 0;
+}
+
+.link-icon{
+    display: inline-block;
+    padding-left: 2rem;
+}
+
+/* Media queries */
+@media screen and (min-width: 768px){
+    /* Header section style */
+    .header{
+        height: 7rem;
+    }
+    
+    .title{
+        font-size: 3.5rem;
+    }
+
+    /* Cities section style */
+    .grid-city{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-gap: 1.5rem;
+    }
+    /* Footer section style */
+    .copyright-{
+        text-align: left;
+    }
+    
+    .copyright-menu{
+        padding-top: 0;
+        text-align: right;
+        margin: 0;
+    }
+}
+
+@media screen and (min-width: 1000px){
+    /* Hero section style */
+    .title{
+        font-size: 3.8rem;
+    
+    /* Hamberger-menu style */
+    }
+    .hamburger-menu{
+        display: none;
+    }
+
+    .nav-list{
+        position: initial;
+        width: initial;
+        height: initial;
+        background-color: transparent; /* transparent color */
+        flex-direction: row;
+        justify-content: initial;
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .nav-item:not(:last-child){
+        margin-right: 2rem;
+        margin-bottom: 0;
+    }
+
+    .nav-list{
+        margin-bottom: 0;
+    }
+
+    .nav-link{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+    }
+
+    /* City section style */
+    .grid-city{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 1.3rem;
+    }
+
+    /* Booking section style */
+    .form{
+        display: flex;
+        width: unset;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 1rem;
+    }
+
+    .form .input-group{
+        margin-bottom: 0;
+        margin-right: 3rem;
+    }
+
+    .form .input-group:first-child{
+        flex: 0 0 30%;
+    }
+
+    .input,
+    .options{
+        min-width: 10%;
+    }
+
+    .btn-search{
+        position: relative;
+        top: 1rem;
+    }
+}

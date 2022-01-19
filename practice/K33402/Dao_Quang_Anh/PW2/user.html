@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="User Profile">
+    <meta name="theme-color" content="#f65858">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D Bep | Meetup</title>
+    <link rel="icon" href="/static/images/626px-Meetup_Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/static/css/light.css" rel="stylesheet" id="theme-link">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar navbar-expand nav">
+            <div class="d-flex container-fluid justify-content-start pt-1">
+                <div class="logo-meetup me-3 mt-2">
+                    <a href="search-calendar.html"><img class="logo-meetup"src="static/images/meetup-1.svg" alt="logo"></a>
+                </div>
+                <button class="btn-toggle me-3" aria-label="Dark-Light mode">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="#dc3545" class="bi bi-sun" viewBox="0 0 16 16">
+                        <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+                    </svg>
+                </button>
+                <script src="static/js/theme.js"></script>  
+                <form class="d-flex">
+                    <input class="nav-search ps-3" type="search" placeholder="Search for keywords" aria-label="Search">
+                    <button class="button3" type="submit" aria-label="search-btn" id="search-button">
+                        <i style="font-size: 20px;"class="fa fa-search"></i>
+                    </button>  
+                </form>
+
+            </div>
+            <a class="text-decoration-none a-nav pt-1 fw-bold pink" href="organizer.html"><span>Start a new group</span></a>
+            <a class="text-decoration-none a-nav-2 pt-2 black"href="login.html"><span>Login</span></a>
+            <a class="text-decoration-none a-nav-2 pt-2 black"href="register.html"><span>Register</span></a>
+        </nav>
+    </header>
+    <main class="search-background">
+        <div class="d-flex justify-content-center align-items-center">
+            <img class="px-3 pt-5 pb-5 user-avatar"src="/static/images/avatar.jpg" alt="avatar">
+            <div class="d-flex flex-column p-3">
+                <h1 class="fw-bold pb-2">D Bep</h1>
+                <span class="h3 fw-bold pb-3"> Member since September 2021</span>
+                <div style="color:grey" class="d-flex">
+                    <svg class="pa-1 me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                    </svg>
+                    <span class="pa-1">St. Petersburg</span>
+                </div>
+                <div style="color:grey" class="d-flex">
+                    <svg class="pa-1 me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+                        <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                    </svg>
+                    <span>Attended 0 Events</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex">
+            <div class="d-flex sections">
+                <div class="d-flex align-items-center">
+                    <span class="h6 b5">2</span>
+                    <span class="h6 fw-normal">Groups</span>
+                </div>
+                <div class="m-3"></div>
+                <div class=" d-flex align-items-center">
+                    <span class="h6 b5">5</span>
+                    <span class="h6 fw-normal">Interests</span>
+                </div>
+                <button class="b4 ms-auto">Edit Profile</button>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex">
+            <div class="d-flex flex-column sections pb-5 fw-bold">
+                <h2 class=" mt-5 mb-3">Groups</h2>
+                <div class="d-flex fw-bold flex-wrap">
+                    <div class="d-flex g-box i-g me-2 mb-2">
+                        <img class="group-photo" src="/static/images/group1.jpg" alt="group-photo1">
+                        <span style="color: black;" class="h5 align-self-center he2 hiddy">Piter International </span>
+                    </div>
+                    <div class="d-flex g-box i-g me-2 mb-2">
+                        <img class="group-photo" src="/static/images/group2.jpg" alt="group-photo1">
+                        <span style="color: black;" class="h5 align-self-center he2 hiddy">Robonomics network Meetup Group </span>
+                    </div>
+                </div>
+                <span class="h2 my-3">Interests</span>
+                <div class="d-flex fw-normal flex-wrap">
+                    <span class="b6 me-2 mb-2">Photography</span>
+                    <span class="b6 me-2 mb-2">Web Design</span>
+                    <span class="b6 me-2 mb-2">Python</span>
+                    <span class="b6 me-2 mb-2">Online Marketing</span>
+                    <span class="b6 me-2 mb-2">Nature Photography</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div style="width:100%" class="d-flex">
+            <div class="footer">
+                <form  class="d-flex flex-column form-container2">
+                    <div class="d-flex align-items-center">
+                        <div style="padding-right: 15px;">Create your own Meetup group.</div>
+                        <button class="button2">Get Started</button>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between text-decoration-none">
+                        <div class="d-flex flex-column align-items-stretch fs-6">
+                        <span class="h5">Your Account</span>  
+                        <div style="color: rgb(158, 158, 158);" class="d-flex flex-column justify-content-center fs-6 p-2">
+                            <span>Sign up</span>
+                            <span>Log in</span>
+                            <span>Help</span>
+                        </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-stretch fs-6">
+                        <span class="h5">Discover</span>
+                        <div style="color: rgb(158, 158, 158);" class="d-flex flex-column fs-6 p-2">
+                            <span>Groups</span>
+                            <span>Topics</span>
+                            <span>Online Events</span>
+                            <span>Local Guides</span>
+                        </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-stretch fs-6">
+                        <span class="h5">Meetup</span>
+                        <div style="color: rgb(158, 158, 158)" class="d-flex flex-column fs-6 p-2">
+                            <span>About</span>
+                            <span>Blog</span>
+                            <span>Meetup Pro</span>
+                            <span>Apps</span>
+                        </div>
+                        </div>
+                    </div>
+                    <div style="padding-bottom:0.5rem;" class="h5">Follow us</div>
+                    <div class="d-flex align-items-baseline">
+                        <i style="font-size: 30px;" class="pe-4 fa fa-facebook"></i>
+                        <i style="font-size: 30px;" class="pe-4 fa fa-twitter icon-size"></i>
+                        <i style="font-size: 30px;" class="pe-4 fa fa-youtube icon-size"></i>
+                        <i style="font-size: 30px;" class="pe-4 fa fa-instagram icon-size"></i>
+                    </div>
+                    <div class="d-flex justify-content-start">
+                        <div class="py-4 pe-3"><i class="fa fa-copyright"></i> 2021 Meetup</div>
+                        <div class="py-4 pe-3">Terms of Service</div>
+                        <div class="py-4 pe-3">Privacy Policy</div>
+                        <div class="py-4 pe-3">Cookie Policy</div>
+                        <div class="py-4 pe-3">Help</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

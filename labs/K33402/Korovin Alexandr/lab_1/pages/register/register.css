@@ -1,0 +1,217 @@
+* {
+    color-scheme: light dark;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    background: var(--body-back);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 10px 30px; /* устанавливает внутренние отступы/поля со всех сторон*/
+    background-color: var(--nav-back);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+.navbar ul {
+    list-style-type: none;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: var(--text-color);
+}
+.logo {
+    color: var(--text-color);
+    letter-spacing: 2px; /*определяет межбуквенное расстояние в тексте*/
+}
+.main-head{
+    margin: auto;
+    width: 600px;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: darken;
+    display: flex;
+    flex-direction: column;
+}
+.banner-text{
+    text-align: center;
+    color: var(--text-color);
+    line-height: 1.5;
+    letter-spacing: 2px;
+
+}
+.form{
+    height: 400px;
+    max-width: 600px;
+    color: var(--text-color);
+    line-height: 1.5;
+    letter-spacing: 2px;
+}
+
+.form input {
+    width: 100%;
+    height: 42px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    outline: none;
+}
+.form button {
+    width: 100%;
+    height: 40px;
+    background: var(--nav-back);
+    box-sizing: border-box;
+    border-radius: 5px;
+    border: 1px solid #000000;
+    color: var(--text-color);
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 14px;
+    outline: none;
+    cursor: pointer;
+}
+.form button:hover {
+    background: var(--text-color);
+    color:var(--nav-back)
+}
+
+.form input#login {
+
+    background-color: var(--input-color);
+    background-size: 16px 80px;
+}
+.form input#login::placeholder{
+    color: #fff;
+}
+.form input#login:focus {
+    background-color: var(--input-color);
+    background-size: 16px 80px;
+}
+
+.form input#password{
+    background-color: var(--input-color) ;
+    background-size: 16px 80px;
+}
+.form input#password::placeholder{
+    color: #fff;
+}
+
+.form input#password:focus {
+    background-color: var(--input-color) ;
+    background-size: 16px 80px;
+}
+.form input#password2{
+    background-color: var(--input-color) ;
+    background-size: 16px 80px;
+}
+.form input#password2::placeholder{
+    color: #fff;
+}
+
+.form input#password2:focus {
+    background-color: var(--input-color) ;
+    background-size: 16px 80px;
+}
+.form h2{
+    font-size: 20px;
+    text-align: right;
+}
+.form h2 a{
+    text-decoration: none;
+}
+
+span{
+    color: #070606;
+}
+
+.switcher {
+    position: fixed;
+    bottom: 36px;
+    left: 50%;
+    margin: 0;
+    margin-left: -50px;
+    padding: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: none;
+}
+
+/* Switcher Legend */
+
+.switcher__legend {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Switcher Radio */
+
+.switcher__radio {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    transition: filter 0.1s ease-in;
+}
+
+.switcher__radio:focus {
+    outline: none;
+}
+
+.switcher__radio--light {
+    background-image: url('../icons/light.svg');
+}
+
+.switcher__radio--auto {
+    background-image: url('../icons/auto.svg');
+}
+
+.switcher__radio--dark {
+    background-image: url('../icons/dark.svg');
+}
+
+/* Switcher Status */
+
+.switcher__status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    box-shadow: 0 0 0 2px rgb(0 0 0 / 0.2);
+    border-radius: 18px;
+    background-color: rgb(255 255 255 / 0.5);
+    background-repeat: no-repeat;
+    background-image: url('../icons/status.svg');
+    background-size: 32px;
+    background-position: center;
+    transition: background-position 0.1s ease-in;
+}
+
+.switcher__radio:focus-visible ~ .switcher__status {
+    box-shadow: 0 0 0 2px black;
+}
+
+.switcher__radio--light:checked ~ .switcher__status {
+    background-position: left 2px center;
+}
+
+.switcher__radio--auto:checked ~ .switcher__status {
+    background-position: center center;
+}
+
+.switcher__radio--dark:checked ~ .switcher__status {
+    background-position: right 2px center;
+}

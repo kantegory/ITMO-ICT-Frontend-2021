@@ -1,0 +1,10 @@
+:root {
+    --background-color: #e9ecef;
+    --background-color-navbar: #f8f9ea;
+    --background-color-jumbotron: #ccffff;
+    --background-color-card: #ffffdd;
+    --background-color-input: rgb(255, 255, 255);
+    --color-main: #121212;
+    --color-navbar: #770033;
+    --color-placeholder: #a9a9a9;
+}
