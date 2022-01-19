@@ -36,11 +36,11 @@
     </button>
     <div class="menu" id="list-menu">
         <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#" id="login-ref" onclick="toggleLogin()">Sign in</a></li>
-            <li><a href="#" id="book-ref" onclick="toggleBookings()">Your bookings</a></li>
-            <li><a href="#">Support</a></li>
-            <li><a href="#">Feedback</a></li>
+            <li><a href="#" title="Home">Home</a></li>
+            <li><a href="#" id="login-ref" onclick="toggleLogin()" title="Sign in">Sign in</a></li>
+            <li><a href="#" id="book-ref" onclick="toggleBookings()" title="Your bookings">Your bookings</a></li>
+            <li><a href="#" title="Support">Support</a></li>
+            <li><a href="#" title="Feedback">Feedback</a></li>
         </ul>
     </div>
 </nav>
@@ -55,7 +55,7 @@
     <div class="switcher__status"></div>
 </fieldset>
 <section class="login-container" id="login-menu">
-    <label for="" id="login-close-btn" class="close-btn ri-close-line" onclick="toggleLogin()"></label>
+    <label id="login-close-btn" class="close-btn ri-close-line" onclick="toggleLogin()"></label>
     <h1 class="text">Login</h1>
     <form action="#" id="sign-in">
         <div class="data">
@@ -112,9 +112,7 @@
             <h2 class="text">Guests</h2>
             <input type="text" placeholder="Add guests">
         </div>
-        <div class="search-btn">
-            <button name="Search button" class="ri-search-line" type="submit"></button>
-        </div>
+        <button name="Search button" class="ri-search-line" type="submit" title="Search"><span>Search</span></button>
     </div>
 </section>
 <section class="filter-window-mobile">

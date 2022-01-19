@@ -1,0 +1,11 @@
+.reservesContainer {
+    margin: 70px auto;
+    max-width: calc(100% - 80px);
+
+}
+
+.reservesContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+}

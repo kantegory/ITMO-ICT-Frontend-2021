@@ -3,7 +3,7 @@ import axios from "axios";
 
 
 const hotelElement = document.querySelector('.hotel-container')
-const apiUrl = 'https://usahotelsapi.herokuapp.com/hotels/30'
+const apiUrl = 'https://usahotelsapi.herokuapp.com/hotels/30/1'
 
 async function getHotels(url) {
     axios.get(url)

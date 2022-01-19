@@ -1,0 +1,29 @@
+body {
+    --body-back: #121212;
+    --dark-color: #3b3b3b;
+    --light-color: #515151;
+    --text-color: #bdbdbd;
+    --star-color: #fdde6c;
+    --text-color-dark: #bdbdbd;
+    --text-hover: #fff;
+    --button-color: #515151;
+    --card-color: #3b3b3b;
+    --card-text: #bdbdbd;
+    --card-price-color: #fff;
+
+}
+
+.switcher__radio {
+    filter: invert(0);
+}
+
+.switcher__radio:checked {
+    filter: invert(1);
+}
+
+.switcher__status {
+    filter: invert(0);
+}
+
+
+/*# sourceMappingURL=/dark.c7629f57.css.map */

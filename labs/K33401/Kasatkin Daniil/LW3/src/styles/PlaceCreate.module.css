@@ -1,0 +1,143 @@
+.placeCreateForm {
+    display: flex;
+    justify-content: space-between;
+}
+
+.imageUploadContainer {
+    margin: 50px;
+    max-width: 400px;
+    max-height: 400px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 0 4px 20px 0 rgba(34, 68, 123, 0.2);
+}
+
+.placeImageContainer {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.placeImageContainer img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+}
+
+input[type="file"] {
+    display: none;
+}
+
+.fileUpload {
+    cursor: pointer;
+    text-align: center;
+    margin: 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+
+}
+
+.placeContentContainer {
+    margin: 30px 100px 0 50px;
+    width: 50%;
+    height: 90%;
+}
+
+.placeTitleContainer {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.placeTitleContainer label {
+    width: 80px;
+    margin-right: 20px;
+}
+
+.placeTypesContainer {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.placeTypesContainer label {
+    margin-right: 20px;
+}
+
+.placeOffersContainer {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.placeOffersContainer label {
+    margin-right: 20px;
+}
+
+.placeFloorPlan {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.paramButton {
+    border-radius: 50px;
+    width: 30px;
+    height: 30px;
+    font-size: 20px;
+    background: white;
+    border: 1px lightgrey solid;
+    color: darkgrey;
+    text-align: center;
+    margin: 0 10px 0 10px;
+}
+
+.divideBlock {
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
+
+.placeDescriptionContainer {
+    margin: 20px;
+    width: 400px;
+}
+.placeDescriptionContainer textarea{
+    resize: none;
+    padding: 10px;
+    font-size: 15px;
+}
+.placePriceContainer {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+
+.placePriceContainer label {
+    width: 80px;
+    margin-right: 20px;
+}
+.priceInput{
+    width: 100px;
+}
+.placeLocationContainer{
+    display: flex;
+    align-items: center;
+    margin: 20px;
+}
+.placeLocationContainer label{
+    width: 150px;
+}
+.submitButton{
+    margin: 20px;
+}
+.submitButton button{
+    border: 1px lightgrey solid;
+    background: #fff;
+    width: 100%;
+    height: 30px;
+    font-size: 20px;
+    cursor: pointer;
+}

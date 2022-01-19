@@ -1,0 +1,70 @@
+.loginForm {
+    width: 410px;
+    padding: 5px;
+    font-family: 'Poppins', sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.closeButton {
+    position: relative;
+    left: 90%;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: black;
+}
+
+.closeButton:hover {
+    color: #659dbd;
+}
+
+.inputContainer {
+    height: 45px;
+    width: 100%;
+    margin: 20px 0;
+}
+
+.loginFormButton {
+    margin: 25px 0;
+    height: 45px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    background: #659dbd;
+    color: #fff;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.loginFormButton:hover {
+    color: #b0dfe5;
+}
+
+.loginFormLink {
+    text-decoration: none;
+    color: black;
+    margin-left: -10px;
+    padding: 10px;
+}
+
+.forgotPassword {
+    cursor: pointer;
+}
+
+.forgotPassword:hover {
+    text-decoration: underline;
+}
+
+.loginFormLink:hover {
+    text-decoration: underline;
+}
+
+.loginForm p {
+    text-align: right;
+}

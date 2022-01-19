@@ -2984,7 +2984,7 @@ function asyncGeneratorStep(gen, resolve, reject, _next, _throw, key, arg) { try
 function _asyncToGenerator(fn) { return function () { var self = this, args = arguments; return new Promise(function (resolve, reject) { var gen = fn.apply(self, args); function _next(value) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "next", value); } function _throw(err) { asyncGeneratorStep(gen, resolve, reject, _next, _throw, "throw", err); } _next(undefined); }); }; }
 
 var hotelElement = document.querySelector('.hotel-container');
-var apiUrl = 'https://usahotelsapi.herokuapp.com/hotels/30';
+var apiUrl = 'https://usahotelsapi.herokuapp.com/hotels/30/1';
 
 function getHotels(_x) {
   return _getHotels.apply(this, arguments);
@@ -3004,6 +3004,7 @@ function _getHotels() {
                 hotelImageContainer.classList.add('hotel-image');
                 var hotelImage = document.createElement('img');
                 hotelImage.src = element.img;
+                hotelImage.alt = 'Image of hotel';
                 hotelImageContainer.appendChild(hotelImage);
                 hotelCard.appendChild(hotelImageContainer);
                 var hotelContent = document.createElement('div');
@@ -3076,7 +3077,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "57555" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "55865" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
