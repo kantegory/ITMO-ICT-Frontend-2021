@@ -4,10 +4,6 @@ import {apiKey} from "./secret.js";
 // Names of days of the week
 const dayNames = ["MON", "TUE", "WED", "THU", "FRI", "SAT", "SUN"]
 
-// St. Petersburg
-let lat = 59.9386;
-let lon = 30.3141;
-
 function timestampToWeekDay(timestamp) {
     let date = new Date(timestamp * 1000);
     return dayNames[date.getDay()];
@@ -29,7 +25,7 @@ function renderWeather(data) {
             </div>
         </div>
         <div class="col-sm-6">
-            <p><h3>${temperature}℃</h3></p>
+            <h3>${temperature}℃</h3>
             <p class="fs-4">${description}</p>
             <p class="fs-4">wind ${wind} m/s</p>
         </div>
@@ -92,6 +88,15 @@ function renderWeather(data) {
 }
 
 function getWeather() {
+    // Set default value to St. Petersburg
+    let lat = 59.937500;
+    let lon = 30.308611;
+
+    if (sessionStorage.hasOwnProperty("lat") && sessionStorage.hasOwnProperty("lat")) {
+        lat = sessionStorage.getItem("lat");
+        lon = sessionStorage.getItem("lon");
+    }
+
     let url = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&exclude=minutely,hourly,alerts&appid=${apiKey}&units=metric`;
 
     fetch(url)
@@ -105,4 +110,3 @@ function getWeather() {
 }
 
 window.addEventListener("load", getWeather);
-// window.onload = getWeather;

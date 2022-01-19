@@ -10,6 +10,7 @@
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
     <script type="module" src="js/api.js" defer></script>
+    <script src="js/city.js"></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -48,7 +49,8 @@
 <!-- Main content -->
 <main class="mx-2 my-3">
     <h1 class="display-4">
-        Weather forecast for <span class="hover-opacity">St. Petersburg
+        Weather forecast for <span class="hover-opacity" data-bs-toggle="modal" data-bs-target="#cityModal">
+        <span id="selected-city">St. Petersburg</span>
         <img src="img/edit-pen.svg" alt="edit" width="40px"></span>
     </h1>
 
@@ -68,7 +70,7 @@
                             </div>
                         </div>
                         <div class="col-sm-6">
-                            <p><h3>...℃</h3></p>
+                            <h3>...℃</h3>
                             <p class="fs-4">...</p>
                             <p class="fs-4">wind ... m/s</p>
                         </div>
@@ -148,6 +150,30 @@
         </div>
     </div>
 </main>
+
+<!-- Modal -->
+<div class="modal fade" id="cityModal" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Choose city</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <select class="form-select" aria-label="Default select example" id="city-select">
+                    <option value="" selected>Autodetect</option>
+                    <option value="St. Petersburg">St. Petersburg</option>
+                    <option value="Moscow">Moscow</option>
+                    <option value="Sochi">Sochi</option>
+                </select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="selectCity()">Ok</button>
+            </div>
+        </div>
+    </div>
+</div>
 
 <!-- Footer -->
 <footer class="mt-auto">
