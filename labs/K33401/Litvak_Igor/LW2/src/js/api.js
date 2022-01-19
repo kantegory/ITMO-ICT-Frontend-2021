@@ -25,7 +25,7 @@ function renderWeather(data) {
     <div class="row g-4">
         <div class="col-sm-6">
             <div class="today-img-container">
-                <img src="${icon}" alt="${description}" width="180px">
+                <img src="${icon}" alt="${description}" width="180px" class="img-icon">
             </div>
         </div>
         <div class="col-sm-6">
@@ -67,7 +67,7 @@ function renderWeather(data) {
         tableIconRow += `
         <td>
             <div class="week-img-container">
-                <img src="${weekIcons[i]}" alt="${weekDescriptions[i]}" width="50px">
+                <img src="${weekIcons[i]}" alt="${weekDescriptions[i]}" class="img-icon">
             </div>
         </td>
         `;
