@@ -7,3 +7,19 @@
 .hover-opacity:hover {
     opacity: 1;
 }
+
+.today-img-container {
+    width: 180px;
+    height: 180px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.week-img-container {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}

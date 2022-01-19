@@ -9,6 +9,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
             integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
             crossorigin="anonymous"></script>
+    <script type="module" src="js/api.js" defer></script>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body class="d-flex flex-column min-vh-100">
@@ -58,13 +59,18 @@
                 <div class="card-header">
                     <h2 class="fs-4">Weather today</h2>
                 </div>
-                <div class="card-body">
+                <div class="card-body" id="weather-today">
+                    <!-- This inner HTML will be filled by script -->
                     <div class="row g-4">
-                        <div class="col-sm-6"><img src="img/weather-icons/broken-clouds.svg" alt="cloudy" width="180px"></div>
                         <div class="col-sm-6">
-                            <h3>15℃</h3>
-                            <p>Cloudy</p>
-                            <p>Wind 5 m/s</p>
+                            <div class="today-img-container">
+                                <img src="img/weather-icons/default.svg" alt="cloudy" width="180px">
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <p><h3>...℃</h3></p>
+                            <p class="fs-4">...</p>
+                            <p class="fs-4">wind ... m/s</p>
                         </div>
                     </div>
                 </div>
@@ -77,35 +83,63 @@
                 <div class="card-header">
                     <h2 class="fs-4">Weather this week</h2>
                 </div>
-                <div class="card-body">
+                <div class="card-body" id="weather-week">
                     <div class="table-responsive">
                         <table class="table table-borderless text-center align-middle">
                             <tr>
-                                <th>MON</th>
-                                <th>TUE</th>
-                                <th>WED</th>
-                                <th>THU</th>
-                                <th>FRI</th>
-                                <th>SAT</th>
-                                <th>SUN</th>
+                                <th>...</th>
+                                <th>...</th>
+                                <th>...</th>
+                                <th>...</th>
+                                <th>...</th>
+                                <th>...</th>
+                                <th>...</th>
                             </tr>
                             <tr>
-                                <td>15℃</td>
-                                <td>13℃</td>
-                                <td>11℃</td>
-                                <td>16℃</td>
-                                <td>16℃</td>
-                                <td>14℃</td>
-                                <td>15℃</td>
+                                <td>...℃</td>
+                                <td>...℃</td>
+                                <td>...℃</td>
+                                <td>...℃</td>
+                                <td>...℃</td>
+                                <td>...℃</td>
+                                <td>...℃</td>
                             </tr>
                             <tr>
-                                <td><img src="img/weather-icons/broken-clouds.svg" alt="cloudy" width="50px"></td>
-                                <td><img src="img/weather-icons/few-clouds.svg" alt="part cloudy" width="50px"></td>
-                                <td><img src="img/weather-icons/few-clouds.svg" alt="part cloudy" width="50px"></td>
-                                <td><img src="img/weather-icons/broken-clouds.svg" alt="cloudy" width="50px"></td>
-                                <td><img src="img/weather-icons/clear-sky.svg" alt="sunny" width="50px"></td>
-                                <td><img src="img/weather-icons/few-clouds.svg" alt="part cloudy" width="50px"></td>
-                                <td><img src="img/weather-icons/broken-clouds.svg" alt="cloudy" width="50px"></td>
+                                <td>
+                                    <div class="week-img-container">
+                                        <img src="img/weather-icons/default.svg" alt="cloudy" width="50px">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="week-img-container">
+                                        <img src="img/weather-icons/default.svg" alt="cloudy" width="50px">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="week-img-container">
+                                        <img src="img/weather-icons/default.svg" alt="cloudy" width="50px">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="week-img-container">
+                                        <img src="img/weather-icons/default.svg" alt="cloudy" width="50px">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="week-img-container">
+                                        <img src="img/weather-icons/default.svg" alt="cloudy" width="50px">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="week-img-container">
+                                        <img src="img/weather-icons/default.svg" alt="cloudy" width="50px">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="week-img-container">
+                                        <img src="img/weather-icons/default.svg" alt="cloudy" width="50px">
+                                    </div>
+                                </td>
                             </tr>
                         </table>
                     </div>

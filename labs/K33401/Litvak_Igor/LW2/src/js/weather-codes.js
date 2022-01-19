@@ -1,17 +1,17 @@
 // Filenames for different weather types
-const rootPath = "img/weather-icons/"
+const rootPath = "img/weather-icons/";
 
-const clearSky = "clear-sky.svg"
-const fewClouds = "few-clouds.svg"
-const scatteredClouds = "scattered-clouds.svg"
-const brokenClouds = "broken-clouds.svg"
-const showerRain = "shower-rain.svg"
-const rain = "rain.svg"
-const thunderstorm = "thunderstorm.svg"
-const snow = "snow.svg"
-const mist = "mist.svg"
+const clearSky = "clear-sky.svg";
+const fewClouds = "few-clouds.svg";
+const scatteredClouds = "scattered-clouds.svg";
+const brokenClouds = "broken-clouds.svg";
+const showerRain = "shower-rain.svg";
+const rain = "rain.svg";
+const thunderstorm = "thunderstorm.svg";
+const snow = "snow.svg";
+const mist = "mist.svg";
 
-const defaultIcon = "default.svg"
+const defaultIcon = "default.svg";
 
 // https://openweathermap.org/weather-conditions
 const codeMappings = {
@@ -70,11 +70,11 @@ const codeMappings = {
     802: scatteredClouds,
     803: brokenClouds,
     804: brokenClouds
-}
+};
 
 export function weatherCodeToIcon(code) {
     if (!codeMappings.hasOwnProperty(code)) {
-        return defaultIcon
+        return rootPath + defaultIcon;
     }
-    return codeMappings[code]
+    return rootPath + codeMappings[code];
 }

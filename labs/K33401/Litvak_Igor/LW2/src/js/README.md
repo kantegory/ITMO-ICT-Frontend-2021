@@ -2,5 +2,5 @@
 
 Before launching project, create `secret.js` file in current directory and create a following constant:
 ```js
-export const apiKey = "YOUR_KEY_VALUE"
+export const apiKey = "YOUR_KEY_VALUE";
 ```
