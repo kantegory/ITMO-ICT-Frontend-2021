@@ -30,7 +30,7 @@ function showWeather(data, num) {
     document.getElementById("loc" + num + "_now").innerHTML = data['daily'][0]['temp']['day'] + "&degC";
     document.getElementById("loc" + num + "_temp_date1").innerHTML = data['daily'][0]['temp']['day'] + "&degC";
     document.getElementById("loc" + num + "_temp_date2").innerHTML = data['daily'][1]['temp']['day'] + "&degC";
-    document.getElementById("loc" + num + "_temp_date2").innerHTML = data['daily'][2]['temp']['day'] + "&degC";
+    document.getElementById("loc" + num + "_temp_date3").innerHTML = data['daily'][2]['temp']['day'] + "&degC";
     document.getElementById("loc" + num + "_prec_date1").innerHTML = data['daily'][0]['weather'][0]['description'];
     document.getElementById("loc" + num + "_prec_date2").innerHTML = data['daily'][1]['weather'][0]['description'];
     document.getElementById("loc" + num + "_prec_date3").innerHTML = data['daily'][2]['weather'][0]['description'];
