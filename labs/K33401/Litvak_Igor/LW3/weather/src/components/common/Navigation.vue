@@ -13,16 +13,16 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" href="/">Home</a>
+                            <router-link to="/" class="nav-link" exact-active-class="active">Home</router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/login">Login</a>
+                            <router-link to="/login" class="nav-link" active-class="active">Login</router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/register">Register</a>
+                            <router-link to="/register" class="nav-link" active-class="active">Register</router-link>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="/profile">Profile</a>
+                            <router-link to="/profile" class="nav-link" active-class="active">Profile</router-link>
                         </li>
                     </ul>
                 </div>
