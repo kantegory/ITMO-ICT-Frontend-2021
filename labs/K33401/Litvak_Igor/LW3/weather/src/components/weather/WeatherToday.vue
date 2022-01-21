@@ -2,7 +2,7 @@
     <div class="row g-4">
         <div class="col-sm-6">
             <div class="today-img-container">
-                <img :src=icon :alt=desc class="img-icon">
+                <img :src="icon" :alt="desc" class="img-icon">
             </div>
         </div>
         <div class="col-sm-6">

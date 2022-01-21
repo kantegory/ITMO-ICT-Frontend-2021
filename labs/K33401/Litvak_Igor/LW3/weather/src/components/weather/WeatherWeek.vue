@@ -3,7 +3,7 @@
         <p><b>{{ day }}</b></p>
         <p>{{ temp }}℃</p>
         <div class="week-img-container">
-            <img :src=icon :alt=desc class="img-icon">
+            <img :src="icon" :alt="desc" class="img-icon">
         </div>
 
     </div>
