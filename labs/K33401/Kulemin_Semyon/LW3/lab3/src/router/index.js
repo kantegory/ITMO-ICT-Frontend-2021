@@ -4,6 +4,7 @@ import Home from '../views/Home.vue'
 import Index from '../views/Index.vue'
 import SignUp from '../views/SignUp.vue'
 import Settings from '../views/Settings.vue'
+import Search from '../views/Search.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
     path: '/settings',
     name: 'Settings',
     component: Settings
+  },
+  {
+    path: '/search',
+    name: 'Search',
+    component: Search
   }
 
 ]
