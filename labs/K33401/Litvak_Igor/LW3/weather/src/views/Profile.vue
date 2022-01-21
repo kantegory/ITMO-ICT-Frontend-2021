@@ -36,19 +36,22 @@
                         </div>
                         <div class="p-2">
                             <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
-                                    data-bs-target="#cityModal">+
+                                    data-bs-target="#addCityModal">+
                             </button>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <add-city-modal></add-city-modal>
     </div>
 </template>
 
 <script>
+import AddCityModal from "../components/modals/addCityModal";
 export default {
-    name: "Profile"
+    name: "Profile",
+    components: {AddCityModal}
 }
 </script>
 
