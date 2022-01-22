@@ -1,4 +1,4 @@
-# maha
+# Karatetskaya  Maria
 
 ## Project setup
 ```
