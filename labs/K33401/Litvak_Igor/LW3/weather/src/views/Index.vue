@@ -2,7 +2,7 @@
     <div>
         <h1 class="display-4">
             Weather forecast for <span class="hover-opacity" data-bs-toggle="modal" data-bs-target="#chooseCityModal">
-        <span id="selected-city">St. Petersburg</span>
+        <span id="selected-city">{{ selectedCity }}</span>
         <img src="img/edit-pen.svg" alt="edit" width="40px"></span>
         </h1>
 
@@ -14,7 +14,8 @@
                         <h2 class="fs-4">Weather today</h2>
                     </div>
                     <div class="card-body" id="weather-today">
-                        <weather-today v-if="todayWeather" :icon="todayWeather.icon" :temp="todayWeather.temp" :desc="todayWeather.desc" :wind="todayWeather.wind"></weather-today>
+                        <weather-today v-if="todayWeather" :icon="todayWeather.icon" :temp="todayWeather.temp"
+                                       :desc="todayWeather.desc" :wind="todayWeather.wind"></weather-today>
                     </div>
                 </div>
             </div>
@@ -29,7 +30,10 @@
                         <div class="table-responsive">
                             <table class="table table-borderless text-center align-middle" v-if="weekWeather">
                                 <tr>
-                                    <td v-for="item in weekWeather" :key="item.day"><weather-week :icon="item.icon" :temp="item.temp" :desc="item.desc" :day="item.day"></weather-week></td>
+                                    <td v-for="item in weekWeather" :key="item.day">
+                                        <weather-week :icon="item.icon" :temp="item.temp" :desc="item.desc"
+                                                      :day="item.day"></weather-week>
+                                    </td>
                                 </tr>
                             </table>
                         </div>
@@ -138,19 +142,30 @@ function timestampToWeekDay(timestamp) {
 
 // https://stackoverflow.com/a/51992739
 async function getJSON(url) {
-    return fetch(url).then((response)=>response.json()).then((responseJson)=>{return responseJson});
+    return fetch(url).then((response) => response.json()).then((responseJson) => {
+        return responseJson
+    });
 }
 
 export default {
     name: "Index",
     components: {ChooseCityModal, WeatherWeek, WeatherToday},
     data: function () {
-        // Temp
-        let todayWeather = null;
-        let weekWeather = null;
+        let selectedCity = "St. Petersburg";
+        if (Object.prototype.hasOwnProperty.call(sessionStorage, "city")) {
+            let city = sessionStorage.getItem("city");
+            if (city) {
+                selectedCity = city;
+            } else if (Object.prototype.hasOwnProperty.call(sessionStorage, "lat") && Object.prototype.hasOwnProperty.call(sessionStorage, "lon")) {
+                let lat = sessionStorage.getItem("lat");
+                let lon = sessionStorage.getItem("lon");
+                selectedCity = `${lat} ${lon}`;
+            }
+        }
         return {
-            todayWeather: todayWeather,
-            weekWeather: weekWeather
+            todayWeather: null,
+            weekWeather: null,
+            selectedCity: selectedCity
         }
     },
     async created() {
@@ -178,7 +193,7 @@ export default {
         }
 
         let weekWeather = []
-        for (let day of data["daily"]) {
+        for (let day of data["daily"].slice(0, 7)) {
             weekWeather.push({
                 day: timestampToWeekDay(day["dt"]),
                 temp: Math.round(day["temp"]["day"]),
