@@ -5,7 +5,7 @@
       <div class="row card-group form-fly">
         <div class="col-lg-4 col-md-6 col-sm-12 col-card" v-for="(f, index) in json" :key="index">
           <div class="card">
-            <img src="../../public/image/plain.jpg" class="card-img-top" alt="">
+            <img :src=getImgUrl(json[index]) class="card-img-top" alt="">
             <div class="card-body">
               <h5 class="card-title">{{f.from}} - {{f.to}}</h5>
               <p class="card-text">Количество пассажиров - {{f.pass}}</p>
@@ -27,6 +27,7 @@ export default {
   props: {
     json: null,
     to: null,
+    town: null,
     from: null,
     date: null,
     time: null,
@@ -37,6 +38,12 @@ export default {
     console.log('qwe')
     this.json = JSON.parse(localStorage.getItem('profil'))
     console.log(this.json.from)
+  },
+  methods: {
+    getImgUrl (array) {
+      console.log('../../public/image/' + array.to + '.jpg')
+      return require('../../public/image/' + array.to + '.jpg')
+    }
   }
 }
 </script>
