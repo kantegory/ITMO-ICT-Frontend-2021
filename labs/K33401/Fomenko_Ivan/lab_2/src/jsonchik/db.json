@@ -1,0 +1,52 @@
+{
+	"tickets": [
+		{
+			"id": 1,
+			"isActive": true,
+			"departure": "Saint-Petersburg",
+			"arrival": "Moscow",
+			"date": "2022-01-25",
+			"time": "15:00",
+			"country": 1,
+			"aviacompany": 1,
+			"personal_class": 4,
+			"price": 1
+		},
+		{
+			"id": 2,
+			"isActive": true,
+			"departure": "Saint-Petersburg",
+			"arrival": "Beijing",
+			"date": "2022-01-25",
+			"time": "15:00",
+			"country": 2,
+			"aviacompany": 1,
+			"personal_class": 4,
+			"price": 1
+		},
+		{
+			"id": 3,
+			"isActive": true,
+			"departure": "Saint-Petersburg",
+			"arrival": "Dublin",
+			"date": "2022-01-25",
+			"time": "15:00",
+			"country": 3,
+			"aviacompany": 1,
+			"personal_class": 4,
+			"price": 1
+		},
+		{
+			"id": 4,
+			"isActive": true,
+			"departure": "Saint-Petersburg",
+			"arrival": "Stockholm",
+			"date": "2022-01-25",
+			"time": "15:00",
+			"country": 5,
+			"aviacompany": 1,
+			"personal_class": 1,
+			"price": 1
+		}
+	]
+}
