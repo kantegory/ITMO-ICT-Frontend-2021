@@ -16,6 +16,18 @@
                     <div class="card-body" id="weather-today">
                         <weather-today v-if="todayWeather" :icon="todayWeather.icon" :temp="todayWeather.temp"
                                        :desc="todayWeather.desc" :wind="todayWeather.wind"></weather-today>
+                        <div class="row g-4" v-else>
+                            <div class="col-sm-6">
+                                <div class="today-img-container placeholder-glow">
+                                    <span class="placeholder w-100 h-100"></span>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <h3 class="placeholder-glow"><span class="placeholder col-8"></span></h3>
+                                <p class="fs-4 placeholder-glow"><span class="placeholder col-5"></span></p>
+                                <p class="fs-4 placeholder-glow"><span class="placeholder col-7"></span></p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -33,6 +45,17 @@
                                     <td v-for="item in weekWeather" :key="item.day">
                                         <weather-week :icon="item.icon" :temp="item.temp" :desc="item.desc"
                                                       :day="item.day"></weather-week>
+                                    </td>
+                                </tr>
+                            </table>
+                            <table class="table table-borderless text-center align-middle" v-else>
+                                <tr>
+                                    <td v-for="i in 7" :key="i">
+                                        <p class="placeholder-glow"><span class="placeholder col-7"></span></p>
+                                        <p class="placeholder-glow"><span class="placeholder col-5"></span></p>
+                                        <div class="week-img-container placeholder-glow">
+                                            <span class="placeholder w-100 h-100"></span>
+                                        </div>
                                     </td>
                                 </tr>
                             </table>
