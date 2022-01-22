@@ -7,6 +7,7 @@ async function getTickets() {
     let url = `http://localhost:3000/tickets?from=${from}&to=${to}&date=${date}`;
     let res = await fetch(url);
     let data = await res.json();
+    console.log('asd');
     console.log(data);
     return data;
 }
@@ -22,7 +23,7 @@ async function sendTickets() {
     let html = "";
     let htmlDif = "";
     let htmlImg = "";
-    console.log(pass);
+    console.log('fgh');
     html += "<div class='title'><a>Билеты</a></div>";
     html += "<div class='row card-group form-fly'>";
     for (let i = 0; i < tickets.length; i++){

@@ -1,9 +1,13 @@
 {
   "ExpandedNodes": [
     "",
+    "\\public",
     "\\src",
+    "\\src\\assets",
     "\\src\\components",
+    "\\src\\router",
     "\\src\\views"
   ],
+  "SelectedNode": "\\src\\router\\index.js",
   "PreviewInSolutionExplorer": false
 }
