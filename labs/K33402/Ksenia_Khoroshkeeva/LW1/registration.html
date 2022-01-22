@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main_page_weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js" integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js" integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/" crossorigin="anonymous"></script>
+</head>
+
+
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light my-bg-indigo">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Погода Ро$$ии</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Москва" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit">Поиск</button>
+                </form>
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Войти</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registration.html">Зарегистрироваться</a>
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </nav>
+</header>
+
+<main>
+    <div class="row">
+        <div class="col-sm-5 my-3 mx-5">
+            <form>
+                <div class="form-group my-3 mx-5">
+                    <label for="Email">Email</label>
+                    <input type="email" class="form-control" id="Email" placeholder="Введите email">
+                </div>
+                <div class="form-group my-3 mx-5">
+                    <label for="Name">Ваше имя</label>
+                    <input type="text" class="form-control" id="Name" placeholder="Введите имя">
+                </div>
+                <div class="form-group my-3 mx-5">
+                    <label for="city">Ваш город</label>
+                    <input type="text" class="form-control" id="city" placeholder="Введите название города">
+                </div>
+                <div class="form-group my-3 mx-5">
+                    <label for="Password">Пароль</label>
+                    <input type="password" class="form-control" id="Password" placeholder="Введите пароль">
+                </div>
+                <a href="index_personal.html" type="submit" class="btn btn-primary my-3 mx-5">Зарегистрироваться</a>
+                <a href="login.html" type="button" class="btn btn-outline-primary my-3">Войти</a>
+            </form>
+        </div>
+        <div class="col-sm-5 my-3 mx-5">
+            <img src="img/img3.jpg" class="card-img-top" alt="...">
+        </div>
+    </div>
+</main>
+</body>
