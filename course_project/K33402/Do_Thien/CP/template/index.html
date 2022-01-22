@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Astronaut</title>
+
+	<meta name="theme-color" media="(prefers-color-scheme: light)" content="white">
+	<meta name="theme-color" media="(prefers-color-scheme: dark)" content="#222222">
+
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="stylesheet" href="/css/light.css" media="(prefers-color-scheme: light)">
+	<link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+	<header class="header">
+		<div class="container">
+			<nav class="nav">
+				<a href="#" class="logo">
+					<img src="/images/logo1.png" alt="logo-woft">
+				</a>
+				<div class="hamburger-menu navbar-toggler">
+					<i class="fas fa-bars"></i>
+					<i class="fas fa-times"></i>
+				</div>
+				<ul class="nav-list">
+					<li class="nav-item">
+						<a href="index.html" class="nav-link">Home</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">About</a>
+					</li>
+					<li class="nav-item">
+						<a href="/template/booking.html" class="nav-link">Offers</a>
+					</li>
+					<li class="nav-item">
+						<a href="#" class="nav-link">Contact</a>
+					</li>
+					<li class="nav-item">
+						<a href="/template/account.html" class="nav-link">Account</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+	</header>
+
+	<main>
+		<div class="scheme">
+			<div class="container">
+				<fieldset class="switcher">
+					<legend class="switcher__legend">Scheme</legend>
+					<input class="switcher__radio switcher__radio--light" type="radio" name="color-scheme" value="light" aria-label="Light">
+					<input class="switcher__radio switcher__radio--auto" type="radio" name="color-scheme" value="auto" aria-label="System" checked>
+					<input class="switcher__radio switcher__radio--dark" type="radio" name="color-scheme" value="dark" aria-label="Dark">
+					<div class="switcher__status"></div>
+				</fieldset>
+			</div>
+		</div>
+		<div class="hero">
+			<div class="container">
+				<div class="main-heading">
+					<h3 class="title">Not sure where to go? Perfect.</h3>
+				</div>
+				<a href="/template/booking.html" class="btn btn-gradient">
+					<span class="flexible">I'm flexible</span>
+					<span class="dots"><i class="fas fa-ellipsis-h"></i></span> 
+					<!-- three dots -->
+				</a>
+			</div>
+		</div>
+		<section class="booking">
+			<div class="container">
+				<form action="" class="form">
+					<div class="input-group">
+						<label for="destination" class="input-label">Destination</label>
+						<input type="text" class="input" id="destination">
+					</div>
+					<div class="input-group">
+						<label for="check-in" class="input-label">Check In</label>
+						<input type="date" class="input" id="check-in">
+					</div>
+					<div class="input-group">
+						<label for="check-out" class="input-label">Check Out</label>
+						<input type="date" class="input" id="check-out">
+					</div>
+					<div class="input-group">
+						<label for="adults" class="input-label">Adults</label>
+						<select id="adults" class="options">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					</div>
+					<div class="input-group">
+						<label for="children" class="input-label">Children</label>
+						<select id="children" class="options">
+							<option value="0">0</option>
+							<option value="1">1</option>
+							<option value="2">2</option>
+							<option value="3">3</option>
+							<option value="4">4</option>
+							<option value="5">5</option>
+						</select>
+					</div>
+					<button type="submit" class="btn btn-search"><i class="fas fa-search"></i></button>
+				</form>
+			</div>
+		</section>
+
+		<section class="cities">
+			<div class="container">
+				<h3 class="section-head">Explore nearby</h3>
+				<div class="grid-city">
+					<div class="grid-item-city">
+						<a href="#" class="city-link">
+							<img src="/images/explore/1.jpg" alt="city" class="city-img">
+							<div class="texts">
+								<h4 class="city-name">Saint Petersburg</h4>
+								<h5 class="time-drive">15 minute drive</h5>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid-item-city">
+						<a href="#" class="city-link">
+							<img src="/images/explore/2.webp" alt="city" class="city-img">
+							<div>
+								<h4 class="city-name">Veliky Novgorod</h4>
+								<h5 class="time-drive">3 hour drive</h5>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid-item-city">
+						<a href="#" class="city-link">
+							<img src="/images/explore/3.webp" alt="city" class="city-img">
+							<div>
+								<h4 class="city-name">Pskov</h4>
+								<h5 class="time-drive">5 hour drive</h5>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid-item-city">
+						<a href="#" class="city-link">
+							<img src="/images/explore/4.webp" alt="city" class="city-img">
+							<div>
+								<h4 class="city-name">Vyborg</h4>
+								<h5 class="time-drive">2.5 hour drive</h5>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid-item-city">
+						<a href="#" class="city-link">
+							<img src="/images/explore/5.webp" alt="city" class="city-img">
+							<div>
+								<h4 class="city-name">Tver</h4>
+								<h5 class="time-drive">6.5 hour drive</h5>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid-item-city">
+						<a href="#" class="city-link">
+							<img src="/images/explore/6.jpg" alt="city" class="city-img">
+							<div>
+								<h4 class="city-name">Kudrovo</h4>
+								<h5 class="time-drive">30 minute drive</h5>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid-item-city">
+						<a href="#" class="city-link">
+							<img src="/images/explore/7.webp" alt="city" class="city-img">
+							<div>
+								<h4 class="city-name">Murino</h4>
+								<h5 class="time-drive">45 minute drive</h5>
+							</div>
+						</a>
+					</div>
+
+					<div class="grid-item-city">
+						<a href="#" class="city-link">
+							<img src="/images/explore/8.webp" alt="city" class="city-img">
+							<div>
+								<h4 class="city-name">Cherepovets</h4>
+								<h5 class="time-drive">9 hour drive</h5>
+							</div>
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="hotels">
+			<div class="container">
+				<h3 class="section-head">Live anywhere</h3>
+				<div class="grid">
+					<div class="grid-item">
+						<a href="#" class="hotel-link">
+							<img src="/images/explore/21.webp" alt="hotel1" class="hotel-img">
+							<h4 class="hotel-name">Outdoor getaways</h4>
+						</a>
+					</div>
+
+					<div class="grid-item">
+						<a href="#" class="hotel-link">
+							<img src="/images/explore/22.webp" alt="hotel1" class="hotel-img">
+							<h4 class="hotel-name">Unique stays</h4>
+						</a>
+					</div>
+
+					<div class="grid-item">
+						<a href="#" class="hotel-link">
+							<img src="/images/explore/23.webp" alt="hotel1" class="hotel-img">
+							<h4 class="hotel-name">Intire homes</h4>
+						</a>
+					</div>
+
+					<div class="grid-item">		
+						<a href="#" class="hotel-link">
+							<img src="/images/explore/24.webp" alt="hotel1" class="hotel-img">
+							<h4 class="hotel-name">Pet allowed</h4>	
+						</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<section class="try-hosting">
+			<div class="container">
+				<div class="background-host">
+					<div class="content">
+						<div class="head-content">
+							<h3 class="head-content-">Try hosting</h3>
+						</div>
+						<div class="text-content">
+							<p class="text-content-">Earn extra income and unlock new opportunities by sharing your space.</p>
+						</div>
+						<a href="#" class="btn btn-gradient">Learn more</a>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<div class="discover">
+			<div class="container">
+				<h3 class="section-head">Discover things to do</h3>
+				<div class="grid">
+					<div class="grid-item">
+						<a href="#" class="discover-link">
+							<img src="/images/explore/41.jpg" alt="Discover things" class="discover-img">
+							<h5 class="discover-name">Experience</h5>
+							<p class="discover-text">Find unforgettable activities near you</p>
+						</a>
+					</div>
+					<div class="grid-item">
+						<a href="#" class="discover-link">
+							<img src="/images/explore/42.jpg" alt="Discover things" class="discover-img">
+							<h5 class="discover-name">Online Experience</h5>
+							<p class="discover-text">Live, interactive activities led by Hosts</p>
+						</a>
+					</div>
+					<div class="grid-item">
+						<a href="#" class="discover-link">
+							<img src="/images/explore/43.jpg" alt="Discover things" class="discover-img">
+							<h5 class="discover-name">Featured collection: Wanderlust</h5>
+							<p class="discover-text">Travel from home Online Experinece</p>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+	<footer class="footer">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-sm-6 col-md-3 col-12 item">
+					<h3 class="head-footer">About</h3>
+					<ul class="list-footer">
+						<li><a href="#" class="link-footer">How Airbnb works</a></li>
+						<li><a href="#" class="link-footer">Newsroom</a></li>
+						<li><a href="#" class="link-footer">Airbnb 2021</a></li>
+						<li><a href="#" class="link-footer">Investor</a></li>
+						<li><a href="#" class="link-footer">Airbnb Plus</a></li>
+						<li><a href="#" class="link-footer">Airbnb Luxe</a></li>
+						<li><a href="#" class="link-footer">HotelTonight</a></li>
+						<li><a href="#" class="link-footer">Airbnb for Work</a></li>
+						<li><a href="#" class="link-footer">Made possible by Hosts</a></li>
+						<li><a href="#" class="link-footer">Careers</a></li>
+						<li><a href="#" class="link-footer">Founders'Letter</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-6 col-md-3 col-12 item">
+					<h3 class="head-footer">Community</h3>
+					<ul class="list-footer">
+						<li><a href="#" class="link-footer">Diversity & Belonging</a></li>
+						<li><a href="#" class="link-footer">Against Discrimination</a></li>
+						<li><a href="#" class="link-footer">Accessibility</a></li>
+						<li><a href="#" class="link-footer">Airbnb Associates</a></li>
+						<li><a href="#" class="link-footer">Host Afghan refugees</a></li>
+						<li><a href="#" class="link-footer">Guest Referrals</a></li>
+						<li><a href="#" class="link-footer">Gift cards</a></li>
+						<li><a href="#" class="link-footer">Airbnb.org</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-6 col-md-3 col-12 item">
+					<h3 class="head-footer">Host</h3>
+					<ul class="list-footer">
+						<li><a href="#" class="link-footer">Host your home</a></li>
+						<li><a href="#" class="link-footer">Host an Online Experience</a></li>
+						<li><a href="#" class="link-footer">Host an Experience</a></li>
+						<li><a href="#" class="link-footer">Responsible hosting</a></li>
+						<li><a href="#" class="link-footer">Resource Center</a></li>
+						<li><a href="#" class="link-footer">Community Center</a></li>
+					</ul>
+				</div>
+				<div class="col-sm-6 col-md-3 col-12 item">
+					<h3 class="head-footer">Support</h3>
+					<ul class="list-footer">
+						<li><a href="#" class="link-footer">Our COVID-19 Response</a></li>
+						<li><a href="#" class="link-footer">Help Center</a></li>
+						<li><a href="#" class="link-footer">Cancellation options</a></li>
+						<li><a href="#" class="link-footer">Neighborhood Support</a></li>
+						<li><a href="#" class="link-footer">Trust & Safety</a></li>
+					</ul>
+				</div>
+			</div>
+			<hr class="hr">
+		</div>
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-sm-12 copyright-">
+						<span class="text-copyright">Copyright © 2021 Airbnb,Inc.</span>
+					</div>
+					<div class="col-md-6 col-sm-12 item social copyright-menu">
+						<ul>
+							<li class="link-icon"><a href="#">English(US)</a></li>
+							<li class="link-icon"><a href="#">RUB</a></li>
+							<li class="link-icon"><a href="#"><i class="icon ion-social-facebook"></i></a></li>
+							<li class="link-icon"><a href="#"><i class="icon ion-social-twitter"></i></a></li>
+							<li class="link-icon"><a href="#"><i class="icon ion-social-snapchat"></i></a></li>
+							<li class="link-icon"><a href="#"><i class="icon ion-social-instagram"></i></a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+	<script src="/js/main.js"></script>
+</body>
+</html>

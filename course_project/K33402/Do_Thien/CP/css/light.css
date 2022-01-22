@@ -1,0 +1,35 @@
+:root {
+    --back-color: white;
+    --body-color: #262525;
+    --footer-color: #fafafa;
+    --link-color: rgb(56, 56, 56);
+    --text-shadow-color: 1px 1px 1rem rgb(0, 0, 0);
+    --input-label-color: #1a1919;
+    --button-color: #111111;
+    --hotel-name-color: rgb(54, 54, 54);
+    --head-content-shadow-color: rgb(201, 201, 201) 1px 1px 3px;
+    --discover-color: rgb(54, 54, 54);
+    --btn-continue-color: #191A19;
+    --grid-item-account: rgb(252, 252, 252);
+    --green-vintage-1:  #2F5D62;
+    --green-vintage-2:  #5E8B7E;
+    --green-vintage-3:  #A7C4BC;
+    --green-vintage-4:  #DFEEEA;
+    --gadient-color: linear-gradient(to right, var(--green-vintage-2), var(--green-vintage-3), var(--green-vintage-4));
+    --gadient-color-alt: linear-gradient(to left, var(--green-vintage-2), var(--green-vintage-3), var(--green-vintage-4));
+    --back-image: url(/images/background.jpg);
+}
+
+/* Switcher */
+
+.switcher__radio {
+    filter: invert(0);
+}
+
+.switcher__radio:checked {
+    filter: invert(1);
+}
+
+.switcher__status {
+    filter: invert(0);
+}
