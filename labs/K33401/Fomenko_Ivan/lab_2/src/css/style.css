@@ -1,0 +1,178 @@
+
+.row {
+	display: flex;
+	align-content: space-around;
+	justify-content: space-around;
+	padding: 0 4px;
+	margin-top: .25rem;
+}
+
+.unwrapped{
+	display: flex;
+	flex-wrap: nowrap;
+}
+
+.row img{
+	margin-top: 8px;
+	border-radius: 10px;
+}
+
+.col img {
+	margin-top: 8px;
+	border-radius: 10px;
+}
+
+.col{
+	padding: 0 5px;
+	margin-left: 1rem;
+	margin-right: 1rem;
+}
+
+
+.image {
+	margin-left: 10%;
+	margin-right: 1rem;
+	margin-top: 0;
+	border-radius: 10px;
+	box-shadow: 0 0 5px 5px rgba(0,0,0, .25);
+	width: 70%;
+}
+
+
+
+body {
+	font: 20px "URW Chancery L";
+	background-color: #3ea2c7;
+}
+
+.card-centered{
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: nowrap;
+}
+
+.content {
+	margin-top: 7%;
+	margin-right: 20%;
+	margin-left: 20%;
+	margin-bottom: 7%;
+	background-color: #fff;
+	padding: 2rem 1rem 2rem 1rem;
+	box-shadow: 0 0 5px 5px rgba(0,0,0, .25);
+	border-radius: 10px;
+}
+
+.tablet{
+	margin-top: 1%;
+	margin-bottom: 1%;
+}
+
+
+
+a {
+ font: 20px "URW Chancery L";
+ color: #3C3C3B;}
+
+
+
+span{
+ font: 14px "URW Chancery L";
+ color: #fff;
+}
+
+.active{
+ color:#479683;
+}
+
+
+.form-control{
+	display: block;
+	width: 100%;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	background-color: #ccddeb;
+ 	border-style: solid;
+ 	border-width: 0 0 1px 0;
+ 	padding: 0;
+ 	border-radius: 5px;
+ 	height: auto;
+ 	font: 18px "URW Chancery L";
+ 	color: #111212;
+ 	background-clip: padding-box;
+}
+
+.form-control:focus{
+	color: #111212;
+	background-color: #fff;
+	border-color: #dae9f5;
+	border-width: 0 0 2px 0;
+	outline: 0;
+	box-shadow: none;
+}
+
+
+.kicker{
+	margin-bottom: .5rem;
+	margin-top: .5rem;
+	margin-right: .5rem;
+}
+
+.btn-class{
+	margin-top: 1rem;
+	border-color: #e09e04;
+	color: #e09e04;
+}
+.btn-class:hover{
+	background-color: #e09e04;
+}
+
+input[type="checkbox"] {
+	margin-top: 15px;
+	width: 15px;
+	height: 15px;
+}
+
+.card{
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	padding: 1rem 1rem;
+	font: 14px "URW Chancery L";
+	border-radius: 10px;
+	vertical-align: space-between;
+}
+
+.card-img-top{
+	border-radius: 10px;
+}
+
+p{
+	margin-top: 5px;
+	margin-bottom: 5px;
+	align-self: center;
+}
+
+
+h5{
+	font: 16px "URW Chancery L";
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
+
+
+.center{
+	width: 350px;
+	margin: auto;
+	margin-top: 1px;
+	padding-bottom: 5px;
+}
+
+.icon{
+	display: block;
+	width: 60px;
+	height: 60px;
+}
+
+.icon:hover{
+	fill: #e09e04;
+}
