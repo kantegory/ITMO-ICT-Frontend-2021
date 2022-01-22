@@ -1,0 +1,14 @@
+.bg-image {
+    background: url('../images/sky-background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    min-height:100vh;
+}
+.fw-bold {
+    text-align: center;
+}
+.fs-4 {
+    text-align: center;
+}
+.info {
+    text-align: center;
+}
