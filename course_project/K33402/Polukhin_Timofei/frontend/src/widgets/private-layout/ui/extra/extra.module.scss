@@ -1,0 +1,18 @@
+.title {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-gap: 8px;
+  align-items: center;
+  height: 100%;
+  margin: 0;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+.icon {
+  font-size: 16px !important;
+}
+
+.menu {
+  min-width: 100px;
+}
