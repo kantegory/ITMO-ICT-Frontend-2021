@@ -85,7 +85,7 @@ span{
 }
 
 
-.form-control{
+.form-control-cool{
 	display: block;
 	width: 100%;
 	font-size: 1rem;
@@ -102,7 +102,7 @@ span{
  	background-clip: padding-box;
 }
 
-.form-control:focus{
+.form-control-cool:focus{
 	color: #111212;
 	background-color: #fff;
 	border-color: #dae9f5;
@@ -116,6 +116,7 @@ span{
 	margin-bottom: .5rem;
 	margin-top: .5rem;
 	margin-right: .5rem;
+	font-size: 1.25rem;
 }
 
 .btn-class{
