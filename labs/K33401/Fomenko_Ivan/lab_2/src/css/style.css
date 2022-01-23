@@ -160,6 +160,16 @@ h5{
 	margin-bottom: 5px;
 }
 
+.team{
+	margin: 50px 0;
+}
+
+h1{
+	text-align: center;
+	letter-spacing: 2px;
+}
+
+
 
 .center{
 	width: 350px;
@@ -178,3 +188,69 @@ h5{
 .icon:hover{
 	fill: #e09e04;
 }
+
+.progile{
+	margin-top: 25px;
+}
+
+.profile .img-box{
+	opacity: 1;
+	display: block;
+	position: relative;
+}
+
+.profile h2{
+	margin-top: 10px;
+	font-size: 22px;
+}
+
+.profile h3{
+	font-size: 15px;
+}
+
+.img-box:after{
+	content: '';
+	opacity: 0;
+	background-color: rgba(0,0,0,0.6);
+	position: absolute;
+	right: 0;
+	left: 0;
+	top: 0;
+	bottom: 0;
+
+}
+
+.img-box ul{
+	margin 0;
+	padding: 20px 0;
+	position: absolute;
+	z-index: 1;
+	bottom: 0;
+	display: block;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+}
+
+.img-box ul li{
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	border: 1px solid #fff;
+	border-radius: 50%;
+	margin: 1px;
+	padding: 3px;
+}
+
+.img-box a{
+	color: #fff;
+}
+
+.img-box:hover:after{
+	opacity: 1;
+}
+
+.img-box:hover ul{
+	opacity: 1;
+}
+
