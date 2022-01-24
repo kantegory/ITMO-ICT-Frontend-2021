@@ -81,12 +81,23 @@
         </div>
       </div>
     </div>
+    <div v-for="item in weatherList" :key="item[0]">
+      {{item[1].data.list[0]}}
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'WeatherCards'
+  name: 'WeatherCards',
+  mounted () {
+    this.$store.dispatch('weatherCall')
+  },
+  computed: {
+    weatherList () {
+      return this.$store.getters.getWeather
+    }
+  }
 }
 </script>
 

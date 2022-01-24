@@ -22,12 +22,6 @@ export const store = new Vuex.Store({
     }
   },
   mutations: {
-    // SET_CITIES (state, cities) {
-    //   state.cities = cities
-    // },
-    // SET_WEATHER (state, weather) {
-    //   state.weather = weather
-    // }
     changeCities: (state, cities) => {
       state.cities = cities
     },
@@ -37,7 +31,8 @@ export const store = new Vuex.Store({
         axios
           .get('https://api.openweathermap.org/data/2.5/onecall?lat=' + this.cities[i][1] + '&lon=' + this.cities[i][2] + '&exclude={daily}' + '&appid=' + state.api + '&lang=ru&units=metric')
           .then(response => {
-            currentWeather.push(response)
+            console.log([this.cities[i][0], response])
+            currentWeather.push([this.cities[i][0], response])
           })
       }
       state.weather = currentWeather
