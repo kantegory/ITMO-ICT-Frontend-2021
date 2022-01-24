@@ -1,0 +1,15 @@
+.layout-default {
+  display: flex;
+  flex-direction: column;
+
+  main {
+    display: flex;
+    flex: 1;
+
+    > div {
+      flex: 1;
+
+      padding-bottom: 50px;
+    }
+  }
+}
