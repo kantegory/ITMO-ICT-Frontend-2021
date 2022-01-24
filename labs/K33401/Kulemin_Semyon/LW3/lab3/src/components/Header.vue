@@ -7,9 +7,9 @@
           <span class="d-flex align-items-left mb-3 mb-md-0 me-md-auto text-dark">Моя погода</span>
         </router-link>
       </div>
-      <div class="col-1">
-        <button class="btn btn-primary" type="submit" id="location_button">Location</button>
-      </div>
+<!--      <div class="col-1">-->
+<!--        <button class="btn btn-primary" type="submit" id="location_button">Location</button>-->
+<!--      </div>-->
       <div class="col-1">
         <router-link to="/search">
           <span class="d-flex align-items-left mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">Поиск</span>

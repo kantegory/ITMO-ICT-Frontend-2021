@@ -45,7 +45,6 @@
           <span class="input-group-text">@</span>
           <input id='city3' type="text" class="form-control" placeholder="Лондон" required>
         </div>
-
         <button id="register3" class="w-50 btn btn-primary btn-lg" type="submit">Выбрать</button>
         <br>
       </div>
@@ -55,7 +54,10 @@
 
 <script>
 export default {
-  name: 'CitiesChoice'
+  name: 'CitiesChoice',
+  mounted () {
+    this.$store.dispatch('cities')
+  }
 }
 </script>
 
