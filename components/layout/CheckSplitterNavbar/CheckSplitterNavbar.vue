@@ -1,5 +1,5 @@
 <template>
-  <b-navbar toggleable="lg" class="check-splitter-navbar">
+  <b-navbar toggleable="sm" class="check-splitter-navbar">
     <b-container>
       <b-navbar-brand to="/">CheckSplitter</b-navbar-brand>
 
@@ -9,9 +9,9 @@
 
         <b-navbar-nav class="ml-auto">
           <b-nav-item href="#" disabled>Чеки</b-nav-item>
-          <b-dropdown v-if="$auth.loggedIn" no-caret variant="link">
+          <b-nav-item-dropdown v-if="$auth.loggedIn" no-caret variant="link">
             <template #button-content>
-              <b-icon-person-circle/>
+              <b-icon-person-circle class="align-middle"/>
             </template>
             <b-dropdown-item disabled>
               Профиль
@@ -20,7 +20,7 @@
             <b-dropdown-item-button @click="$auth.logout()">
               Выйти
             </b-dropdown-item-button>
-          </b-dropdown>
+          </b-nav-item-dropdown>
           <b-nav-item v-else :to="{'name': 'LoginView'}">Войти</b-nav-item>
         </b-navbar-nav>
 
