@@ -1,15 +1,25 @@
 <template>
-  <div>
-    <City city="Moscow" api-key="5fa8289d2a7fa01e858bb2efe6a2b11b" lat="55.75222" lon="37.61556"/>
-    <City city="London" api-key="5fa8289d2a7fa01e858bb2efe6a2b11b" lat="55.75222" lon="37.61556"/>
+  <div class="row row-cols-1 row-cols-md-2 mt-5 mb-3 text-center align-items-center">
+    <div v-for="(city, i) in citiesList" :key="i">
+      <City :city="city[0]" api-key="5fa8289d2a7fa01e858bb2efe6a2b11b" :lat="city[1]" :lon="city[2]"/>
+    </div>
   </div>
 </template>
 
 <script>
 import City from '@/components/City'
+
 export default {
   name: 'WeatherCards',
-  components: { City }
+  components: { City },
+  mounted () {
+    this.$store.dispatch('getCities')
+  },
+  computed: {
+    citiesList () {
+      return this.$store.getters.CITIES
+    }
+  }
 }
 </script>
 
