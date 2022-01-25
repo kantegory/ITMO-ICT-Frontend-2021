@@ -15,6 +15,7 @@
                         <a class="nav-item nav-link" href="/Register">Register</a>
                         <a class="nav-item nav-link" href="/TicketWall">Ticket Wall</a>
                         <a class="nav-item nav-link" href="/OurTeam">Our Team</a>
+                        <a class="nav-item nav-link" href="/Planes">Our Planes</a>
                         <a class="nav-item nav-link" href="/AboutUs">About Us</a>
                         <a class="nav-item nav-link" href="/ContactUs">Contact Us</a>
                         <a class="nav-item nav-link" href="/PartnersSection">Our Partners</a>

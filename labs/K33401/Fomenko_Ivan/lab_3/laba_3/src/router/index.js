@@ -9,6 +9,7 @@ import AboutUs from '../views/AboutUs.vue'
 import ContactUs from '../views/ContactUs.vue'
 import PartnersSection from '../views/PartnersSection.vue'
 import Buy from '../views/Buy.vue'
+import Planes from '../views/Planes.vue'
 
 Vue.use(VueRouter)
 
@@ -57,6 +58,11 @@ const routes = [
     path: '/Buy',
     name: 'Buy',
     component: Buy
+  },
+  {
+    path: '/Planes',
+    name: 'Planes',
+    component: Planes
   }
 ]
 
