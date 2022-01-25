@@ -14,7 +14,7 @@
       <div class="d-flex flex-column align-items-start">
         <b-button type="submit" variant="outline-dark" class="mt-3 mb-2 align-self-stretch">Войти</b-button>
         <b-link :to="{'name': 'RegisterView'}">Регистрация</b-link>
-<!--        <b-link>Забыли пароль?</b-button>-->
+        <b-link :to="{'name': 'PasswordResetView'}">Забыли пароль?</b-link>
       </div>
     </b-form>
   </b-container>
