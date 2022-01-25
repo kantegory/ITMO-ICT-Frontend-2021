@@ -12,9 +12,13 @@
             </b-form-group>
 
             <b-form-group label="Пароль" :state="!(errors.password && errors.password.length !== 0)"
-                          :invalid-feedback="errors.password ? errors.password.join(', '): ''">
+                          :invalid-feedback="errors.password ? errors.password.join(', '): ''"
+                          class="mb-1"
+            >
               <b-form-input placeholder="Введите пароль" v-model="password" type="password" required />
             </b-form-group>
+
+            <router-link :to="{name: 'PasswordReset' }">Забыли пароль?</router-link>
 
             <div class="d-flex justify-content-center">
               <b-button type="sumbit">Авторизоваться</b-button>

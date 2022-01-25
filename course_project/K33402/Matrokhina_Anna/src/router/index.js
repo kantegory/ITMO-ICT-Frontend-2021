@@ -6,7 +6,8 @@ import Authorization from "../views/Authorization";
 import Account from "../views/Account";
 import WeatherItem from "../views/WeatherItem";
 import ProfileEdit from "@/views/ProfileEdit";
-import PasswordEdit from "@/views/PasswordEdit";
+import PasswordReset from "@/views/PasswordReset";
+import PasswordResetSuccess from "@/views/PasswordResetSuccess";
 
 Vue.use(VueRouter)
 
@@ -42,9 +43,14 @@ const routes = [
     component: ProfileEdit
   },
   {
-    path: '/profile/password',
-    name: 'PasswordEdit',
-    component: PasswordEdit
+    path: '/auth/forgot',
+    name: 'PasswordReset',
+    component: PasswordReset
+  },
+  {
+    path: '/auth/forgot/success',
+    name: 'PasswordResetSuccess',
+    component: PasswordResetSuccess
   },
 ]
 
