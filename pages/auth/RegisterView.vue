@@ -18,7 +18,7 @@
         <b-form-input type="password" v-model="form.password2" required/>
       </b-form-group>
       <div class="d-flex flex-column">
-        <b-button type="submit" variant="outline-dark" class="mt-3 mb-2">Зарегистрироваться</b-button>
+        <b-button type="submit" variant="outline-dark" class="mt-3 mb-2">Регистрация</b-button>
         <b-link :to="{'name': 'LoginView'}">Войти в существующий аккаунт</b-link>
       </div>
     </b-form>
