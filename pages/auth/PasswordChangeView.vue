@@ -24,10 +24,9 @@ import {Component, Vue} from 'nuxt-property-decorator'
 import {components} from "~/types/schema";
 
 @Component({
-  name: 'ProfileView',
+  name: 'PasswordChangeView',
 })
-export default class ProfileView extends Vue {
-  user = this.$auth.user as components['schemas']['Profile']
+export default class PasswordChangeView extends Vue {
   form: components['schemas']['PasswordChangeRequest'] = {
     old_password: '',
     new_password1: '',
