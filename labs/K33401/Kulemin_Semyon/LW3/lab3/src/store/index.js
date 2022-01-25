@@ -1,6 +1,5 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import axios from 'axios'
 
 Vue.use(Vuex)
 
@@ -19,31 +18,6 @@ export const store = new Vuex.Store({
     },
     getApi (state) {
       return state.api
-    }
-  },
-  mutations: {
-    changeCities: (state, cities) => {
-      state.cities = cities
-    },
-    fetchWeather: (state) => {
-      const currentWeather = []
-      for (let i = 0; i < this.cities.length; i++) {
-        axios
-          .get('https://api.openweathermap.org/data/2.5/onecall?lat=' + this.cities[i][1] + '&lon=' + this.cities[i][2] + '&exclude={daily}' + '&appid=' + state.api + '&lang=ru&units=metric')
-          .then(response => {
-            console.log([this.cities[i][0], response])
-            currentWeather.push([this.cities[i][0], response])
-          })
-      }
-      state.weather = currentWeather
-    }
-  },
-  actions: {
-    changeCities: ({ commit }, cities) => {
-      commit('changeCities', cities)
-    },
-    weatherCall: ({ commit }) => {
-      commit('fetchWeather')
     }
   }
 })
