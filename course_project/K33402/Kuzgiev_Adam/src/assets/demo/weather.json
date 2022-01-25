@@ -1,0 +1,49 @@
+{
+  "coord": {
+    "lon": 37.6156,
+    "lat": 55.7522
+  },
+  "weather": [
+    {
+      "id": 600,
+      "main": "Snow",
+      "description": "light snow",
+      "icon": "13n"
+    }
+  ],
+  "base": "stations",
+  "main": {
+    "temp": -6.36,
+    "feels_like": -12.48,
+    "temp_min": -7.07,
+    "temp_max": -5.71,
+    "pressure": 1015,
+    "humidity": 88,
+    "sea_level": 1015,
+    "grnd_level": 996
+  },
+  "visibility": 10000,
+  "wind": {
+    "speed": 4.47,
+    "deg": 281,
+    "gust": 11.9
+  },
+  "snow": {
+    "1h": 0.46
+  },
+  "clouds": {
+    "all": 99
+  },
+  "dt": 1641607653,
+  "sys": {
+    "type": 2,
+    "id": 47754,
+    "country": "RU",
+    "sunrise": 1641621352,
+    "sunset": 1641647758
+  },
+  "timezone": 10800,
+  "id": 524901,
+  "name": "Moscow",
+  "cod": 200
+}
