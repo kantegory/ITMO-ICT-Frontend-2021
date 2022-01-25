@@ -7,6 +7,7 @@ const store = new Vuex.Store({
   state: {
     token: '',
     username: '',
+    email: ''
   },
   mutations: {
     updateToken(state, payload) {
@@ -14,9 +15,14 @@ const store = new Vuex.Store({
       localStorage.setItem('token', payload.token)
       state.token = payload.token
     },
-    updateUsername(state, payload) {
+    updateUserInfo(state, payload) {
       console.log('payload', payload)
-      state.username = payload.username
+      if (payload.username) {
+        state.username = payload.username
+      }
+      if (payload.email) {
+        state.email = payload.email
+      }
     },
   },
   getters: {

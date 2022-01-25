@@ -3,6 +3,10 @@
     <b-container>
       <h1 class="mt-4 text-center">Здравствуйте, {{ $store.state.username }}!</h1>
 
+      <div class="d-flex justify-content-center">
+        <b-button variant="outline-dark" @click="$router.push({name: 'ProfileEdit'})">Редактировать профиль</b-button>
+      </div>
+
       <h3 class="mt-5">Погода в выбранных городах:</h3>
       <b-row v-if="weatherInCities.length !== 0" cols="1" cols-md="2" cols-lg="3" cols-xl="4" class="mt-3">
         <b-col v-for="data in weatherInCities" class="mb-3">

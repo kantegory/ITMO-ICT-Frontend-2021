@@ -13,7 +13,7 @@
 
             <b-form-group label="Пароль" :state="!(errors.password && errors.password.length !== 0)"
                           :invalid-feedback="errors.password ? errors.password.join(', '): ''">
-              <b-form-input placeholder="Введите пароль" v-model="password" required />
+              <b-form-input placeholder="Введите пароль" v-model="password" type="password" required />
             </b-form-group>
 
             <!--            <b-form-group label="Пароль">-->

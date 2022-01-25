@@ -5,6 +5,8 @@ import Registration from "../views/Registration";
 import Authorization from "../views/Authorization";
 import Account from "../views/Account";
 import WeatherItem from "../views/WeatherItem";
+import ProfileEdit from "@/views/ProfileEdit";
+import PasswordEdit from "@/views/PasswordEdit";
 
 Vue.use(VueRouter)
 
@@ -33,6 +35,16 @@ const routes = [
     path: '/city/:id',
     name: 'WeatherItem',
     component: WeatherItem
+  },
+  {
+    path: '/profile',
+    name: 'ProfileEdit',
+    component: ProfileEdit
+  },
+  {
+    path: '/profile/password',
+    name: 'PasswordEdit',
+    component: PasswordEdit
   },
 ]
 
