@@ -12,6 +12,7 @@
         <b-col v-for="data in weatherInCities" class="mb-3">
           <weather-city
               :id="data.mycityid"
+              :weatherid="data.id"
               :title="data.city.local_names.ru"
               :weather="data.current.temp"
               :pressure="data.current.pressure"
@@ -54,7 +55,7 @@ export default {
       })
 
       if (response) {
-        this.$store.commit('updateUsername', { 'username': response.data.username })
+        this.$store.commit('updateUserInfo', { 'username': response.data.username })
       }
 
     } catch (e) {

@@ -4,12 +4,6 @@
 
 <script>
 export default {
-  data() {
-    return {
-      openweathermapKey: '5ae749cc2df923e8e65a27f4fdc3eccf'
-    }
-  },
-
   methods: {
     getWindDirection(windAngle) {
       let val = Math.floor((windAngle / 22.5) + 0.5);
@@ -29,7 +23,7 @@ export default {
     async resolveCityName(city) {
       let result = { status: true, data: null, error: null }
 
-      let url = `http://127.0.0.1:8000/city/?search=${city}&appid=${this.openweathermapKey}`
+      let url = `http://127.0.0.1:8000/city/?search=${city}`
 
       try {
         const response = await this.axios.get(url)

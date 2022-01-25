@@ -1,7 +1,7 @@
 <template>
   <div class="weather-page">
     <b-container v-if="loaded">
-      <h1 class="mt-4 text-center">{{ city.name }}, {{ Math.round(current.temp) }}</h1>
+      <h1 class="mt-4 text-center">{{ city.local_names.ru }}, {{ Math.round(current.temp) }}</h1>
 
       <h5 class="mt-4">Погода на ближайшую неделю:</h5>
 

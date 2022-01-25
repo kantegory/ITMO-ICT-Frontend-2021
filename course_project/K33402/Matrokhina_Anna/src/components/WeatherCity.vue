@@ -13,7 +13,7 @@
 
       <div class="d-flex flex-column">
         <b-button v-if="!noDetailButton" size="sm" variant="outline-dark"
-                  @click="$router.push({name: 'WeatherItem', params: {id: weatherid.toString()}})">
+                  @click="$router.push({name: 'WeatherItem', params: {id: weatherid}})">
           Подробнее
         </b-button>
         <b-button v-if="saveButton" size="sm" variant="outline-success" class="mt-2"

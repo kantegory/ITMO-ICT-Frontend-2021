@@ -55,7 +55,7 @@ export default {
             { 'email': this.email, 'username': this.username, 'password': this.password })
 
         console.log('success', response)
-        await this.$router.push({ name: 'Account' })
+        await this.$router.push({ name: 'Authorization' })
       } catch (e) {
         console.log(e)
         console.log(e.response)
