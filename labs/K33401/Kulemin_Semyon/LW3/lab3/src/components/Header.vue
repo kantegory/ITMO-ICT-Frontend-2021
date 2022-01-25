@@ -17,7 +17,7 @@
       </div>
       <div class="col-1">
         <router-link to="/settings">
-          <span class="d-flex align-items-left mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">Настройки</span>
+          <span class="d-flex align-items-left mb-3 mb-md-0 me-md-auto text-dark text-decoration-none">Выбор городов</span>
         </router-link>
       </div>
       <div class="col-1">

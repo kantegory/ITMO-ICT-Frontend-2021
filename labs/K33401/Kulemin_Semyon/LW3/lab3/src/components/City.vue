@@ -6,13 +6,16 @@
     <div class="card-body">
       <h1 class="card-title pricing-card-title"> {{ Math.round(weather[0]['temp']['day'])}}<small class="text-muted fw-light">°C</small></h1>
       <table class="table mt-3 mb-3" v-for="(weatherThisDay, i) in weather" :key="i">
-        <tr class="ml-5 mr-5 pl-3 pr-3 ">
-          <td>{{ dates[i] }}</td>
-          <td>{{ Math.round(weatherThisDay['temp']['day']) }} °C</td>
-          <td>{{ weatherThisDay['weather'][0]['description'] }}</td>
-          <td>{{ weatherThisDay['humidity'] }} %</td>
+        <tr class="ml-5 mr-5 pl-3 pr-3">
+          <td class="col-1">{{ dates[i] }}</td>
+          <td class="col-1">{{ Math.round(weatherThisDay['temp']['day']) }} °C</td>
+          <td class="col-1">{{ weatherThisDay['weather'][0]['description'] }}</td>
+          <td class="col-1">{{ weatherThisDay['humidity'] }} %</td>
         </tr>
       </table>
+      <router-link to="/advancedweather">
+        <button @click="addCityForFull([[city, lat, lon]])" class="btn-dark">Подробнее</button>
+      </router-link>
     </div>
   </div>
 </template>
@@ -27,6 +30,11 @@ export default {
     dates: [],
     weather: []
   }),
+  methods: {
+    addCityForFull (city) {
+      this.$store.dispatch('cityForFull', city)
+    }
+  },
   mounted () {
     this.dates.push('сегодня', 'завтра', 'послезавтра')
     axios
