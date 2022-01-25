@@ -46,18 +46,53 @@ const config: NuxtConfig = {
 
   modules: [
     '@nuxtjs/axios',
+    '@nuxtjs/auth-next',
     '@nuxtjs/style-resources',
 
     'bootstrap-vue/nuxt',
   ],
 
+  auth: {
+    redirect: {
+      login: '/login',
+      logout: '/',
+      home: '/',
+    },
+    strategies: {
+      local: {
+        token: {
+          property: 'access_token',
+          global: true,
+          required: true,
+          type: 'Bearer'
+        },
+        user: {
+          property: 'user',
+          autoFetch: false,
+        },
+        endpoints: {
+          login: { url: '/auth/login/', method: 'post' },
+          logout: { url: '/auth/logout/', method: 'post' },
+          user: false,
+        }
+      }
+    },
+  },
+
   router: {
+    middleware: ['auth'],
+
     extendRoutes(routes: NuxtRouteConfig[], resolve: (...pathSegments: string[]) => string) {
       routes.push(
         {
           path: '/',
-          name: 'Index',
-          component: resolve(__dirname, 'pages/Index')
+          name: 'IndexView',
+          component: resolve(__dirname, 'pages/IndexView')
+        },
+        {
+          path: '/login',
+          name: 'LoginView',
+          component: resolve(__dirname, 'pages/auth/LoginView')
         },
       )
     }

@@ -1,7 +1,7 @@
 <template>
-  <b-navbar toggleable="lg" class="checksplitter-navbar">
+  <b-navbar toggleable="lg" class="check-splitter-navbar">
     <b-container>
-      <b-navbar-brand href="#">CheckSplitter</b-navbar-brand>
+      <b-navbar-brand to="/">CheckSplitter</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -9,7 +9,19 @@
 
         <b-navbar-nav class="ml-auto">
           <b-nav-item href="#" disabled>Чеки</b-nav-item>
-          <b-nav-item href="#" disabled>Профиль</b-nav-item>
+          <b-dropdown v-if="$auth.loggedIn" no-caret variant="link">
+            <template #button-content>
+              <b-icon-person-circle/>
+            </template>
+            <b-dropdown-item disabled>
+              Профиль
+            </b-dropdown-item>
+            <b-dropdown-divider/>
+            <b-dropdown-item-button @click="$auth.logout()">
+              Выйти
+            </b-dropdown-item-button>
+          </b-dropdown>
+          <b-nav-item v-else :to="{'name': 'LoginView'}">Войти</b-nav-item>
         </b-navbar-nav>
 
       </b-collapse>
@@ -18,10 +30,12 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
+import {Component, Vue} from 'nuxt-property-decorator'
+import {BIcon, BIconPersonCircle} from 'bootstrap-vue'
 
 @Component({
-  name: 'CheckSplitterNavbar'
+  name: 'CheckSplitterNavbar',
+  components: {BIcon, BIconPersonCircle}
 })
 export default class CheckSplitterNavbar extends Vue {
 

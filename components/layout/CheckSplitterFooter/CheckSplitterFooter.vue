@@ -1,5 +1,5 @@
 <template>
-  <div class="checksplitter-footer">
+  <div class="check-splitter-footer">
 
   </div>
 </template>
