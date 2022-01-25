@@ -72,7 +72,6 @@ export default class ProfileView extends Vue {
 
       let user = JSON.parse(JSON.stringify(this.$auth.user)) as components['schemas']['Profile']
       user.avatarUrl = response.data.avatarUrl
-      console.log(user.avatarUrl, response.data.avatarUrl)
       this.$auth.setUser(user)
 
       this.$bvToast.toast(`Данные профиля обновлены!`, {
@@ -83,7 +82,6 @@ export default class ProfileView extends Vue {
       })
     } catch (e) {
       const error = e as any
-      console.log(error)
       if (error.response) {
         this.errors = error.response.data
         if ('detail' in this.errors) {
@@ -108,12 +106,10 @@ export default class ProfileView extends Vue {
         toaster: 'b-toaster-bottom-right',
         autoHideDelay: 5000,
       })
-      this.$bvToast.toast("")
     } catch (e) {
       const error = e as any
       if (error.response) {
         this.errors = error.response.data
-        console.log(this.errors)
       }
     }
   }
