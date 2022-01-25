@@ -1,0 +1,132 @@
+{
+  "tickets": [
+    {
+      "id": 1,
+      "isActive": true,
+      "from": "Moskow",
+      "to": "Omsk",
+      "date": "2022-01-12",
+      "pass": 1,
+      "time": "17:00",
+        "price": "20000"
+    },
+    {
+      "id": 2,
+      "from": "Omsk",
+      "to": "Moskow",
+      "date": "2022-01-12",
+      "pass": 1,
+      "time": "17:00",
+        "price": "20000"
+    },
+
+    {
+      "id": 3,
+      "isActive": true,
+      "from": "Moskow",
+      "to": "Dublin",
+      "date": "2021-12-23",
+      "pass": 2,
+      "time": "17:00",
+        "price": "25000"
+    },
+      {
+      "id": 4,
+      "isActive": true,
+      "from": "Algiers",
+      "to": "Dublin",
+      "date": "2021-12-23",
+      "pass": 3,
+      "time": "09:00",
+        "price": "29000"
+    },
+       {
+      "id": 5,
+      "isActive": true,
+      "from": "Baghdad",
+      "to": "Dublin",
+      "date": "2021-12-23",
+      "pass": 2,
+      "time": "11:00",
+        "price": "24000"
+    },
+      {
+      "id": 6,
+      "isActive": true,
+      "from": "Baghdad",
+      "to": "Dublin",
+      "date": "2021-12-23",
+      "pass": 2,
+      "time": "12:00",
+        "price": "24000"
+    },
+
+      {
+      "id": 7,
+      "isActive": true,
+      "from": "Bogota",
+      "to": "Dublin",
+      "date": "2021-12-23",
+      "pass": 2,
+      "time": "13:00",
+        "price": "28000"
+    }
+  ],
+
+    "mytickets": [
+        {
+      "id": 1,
+      "isActive": true,
+      "from": "Moskow",
+        "id_person": 1,
+      "to": "Omsk",
+      "date": "2022-01-12",
+      "pass": 1,
+      "time": "17:00",
+        "price": "20000"
+    },
+        {
+      "id": 2,
+      "isActive": true,
+        "id_person": 1,
+      "from": "Bogota",
+      "to": "Moskow",
+      "date": "2021-12-23",
+      "pass": 2,
+      "time": "13:00",
+        "price": "28000"
+    },
+        {
+      "id": 2,
+      "isActive": true,
+        "id_person": 2,
+      "from": "Bogota",
+      "to": "Moskow",
+      "date": "2021-12-23",
+      "pass": 2,
+      "time": "13:00",
+        "price": "28000"
+    }
+    ],
+    "person": [
+        {
+      "id": 1,
+      "isActive": true,
+      "passw": "Moskow",
+      "login": "Omsk"
+        },
+        {
+      "id": 2,
+      "isActive": true,
+      "passw": "Tomsk",
+      "login": "Tomsk"
+    },
+        {
+      "id": 3,
+      "isActive": true,
+      "passw": "Mary",
+      "login": "Mary"
+    }
+
+    ]
+}

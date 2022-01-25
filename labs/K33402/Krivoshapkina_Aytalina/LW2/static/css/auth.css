@@ -1,0 +1,51 @@
+body {
+    width: 100%;
+    height: 60%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    align-content: center; 
+    justify-content: center; 
+    overflow: auto;  
+}
+  
+.form {
+    width: 300px;    
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    font: 16px arial;
+}
+
+.form-group input,
+.form-group {
+    margin-top: 5px;
+}
+
+.form,
+.submit-button {
+    margin-top: 20px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    font: 16px arial
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+.logo {
+    text-align: center; 
+    font: bold 36px arial;
+}

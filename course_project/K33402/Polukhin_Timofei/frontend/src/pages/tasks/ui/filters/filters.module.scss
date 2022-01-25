@@ -1,0 +1,18 @@
+.wrapper {
+  display: grid;
+  grid-gap: 24px;
+}
+
+@media (min-width: 1024px) {
+  .wrapper {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .search {
+    grid-column: 1 / -1;
+  }
+
+  .names {
+    grid-column: 1 / -2;
+  }
+}

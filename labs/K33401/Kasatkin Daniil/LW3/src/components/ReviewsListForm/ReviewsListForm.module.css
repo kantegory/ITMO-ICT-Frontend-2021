@@ -1,0 +1,100 @@
+.ReviewsListForm {
+    width: 70vw;
+}
+
+.formContent {
+    height: 700px;
+    overflow-y: auto;
+    position: relative;
+}
+
+.reviewInfo {
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    margin: 30px;
+    width: 95%;
+    height: 300px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.placeInfo {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.placeImage {
+    margin: 0;
+    padding: 0;
+    height: auto;
+}
+
+.placeImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.placeTitle {
+    font-size: 14px;
+    text-align: center;
+}
+
+.authorName {
+    font-size: 14px;
+}
+
+.nameAndRateContainer {
+    display: flex;
+    width: 200px;
+    margin: 10px;
+    padding-left: 30px;
+}
+
+.rating {
+    margin-left: 10px;
+    font-size: 14px;
+}
+
+.star {
+    margin-left: 5px;
+    color: orange;
+    font-size: 20px;
+}
+
+
+
+
+.commentDate {
+    margin: 10px;
+    width: 80%;
+}
+
+.commentContainer {
+    border: 1px solid lightgrey;
+    padding: 20px;
+    border-radius: 10px;
+    height: 90%;
+}
+.reviewDate {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: end;
+    margin-top: 10px;
+}
+.closeButton {
+    position: relative;
+    left: 90%;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 40px;
+    color: black;
+}
+
+.closeButton:hover {
+    color: #659dbd;
+}

@@ -1,0 +1,106 @@
+
+<!DOCTYPE HTML>
+<html lang="en"></html>
+<head>
+    <title>Login form </title>
+    <link rel="stylesheet" href="/lap1/css/signin.css">
+    <link rel="stylesheet" href="/lap1/css/bootstrap.min.css">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <link rel="stylesheet" href="/lap1/css/light.css" media="(prefers-color-scheme: light)">
+    <link rel="stylesheet" href="/lap1/css/dark.css" media="(prefers-color-scheme: dark)">
+</head>
+<body>
+    <header>
+        <fieldset class="switcher">
+            <legend class="switcher__legend"></legend>
+            <input class="switcher__radio switcher__radio--light"
+            type="radio" name="color-scheme" value="light"
+            aria-label="Light">
+            <input class="switcher__radio switcher__radio--auto"
+            type="radio" name="color-scheme" value="auto"
+            aria-label="auto" checked>
+            <input class="switcher__radio switcher__radio--dark"
+            type="radio" name="color-scheme" value="dark"
+            aria-label="Dark">
+            <div class="switcher__status"></div>
+        </fieldset>
+        <script src="js/index.js"></script>
+        <!--Navbar-->
+        <nav class="navbar navbar-expand-lg narbar-light bg-light1">
+            <a class="navbar_brand" href="#top">
+                <img src="img/logo.png" alt="logo">MyLab
+            </a>
+            <div id="mainNav" class="collapse navbar-collapse tm-bg-white">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lap1/home.html">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lap1/offers.html">Offers</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#fter">Contact</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lap1/login.html">Log In</a>
+                    </li> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="/lap1/sign_up.html">Sign Up</a>
+                    </li> 
+                </ul>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <!--body_main-->
+        <div class="header-main">
+            <h1>Login Form</h1>
+            <div class="header-bottom">
+                <div class="header-right"> 
+                    <div class="header-left-bottom">   
+                        <form action="#" method="post">
+                            <label class="input">
+                                <input type="text"  value="User name" name="name">
+                            </label>
+                            <label class="input">
+                                <input type="password"  value="Password" name="password">
+                            </label>
+                            <div class="remember">
+                            <span class="checkbox1">
+                                <label class="checkbox"><input type="checkbox" name="" checked="">Remember me</label>
+                            </span>
+                            <div class="forgot">
+                                <h6><a href="#">Forgot Password?</a></h6>
+                            </div>
+                                <div class="clear"> </div>
+                            </div>
+                            <input type="submit" value="Login">
+                        </form>	  
+                    </div> 
+                </div>
+            </div>
+        </div>
+        <!--header end here-->
+    </main>
+    <footer>
+        <!--footer-->
+        <div class="footer-basic" id="fter">
+            <div class="social">
+                <a href="#"><i class="icon ion-social-instagram"></i></a>
+                <a href="#"><i class="icon ion-social-snapchat"></i></a>
+                <a href="#"><i class="icon ion-social-twitter"></i></a>
+                <a href="#"><i class="icon ion-social-facebook"></i></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a1 href="#">Home</a1></li>
+                <li class="list-inline-item"><a1 href="#">Services</a1></li>
+                <li class="list-inline-item"><a1 href="#">About</a1></li>
+                <li class="list-inline-item"><a1 href="#">Terms</a1></li>
+                <li class="list-inline-item"><a1 href="#">Privacy Policy</a1></li>
+            </ul>
+            <p class="copyright">Nguyentuan ©2021</p>
+        </div>
+    </footer>   
+</body>
+</html>

@@ -1,0 +1,114 @@
+.placeCard {
+    background: #fff;
+    border-radius: 20px;
+    transition: 0.3s;
+    box-shadow: 0 4px 20px 0 rgba(34, 68, 123, 0.2);
+    display: flex;
+    flex-direction: column;
+}
+
+.placeImage {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 50%;
+    cursor: pointer;
+}
+
+.placeImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+}
+
+.placeContent {
+    padding: 1rem;
+    height: 50%;
+    justify-self: end;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.placeCharContainer {
+    display: flex;
+    justify-content: space-between;
+}
+
+.placeRating {
+    display: flex;
+    align-items: center;
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: black;
+    font-width: 600;
+    cursor: pointer;
+}
+.placeRating:hover{
+    text-decoration: underline;
+}
+
+.star {
+    font-size: 20px;
+    margin-left: 2.5px;
+    color: orange;
+}
+
+.placeType {
+    font-size: 0.875rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+    display: block;
+    color: black;
+    font-width: 600;
+}
+
+.placeTitle {
+    text-align: center;
+    margin: 1rem 0;
+    font-size: 1.2rem;
+    color: black;
+    letter-spacing: 0.1rem;
+    cursor: pointer;
+}
+.placeTitle:hover{
+    text-decoration: underline;
+}
+.placePrice {
+    font-size: 1rem;
+    line-height: 1.5rem;
+    letter-spacing: 0.1rem;
+    color: black;
+    text-align: end;
+    margin: 1rem 0 0 0;
+}
+
+.placeFloorPlan {
+    display: flex;
+    justify-content: center;
+}
+
+.floorParam {
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: grey;
+    letter-spacing: 0.1rem;
+    margin: 0 0.5rem;
+}
+
+.placeOffers {
+    display: flex;
+    justify-content: center;
+}
+
+.placeOffer {
+    font-size: 0.9rem;
+    font-weight: 500;
+    line-height: 1.5rem;
+    color: grey;
+    letter-spacing: 0.1rem;
+    margin: 0 0.5rem;
+}

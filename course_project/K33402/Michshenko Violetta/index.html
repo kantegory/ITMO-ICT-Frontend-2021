@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Сайт по бронированию отелей по всему миру">
+    <title>DreamVacation: бронирование отелей по всему миру</title>
+    <link rel="icon" href="/ico/favicon2.ico" >
+    <link rel="stylesheet" href="/css/style.css">
+<link href="//fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap" rel="stylesheet">  
+<link rel="preconnect" href="//fonts.googleapis.com">
+<link rel="preconnect" href="//fonts.gstatic.com" crossorigin>
+<link href="//fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=Libre+Baskerville:wght@700&display=swap" 
+rel="stylesheet">
+<script src="index.js"></script>
+</head>
+<body>
+    <header>
+        <a href="index.html"><img class="logo" src="/img/label2.jpg" width="582" height="75" alt="Logo"></a>
+            <ul class="mnu_top">
+                <li><a href="book.html">Мои бронирования</a></li>
+                <li><a href="about.html">О нас</a></li>
+                <li><a href="contact.html">Контакты</a></li>
+                <li><a href="reviews.html">Отзывы</a></li>
+            </ul>
+            <div class="btns">
+                <a href="sign_in.html" class="btn_light">Войти</a>
+            </div>
+    </header>
+    <p></p>
+    <div class="image">
+        <img src="/img/font.avif" width="1385" height="510" alt="room">
+        <h5><b><span>НАЧНИТЕ ОТДЫХ С НАМИ</span></b></h5>
+        <br><h6><span>НАЙДИТЕ СПЕЦПРЕДЛОЖЕНИЯ ДЛЯ ОТЕЛЕЙ</span></h6></br>
+        <button type="button" class="btn btn-outline-secondary">Бронировать</button>
+    </div>
+    <div class="container d-flex main-search justify-content-center">
+      <form class="col-9">
+          <label for="city" class="form-label">Город</label>
+          <input type="search" class="form-control" aria-label="Search" id="city">
+      </form>
+  </div>
+  <div class="container d-flex search-params justify-content-center">
+      <form class="col-3">
+          <label for="numberOfGuests" class="form-label">Количество гостей</label>
+          <input type="number" class="form-control small-input" id="numberOfGuests">
+      </form>
+      <form class="col-3">
+          <label for="city" class="form-label">Заезд</label>
+          <input type="date" class="form-control small-input" id="arrival-datetime">
+      </form>
+      <form class="col-3">
+          <label for="arrival-datetime" class="form-label">Выезд</label>
+          <input type="date" class="form-control small-input" id="departure-datetime">
+      </form>
+  </div>
+  <div class="container d-flex search-button justify-content-center">
+      <button class="btn" type="submit" onclick="searchResults()">Искать</button>
+  </div>
+</body>       
+</html>

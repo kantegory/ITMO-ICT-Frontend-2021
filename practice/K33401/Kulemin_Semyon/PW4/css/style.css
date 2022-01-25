@@ -1,0 +1,43 @@
+*, body {
+    color: var(--main-text);
+    background-color: var(--main-bg-color);
+}
+
+header, .nav-link {
+    background-color: var(--header-color);
+    color: var(--header-text-color);
+}
+
+main {
+    background-color: var(--main-bg-color);
+}
+
+.card {
+    background-color: var(--main-card-color);
+    border-color: var(--border-color);
+}
+
+.card-header {
+    background-color: var(--main-card-color);
+    border-color: var(--border-color);
+}
+
+table, tr, td {
+    border-color: var(--border-color);
+}
+
+#location_button {
+    background-color: var(--location-button-color);
+    border-color: var(--location-button-color);
+    color: var(--main-text)
+}
+
+input {
+    background-color: var(--main-bg-color);
+}
+
+.icon {
+    color: var(--main-text);
+    width: 50px;
+    height: 50px;
+}

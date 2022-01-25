@@ -1,0 +1,75 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  Prepare:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node_modules-${{ github.run_id }}
+      - name: Install dependencies
+        run: yarn install --immutable
+
+  Build:
+    needs: Prepare
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node_modules-${{ github.run_id }}
+      - run: yarn build
+      - uses: actions/cache@v2
+        with:
+          path: build
+          key: build-${{ github.run_id }}
+
+  ESLint:
+    needs: Prepare
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node_modules-${{ github.run_id }}
+      - run: yarn eslint
+
+  Stylelint:
+    needs: Prepare
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: node_modules
+          key: node_modules-${{ github.run_id }}
+      - run: yarn stylelint
+
+  Deploy:
+    if: github.event_name == 'push'
+    needs: [Build, ESLint, Stylelint]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: actions/cache@v2
+        with:
+          path: build
+          key: build-${{ github.run_id }}
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_TASKS_82B5B }}'
+          channelId: live
+          projectId: tasks-82b5b

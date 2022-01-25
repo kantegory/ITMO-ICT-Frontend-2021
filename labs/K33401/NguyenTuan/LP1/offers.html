@@ -6,8 +6,11 @@
     <link rel="stylesheet" href="/lap1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/lap1/css/offers.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
-    <body>
+<body>
+    <header>
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg narbar-light bg-light nav">
             <a class="navbar_brand" href="#top">
@@ -33,58 +36,64 @@
                 </ul>
             </div>
         </nav>
+    </header>
+    <main>
         <!--bodymain-->
         <div class="container">
-            <div class="row">
-              <div class="col">
-                <a href="#" class="hotel-link">
-                    <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
-                    <h5 class="hotel-name">Russia</h5>
-                    <p class="hotel-price">2000$/night</p>
-                </a>
-              </div>
-              <div class="col">
-                
-                <a href="#" class="hotel-link">
-                    <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
-                    <h5 class="hotel-name">Russia</h5>
-                    <p class="hotel-price">1500$/night</p>
-                </a>
-              </div>
-              <div class="col">
-                <a href="#" class="hotel-link">
-                    <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
-                    <h5 class="hotel-name">Russia</h5>
-                    <p class="hotel-price">1000$/night</p>
-                </a>
-              </div>
-              <div class="col">
-                <a href="#" class="hotel-link">
-                    <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
-                    <h5 class="hotel-name">Russia</h5>
-                    <p class="hotel-price">1000$/night</p>
-                </a>
-              </div>
+            <div class="tieude">
+                <h5 class="hotel-name">Where do you want to find ?</h5>
+            </div>
+            <div class="search">
+                <input type="text" name="" id="inputt" class="text1">
+                <button type="submit" class="btn btn-primary" id="search-btn"> Search </button>
+            </div>
+            <div class="row" id ="row">
+                <div class="col">
+                    <a href="#" class="hotel-link">
+                        <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
+                        <h5 class="hotel-name">Russia</h5>
+                    </a>
+                </div>
+                <div class="col">    
+                    <a href="#" class="hotel-link">
+                        <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
+                        <h5 class="hotel-name">Russia</h5>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#" class="hotel-link">
+                        <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
+                        <h5 class="hotel-name">Russia</h5>
+                    </a>
+                </div>
+                <div class="col">
+                    <a href="#" class="hotel-link">
+                        <img src="/lap1/img/3_33_russia_02.jpg" alt="hotel" class="hotel-img">
+                        <h5 class="hotel-name">Russia</h5>
+                    </a>
+                </div>
             </div>
         </div>
-        <!--footer-->
+    </main>
+    <footer>
+    <!--footer-->
         <div class="footer-basic" id="fter">
-            <footer>
-                <div class="social">
-                    <a href="#"><i class="icon ion-social-instagram"></i></a>
-                    <a href="#"><i class="icon ion-social-snapchat"></i></a>
-                    <a href="#"><i class="icon ion-social-twitter"></i></a>
-                    <a href="#"><i class="icon ion-social-facebook"></i></a>
-                </div>
-                <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#">Home</a></li>
-                    <li class="list-inline-item"><a href="#">Services</a></li>
-                    <li class="list-inline-item"><a href="#">About</a></li>
-                    <li class="list-inline-item"><a href="#">Terms</a></li>
-                    <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-                </ul>
-                <p class="copyright">Nguyentuan ©2021</p>
-            </footer>
+            <div class="social">
+                <a href="#"><i class="icon ion-social-instagram"></i></a>
+                <a href="#"><i class="icon ion-social-snapchat"></i></a>
+                <a href="#"><i class="icon ion-social-twitter"></i></a>
+                <a href="#"><i class="icon ion-social-facebook"></i></a>
+            </div>
+            <ul class="list-inline">
+                <li class="list-inline-item"><a href="#">Home</a></li>
+                <li class="list-inline-item"><a href="#">Services</a></li>
+                <li class="list-inline-item"><a href="#">About</a></li>
+                <li class="list-inline-item"><a href="#">Terms</a></li>
+                <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">Nguyentuan ©2021</p>
         </div>
-    </body>
+    </footer>
+    <script src="js/searching.js"></script>
+</body>
 </html>

@@ -1,0 +1,26 @@
+.hotel-item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 70px;
+    margin-left: 40px;
+    border: 2px solid rgb(178, 207, 240);
+    padding: 10px;
+}
+
+h5 {
+    top: 10px;
+    text-align: center;
+    margin-left: 530px;
+    font-size: 25px;
+}
+
+h6 {
+    top: 20px;
+    text-align: center;
+    margin: 0;
+}
+
+img {
+    width: initial;
+}

@@ -1,0 +1,35 @@
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 10px 30px; /* устанавливает внутренние отступы/поля со всех сторон*/
+    position: sticky;
+    top: 0;
+    z-index: 5;
+    height: 80px;
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;;
+    justify-content: left;
+    list-style-type: none;
+
+}
+
+.navbar ul li a {
+    padding: 10px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+.logo {
+    align-self: center;
+}
+
+.logo a {
+    font-weight: 600;
+    text-decoration: none;
+    font-size: 25px;
+    letter-spacing: 2px; /*определяет межбуквенное расстояние в тексте*/
+}

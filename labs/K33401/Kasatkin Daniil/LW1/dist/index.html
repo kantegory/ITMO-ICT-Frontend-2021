@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital@0;1&family=Work+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" media="(prefers-color-scheme:light)" content="#fff">
+    <meta name="theme-color" media="(prefers-color-scheme:dark)" content="#121212">
+    <script>if (window.matchMedia('(prefers-color-scheme: dark)').media === 'not all') {
+  document.documentElement.style.display = 'none';
+  document.head.insertAdjacentHTML('beforeend', '<link rel="stylesheet" href="./styles/light.css" onload="document.documentElement.style.display = \'\'">');
+}</script>
+    <link rel="stylesheet" href="/styles.6145e9cd.css">
+    <link rel="stylesheet" href="/light.a03bf2dc.css" media="(prefers-color-scheme:light)">
+    <link rel="stylesheet" href="/dark.c7629f57.css" media="(prefers-color-scheme:dark)">
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+    <title>Hotel</title>
+<script src="/styles.6145e9cd.js"></script><script src="/light.a03bf2dc.js"></script><script src="/dark.c7629f57.js"></script></head>
+<body>
+
+<nav>
+    <div class="logo"><a href="#">HotelLab<i class="ri-vip-diamond-line"></i></a></div>
+    <button class="btn-menu" id="btn-menu" onclick="toggleMenu()">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+    </button>
+    <div class="menu" id="list-menu">
+        <ul>
+            <li><a href="#" title="Home">Home</a></li>
+            <li><a href="#" id="login-ref" onclick="toggleLogin()" title="Sign in">Sign in</a></li>
+            <li><a href="#" id="book-ref" onclick="toggleBookings()" title="Your bookings">Your bookings</a></li>
+            <li><a href="#" title="Support">Support</a></li>
+            <li><a href="#" title="Feedback">Feedback</a></li>
+        </ul>
+    </div>
+</nav>
+<fieldset class="switcher">
+    <legend class="switcher__legend">Scheme</legend>
+    <input class="switcher__radio switcher__radio--light" type="radio" name="color-scheme" value="light" aria-label="Light">
+    <input class="switcher__radio switcher__radio--auto" type="radio" name="color-scheme" value="auto" aria-label="System" checked="">
+    <input class="switcher__radio switcher__radio--dark" type="radio" name="color-scheme" value="dark" aria-label="Dark">
+    <div class="switcher__status"></div>
+</fieldset>
+<section class="login-container" id="login-menu">
+    <label id="login-close-btn" class="close-btn ri-close-line" onclick="toggleLogin()"></label>
+    <h1 class="text">Login</h1>
+    <form action="#" id="sign-in">
+        <div class="data">
+            <label for="username"><i class="ri-user-line"></i></label>
+            <input id="username" type="text" placeholder="Email or username" required="">
+        </div>
+        <div class="data">
+            <label for="password"><i class="ri-key-fill"></i></label>
+            <input id="password" type="password" placeholder="Password" required="">
+        </div>
+        <p class="forgot-pas"><a href="#">Forgot password?</a></p>
+        <div class="btn">
+            <div class="inner"></div>
+            <button type="submit">Login</button>
+        </div>
+        <p class="form-change-link">Don't have an account? <a href="#" id="sign-in-link">Sign up now</a></p>
+    </form>
+    <form action="#" id="sign-up" class="form--hidden">
+        <div class="data">
+            <label for="username"><i class="ri-user-line"></i></label>
+            <input type="text" placeholder="Username" required="">
+        </div>
+        <div class="data">
+            <label for="email"><i class="ri-mail-line"></i></label>
+            <input id="email" type="text" placeholder="Email" required="">
+        </div>
+        <div class="data">
+            <label for="password-signup"> <i class="ri-key-fill"></i></label>
+            <input id="password-signup" type="password" placeholder="Password" required="">
+        </div>
+        <div class="data">
+            <label for="password-signup2"><i class="ri-key-fill"></i></label>
+            <input id="password-signup2" type="text" placeholder="Confirm password" required="">
+        </div>
+        <div class="btn">
+            <div class="inner"></div>
+            <button type="submit">Create account</button>
+        </div>
+        <p class="form-change-link">Already have an account? <a id="signup-link" href="#">Sign in now</a></p>
+    </form>
+</section>
+
+<section class="filter-window" id="filter-menu">
+    <div class="filter-blocks">
+        <div class="filter-box">
+            <h2 class="text">Location</h2>
+            <input type="text" placeholder="Where are you going?">
+        </div>
+        <div class="filter-box">
+            <h2 class="text">Check in</h2>
+            <input class="date" type="text" placeholder="When you check in?">
+        </div>
+        <div class="filter-box">
+            <h2 class="text">Guests</h2>
+            <input type="text" placeholder="Add guests">
+        </div>
+        <button name="Search button" class="ri-search-line" type="submit" title="Search"><span>Search</span></button>
+    </div>
+</section>
+<section class="filter-window-mobile">
+    <div class="filter-block-mobile">
+        <div class="search-mobile">
+            <input type="text" placeholder="Type to search...">
+        </div>
+        <div class="search-btn-mobile">
+            <button class="ri-search-line" type="submit"></button>
+        </div>
+    </div>
+</section>
+
+<div class="hotels-container">
+    <div class="hotel-container"></div>
+</div>
+<div id="book" class="bookings">
+    <div class="book-window">
+        <p class="book-title">Bookings</p>
+        <div class="book-container">
+            <div class="description">
+                <h1 class="name">Lagom-House</h1>
+            </div>
+            <img src="https://a0.muscache.com/im/pictures/65953e73-b1bf-4ee5-ac34-bc68a76406cc.jpg?im_w=1200" alt="Image of hotel">
+        </div>
+    </div>
+</div>
+<script type="module" src="/axios.c279df45.js"></script>
+<script type="module" src="/parseApi.f69c223a.js"></script>
+<script type="module" src="/themeSwitcher.bf42309f.js"></script>
+<script type="module" src="/LW1.e31bb0bc.js"></script>
+</body>
+</html>

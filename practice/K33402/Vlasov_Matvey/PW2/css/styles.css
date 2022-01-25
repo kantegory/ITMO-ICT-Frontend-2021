@@ -1,0 +1,77 @@
+body {
+    padding-top: 3.5rem;
+}
+  
+p {
+    text-align: justify;
+} 
+
+figcaption {
+    font-size: 1.5rem;
+}
+
+.fa {
+    padding-right: 2rem;
+    font-size: 1.5rem;
+    width: 1rem;
+}
+
+.fa-google {
+    color: red;
+}
+
+.fa-instagram {
+    color: violet;
+}
+
+.form-control, .search-form .btn {
+    margin: 1.5rem 0.3rem;
+}
+
+.card-img-top {
+    margin-top: 1rem;
+}
+
+.card-location {
+    color: blue;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.card-body p {
+    line-height: 0.8rem;
+}
+
+p.card-text {
+    line-height: 1.0rem;
+}
+
+.red-star {
+    color: red;
+}
+
+.reviews {
+    color: gray;
+}
+
+.fa-map-marker {
+    padding-right: 1.5rem;
+}
+
+.input-field input {
+    margin: 0.5rem;
+}
+
+.registration-main, .login-main {
+    background-color: #e9ecef;
+}
+
+.input-field input[type='checkbox'], input[type='radio'] {
+    margin-left: 3rem;
+}
+
+.nav-item a {
+    color: #CCFFFF !important;
+}

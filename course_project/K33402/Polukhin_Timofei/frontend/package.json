@@ -1,0 +1,75 @@
+{
+  "name": "tasks",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@ant-design/icons": "^4.7.0",
+    "@craco/craco": "^6.4.0",
+    "@types/node": "^12.0.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-router-dom": "^5.3.1",
+    "antd": "4.17.0",
+    "axios": "^0.24.0",
+    "classnames": "^2.3.1",
+    "copy-to-clipboard": "^3.3.1",
+    "easymde": "^2.15.0",
+    "framer-motion": "^5.3.0",
+    "moment": "^2.29.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-markdown": "^7.1.0",
+    "react-router-dom": "^5.3.0",
+    "react-scripts": "4.0.3",
+    "react-simplemde-editor": "^5.0.2",
+    "sass": "^1.43.3",
+    "swr": "^1.1.0",
+    "typescript": "^4.1.2"
+  },
+  "lint-staged": {
+    "src": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+  },
+  "scripts": {
+    "start": "craco start",
+    "build": "craco build",
+    "test": "craco test",
+    "eject": "craco eject",
+    "eslint": "eslint src --max-warnings=0",
+    "stylelint": "stylelint src",
+    "prepare": "husky install",
+    "tools:dtsgen": "./get-backend-types.sh"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "devDependencies": {
+    "dtsgenerator": "^3.13.2",
+    "eslint-import-resolver-typescript": "^2.5.0",
+    "eslint-plugin-import": "^2.25.3",
+    "husky": "^7.0.4",
+    "lint-staged": "^12.0.2",
+    "prettier": "^2.4.1",
+    "stylelint": "^13.13.1",
+    "stylelint-config-css-modules": "^2.3.0",
+    "stylelint-config-recess-order": "^3.0.0",
+    "stylelint-config-standard": "^22.0.0"
+  }
+}

@@ -1,0 +1,93 @@
+:root {
+    color-scheme: light dark;
+}
+
+html, body {
+    height: 100%;
+    color: var(--text-color) !important;
+    background-color: var(--back-color) !important;
+
+}
+.modal-content {
+    background-color: var(--back-color)!important;
+}
+.card-header, .info-line {
+    background-color: rgba(0, 0, 0, 0.03);
+}
+.link {
+    height: 100%;
+    width: auto;
+    margin-right: 20px;
+    margin-left: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+a {
+    color: var(--a-color)!important;
+}
+a:hover {
+    background-color: transparent!important;
+    color: var(--a-hover-color) !important;
+}
+a:focus {
+    background-color: transparent!important;
+}
+.router-link-exact-active {
+    color: var(--a-active-color)!important;
+}
+#theme_page {
+    height: 95vh;
+    margin: 0;
+    display: grid;
+    place-content: center;
+    background-color: var(--back-color);
+    background-image: var(--back-image);
+    background-size: cover;
+    font-family: sans-serif;
+}
+
+
+#theme_page #body {
+    width: 20vmin;
+    height: 20vmin;
+    border-radius: 50%;
+    background-image: radial-gradient(
+            circle at 20% 20%,
+            var(--body-color) 50%,
+            var(--body-shadow)
+    );
+    box-shadow: 0 0 10vmin var(--body-glow);
+}
+.navbar {
+    background-color: var(--back-color)!important;
+}
+.theme-btn {
+    background: none;
+    border: none;
+}
+.theme-btn  svg{
+    padding: 2px;
+    height: 34px;
+    width: 34px;
+}
+.theme-btn.active svg{
+    border-radius: 20px;
+    border: 1px solid var(--back-color);
+    fill: var(--back-color);
+    filter: invert(1);
+}
+.theme-btn svg{
+    fill: var(--body-color);
+}
+.body-item {
+    fill: var(--body-item-color);
+}
+h1 {
+    color: var(--text-color);
+    font-size: 50px!important;
+}
+h2 {
+    color: var(--text-color);
+    font-size: 40px!important;
+}

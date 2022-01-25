@@ -1,0 +1,39 @@
+.profileInfo {
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    width: 25vw;
+    height: 70vh;
+    margin: 70px auto auto auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.welcomeMessage {
+    margin-top: 10px;
+    font-size: 27px;
+    letter-spacing: 0.1rem;
+}
+
+.reviewsList {
+    text-align: center;
+    letter-spacing: 0.1rem;
+    font-size: 17px;
+    text-decoration: underline;
+    cursor: pointer;
+    margin: 20px;
+}
+.reviewsCount{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin:50px;
+}
+.reviewsCount h2{
+    font-size: 20px;
+    letter-spacing: 0.1rem;
+}
+.star{
+    font-size: 25px;
+    margin-right: 5px;
+}

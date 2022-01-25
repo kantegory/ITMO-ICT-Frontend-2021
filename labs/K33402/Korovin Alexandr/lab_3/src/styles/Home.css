@@ -1,0 +1,31 @@
+.filter-area {
+    position: absolute;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    border: 2px solid lightgray;
+    border-radius: 25px;
+    width: 700px;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-input {
+    margin: 0 15px 0 15px;
+    height: 40px;
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.search-button {
+    border-radius: 15px;
+    height: 40px;
+    width: 80px;
+    cursor: pointer;
+    margin: 0 15px 0 15px;
+    border: 1px black solid;
+    background: none;
+}
