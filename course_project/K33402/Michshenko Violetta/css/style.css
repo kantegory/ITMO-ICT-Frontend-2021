@@ -1,0 +1,369 @@
+body{
+    font-size: 14px;
+    min-width: 320px;
+    position: relative;
+    line-height: 1.65;
+    font-family: 'Montserrat', sans-serif;
+    overflow-x: hidden;
+    opacity: 1;
+    background: rgb(28, 58, 87);
+    color: white;
+}
+
+header{
+    margin-top: 30px auto;
+    max-width: 100%;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -ms-align-items: center;
+    align-items: center;
+    padding-bottom: 5px;
+    border-bottom: 1px solid rgb(255, 255, 255);
+    justify-content: space-between;
+}
+
+header .logo{
+    max-width: 250px;
+}
+
+header .logo img{
+    max-width: 100%;
+    
+}
+
+header .mnu_top{
+    list-style-type: none;
+}
+
+header .mnu_top li{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+header .mnu_top li a{
+    display: block;
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif; 
+
+}
+
+header .btns{
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    -ms-align-items:center;
+    align-items: center;
+}
+
+header .btns>a{
+    border-radius: 10px;
+    text-decoration: none;
+}
+
+header .btn_light{
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-size: 18px;
+    font-weight: 500;
+    border: 1px solid rgb(255, 255, 255);
+    padding: 5px 48px;
+}
+
+.image {
+    position: relative;
+    width: 100%; 
+    }
+ 
+h5 {
+    position: absolute;
+    top: 150px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    }
+h5 span {
+    color: white;
+    font-size: 50px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 55px;
+    padding: 5px;
+    }
+h6 {
+    position: absolute;
+    top: 200px;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    }
+h6 span {
+    color:white;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 55px;
+    padding: 5px;
+    }
+
+
+
+.container {
+    position: relative;
+    width: 50%;
+}
+
+.btn-outline-secondary{
+    position: absolute;
+    top: 300px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    color: rgb(3, 3, 3);
+    font-family: 'Montserrat', sans-serif;
+    
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.form-control{
+    margin: 5px;
+	background-color: #E5E5E5;
+	border: none;
+	border-radius: 0;
+	height: 60px;
+	font: 24px "Montserrat";
+	color: #3C3C3B;
+    height: 30px;
+    font-size: 15px;
+}
+
+.btn-primary{
+    margin: 10px;
+    margin-left: 310px;
+	font: 15px "Montserrat";
+	color: #727171;
+    text-decoration: none;
+	background-color: rgb(122, 168, 206);
+	color: rgb(2, 2, 2);
+	height: 30px;
+	width: 100px;
+	border-radius: 0;
+	border: none;
+	display: block;
+    padding-top: 10px;
+    padding-left: 40px;
+}
+
+.mb-3{
+    margin-block: 20px;
+    margin-left: 300px;
+}
+
+.btn-primary-submit{
+    display: block;
+    margin-top: 0;
+    margin-left: 320px;
+    font: 18px "Montserrat";
+    text-align: center;
+    text-decoration: none;
+	background-color: rgb(122, 168, 206);
+	color: rgb(2, 2, 2);
+	height: 30px;
+	width: 100px;
+	border-radius: 7px;
+	border: none;
+}
+
+.btn-primary-login{
+    display: block;
+    margin-left: 460px;
+    margin-top: -34px;
+    font: 20px "Montserrat";
+	background-color: #033a66;
+	color: rgb(255, 255, 255);
+    border: 1px solid rgb(255, 255, 255);
+    text-decoration: none;
+    padding-top: 5px;
+    padding-left: 35px;
+	height: 30px;
+	width: 250px;
+	border-radius: 7px;
+}
+
+.btn-primary-login1{
+    display: block;
+    margin-top: 10px;
+    margin-left: 310px;
+    font: 18px "Montserrat";
+	background-color: #7aa8ce;
+	color: rgb(2, 2, 2);
+	height: 30px;
+	width: 250px;
+	border-radius: 7px;
+	border: none;
+}
+
+.form-label{
+    margin-left: 10px;
+    font-size: 20px;
+}
+
+.hotels img{
+    margin-top: 20px;
+    margin-left: 40px;
+    border: 2px solid rgb(210, 228, 248);
+    padding: 2px;
+}
+
+.stars_1{
+    margin-top: -7px;
+    margin-left: 125px;
+}
+
+.stars_2{
+    margin-top: -50px;
+    margin-left: 470px;
+}
+
+.stars_3{
+    margin-top: -50px;
+    margin-left: 830px;
+}
+
+.label_1{
+    font: 13px "Montserrat";
+    margin-top: 10px;
+    margin-left: 80px;
+}
+
+.label_2{
+    font: 13px "Montserrat";
+    margin-top: -17px;
+    margin-left: 410px;
+}
+
+.label_3{
+    font: 13px "Montserrat";
+    margin-top: -17px;
+    margin-left: 740px;
+}
+
+.banner{
+    width: 600px;
+    height: 372px;
+    margin: 2em auto;
+    overflow: hidden;
+    position: relative;
+}
+
+.banner .imgs{
+    width: 2080px;
+    height: 300px;
+}
+
+.banner .imgs img{
+    width: 600px;
+    height: 372px;
+    object-fit: cover;
+}
+
+.banner .imgs a{
+    float: left;
+}
+
+.banner .left,
+.banner .right{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    margin: auto 0;
+    width: 50px;
+    height: 50px;
+    color: #fff;
+    font-size: 3em;
+    line-height: 50px;
+    text-align: center;
+    font-family: Arial;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.banner .left{
+    left: 20px;
+}
+
+.banner .right{
+    right: 20px;
+}
+
+.banner .left:hover,
+.banner .right:hover{
+    background-color: #fff;
+    color: rgb(65, 64, 64);
+}
+
+h4{
+    font: 13px "Montserrat";
+    margin-top: px;
+    margin-left: 450px;
+    font-size: 20px;
+}
+
+main {
+    height: 90%;
+}
+
+.main-search {
+    position: relative;
+    top: 28%
+}
+
+.search-params {
+    position: relative;
+    top: 35%
+}
+
+.title {
+    position: relative;
+    top: 25%
+}
+
+.search-button {
+    position: relative;
+    top: 45%
+}
+
+.btn {
+    background-color: rgb(122, 168, 206)a17;
+    color: #2c2c2c;
+    margin: 10px auto;
+    font-size: 18px;
+    border-radius: 10px;
+    padding: 5px 20px;
+}
+
+.btn:hover {
+    background-color: rgb(122, 168, 206);
+    color: #2c2c2c; 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

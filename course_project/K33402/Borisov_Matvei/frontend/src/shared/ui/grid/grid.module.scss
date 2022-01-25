@@ -1,0 +1,9 @@
+.grid {
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 24px;
+
+  > *:global(.ant-typography) {
+    margin: 0;
+  }
+}

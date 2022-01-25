@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main_page_weather</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"
+            integrity="sha384-W8fXfP3gkOKtndU4JGtKDvXbO53Wy8SZCQHczT5FMiiqmQfUpWbYdTil/SxwZgAN"
+            crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.min.js"
+            integrity="sha384-skAcpIdS7UcVUC05LJ9Dxay8AXcDYfBJqt1CJ85S/CFujBsIzCIv+l9liuYLaMQ/"
+            crossorigin="anonymous"></script>
+</head>
+<body>
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light my-bg-indigo">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Погода Ро$$ии</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <form class="d-flex">
+                    <input class="form-control me-2" type="search" placeholder="Москва" aria-label="Search">
+                    <button class="btn btn-outline-dark" type="submit">Поиск</button>
+                </form>
+                <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="login.html">Войти</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registration.html">Зарегистрироваться</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+
+
+<main>
+    <h4 class="col-sm-5 my-3 mx-5">Здравствуйте, Илья.</h4>
+    <div class="row">
+        <div class="col-sm-5 my-3 mx-5">
+            <div class="card text-white my-bg-p">
+                <div class="card-body">
+                    <img src="img/img1.jpg" class="card-img-top" alt="...">
+                    <h5 class="card-title my-3"><span class="temp-today">-20</span>°, <span class="date"> сегодня</span>, Москва</h5>
+                    <p class="card-text">Ощущается как обморожение, рекомендуем надевать шапку</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-5 my-3 mx-5">
+            <div class="card">
+                <div class="col">
+                    <h3 class="row-3 mt-3 mx-4">Погода на неделю</h3>
+                    <div class="row-3 mb-2 mx-1">
+                        <div class="card-body">
+                            <h5 class="card-title"><span class="temp">-20</span>°, <span class="date"> 13 янв</span>, <span class="city">Москва</span></h5>
+                            <p class="card-text">На улице <span class="feels-like"></span>, рекомендуем надевать шапку</p>
+                            <p class="card-text">Температура днем: <span class="temp-max"></span></p>
+                            <p class="card-text">Температура вечером: <span class="temp-min"></span></p>
+                            <p class="card-text">Температура ночью: <span class="temp-night"></span></p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row-3 mb-2 mx-1">
+                        <div class="card-body">
+                            <h5 class="card-title"><span class="temp">-20</span>°, <span class="date"> 13 янв</span>, <span class="city">Москва</span></h5>
+                            <p class="card-text">На улице <span class="feels-like"></span>, рекомендуем надевать шапку</p>
+                            <p class="card-text">Температура днем: <span class="temp-max"></span></p>
+                            <p class="card-text">Температура вечером: <span class="temp-min"></span></p>
+                            <p class="card-text">Температура ночью: <span class="temp-night"></span></p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row-3 mb-2 mx-1">
+                        <div class="card-body">
+                            <h5 class="card-title"><span class="temp">-20</span>°, <span class="date"> 13 янв</span>, <span class="city">Москва</span></h5>
+                            <p class="card-text">На улице <span class="feels-like"></span>, рекомендуем надевать шапку</p>
+                            <p class="card-text">Температура днем: <span class="temp-max"></span></p>
+                            <p class="card-text">Температура вечером: <span class="temp-min"></span></p>
+                            <p class="card-text">Температура ночью: <span class="temp-night"></span></p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row-3 mb-2 mx-1">
+                        <div class="card-body">
+                            <h5 class="card-title"><span class="temp">-20</span>°, <span class="date"> 13 янв</span>, <span class="city">Москва</span></h5>
+                            <p class="card-text">На улице <span class="feels-like"></span>, рекомендуем надевать шапку</p>
+                            <p class="card-text">Температура днем: <span class="temp-max"></span></p>
+                            <p class="card-text">Температура вечером: <span class="temp-min"></span></p>
+                            <p class="card-text">Температура ночью: <span class="temp-night"></span></p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row-3 mb-2 mx-1">
+                        <div class="card-body">
+                            <h5 class="card-title"><span class="temp">-20</span>°, <span class="date"> 13 янв</span>, <span class="city">Москва</span></h5>
+                            <p class="card-text">На улице <span class="feels-like"></span>, рекомендуем надевать шапку</p>
+                            <p class="card-text">Температура днем: <span class="temp-max"></span></p>
+                            <p class="card-text">Температура вечером: <span class="temp-min"></span></p>
+                            <p class="card-text">Температура ночью: <span class="temp-night"></span></p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row-3 mb-2 mx-1">
+                        <div class="card-body">
+                            <h5 class="card-title"><span class="temp">-20</span>°, <span class="date"> 13 янв</span>, <span class="city">Москва</span></h5>
+                            <p class="card-text">На улице <span class="feels-like"></span>, рекомендуем надевать шапку</p>
+                            <p class="card-text">Температура днем: <span class="temp-max"></span></p>
+                            <p class="card-text">Температура вечером: <span class="temp-min"></span></p>
+                            <p class="card-text">Температура ночью: <span class="temp-night"></span></p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="row-3 mb-2 mx-1">
+                        <div class="card-body">
+                            <h5 class="card-title"><span class="temp">-20</span>°, <span class="date"> 13 янв</span>, <span class="city">Москва</span></h5>
+                            <p class="card-text">На улице <span class="feels-like"></span>, рекомендуем надевать шапку</p>
+                            <p class="card-text">Температура днем: <span class="temp-max"></span></p>
+                            <p class="card-text">Температура вечером: <span class="temp-min"></span></p>
+                            <p class="card-text">Температура ночью: <span class="temp-night"></span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</main>
+<script type="module" src='script.js'></script>
+
+</body>
+</html>

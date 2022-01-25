@@ -1,0 +1,55 @@
+{
+  "extends": ["react-app", "plugin:import/recommended"],
+  "overrides": [
+    {
+      "files": ["**/*.ts?(x)"],
+      "extends": ["plugin:import/typescript"],
+      "settings": {
+        "import/parsers": {
+          "@typescript-eslint/parser": [".ts", ".tsx"]
+        },
+        "import/resolver": {
+          "typescript": {
+            "project": "."
+          }
+        }
+      },
+      "rules": {
+        "no-console": [
+          "warn",
+          {
+            "allow": ["error"]
+          }
+        ],
+        "import/order": [
+          "warn",
+          {
+            "groups": [
+              "builtin",
+              "external",
+              "internal",
+              "sibling",
+              "type",
+              "object"
+            ],
+            "newlines-between": "always",
+            "alphabetize": {
+              "order": "asc",
+              "caseInsensitive": false
+            }
+          }
+        ],
+        "react/jsx-sort-props": [
+          "warn",
+          {
+            "callbacksLast": true,
+            "shorthandFirst": true,
+            "reservedFirst": true
+          }
+        ],
+        "quotes": ["warn", "backtick"],
+        "react/jsx-key": "warn"
+      }
+    }
+  ]
+}

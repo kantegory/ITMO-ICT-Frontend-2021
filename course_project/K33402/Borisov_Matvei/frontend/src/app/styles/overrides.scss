@@ -1,0 +1,182 @@
+.ant-typography a,
+a.ant-typography,
+.ant-btn-link span {
+  text-decoration: underline;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+.ant-card,
+.ant-btn,
+.ant-input,
+.ant-upload-list-item,
+.ant-modal-content,
+.ant-radio-button-wrapper,
+.ant-input-affix-wrapper,
+.ant-select-selector,
+.ant-select-selection-item,
+.ant-select-dropdown,
+.ant-popover-inner {
+  border-radius: 0 !important;
+}
+
+.ant-form-large .ant-form-item-label > label {
+  height: auto;
+}
+
+body {
+  color: var(--text-color);
+  background: var(--body-color);
+}
+
+input::placeholder {
+  color: var(--text-color) !important;
+  opacity: 1;
+  fill-opacity: 1;
+}
+
+.ant-typography,
+h1.ant-typography,
+h2.ant-typography,
+h3.ant-typography,
+h4.ant-typography,
+h5.ant-typography,
+h6.ant-typography,
+.ant-menu,
+.ant-form-item,
+.ant-upload-list,
+.ant-picker-header button,
+.ant-picker-content th,
+.ant-picker-cell,
+.ant-form-item-label > label,
+.ant-result-title,
+.ant-page-header-back-button,
+.ant-drawer-title,
+.ant-select-item-option-content {
+  color: var(--text-color);
+}
+
+.ant-typography.ant-typography-secondary,
+.ant-picker-suffix,
+.ant-result-subtitle,
+.ant-input-search
+  > .ant-input-group
+  > .ant-input-group-addon:last-child
+  .ant-input-search-button:not(.ant-btn-primary),
+.ant-select-arrow,
+.ant-empty-small,
+.ant-select-selection-placeholder {
+  color: var(--secondary) !important;
+}
+
+.ant-btn,
+.ant-upload,
+.ant-upload.ant-upload-select-picture-card,
+.ant-picker,
+.ant-picker-input > input,
+.ant-upload-list .ant-upload-list-item:not(.ant-upload-list-item-error),
+.ant-input,
+.ant-input-affix-wrapper,
+.ant-drawer-header,
+.ant-select:not(.ant-select-customize-input) .ant-select-selector {
+  color: var(--text-color);
+  background: transparent;
+  border-color: var(--border-color);
+
+  &:hover,
+  &:focus {
+    background: transparent;
+  }
+}
+
+.ant-btn-primary {
+  color: #fff;
+  background: var(--ant-primary-color);
+  border-color: var(--ant-primary-color);
+
+  &:hover,
+  &:focus {
+    background: var(--ant-primary-color-hover);
+  }
+}
+
+.ant-picker-header,
+.ant-picker-panel,
+.ant-picker-panel-container,
+.ant-picker-panel .ant-picker-footer,
+.ant-popover-inner,
+.ant-radio-button-wrapper,
+.ant-select-dropdown {
+  color: var(--text-color);
+  background: var(--background-color);
+  border-color: var(--border-color);
+}
+
+.ant-picker-header button,
+.ant-picker-content th,
+.ant-picker-cell {
+  &:hover {
+    color: var(--text-color);
+  }
+}
+
+.ant-picker-cell:hover:not(.ant-picker-cell-selected):not(.ant-picker-cell-range-start):not(.ant-picker-cell-range-end):not(.ant-picker-cell-range-hover-start):not(.ant-picker-cell-range-hover-end) {
+  .ant-picker-cell-inner {
+    background: var(--hover-color);
+  }
+}
+
+.ant-picker-clear,
+.ant-drawer-content,
+.ant-modal-content {
+  color: var(--text-color) !important;
+  background: var(--body-color);
+}
+
+.ant-list-split .ant-list-item,
+.ant-select-multiple .ant-select-selection-item {
+  border-color: var(--border-color);
+}
+
+.ant-form-item-has-error
+  :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper,
+.ant-form-item-has-error
+  :not(.ant-input-affix-wrapper-disabled):not(.ant-input-affix-wrapper-borderless).ant-input-affix-wrapper:hover,
+.ant-form-item-has-error
+  :not(.ant-input-disabled):not(.ant-input-borderless).ant-input,
+.ant-form-item-has-error
+  :not(.ant-input-disabled):not(.ant-input-borderless).ant-input:hover,
+.ant-popover-arrow-content {
+  background: var(--background-color);
+}
+
+.ant-input[disabled],
+.ant-input-group-addon,
+.ant-select-multiple .ant-select-selection-item {
+  color: var(--secondary);
+  background: var(--background-color);
+}
+
+.ant-btn-link {
+  border: none;
+}
+
+.ant-input::placeholder {
+  opacity: 0.5;
+}
+
+.ant-modal-mask {
+  background: rgba(0, 0, 0, 0.65);
+}
+
+.ant-modal-content {
+  box-shadow: 0 3px 6px -4px rgb(255 255 255 / 12%),
+    0 6px 16px 0 rgb(255 255 255 / 8%), 0 9px 28px 8px rgb(255 255 255 / 5%);
+}
+
+.ant-select-item-option-active:not(.ant-select-item-option-disabled),
+.ant-select-item-option-selected:not(.ant-select-item-option-disabled) {
+  background: var(--hover-color);
+}

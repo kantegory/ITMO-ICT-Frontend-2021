@@ -1,0 +1,63 @@
+.reserveCard {
+    background: #fff;
+    border-radius: 20px;
+    transition: 0.3s;
+    box-shadow: 0 4px 20px 0 rgba(34, 68, 123, 0.2);
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    height: 500px;
+}
+
+.reservePlaceImage {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    height: 50%;
+}
+
+.reservePlaceImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px 20px 0 0;
+    object-fit: cover;
+}
+
+.reserveDates {
+    display: flex;
+    justify-content: space-around;
+    margin: auto;
+}
+
+.reservePlaceTitle {
+    margin: 30px;
+    font-size: 20px;
+    text-align: center;
+    font-weight: 600;
+}
+
+.reserveDates p {
+    border-radius: 10px;
+    border: 1px solid lightgrey;
+    padding: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+.reserveSettingsButtons {
+    display: flex;
+    margin: auto;
+}
+
+.settingButton {
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    background: none;
+    width: 200px;
+    height: 50px;
+    font-weight: 600;
+    font-size: 17px;
+    cursor: pointer;
+    margin: 10px;
+    text-transform: uppercase;
+}

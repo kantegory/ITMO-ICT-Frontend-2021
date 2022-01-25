@@ -19,10 +19,25 @@
     padding: 0;
     transition: all 0.5s ease;
 }
-
 /* body */
+.tieude {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 3rem;
+}
+.text1 {
+	width: 100rem;
+	height: 36px;
+	border-radius: 10 rem;
+}
 .container {
-    padding: 200px 1.5rem;
+    padding: 5rem 1.5rem;
     margin: 0 auto;
 }
 .bg-1 {

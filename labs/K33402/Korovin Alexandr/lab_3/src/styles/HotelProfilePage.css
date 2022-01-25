@@ -1,0 +1,10 @@
+.review-add{
+    resize: none;
+    font-size: 20px;
+
+}
+.review-add-button{
+    height: 40px;
+    cursor: pointer;
+    margin-top: 10px;
+}

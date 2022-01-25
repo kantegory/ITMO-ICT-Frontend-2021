@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Homepage">
+    <meta name="theme-color" content="#f65858">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start your own group</title>
+    <link rel="icon" href="/static/images/626px-Meetup_Logo.png" type="image/x-icon">
+    <link href="/static/css/light.css" rel="stylesheet" id="theme-link">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body class="d-flex flex-column">
+    <header width="100%" class="sticky-top">
+        <nav class="navbar navbar-expand nav ">
+            <div class="sections d-flex align-items-center">
+                <div class="d-flex container-fluid justify-content-start align-items-center pt-1">
+                    <a class="logo-meetup me-3 mt-2" href="organizer.html">
+                        <img class="logo-meetup"src="static/images/meetup-1.svg" alt="logo">
+                    </a>
+                    <button class="btn-toggle me-3" aria-label="Dark-Light mode">
+                        <svg style="fill:#dc3545" class="svg svg-nav-mode">
+                            <use xlink:href="/sprite.svg#mode"></use>
+                        </svg>
+                    </button>
+                    <script src="static/js/theme.js"></script>  
+                </div>
+                <a class="text-decoration-none black"href="user.html">
+                    <div class="nav-profile-container d-flex align-items-center justify-content-center">                
+                        <img class="nav-profile bounce" src="static/images/avatar.jpg">
+                    </div>
+                </a>
+                <a class="text-decoration-none pt-1 a-nav-1">
+                    <svg style="fill:#dc3545" class="svg svg-nav-noti">
+                        <use xlink:href="/sprite.svg#noti"></use>
+                    </svg>                            
+                </a>
+                <a class="text-decoration-none pt-1 a-nav-1" href="/search-calendar.html">
+                    <svg style="fill:#dc3545" class="svg svg-nav-noti">
+                        <use  xlink:href="/sprite.svg#search"></use>
+                    </svg>   
+                </a>
+                <a class="text-decoration-none pt-1 a-nav-1" href="login.html">
+                    <svg style="fill:#dc3545" class="svg svg-nav-noti">
+                        <use  xlink:href="/sprite.svg#logout"></use>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div style="width:100%" id="app" class="mode">
+            <div class="d-flex mb-5 justify-content-center pt-3">
+                <div class="d-flex route-container mt-3 text-viridian-1">
+                    <div class="py-3 step-container step-container-1"  v-bind:class="{ 'color-nav': $route.path == '/step1' }">
+                        <router-link id="step" class="text-decoration-none mx-3 fw-normal" to="/step1">Step 1</router-link>
+                    </div>
+
+                    <div class="py-3 step-container"  v-bind:class="{ 'color-nav': $route.path == '/step2' }">
+                        <router-link id="step" class="text-decoration-none mx-3 fw-normal" to="/step2">Step 2</router-link>
+                    </div>
+
+                    <div class="py-3 step-container step-container-3"  v-bind:class="{ 'color-nav': $route.path == '/step3' }">
+                        <router-link id="step" class="text-decoration-none mx-3 fw-normal" to="/step3">Step 3</router-link>
+                    </div>
+                </div>
+            </div>
+            <transition name="fade">
+                <router-view></router-view>
+            </transition>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+        <script src="https://unpkg.com/vue/dist/vue.js"></script>
+        <script src="https://unpkg.com/vue-router/dist/vue-router.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="/static/js/step1.js"></script>
+        <script src="/static/js/step2.js"></script>
+        <script src="/static/js/step3.js"></script>
+        <script src="/static/js/group.js"></script>
+    </main>
+    
+</body>
+</html>

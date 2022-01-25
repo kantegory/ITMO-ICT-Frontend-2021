@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Search Page">
+    <meta name="theme-color" content="#f65858">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meetup Calendar</title>
+    <link rel="icon" href="/static/images/626px-Meetup_Logo.png" type="image/x-icon">
+    <link href="/static/css/light.css" rel="stylesheet" id="theme-link">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <header width="100%" class="sticky-top">
+        <nav class="navbar navbar-expand nav ">
+            <div class="sections d-flex align-items-center">
+                <div class="d-flex container-fluid justify-content-start align-items-center pt-1">
+                    <a class="logo-meetup me-3 mt-2" href="organizer.html">
+                        <img class="logo-meetup"src="static/images/meetup-1.svg" alt="logo">
+                    </a>
+                    <button class="btn-toggle me-3" aria-label="Dark-Light mode">
+                        <svg style="fill:#dc3545" class="svg svg-nav-mode">
+                            <use xlink:href="/sprite.svg#mode"></use>
+                        </svg>
+                    </button>
+                    <script src="static/js/theme.js"></script>  
+                </div>
+                <a class="text-decoration-none black"href="user.html">
+                    <div class="nav-profile-container d-flex align-items-center justify-content-center">                
+                        <img class="nav-profile bounce" src="static/images/avatar.jpg">
+                    </div>
+                </a>
+                <a class="text-decoration-none pt-1 a-nav-1">
+                    <svg style="fill:#dc3545" class="svg svg-nav-noti">
+                        <use xlink:href="/sprite.svg#noti"></use>
+                    </svg>                            
+                </a>
+                <a class="text-decoration-none pt-1 a-nav-1" href="/search-calendar.html">
+                    <svg style="fill:#dc3545" class="svg svg-nav-noti">
+                        <use  xlink:href="/sprite.svg#search"></use>
+                    </svg>   
+                </a>
+                <a class="text-decoration-none pt-1 a-nav-1" href="login.html">
+                    <svg style="fill:#dc3545" class="svg svg-nav-noti">
+                        <use  xlink:href="/sprite.svg#logout"></use>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main class="d-flex flex-column mode">
+            <div class="d-flex flex-column search-section">
+                <span class="fw-bold h2 pt-5 pb-3 login-text">What do you want to find?</span>
+                <div class="d-flex search-container justify-content-center">
+                    <input class="search-box p-3 me-2" type="search" placeholder="Search for keywords" id="input">
+                    <input class="search-box p-3 me-2" type="search" placeholder="Enter location" id="input2">
+                    <button class="search-button me-3" type="submit" id='search-button' aria-label="search-button">
+                        <i class="fa fa-search"></i>
+                    </button>
+                    <div class="wrapper">
+                        <input type="radio" name="select" id="option-1">
+                        <input type="radio" name="select" id="option-2" checked>
+                        <label for="option-1" class="option option-1">
+                            <span>Events</span>
+                            </label>
+                        <label for="option-2" class="option option-2">
+                            <span>Groups</span>
+                        </label>
+                    </div>
+                </div>
+            </div>
+
+        <div class="d-flex flex-column align-items-center">
+            <!-- Events/Groups - Params -->
+            <div class="main-form d-flex flex-column align-items-center">
+                <div style="width:100%" class='d-flex flex-column'>
+                    <hr style="border-top: solid 1px white;">
+                    <div id="e"></div>
+                    <script src='/static/js/search.js'></script>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer style="height:25rem;">
+        <div style="width:100%" class="d-flex">
+            <div class="footer">
+                <form  class="d-flex flex-column form-container2">
+                    <div class="d-flex align-items-center">
+                        <div style="padding-right: 15px;">Create your own Meetup group.</div>
+                        <button class="button2" href="/group.html">                    
+                            <a style="color: rgb(168, 161, 161);" class="text-decoration-none" href="/group.html" >Get Started</a>
+                        </button>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between text-decoration-none">
+                        <div class="d-flex flex-column align-items-stretch fs-6 w0-3">
+                        <span class="h5">Your Account</span>  
+                        <div style="color: rgb(158, 158, 158);" class="d-flex flex-column justify-content-center fs-6 p-2">
+                            <span>Sign up</span>
+                            <span>Log in</span>
+                            <span>Help</span>
+                        </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-stretch fs-6 w0-3">
+                        <span class="h5">Discover</span>
+                        <div style="color: rgb(158, 158, 158);" class="d-flex flex-column fs-6 p-2">
+                            <span>Groups</span>
+                            <span>Topics</span>
+                            <span>Online Events</span>
+                            <span>Local Guides</span>
+                        </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-stretch fs-6 w0-3">
+                        <span class="h5">Meetup</span>
+                        <div style="color: rgb(158, 158, 158)" class="d-flex flex-column fs-6 p-2">
+                            <span>About</span>
+                            <span>Blog</span>
+                            <span>Meetup Pro</span>
+                            <span>Apps</span>
+                        </div>
+                        </div>
+                    </div>
+                    <div style="padding-bottom:0.5rem;" class="h5">Follow us</div>
+                    <div class="d-flex">
+                        <svg style="fill:rgb(168, 161, 161)" class="svg svg-footer-facebook">
+                          <use xlink:href="/sprite.svg#fb"></use>
+                        </svg>                            
+                        <svg style="fill:rgb(168, 161, 161)" class="svg svg-footer-twitter">
+                          <use xlink:href="/sprite.svg#twitter"></use>
+                        </svg>                                            
+                        <svg style="fill:rgb(168, 161, 161)" class="svg svg-footer-youtube">
+                          <use xlink:href="/sprite.svg#youtube"></use>
+                        </svg>                                              
+                        <svg style="fill:rgb(168, 161, 161)" class="svg svg-footer-ig">
+                          <use xlink:href="/sprite.svg#ig"></use>
+                        </svg>                                          
+                    </div>
+                    <div class="d-flex justify-content-start">
+                        <div class="py-4 pe-3"><i class="fa fa-copyright"></i> 2021 Meetup</div>
+                        <div class="py-4 pe-3">Terms of Service</div>
+                        <div class="py-4 pe-3">Privacy Policy</div>
+                        <div class="py-4 pe-3">Cookie Policy</div>
+                        <div class="py-4 pe-3">Help</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="Login Page">
+    <meta name="theme-color" content="#f65858">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="icon" href="/static/images/626px-Meetup_Logo.png" type="image/x-icon">
+    <link href="/static/css/light.css" rel="stylesheet" id="theme-link">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+
+    <main class="login-background">
+      <button class="btn-toggle m-3" aria-label="Dark-Light mode">
+        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-sun" viewBox="0 0 16 16">
+          <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6zm0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0zm0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13zm8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5zM3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8zm10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0zm-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0zm9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707zM4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708z"/>
+        </svg>
+        <script src="static/js/theme.js"></script>  
+      </button>
+      <form class="d-flex flex-column login-container">
+        <div class="d-flex flex-column align-items-center mb-3">
+          <img class="login-logo-meetup" src="static/images/626px-Meetup_Logo.png" alt="logo">
+          <span class="pt-2 h2">Log in</span>
+          <div class="d-flex">
+            <span class="me-2 login-text"> Not a member yet?</span>
+            <a class="text-viridian text-decoration-none" href="register.html">Sign up</a>
+          </div>
+        </div>
+        
+        <div>
+          <div class="mb-3 fw-bold">
+            <label for="exampleInputEmail1" class="form-label">Email</label>
+            <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+          </div>
+
+          <div class="mb-3">
+            <div class="d-flex justify-content-between">
+              <label for="exampleInputPassword1" class="form-label fw-bold">Password</label>
+              <span class="text-viridian text-decoration-none">Forgot Password</span>
+            </div>
+              <input type="password" class="form-control" id="exampleInputPassword1">
+          </div>
+
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label login-text" for="exampleCheck1">Keep me signed in</label>
+          </div>
+        </div>
+
+        <a style="color:white" class="text-decoration-none button1" href="organizer.html">Login</a>
+
+          <br>
+        <!-- or -->
+        <div class="d-flex items-center justify-content-between my-2">
+          <div style="width: 45%" class="p-1 login-orline"><hr></div>
+          <span class="p-1 login-or">or</span>
+          <div style="width: 45%" class="p-1 login-orline"><hr></div>
+        </div>
+        <!-- log in with -->
+        <div class="d-flex flex-column">
+          <button class="d-flex login-button2 form-label justify-content-between" type="button">
+            <svg class="svg svg-fb">
+              <use xlink:href="/sprite.svg#fb"></use>
+            </svg>            
+            <div class="fs-6">Continue with Facebook</div>
+            <div></div>
+          </button>
+          <button class="d-flex login-button2 form-label justify-content-between" type="button">
+            <svg class="svg svg-twitter">
+              <use xlink:href="/sprite.svg#twitter"></use>
+            </svg>               
+            <div class="fs-6">Continue with Twitter</div>
+            <div></div>
+          </button>
+          <button class="d-flex login-button2 form-label justify-content-between" type="button">
+            <svg class="svg svg-apple">
+              <use xlink:href="/sprite.svg#apple"></use>
+            </svg>                   
+            <div class="fs-6">Continue with Apple</div>
+            <div></div>
+          </button>
+        </div>
+      </form>
+    </main>
+    <footer style="height:25rem;">
+      <div style="width:100%" class="d-flex">
+          <div class="footer">
+              <form  class="d-flex flex-column form-container2">
+                  <div class="d-flex align-items-center">
+                      <div style="padding-right: 15px;">Create your own Meetup group.</div>
+                      <button class="button2">Get Started</button>
+                  </div>
+                  <hr>
+                  <div class="d-flex justify-content-between text-decoration-none">
+                      <div class="d-flex flex-column align-items-stretch fs-6 w0-3">
+                      <span class="h5">Your Account</span>  
+                      <div style="color: rgb(158, 158, 158);" class="d-flex flex-column justify-content-center fs-6 p-2">
+                          <span>Sign up</span>
+                          <span>Log in</span>
+                          <span>Help</span>
+                      </div>
+                      </div>
+                      <div class="d-flex flex-column align-items-stretch fs-6 w0-3">
+                      <span class="h5">Discover</span>
+                      <div style="color: rgb(158, 158, 158);" class="d-flex flex-column fs-6 p-2">
+                          <span>Groups</span>
+                          <span>Topics</span>
+                          <span>Online Events</span>
+                          <span>Local Guides</span>
+                      </div>
+                      </div>
+                      <div class="d-flex flex-column align-items-stretch fs-6 w0-3">
+                      <span class="h5">Meetup</span>
+                      <div style="color: rgb(158, 158, 158)" class="d-flex flex-column fs-6 p-2">
+                          <span>About</span>
+                          <span>Blog</span>
+                          <span>Meetup Pro</span>
+                          <span>Apps</span>
+                      </div>
+                      </div>
+                  </div>
+                  <div style="padding-bottom:0.5rem;" class="h5">Follow us</div>
+                  <div class="d-flex">
+                    <svg style="fill:rgb(168, 161, 161)" class="svg svg-footer-facebook">
+                      <use xlink:href="/sprite.svg#fb"></use>
+                    </svg>                            
+                    <svg style="fill:rgb(168, 161, 161)" class="svg svg-footer-twitter">
+                      <use xlink:href="/sprite.svg#twitter"></use>
+                    </svg>                                            
+                    <svg style="fill:rgb(168, 161, 161)" class="svg svg-footer-youtube">
+                      <use xlink:href="/sprite.svg#youtube"></use>
+                    </svg>                                              
+                    <svg style="fill:rgb(168, 161, 161)" class="svg svg-footer-ig">
+                      <use xlink:href="/sprite.svg#ig"></use>
+                    </svg>                                          
+                  </div>
+                  <div class="d-flex justify-content-start">
+                      <div class="py-4 pe-3"><i class="fa fa-copyright"></i> 2021 Meetup</div>
+                      <div class="py-4 pe-3">Terms of Service</div>
+                      <div class="py-4 pe-3">Privacy Policy</div>
+                      <div class="py-4 pe-3">Cookie Policy</div>
+                      <div class="py-4 pe-3">Help</div>
+                  </div>
+              </form>
+          </div>
+      </div>
+  </footer>
+</body>
+</html>

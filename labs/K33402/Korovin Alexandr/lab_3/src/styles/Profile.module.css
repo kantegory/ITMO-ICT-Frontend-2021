@@ -1,0 +1,55 @@
+.hotelContainer {
+    margin: 50px auto;
+    max-width: calc(100% - 80px);
+
+}
+
+.hotelsContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.hotelContainer {
+    cursor: pointer;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+    gap: 2rem;
+}
+
+.hotelImage {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.hotelImage img {
+    max-width: 100%;
+    height: auto;
+}
+
+
+.hotelContent {
+    padding: 2rem;
+}
+
+.hotelContent .hotelTitle {
+    font-size: 24px;
+    margin: 1rem 0;
+}
+
+.hotelContent .hotelAddress {
+    font-size: 18px;
+    margin: 0;
+}
+
+.hotelContent .hotelPrice {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.hotelContent .hotelRating {
+    font-size: 18px;
+    align-: center;
+    display: block;
+}
