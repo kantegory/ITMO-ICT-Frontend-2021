@@ -230,20 +230,27 @@ h5 {
 
 .social-icons li {
     display: flex;
-    flex-direction: row;
-    margin: 0 10px 0 0;
-    width: 50px;
-    height: 50px;
-    background: #da8608;
-    border-radius: 50%;
+    flex-direction: column;
     transition: var(--transition);
     cursor: pointer;
 }
 
-.social-icons li:hover {
-    background: #fff;
-    color: #2e2e2e;
+.icon {
+    fill: rgb(68, 0, 255);
+    background: white;
+    display: block;
+    margin: 0 5px 0 0;
+    width: 50px;
+    height: 50px;
+    border-radius:47%;
+    transition: var(--transition);
+    cursor: pointer;
 }
+
+.icon:hover {
+    fill: rgb(8, 50, 129);
+}
+
 
 @media(min-width:900px) {
     .footer-container {
