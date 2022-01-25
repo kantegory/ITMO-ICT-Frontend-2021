@@ -5,7 +5,7 @@
       <b-link class="underline mb-4" @click="syncReceipts">Синхронизировать</b-link>
 
       <div class="accordion w-100" role="tablist">
-        <receipts-list-item v-for="receipt in receipts" :value="receipt"/>
+        <receipts-list-header v-for="receipt in receipts" :value="receipt"/>
       </div>
     </b-container>
 
@@ -21,12 +21,12 @@ import {Component, Vue} from 'nuxt-property-decorator'
 import {components} from "~/types/schema";
 import {StateChanger} from 'vue-infinite-loading';
 import InfiniteLoading from 'vue-infinite-loading';
-import ReceiptsListItem from "~/components/app/ReceiptsListItem.vue";
+import ReceiptsListHeader from "~/components/app/ReceiptsListHeader.vue";
 
 
 @Component({
   name: 'ReceiptsListView',
-  components: {ReceiptsListItem, InfiniteLoading}
+  components: {ReceiptsListHeader, InfiniteLoading}
 })
 export default class ReceiptsListView extends Vue {
   offset = 0

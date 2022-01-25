@@ -9,10 +9,10 @@ import {components} from "~/types/schema";
 import {BIcon, BIconPencilSquare} from 'bootstrap-vue'
 
 @Component({
-  name: 'ReceiptItem',
+  name: 'ReceiptInstance',
   components: {BIcon, BIconPencilSquare}
 })
-export default class ReceiptItem extends Vue {
+export default class ReceiptInstance extends Vue {
   @Prop() readonly value !: components['schemas']['Check']
 
   nameEditable = false
