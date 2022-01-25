@@ -1,30 +1,32 @@
 <template>
-  <b-navbar toggleable="sm" class="check-splitter-navbar">
+  <b-navbar toggleable="sm" class="check-splitter-navbar shadow-sm">
     <b-container>
-      <b-navbar-brand to="/">CheckSplitter</b-navbar-brand>
+      <b-navbar-brand to="/" class="font-weight-bold">CheckSplitter</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
       <b-collapse id="nav-collapse" is-nav>
 
         <b-navbar-nav class="ml-auto">
-          <b-nav-item href="#" disabled>Чеки</b-nav-item>
-          <b-nav-item-dropdown v-if="$auth.loggedIn" right no-caret variant="link">
-            <template #button-content>
-              <b-icon-person-circle class="align-middle"/>
-            </template>
-            <b-dropdown-text v-if="userName">{{ userName }}</b-dropdown-text>
-            <b-dropdown-text>
-              <small>{{ $auth.user.username }}</small>
-            </b-dropdown-text>
-            <b-dropdown-divider/>
-            <b-dropdown-item :to="{'name': 'ProfileView'}">
-              Профиль
-            </b-dropdown-item>
-            <b-dropdown-item-button @click="$auth.logout()">
-              Выйти
-            </b-dropdown-item-button>
-          </b-nav-item-dropdown>
+          <template v-if="$auth.loggedIn">
+            <b-nav-item :to="{'name': 'ReceiptsListView'}" class="font-weight-bold">Мои чеки</b-nav-item>
+            <b-nav-item-dropdown class="ml-2" right no-caret variant="link">
+              <template #button-content>
+                <b-icon-person-circle class="align-middle"/>
+              </template>
+              <b-dropdown-text v-if="userName">{{ userName }}</b-dropdown-text>
+              <b-dropdown-text>
+                <small>{{ $auth.user.username }}</small>
+              </b-dropdown-text>
+              <b-dropdown-divider/>
+              <b-dropdown-item :to="{'name': 'ProfileView'}">
+                Профиль
+              </b-dropdown-item>
+              <b-dropdown-item-button @click="$auth.logout()">
+                Выйти
+              </b-dropdown-item-button>
+            </b-nav-item-dropdown>
+          </template>
           <b-nav-item v-else :to="{'name': 'LoginView'}">Войти</b-nav-item>
         </b-navbar-nav>
 

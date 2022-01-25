@@ -114,6 +114,11 @@ const config: NuxtConfig = {
           name: 'PasswordResetView',
           component: resolve(__dirname, 'pages/auth/PasswordResetView')
         },
+        {
+          path: '/receipts',
+          name: 'ReceiptsListView',
+          component: resolve(__dirname, 'pages/receipts/ReceiptsListView')
+        },
       )
     }
   },
