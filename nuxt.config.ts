@@ -104,6 +104,11 @@ const config: NuxtConfig = {
           name: 'ProfileView',
           component: resolve(__dirname, 'pages/auth/ProfileView')
         },
+        {
+          path: '/profile/password',
+          name: 'PasswordChangeView',
+          component: resolve(__dirname, 'pages/auth/PasswordChangeView')
+        },
       )
     }
   },

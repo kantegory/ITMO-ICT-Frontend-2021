@@ -21,7 +21,10 @@
                     :invalid-feedback="getError('checkScanToken')">
         <b-form-input type="password" v-model="form.checkScanToken" required/>
       </b-form-group>
-      <b-button type="submit" variant="outline-dark" class="mt-3 mb-2">Сохранить</b-button>
+      <div class="d-flex flex-column">
+        <b-button type="submit" variant="outline-dark" class="mt-3 mb-2">Сохранить</b-button>
+        <b-link class="align-self-start" :to="{'name': 'PasswordChangeView'}">Сменить пароль</b-link>
+      </div>
     </b-form>
   </b-container>
 </template>
