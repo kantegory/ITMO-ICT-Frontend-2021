@@ -67,13 +67,13 @@ const config: NuxtConfig = {
           type: 'Bearer'
         },
         user: {
-          property: 'user',
-          autoFetch: false,
+          property: false,
+          autoFetch: true,
         },
         endpoints: {
           login: { url: '/auth/login/', method: 'post' },
           logout: { url: '/auth/logout/', method: 'post' },
-          user: false,
+          user: { url: '/users/profile', method: 'get' },
         }
       }
     },

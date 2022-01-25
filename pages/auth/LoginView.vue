@@ -45,9 +45,7 @@ export default class LoginView extends Vue {
 
   async userLogin() {
     try {
-      const response = await this.$auth.loginWith('local', {data: this.form})
-      await this.$auth.fetchUser()
-      this.$auth.setUser((response as any).data.user)
+      await this.$auth.loginWith('local', {data: this.form})
     } catch (e) {
       const error = e as any
       if (error.response) {
