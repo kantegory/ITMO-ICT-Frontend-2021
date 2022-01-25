@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import createPersistedState from "vuex-persistedstate";
 import axios from 'axios'
 import {getAuthHeader, weatherCodeToIcon, timestampToWeekDay} from './utils'
 
@@ -8,20 +9,55 @@ Vue.use(Vuex)
 
 const instance = axios.create({
     baseURL: 'http://localhost:8000/api',
-    timeout: 5000,  // ms
+    timeout: 20000,  // ms
     headers: {'Content-type': 'application/json'}
 });
 
+
+// https://www.bezkoder.com/vue-refresh-token/
+instance.interceptors.response.use(
+    (res) => {
+        return res;
+    },
+    async (err) => {
+        const originalConfig = err.config;
+
+        if (originalConfig.url !== "/auth/jwt/create" && err.response) {
+            // Access Token was expired
+            if (err.response.status === 401 && !originalConfig._retry) {
+                originalConfig._retry = true;
+
+                try {
+                    await store.dispatch('refreshToken');
+                    console.log("Refreshed access token");
+                    return instance(originalConfig);
+                } catch (_error) {
+                    return Promise.reject(_error);
+                }
+            }
+        }
+
+        return Promise.reject(err);
+    }
+);
+
+
 const store = new Vuex.Store({
     state: {
+        user: null,
         selectedCity: null,
-        firstName: '',
-        lastName: '',
-        username: '',
         favouriteCities: [],
         allCities: [],
         todayWeather: null,
         weekWeather: null
+    },
+    getters: {
+        nonFavouriteCities(state) {
+            return state.allCities.filter(city => !(state.favouriteCities.map(fav_city => fav_city.id).includes(city.id)));
+        },
+        loggedIn(state) {
+            return state.user !== null;
+        }
     },
     mutations: {
         setSelectedCity(state, payload) {
@@ -31,13 +67,13 @@ const store = new Vuex.Store({
             state.weekWeather = null;
         },
         setFavouriteCities(state, payload) {
-            state.favouriteCities = payload;
+            // Deal with favourite cities being nested serializer
+            state.favouriteCities = payload.map(city => city.city);
         },
         setAllCities(state, payload) {
             state.allCities = payload;
         },
         setForecast(state, payload) {
-            console.log(payload);
 
             let current = payload["current"];
             state.todayWeather = {
@@ -57,20 +93,48 @@ const store = new Vuex.Store({
                 });
             }
             state.weekWeather = weekWeather;
+        },
+        setUser(state, payload) {
+            state.user = payload;
+        },
+        unsetUser(state) {
+            state.user = null;
         }
     },
     actions: {
         selectCity(context, city_id) {
             // Select specific city by ID
-            context.commit('setSelectedCity', context.state.allCities[city_id]);
+            return new Promise(resolve => {
+                context.commit('setSelectedCity', context.state.allCities.filter(city => city.id == city_id)[0]);
+                resolve();
+            })
+        },
+        selectClosestCity(context, location) {
+            // Set city to closest
+            return new Promise(resolve => {
+                instance.get(`/cities/closest/?lat=${location.coords.latitude}&lon=${location.coords.longitude}`, {
+                    headers: {
+                        Authorization: getAuthHeader()
+                    }
+                }).then(function (response) {
+                    if (200 <= response.status < 300) {
+                        return response.data;
+                    }
+                    return Promise.reject(response);
+                }).then(function (data) {
+                    return context.dispatch('selectCity', data['id'])
+                }).then(function () {
+                    resolve();
+                });
+            })
         },
         listFavouriteCities(context) {
             // Get all favourite cities of user
-            instance.get('/cities/favourite', {
+            instance.get('/cities/favourite/', {
                 headers: {
                     Authorization: getAuthHeader()
                 }
-            }).then(function(response) {
+            }).then(function (response) {
                 if (200 <= response.status < 300) {
                     return response.data;
                 }
@@ -81,7 +145,7 @@ const store = new Vuex.Store({
         },
         listAllCities(context) {
             // Get all cities
-            instance.get('/cities').then(function(response) {
+            instance.get('/cities/').then(function (response) {
                 if (200 <= response.status < 300) {
                     return response.data;
                 }
@@ -92,11 +156,11 @@ const store = new Vuex.Store({
         },
         addFavouriteCity(context, city_id) {
             // Add city to user favourites by ID
-            instance.post('/cities/favourite', {city_id: city_id}, {
+            instance.post('/cities/favourite/', {city_id: city_id}, {
                 headers: {
                     Authorization: getAuthHeader()
                 }
-            }).then(function(response) {
+            }).then(function (response) {
                 if (200 <= response.status < 300) {
                     return response.data;
                 }
@@ -107,11 +171,11 @@ const store = new Vuex.Store({
         },
         deleteFavouriteCity(context, city_id) {
             // Delete city from user favourites by ID
-            instance.delete(`/cities/favourite/${city_id}`, {
+            instance.delete(`/cities/favourite/${city_id}/`, {
                 headers: {
                     Authorization: getAuthHeader()
                 }
-            }).then(function(response) {
+            }).then(function (response) {
                 if (200 <= response.status < 300) {
                     return response.data;
                 }
@@ -122,7 +186,7 @@ const store = new Vuex.Store({
         },
         getForecast(context, city_id) {
             // Get forecast for city by id
-            instance.get(`/cities/${city_id}/forecast`).then(function(response) {
+            instance.get(`/cities/${city_id}/forecast/`).then(function (response) {
                 if (200 <= response.status < 300) {
                     return response.data;
                 }
@@ -130,7 +194,73 @@ const store = new Vuex.Store({
             }).then(function (data) {
                 context.commit('setForecast', data);
             })
-        }
-    }
+        },
+        getCurrentUser(context) {
+            // Get info on current user
+            return new Promise(resolve => {
+                instance.get("/auth/users/me/", {
+                    headers: {
+                        Authorization: getAuthHeader()
+                    }
+                }).then(function (response) {
+                    if (200 <= response.status < 300) {
+                        return response.data;
+                    }
+                    return Promise.reject(response);
+                }).then(function (data) {
+                    context.commit('setUser', data);
+                    resolve();
+                })
+            });
+        },
+        login(context, payload) {
+            // Sign user in
+            return new Promise(resolve => {
+                instance.post("/auth/jwt/create", payload).then(function (response) {
+                    if (200 <= response.status < 300) {
+                        return response.data;
+                    }
+                    return Promise.reject(response);
+                }).then(function (data) {
+                    localStorage.setItem('token', JSON.stringify(data));
+                    return context.dispatch('getCurrentUser')
+                }).then(function () {
+                    resolve();
+                });
+            })
+        },
+        refreshToken() {
+            // Refresh JWT token on expiry
+            let token = JSON.parse(localStorage.getItem('token'))
+            instance.post("/auth/jwt/refresh/", {refresh: token?.refresh}).then(function (response) {
+                if (200 <= response.status < 300) {
+                    return response.data;
+                }
+                return Promise.reject(response);
+            }).then(function (data) {
+                token.access = data['access'];
+                localStorage.setItem('token', JSON.stringify(token));
+            })
+        },
+        logout(context) {
+            // Log user out
+            context.commit('unsetUser')
+            localStorage.removeItem('token');
+        },
+        register(context, payload) {
+            // Register user
+            return new Promise(resolve => {
+                instance.post("/auth/users/", payload).then(function (response) {
+                    if (200 <= response.status < 300) {
+                        resolve();
+                    }
+                    return Promise.reject(response);
+                })
+            })
+        },
+    },
+    plugins: [createPersistedState({
+        storage: window.sessionStorage,
+    })]
 })
 export default store;

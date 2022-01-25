@@ -6,10 +6,8 @@
                     <h2>Your account</h2>
                 </div>
                 <div class="card-body">
-                    <p class="fs-5">Name: <span class="hover-opacity">John Smith
-                        <img src="img/edit-pen.svg" alt="edit" width="12px" class="d-inline-block"></span>
-                    </p>
-                    <p class="fs-5">City: <span class="hover-opacity">St. Petersburg
+                    <p class="fs-5">Name: <span class="hover-opacity">
+                        {{ this.$store.state.user.first_name }} {{ this.$store.state.user.last_name }}
                         <img src="img/edit-pen.svg" alt="edit" width="12px" class="d-inline-block"></span>
                     </p>
                 </div>
@@ -22,16 +20,8 @@
                 </div>
                 <div class="card-body">
                     <div class="d-inline-flex flex-wrap">
-                        <div class="btn-group p-2">
-                            <button type="button" class="btn btn-secondary">St. Petersburg</button>
-                            <button type="button" class="btn btn-outline-secondary">X</button>
-                        </div>
-                        <div class="btn-group p-2">
-                            <button type="button" class="btn btn-secondary">Moscow</button>
-                            <button type="button" class="btn btn-outline-secondary">X</button>
-                        </div>
-                        <div class="btn-group p-2">
-                            <button type="button" class="btn btn-secondary">Sochi</button>
+                        <div class="btn-group p-2" v-for="city in this.$store.state.favouriteCities" :key="city.id">
+                            <button type="button" class="btn btn-secondary">{{ city.name }}</button>
                             <button type="button" class="btn btn-outline-secondary">X</button>
                         </div>
                         <div class="p-2">
@@ -49,6 +39,7 @@
 
 <script>
 import AddCityModal from "../components/modals/addCityModal";
+
 export default {
     name: "Profile",
     components: {AddCityModal}

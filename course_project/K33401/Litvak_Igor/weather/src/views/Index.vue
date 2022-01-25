@@ -1,9 +1,16 @@
 <template>
     <div>
-        <h1 class="display-4">
+        <h1 class="display-4" v-if="this.$store.state.selectedCity">
             Weather forecast for <span class="hover-opacity" data-bs-toggle="modal" data-bs-target="#chooseCityModal">
-        <span id="selected-city">{{ selectedCity }}</span>
-        <img src="img/edit-pen.svg" alt="edit" width="40px"></span>
+                {{ this.$store.state.selectedCity.name}}
+                <img src="img/edit-pen.svg" alt="edit" width="40px">
+            </span>
+        </h1>
+        <h1 class="display-4" v-else>
+            <span class="hover-opacity" data-bs-toggle="modal" data-bs-target="#chooseCityModal">
+                Please choose city
+                <img src="img/edit-pen.svg" alt="edit" width="40px">
+            </span>
         </h1>
 
         <div class="row g-2">
@@ -75,30 +82,13 @@
 import WeatherToday from "../components/weather/WeatherToday";
 import WeatherWeek from "../components/weather/WeatherWeek";
 import ChooseCityModal from "../components/modals/chooseCityModal";
+import store from "../store";
 
 export default {
     name: "Index",
     components: {ChooseCityModal, WeatherWeek, WeatherToday},
-    data: function () {
-        let selectedCity = "St. Petersburg";
-        if (Object.prototype.hasOwnProperty.call(sessionStorage, "city")) {
-            let city = sessionStorage.getItem("city");
-            if (city) {
-                selectedCity = city;
-            } else if (Object.prototype.hasOwnProperty.call(sessionStorage, "lat") && Object.prototype.hasOwnProperty.call(sessionStorage, "lon")) {
-                let lat = sessionStorage.getItem("lat");
-                let lon = sessionStorage.getItem("lon");
-                selectedCity = `${lat} ${lon}`;
-            }
-        }
-        return {
-            todayWeather: null,
-            weekWeather: null,
-            selectedCity: selectedCity
-        }
-    },
     async created() {
-        await this.$store.dispatch('getForecast', 1);  // TODO: select city other that SPb
+        await store.dispatch('getForecast', store.state.selectedCity.id);
     }
 }
 </script>
