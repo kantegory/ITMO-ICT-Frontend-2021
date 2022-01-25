@@ -24,10 +24,12 @@
                 </label>
               </div>
               <form>
-                <button class="w-100 btn btn-lg btn-primary" type='submit'>Log in</button>
+                <router-link :to="{name: 'Weather'}">
+                  <button class="w-100 btn btn-lg btn-primary" type='submit'>Log in</button>
+                </router-link>
               </form>
               <hr class="my-4">
-              <small class="text-muted">If you don't have an account, <!-- <a href = ""> -->register</small>
+              <small class="text-muted">If you don't have an account, <router-link to="/signin">register</router-link></small>
             </div>
           </div>
         </div>
@@ -36,9 +38,17 @@
 </template>
 
 <script>
+import router from '@/router'
 export default {
-  name: 'SignIn'
+  name: 'SignIn',
+
+  methods: {
+    onSubmit (form) {
+      router.push('/weather')
+    }
+  }
 }
+
 </script>
 
 <style>
