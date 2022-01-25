@@ -11,8 +11,8 @@
       <b-form-group label="Пароль" :state="getState('password')" :invalid-feedback="getError('password')">
         <b-form-input type="password" v-model="form.password" required/>
       </b-form-group>
-      <div class="d-flex flex-column">
-        <b-button type="submit" variant="outline-dark" class="mt-3 mb-2">Войти</b-button>
+      <div class="d-flex flex-column align-items-start">
+        <b-button type="submit" variant="outline-dark" class="mt-3 mb-2 align-self-stretch">Войти</b-button>
         <b-link :to="{'name': 'RegisterView'}">Регистрация</b-link>
 <!--        <b-link>Забыли пароль?</b-button>-->
       </div>
