@@ -18,6 +18,16 @@
     flex-wrap: nowrap;
   }
 
+  .wrapped{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+  }
+
+  .wrapped img{
+    width: 100px;
+  }
+
   .row img{
     margin-top: 8px;
     border-radius: 10px;
@@ -34,7 +44,6 @@
     margin-right: 1rem;
   }
 
-
   .image {
     margin-left: 10%;
     margin-right: 1rem;
@@ -43,8 +52,6 @@
     box-shadow: 0 0 5px 5px rgba(0,0,0, .25);
     width: 70%;
   }
-
-
 
   body {
     font: 20px "URW Chancery L";
@@ -73,13 +80,9 @@
     margin-bottom: 1%;
   }
 
-
-
   a {
    font: 20px "URW Chancery L";
    color: #3C3C3B;}
-
-
 
   span{
    font: 14px "URW Chancery L";
@@ -89,7 +92,6 @@
   .active{
    color:#479683;
   }
-
 
   .form-control-cool{
     display: block;
@@ -116,7 +118,6 @@
     outline: 0;
     box-shadow: none;
   }
-
 
   .kicker{
     margin-bottom: .5rem;
@@ -156,9 +157,9 @@
   p{
     margin-top: 5px;
     margin-bottom: 5px;
+    font-size: 17px;
     align-self: center;
   }
-
 
   h5{
     font: 16px "URW Chancery L";
@@ -175,15 +176,12 @@
     letter-spacing: 2px;
   }
 
-
-
   .center{
     width: 350px;
     margin: auto;
     margin-top: 1px;
     padding-bottom: 5px;
   }
-
 
   .icon{
     display: block;

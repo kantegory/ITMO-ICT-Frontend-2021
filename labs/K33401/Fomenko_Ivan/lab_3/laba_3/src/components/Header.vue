@@ -13,6 +13,12 @@
                         <a class="nav-item nav-link" href="/">Home</a>
                         <a class="nav-item nav-link" href="/Login">Login</a>
                         <a class="nav-item nav-link" href="/Register">Register</a>
+                        <a class="nav-item nav-link" href="/TicketWall">Ticket Wall</a>
+                        <a class="nav-item nav-link" href="/OurTeam">Our Team</a>
+                        <a class="nav-item nav-link" href="/AboutUs">About Us</a>
+                        <a class="nav-item nav-link" href="/ContactUs">Contact Us</a>
+                        <a class="nav-item nav-link" href="/PartnersSection">Our Partners</a>
+                        <a class="nav-item nav-link" href="/Buy">Buy</a>
                     </ul>
                 </div>
             </div>
