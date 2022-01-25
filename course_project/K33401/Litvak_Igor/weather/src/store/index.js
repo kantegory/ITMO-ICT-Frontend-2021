@@ -47,6 +47,7 @@ const store = new Vuex.Store({
         user: null,
         selectedCity: null,
         favouriteCities: [],
+        rawFavouriteCities: [],
         allCities: [],
         todayWeather: null,
         weekWeather: null
@@ -69,6 +70,7 @@ const store = new Vuex.Store({
         setFavouriteCities(state, payload) {
             // Deal with favourite cities being nested serializer
             state.favouriteCities = payload.map(city => city.city);
+            state.rawFavouriteCities = payload;
         },
         setAllCities(state, payload) {
             state.allCities = payload;
@@ -258,6 +260,42 @@ const store = new Vuex.Store({
                 })
             })
         },
+        changeName(context, payload) {
+            // Update user first and last names
+            return new Promise(resolve => {
+                instance.patch("/auth/users/me/", payload, {
+                    headers: {
+                        Authorization: getAuthHeader()
+                    }
+                }).then(function (response) {
+                    if (200 <= response.status < 300) {
+                        return response.data;
+                    }
+                    return Promise.reject(response);
+                }).then(function (data) {
+                    context.commit("setUser", data);
+                    resolve();
+                })
+            })
+        },
+        changePassword(context, payload) {
+            // Update user first and last names
+            return new Promise(resolve => {
+                instance.post("/auth/users/set_password/", payload, {
+                    headers: {
+                        Authorization: getAuthHeader()
+                    }
+                }).then(function (response) {
+                    if (200 <= response.status < 300) {
+                        return response.data;
+                    }
+                    return Promise.reject(response);
+                }).then(function (data) {
+                    context.commit("setUser", data);
+                    resolve();
+                })
+            })
+        }
     },
     plugins: [createPersistedState({
         storage: window.sessionStorage,

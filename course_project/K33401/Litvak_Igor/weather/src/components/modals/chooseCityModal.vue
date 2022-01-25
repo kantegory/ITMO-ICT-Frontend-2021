@@ -8,8 +8,9 @@
                 </div>
                 <div class="modal-body">
                     <select class="form-select" aria-label="Default select example" id="city-select">
-                        <option value="" selected>Autodetect</option>
-                        <option v-for="city in this.$store.state.favouriteCities" :value="city.id" :key="city.id">
+                        <option value="">Autodetect</option>
+                        <option v-for="city in this.$store.state.favouriteCities" :value="city.id" :key="city.id"
+                                :selected="city.id == getSelectedCityId">
                             {{ city.name }}
                         </option>
                     </select>
@@ -48,6 +49,11 @@ export default {
     },
     created() {
         store.dispatch('listFavouriteCities');
+    },
+    computed: {
+        getSelectedCityId: function () {
+            return store.state.selectedCity ? store.state.selectedCity.id : -1;
+        }
     }
 }
 </script>

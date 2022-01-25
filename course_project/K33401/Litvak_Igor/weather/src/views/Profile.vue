@@ -6,8 +6,12 @@
                     <h2>Your account</h2>
                 </div>
                 <div class="card-body">
-                    <p class="fs-5">Name: <span class="hover-opacity">
+                    <p class="fs-5">Name: <span class="hover-opacity" data-bs-toggle="modal" data-bs-target="#changeNameModal">
                         {{ this.$store.state.user.first_name }} {{ this.$store.state.user.last_name }}
+                        <img src="img/edit-pen.svg" alt="edit" width="12px" class="d-inline-block"></span>
+                    </p>
+                    <p class="fs-5"><span class="hover-opacity" data-bs-toggle="modal" data-bs-target="#changePasswordModal">
+                        Change password
                         <img src="img/edit-pen.svg" alt="edit" width="12px" class="d-inline-block"></span>
                     </p>
                 </div>
@@ -20,9 +24,9 @@
                 </div>
                 <div class="card-body">
                     <div class="d-inline-flex flex-wrap">
-                        <div class="btn-group p-2" v-for="city in this.$store.state.favouriteCities" :key="city.id">
-                            <button type="button" class="btn btn-secondary">{{ city.name }}</button>
-                            <button type="button" class="btn btn-outline-secondary">X</button>
+                        <div class="btn-group p-2" v-for="city in this.$store.state.rawFavouriteCities" :key="city.id">
+                            <button type="button" class="btn btn-secondary">{{ city.city.name }}</button>
+                            <button type="button" class="btn btn-outline-secondary" v-on:click="deleteCity(city.id)">X</button>
                         </div>
                         <div class="p-2">
                             <button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal"
@@ -34,15 +38,25 @@
             </div>
         </div>
         <add-city-modal></add-city-modal>
+        <change-name-modal></change-name-modal>
+        <change-password-modal></change-password-modal>
     </div>
 </template>
 
 <script>
 import AddCityModal from "../components/modals/addCityModal";
+import ChangeNameModal from "../components/modals/changeNameModal";
+import ChangePasswordModal from "../components/modals/changePasswordModal";
+import store from "../store";
 
 export default {
     name: "Profile",
-    components: {AddCityModal}
+    components: {ChangePasswordModal, ChangeNameModal, AddCityModal},
+    methods: {
+        deleteCity: function (city_id) {
+            store.dispatch('deleteFavouriteCity', city_id);
+        }
+    }
 }
 </script>
 
