@@ -26,11 +26,14 @@ export const store = new Vuex.Store({
     },
     setCityForFull (state, payload) {
       state.cityForFull = payload
+    },
+    changeCity (state, payload) {
+      state.cities.splice(payload[0], 1, payload.slice(1, 4))
     }
   },
   actions: {
-    updateCities (state, payload) {
-      // payload = [i, name, lat, lon]
+    updateCities (context, payload) {
+      context.commit('changeCity', payload)
     },
     cityForFull (context, payload) {
       context.commit('setCityForFull', payload)
