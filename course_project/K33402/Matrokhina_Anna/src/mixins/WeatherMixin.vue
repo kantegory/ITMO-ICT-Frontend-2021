@@ -72,10 +72,12 @@ export default {
             diff = 7
           }
 
+          result.data.weatherid = result.data.id
           result.data = response.data.daily[diff]
           result.data.temp = result.data.temp.day
         }
 
+        result.data.cityid = cityResolved.data.id
         result.data.name = cityResolved.data.local_names.ru
       } catch (e) {
         console.log('error getting weather', e)

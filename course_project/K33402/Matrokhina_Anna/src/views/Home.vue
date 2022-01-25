@@ -51,12 +51,14 @@
 
       <b-row v-if="weatherInCities.length !== 0" cols="1" cols-md="2" cols-lg="3" cols-xl="4" class="mt-5">
         <b-col v-for="city in weatherInCities" class="mb-3">
-          <weather-city :city="city.city"
+          <weather-city :id="city.cityid"
+                        :city="city.city"
                         :weather="city.weather"
                         :pressure="city.pressure"
                         :wind="city.wind"
                         :wind-direction="city.windDirection"
                         :save-button="true" :delete-button="true"
+                        @save-city="saveCity"
                         @delete-city="deleteCity"
           />
         </b-col>
@@ -75,7 +77,7 @@ import WeatherMixin from "../mixins/WeatherMixin";
 export default {
   name: 'Home',
   mixins: [WeatherMixin],
-  components: {WeatherCity},
+  components: { WeatherCity },
   data() {
     return {
       filterDate: 'today',
@@ -95,13 +97,15 @@ export default {
 
       this.deleteCity(data.name)
 
+      let cityid = data.cityid
+      let weatherid = data.cityid
       let city = data.name
       let weather = data.temp
       let pressure = data.pressure
       let wind = parseInt(data.wind_speed)
       let windDirection = this.getWindDirection(data.wind_deg)
 
-      this.weatherInCities = [{city, weather, pressure, wind, windDirection}, ...this.weatherInCities]
+      this.weatherInCities = [{ cityid, weatherid, city, weather, pressure, wind, windDirection }, ...this.weatherInCities]
     },
 
     async getWeather() {
@@ -113,6 +117,26 @@ export default {
 
       if (data.status) {
         this.addCityWeather(data.data)
+      }
+    },
+
+    async saveCity(cityID) {
+      try {
+        const response = await this.axios.post(`http://127.0.0.1:8000/mycities/`, {
+              city: cityID
+            },
+            {
+              headers: {
+                'Authorization': `Token ${this.$store.state.token}`
+              }
+            })
+
+        if (response) {
+          this.$store.commit('updateUsername', { 'username': response.data.username })
+        }
+
+      } catch (e) {
+        console.log('error', e)
       }
     },
 
