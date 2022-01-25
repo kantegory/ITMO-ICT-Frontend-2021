@@ -58,7 +58,6 @@ export default class RegisterView extends Vue {
       const error = e as any
       if (error.response) {
         this.errors = error.response.data
-        console.log(this.errors)
       }
     }
   }

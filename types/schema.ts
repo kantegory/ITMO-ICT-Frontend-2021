@@ -97,6 +97,7 @@ export interface paths {
   };
   "/api/users/profile/avatar": {
     put: operations["users_profile_avatar_update"];
+    delete: operations["users_profile_avatar_destroy"];
   };
 }
 
@@ -279,6 +280,8 @@ export interface components {
        * Format: uri
        */
       avatar?: string | null;
+      /** Format: uri */
+      avatarUrl: string;
     };
     ProfileAvatarRequest: {
       /**
@@ -648,6 +651,15 @@ export interface operations {
     requestBody: {
       content: {
         "multipart/form-data": components["schemas"]["ProfileAvatarRequest"];
+      };
+    };
+  };
+  users_profile_avatar_destroy: {
+    responses: {
+      200: {
+        content: {
+          "application/json": components["schemas"]["ProfileAvatar"];
+        };
       };
     };
   };

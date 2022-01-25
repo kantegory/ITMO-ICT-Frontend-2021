@@ -9,14 +9,18 @@
 
         <b-navbar-nav class="ml-auto">
           <b-nav-item href="#" disabled>Чеки</b-nav-item>
-          <b-nav-item-dropdown v-if="$auth.loggedIn" no-caret variant="link">
+          <b-nav-item-dropdown v-if="$auth.loggedIn" right no-caret variant="link">
             <template #button-content>
               <b-icon-person-circle class="align-middle"/>
             </template>
-            <b-dropdown-item disabled>
+            <b-dropdown-text v-if="userName">{{ userName }}</b-dropdown-text>
+            <b-dropdown-text>
+              <small>{{ $auth.user.username }}</small>
+            </b-dropdown-text>
+            <b-dropdown-divider/>
+            <b-dropdown-item :to="{'name': 'ProfileView'}">
               Профиль
             </b-dropdown-item>
-            <b-dropdown-divider/>
             <b-dropdown-item-button @click="$auth.logout()">
               Выйти
             </b-dropdown-item-button>
@@ -39,6 +43,9 @@ import {BIcon, BIconPersonCircle} from 'bootstrap-vue'
 })
 export default class CheckSplitterNavbar extends Vue {
 
+  get userName() {
+    return `${this.$auth.user?.firstName} ${this.$auth.user?.lastName}`.trim()
+  }
 }
 </script>
 

@@ -99,6 +99,11 @@ const config: NuxtConfig = {
           name: 'RegisterView',
           component: resolve(__dirname, 'pages/auth/RegisterView')
         },
+        {
+          path: '/profile',
+          name: 'ProfileView',
+          component: resolve(__dirname, 'pages/auth/ProfileView')
+        },
       )
     }
   },
