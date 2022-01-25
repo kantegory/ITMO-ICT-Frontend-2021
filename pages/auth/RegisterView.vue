@@ -27,13 +27,14 @@
 
 <script lang="ts">
 import {Component, Vue} from 'nuxt-property-decorator'
+import {components} from "~/types/schema";
 
 @Component({
   name: 'RegisterView',
   auth: 'guest',
 })
 export default class RegisterView extends Vue {
-  form = {
+  form: components['schemas']['RegisterRequest'] = {
     username: '',
     email: '',
     password1: '',

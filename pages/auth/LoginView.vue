@@ -22,13 +22,14 @@
 
 <script lang="ts">
 import {Component, Vue} from 'nuxt-property-decorator'
+import {components} from "~/types/schema";
 
 @Component({
   name: 'LoginView',
   auth: 'guest',
 })
 export default class LoginView extends Vue {
-  form = {
+  form: components['schemas']['LoginRequest'] = {
     username: '',
     password: '',
   }
