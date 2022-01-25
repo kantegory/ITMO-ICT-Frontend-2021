@@ -1,55 +1,17 @@
 <template>
-    <main class="">
+    <main class="container-fluid">
         <div class="container row mx-auto">
-            <div class="col-12 col-xl-3 col-lg-4 col-md-6 card-centered">
+            <div class="col-lg-3 col-md-6 col-sm-12 card-centered justify-content-center" v-for="f in from" :key="f.id">
                 <div class="card">
-                    <img src="flying_stuff/card_back.jpg" class="card-img-top" alt="image">
+                    <img src="../../public/flying_stuff/card_back.jpg" class="card-img-top" alt="image">
                     <div class="card-body">
-                        <h5 class="card-title">Moscow - New York</h5>
-                        <p class="card-text">Date: 19.09.22 18:00</p>
-                        <p class="card-text">Name: Valeriy Mikhaylovich Petrushkin</p>
-                        <p class="card-text">Seat: 13A</p>
-                        <p class="card-text">Gate: C</p>
-                        <a href="/TicketWall" class="btn btn-class">Register to flight</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-xl-3 col-lg-4 col-md-6 card-centered">
-                <div class="card">
-                    <img src="flying_stuff/card_back.jpg" class="card-img-top" alt="image">
-                    <div class="card-body">
-                        <h5 class="card-title">Moscow - New York</h5>
-                        <p class="card-text">Date: 19.09.22 18:00</p>
-                        <p class="card-text">Name: Valeriy Mikhaylovich Petrushkin</p>
-                        <p class="card-text">Seat: 13B</p>
-                        <p class="card-text">Gate: C</p>
-                        <a href="/TicketWall" class="btn btn-class">Register to flight</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-xl-3 col-lg-4 col-md-6 card-centered">
-                <div class="card">
-                    <img src="flying_stuff/card_back.jpg" class="card-img-top" alt="image">
-                    <div class="card-body">
-                        <h5 class="card-title">Moscow - New York</h5>
-                        <p class="card-text">Date: 19.09.22 18:00</p>
-                        <p class="card-text">Name: Valeriy Mikhaylovich Petrushkin</p>
-                        <p class="card-text">Seat: 13C</p>
-                        <p class="card-text">Gate: C</p>
-                        <a href="/TicketWall" class="btn btn-class">Register to flight</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-12 col-xl-3 col-lg-4 col-md-6 card-centered">
-                <div class="card">
-                    <img src="flying_stuff/card_back.jpg" class="card-img-top" alt="image">
-                    <div class="card-body">
-                        <h5 class="card-title">Moscow - New York</h5>
-                        <p class="card-text">Date: 19.09.22 18:00</p>
-                        <p class="card-text">Name: Valeriy Mikhaylovich Petrushkin</p>
-                        <p class="card-text">Seat: 14A</p>
-                        <p class="card-text">Gate: C</p>
-                        <a href="/TicketWall" class="btn btn-class">Register to flight</a>
+                        <h5 class="card-title">{{f.departure}} - {{f.arrival}}</h5>
+                        <p class="card-text">Datetime: {{f.date}} {{f.time}}</p>
+                        <p class="card-text">Country: {{f.country}}</p>
+                        <p class="card-text">Aviacompany: {{f.aviacompany}}</p>
+                        <p class="card-text">Personal Class: {{f.personal_class}}</p>
+                        <p class="card-text">Price: {{f.price}}</p>
+                        <a href='#' class='btn btn-class'>Register to flight</a>
                     </div>
                 </div>
             </div>
@@ -58,8 +20,26 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
-  name: 'TicketWallBody'
+  name: 'TicketWallBody',
+  props: {
+    id: [],
+    isActive: [],
+    departure: [],
+    arrival: [],
+    date: [],
+    time: [],
+    country: [],
+    aviacompany: [],
+    personal_class: [],
+    price: []
+  },
+  mounted () {
+    axios.get('http://localhost:3000/tickets').then(response => {
+      this.from = response.data
+    })
+  }
 }
 </script>
 

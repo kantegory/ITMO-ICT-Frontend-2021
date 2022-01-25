@@ -2,7 +2,7 @@
     <main class="container-fluid">
         <div class="container-fluid">
             <div class="row content">
-                <div class="col-lg-5 col-12">
+                <div class="col-lg-11 col-12">
                     <form class="form" @submit.prevent="boom()" method="get">
                         <h3 class="mb-3">Buy the ticket!</h3>
                         <div class="mb-3">
@@ -63,7 +63,7 @@
                     </form>
                 </div>
                 <div class="col-lg-7 mt-5 col-12 surf">
-                    <div class="col-lg-6 col-md-6 col-sm-12 card-centered justify-content-center" v-for="f in tata" :key="f.id">
+                    <div class="col-lg-1 col-md-6 col-sm-12 card-centered justify-content-center" v-for="f in tata" :key="f.id">
                         <div class="card">
                             <img src="../../public/flying_stuff/card_back.jpg" class="card-img-top" alt="image">
                             <div class="card-body">
@@ -103,15 +103,11 @@ export default {
   }),
   methods: {
     boom: function () {
-      axios.get(`http://localhost:3000/tickets?departure=${this.departure}&arrival=${this.arrival}&date=${this.date}&time=${this.time}&country=${this.country}&aviacompany=${this.aviacompany}&personal_class=${this.personal_class}&price=${this.price}`)
-      .then(response => {
-
+      axios.get(`http://localhost:3000/tickets?departure=${this.departure}&arrival=${this.arrival}&date=${this.date}&time=${this.time}&country=${this.country}&aviacompany=${this.aviacompany}&personal_class=${this.personal_class}&price=${this.price}`).then(response => {
         console.log('good')
-        this.form = response.data
-        localStorage.setItem('profil', JSON.stringify(this.form))
-        this.json = JSON.parse(localStorage.getItem('profil'))
-      }) 
-      console.log(this.form)
+        this.tata = response.data
+      })
+      console.log(this.tata)
     }
   }
 }
