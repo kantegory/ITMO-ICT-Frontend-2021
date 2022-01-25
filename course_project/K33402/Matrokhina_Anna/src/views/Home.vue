@@ -132,10 +132,6 @@ export default {
               }
             })
 
-        if (response) {
-          this.$store.commit('updateUsername', { 'username': response.data.username })
-        }
-
       } catch (e) {
         console.log('error', e)
       }
