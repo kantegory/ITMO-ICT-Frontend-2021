@@ -1,5 +1,5 @@
 <template>
-  <b-card :title="city" class="weather-card">
+  <b-card :title="title" class="weather-card">
     <b-card-text>
       <p class="mt-4">
         <b-icon-brightness-high />
@@ -11,15 +11,17 @@
       <p>
         <i class="bi bi-wind"></i> {{ windDirection }}, {{ wind }} м/с</p>
 
-      <div class="d-flex justify-content-center">
-        <b-button v-if="saveButton" size="sm" variant="outline-dark"
-                  @click="$emit('save-city', id)"
-        >
+      <div class="d-flex flex-column">
+        <b-button v-if="!noDetailButton" size="sm" variant="outline-dark"
+                  @click="$router.push({name: 'WeatherItem', params: {id: weatherid.toString()}})">
+          Подробнее
+        </b-button>
+        <b-button v-if="saveButton" size="sm" variant="outline-success" class="mt-2"
+                  @click="$emit('save-city', id)">
           Сохранить
         </b-button>
-        <b-button v-if="deleteButton" size="sm" variant="outline-danger" class="ml-2"
-                  @click="$emit('delete-city', deleteById ? id : city)"
-        >
+        <b-button v-if="deleteButton" size="sm" variant="outline-danger" class="mt-2"
+                  @click="$emit('delete-city', deleteById ? id : title)">
           Удалить
         </b-button>
       </div>
@@ -32,14 +34,16 @@ export default {
   name: 'WeatherCity',
   props: {
     id: Number,
-    city: String,
+    weatherid: Number,
+    title: String,
     weather: Number,
     pressure: Number,
     wind: Number,
     windDirection: String,
     saveButton: Boolean,
     deleteButton: Boolean,
-    deleteById: Boolean
+    deleteById: Boolean,
+    noDetailButton: Boolean
   },
 }
 </script>

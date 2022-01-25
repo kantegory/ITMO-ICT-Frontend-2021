@@ -77,6 +77,7 @@ export default {
           result.data.temp = result.data.temp.day
         }
 
+        result.data.weatherid = response.data.id
         result.data.cityid = cityResolved.data.id
         result.data.name = cityResolved.data.local_names.ru
       } catch (e) {

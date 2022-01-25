@@ -52,7 +52,8 @@
       <b-row v-if="weatherInCities.length !== 0" cols="1" cols-md="2" cols-lg="3" cols-xl="4" class="mt-5">
         <b-col v-for="city in weatherInCities" class="mb-3">
           <weather-city :id="city.cityid"
-                        :city="city.city"
+                        :weatherid="city.weatherid"
+                        :title="city.city"
                         :weather="city.weather"
                         :pressure="city.pressure"
                         :wind="city.wind"
@@ -98,7 +99,7 @@ export default {
       this.deleteCity(data.name)
 
       let cityid = data.cityid
-      let weatherid = data.cityid
+      let weatherid = data.weatherid
       let city = data.name
       let weather = data.temp
       let pressure = data.pressure

@@ -8,7 +8,7 @@
         <b-col v-for="data in weatherInCities" class="mb-3">
           <weather-city
               :id="data.mycityid"
-              :city="data.city.local_names.ru"
+              :title="data.city.local_names.ru"
               :weather="data.current.temp"
               :pressure="data.current.pressure"
               :wind="data.current.wind_speed"
