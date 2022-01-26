@@ -101,6 +101,10 @@ const store = new Vuex.Store({
         },
         unsetUser(state) {
             state.user = null;
+            state.todayWeather = null;
+            state.weekWeather = null;
+            state.favouriteCities = [];
+            state.rawFavouriteCities = [];
         }
     },
     actions: {
@@ -246,8 +250,11 @@ const store = new Vuex.Store({
         },
         logout(context) {
             // Log user out
-            context.commit('unsetUser')
-            localStorage.removeItem('token');
+            return new Promise(resolve => {
+                context.commit('unsetUser')
+                localStorage.removeItem('token');
+                resolve();
+            })
         },
         register(context, payload) {
             // Register user

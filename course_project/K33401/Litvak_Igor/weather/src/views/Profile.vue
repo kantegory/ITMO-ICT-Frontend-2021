@@ -14,6 +14,8 @@
                         Change password
                         <img src="img/edit-pen.svg" alt="edit" width="12px" class="d-inline-block"></span>
                     </p>
+                    <p class="fs-5"><span class="hover-opacity" v-on:click="logout">Logout</span>
+                    </p>
                 </div>
             </div>
         </div>
@@ -48,6 +50,7 @@ import AddCityModal from "../components/modals/addCityModal";
 import ChangeNameModal from "../components/modals/changeNameModal";
 import ChangePasswordModal from "../components/modals/changePasswordModal";
 import store from "../store";
+import router from "../router";
 
 export default {
     name: "Profile",
@@ -55,6 +58,11 @@ export default {
     methods: {
         deleteCity: function (city_id) {
             store.dispatch('deleteFavouriteCity', city_id);
+        },
+        logout: function () {
+            store.dispatch('logout').then(function () {
+                router.push('/login');
+            });
         }
     }
 }
