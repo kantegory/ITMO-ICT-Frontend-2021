@@ -1,6 +1,6 @@
 <template>
   <b-container>
-    <receipt-instance v-if="receipt" :value="receipt" class="mt-4"/>
+    <receipt-instance v-if="receipt" :value="receipt" name-editable class="mt-4"/>
   </b-container>
 </template>
 

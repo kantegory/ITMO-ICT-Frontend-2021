@@ -1,13 +1,13 @@
 <template>
   <div class="d-flex flex-column">
-    <div v-if="!nameEditable">
-      <b-link :to="{'name': 'ReceiptInstanceView', params: {id: value.id}}" class="name mr-1">{{ value.name }}</b-link>
-      <b-icon-pencil-square @click="nameEditable = true"/>
+    <div v-if="!nameEditing">
+      <b-link :to="{'name': 'ReceiptInstanceView', params: {id: value.id}}" class="name mr-1">{{ nameValue }}</b-link>
+      <b-icon-pencil-square v-if="nameEditable" @click="nameEditing = true"/>
     </div>
-    <div class="d-flex" v-else>
-      <b-form-input v-model="nameEditableValue"></b-form-input>
-      <b-icon-check class="icon-check" @click="updateName"/>
-    </div>
+    <b-form v-else class="d-flex" @submit.prevent="updateName">
+      <b-form-input v-model="nameValue"></b-form-input>
+      <b-icon-check class="icon-check" @submit/>
+    </b-form>
     <span>{{ value.orgName }} (ИНН: {{ value.orgInn }})</span>
     <span v-if="value.orgAddress">{{ value.orgAddress }}</span>
 
@@ -37,10 +37,11 @@ import {BIcon, BIconPencilSquare, BIconCheck} from 'bootstrap-vue'
   components: {BIcon, BIconPencilSquare, BIconCheck}
 })
 export default class ReceiptInstance extends Vue {
+  @Prop({type: Boolean, default: false}) readonly nameEditable !: boolean
   @Prop() readonly value !: components['schemas']['Check']
 
-  nameEditable = false
-  nameEditableValue = this.value.name
+  nameEditing = false
+  nameValue = this.value.name
 
   itemsFields = [
     {key: 'name', label: 'Наименование'},
@@ -53,8 +54,21 @@ export default class ReceiptInstance extends Vue {
     return new Date(this.value.date).toLocaleDateString()
   }
 
-  updateName() {
-    this.nameEditable = false
+  async updateName() {
+    this.nameEditing = false
+    try {
+      await this.$axios.patch(`/checks/${this.value.id}/name`, {name: this.nameValue})
+    } catch (e) {
+      const error = e as any
+      if (error.response) {
+        this.$bvToast.toast('Что-то прошло не так.', {
+          title: 'Ошибка!',
+          variant: 'danger',
+          toaster: 'b-toaster-bottom-right',
+          autoHideDelay: 5000,
+        })
+      }
+    }
   }
 }
 </script>

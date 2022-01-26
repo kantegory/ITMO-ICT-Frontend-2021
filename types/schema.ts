@@ -86,6 +86,9 @@ export interface paths {
   "/api/checks/{id}/items": {
     put: operations["checks_items_update"];
   };
+  "/api/checks/{id}/users": {
+    put: operations["checks_users_update"];
+  };
   "/api/checks/sync": {
     post: operations["checks_sync_create"];
   };
@@ -107,6 +110,7 @@ export interface components {
       /** ID чека */
       id: number;
       items: components["schemas"]["CheckItem"][];
+      users: components["schemas"]["User"][];
       /**
        * Дата создания
        * Format: date-time
@@ -155,8 +159,6 @@ export interface components {
       createdBy: number;
       /** Кем обновлён */
       updatedBy: number;
-      /** Пользователи */
-      users: number[];
     };
     CheckItem: {
       /** ID товара */
@@ -201,6 +203,9 @@ export interface components {
       /** Товар */
       item: number;
     };
+    CheckUsersUpdateRequest: {
+      users: string[];
+    };
     /** @description Serializer for JWT authentication. */
     JWT: {
       access_token: string;
@@ -218,12 +223,12 @@ export interface components {
       count?: number;
       /**
        * Format: uri
-       * @example http://api.example.org/accounts/?page=4
+       * @example http://api.example.org/accounts/?offset=400&limit=100
        */
       next?: string | null;
       /**
        * Format: uri
-       * @example http://api.example.org/accounts/?page=2
+       * @example http://api.example.org/accounts/?offset=200&limit=100
        */
       previous?: string | null;
       results?: components["schemas"]["Check"][];
@@ -280,7 +285,6 @@ export interface components {
        * Format: uri
        */
       avatar?: string | null;
-      /** Format: uri */
       avatarUrl: string;
     };
     ProfileAvatarRequest: {
@@ -320,6 +324,25 @@ export interface components {
     };
     TokenVerifyRequest: {
       token: string;
+    };
+    User: {
+      id: number;
+      /**
+       * Имя пользователя
+       * @description Обязательное поле. Не более 150 символов. Только буквы, цифры и символы @/./+/-/_.
+       */
+      username: string;
+      /**
+       * E-Mail
+       * Format: email
+       */
+      email: string;
+      /** Имя */
+      firstName?: string;
+      /** Фамилия */
+      lastName?: string;
+      /** Format: uri */
+      avatarUrl: string;
     };
     /** @description User model w/o password */
     UserDetails: {
@@ -543,8 +566,12 @@ export interface operations {
   checks_list: {
     parameters: {
       query: {
-        /** A page number within the paginated result set. */
-        page?: number;
+        /** Number of results to return per page. */
+        limit?: number;
+        /** The initial index from which to return the results. */
+        offset?: number;
+        /** A search term. */
+        search?: string;
       };
     };
     responses: {
@@ -584,6 +611,26 @@ export interface operations {
     requestBody: {
       content: {
         "application/json": components["schemas"]["CheckItemPartRequest"][];
+      };
+    };
+  };
+  checks_users_update: {
+    parameters: {
+      path: {
+        /** A unique value identifying this Чек. */
+        id: number;
+      };
+    };
+    responses: {
+      200: {
+        content: {
+          "application/json": components["schemas"]["Check"];
+        };
+      };
+    };
+    requestBody: {
+      content: {
+        "application/json": components["schemas"]["CheckUsersUpdateRequest"];
       };
     };
   };
