@@ -119,6 +119,11 @@ const config: NuxtConfig = {
           name: 'ReceiptsListView',
           component: resolve(__dirname, 'pages/receipts/ReceiptsListView')
         },
+        {
+          path: '/receipts/:id',
+          name: 'ReceiptInstanceView',
+          component: resolve(__dirname, 'pages/receipts/ReceiptInstanceView')
+        },
       )
     }
   },
