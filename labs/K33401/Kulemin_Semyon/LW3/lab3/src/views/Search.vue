@@ -1,7 +1,7 @@
 <template>
   <div class="body">
     <Header/>
-    <WeatherCards/>
+    <SearchWeather/>
     <Footer/>
   </div>
 </template>
@@ -9,14 +9,18 @@
 <script>
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import WeatherCards from '@/components/WeatherCards'
+import SearchWeather from '@/components/SearchWeather'
 
 export default {
-  name: 'Home',
+  name: 'Search',
   components: {
-    WeatherCards,
     Header,
-    Footer
+    Footer,
+    SearchWeather
   }
 }
 </script>
+
+<style scoped>
+
+</style>

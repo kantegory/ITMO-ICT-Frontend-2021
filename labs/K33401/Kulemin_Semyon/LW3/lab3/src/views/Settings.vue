@@ -1,7 +1,7 @@
 <template>
   <div class="body">
     <Header/>
-    <WeatherCards/>
+    <CitiesChoice/>
     <Footer/>
   </div>
 </template>
@@ -9,14 +9,18 @@
 <script>
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import WeatherCards from '@/components/WeatherCards'
+import CitiesChoice from '@/components/CitiesChoice'
 
 export default {
-  name: 'Home',
+  name: 'Settings',
   components: {
-    WeatherCards,
     Header,
-    Footer
+    Footer,
+    CitiesChoice
   }
 }
 </script>
+
+<style scoped>
+
+</style>
