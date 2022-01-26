@@ -1,6 +1,6 @@
 <template>
-  <b-card no-body v-b-toggle="`accordion-${value.id}`">
-    <b-card-header header-tag="header" class="p-3 bg-transparent" role="tab">
+  <b-card no-body>
+    <b-card-header header-tag="header" class="p-3 bg-transparent" role="tab" v-b-toggle="`accordion-${value.id}`">
       <b-row cols="1" cols-md="4">
         <b-col md="4" class="font-weight-bold">{{ value.name }}</b-col>
         <b-col md="4" class="font-weight-light">{{ value.address }}</b-col>
