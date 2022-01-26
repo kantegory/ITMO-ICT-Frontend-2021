@@ -1,0 +1,95 @@
+section {
+    padding: 64px 0;
+}
+
+.sectionTitle {
+    margin-bottom: 30px;
+}
+
+.navbar {
+    display: flex;
+}
+
+.navbarLinks {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.navbarLinks li {
+  margin-left: 10px;
+}
+
+.sectionTitle {
+    text-align: center;
+    font-size: 32px;
+}
+
+.sectionSubTitle {
+    font-size: 16px;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-underline-color: aliceblue;
+}
+
+.headerSection {
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    background-image: url("../img/landing/background.jpg");
+    background-repeat: no-repeat;
+    text-align: center;
+    color: white;
+}
+
+.headerTitle {
+    padding-top: calc(50vh - 128px);
+    font-size: 64px;
+}
+
+.headerDescription {
+    font-size: 32px;
+}
+
+#applicationDescription {
+    text-align: center;
+    font-weight: bold;
+}
+
+.advantages {
+    display: flex;
+    justify-content: space-between;
+}
+
+.advantages__advantage {
+    text-align: center;
+    width: 256px;
+    margin: 0 auto;
+}
+
+.team .card img {
+    height: 336px;
+    object-fit: cover;
+}
+
+@media screen and (max-width: 800px) {
+    .advantages {
+        flex-direction: column;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .advantages__advantage {
+        padding: 30px;
+        width: 80%;
+    }
+
+    .team .card {
+        margin-top: 30px !important;
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}

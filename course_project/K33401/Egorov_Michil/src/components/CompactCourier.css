@@ -1,0 +1,30 @@
+.courier_card {
+    position: relative;
+    background-color: white;
+    padding: 49px 68px;
+    border-radius: 20px;
+}
+
+.courier_card__img {
+    height: 242px;
+    width: 242px;
+    border-radius: 100%;
+}
+
+.courier_card__info {
+    padding-left: 80px;
+}
+
+.courier_card__info p {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+.courier_card__info__name {
+    font-size: 36px !important;
+    font-weight: bold !important;
+}
+
+.courier_card__info a {
+    color: rgba(147, 120, 255, 1);
+}

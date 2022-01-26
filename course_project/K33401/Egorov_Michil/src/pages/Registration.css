@@ -1,0 +1,72 @@
+.regform {
+    padding-top: 55px;
+}
+
+.regform .form-control, .regform .form-select {
+    width: 278px;
+    border-radius: 8px;
+    grid-column: 1;
+    margin-left: 61px;
+    font-size: 14px;
+    padding: 10px 16px;
+}
+
+.regform .btn {
+    width: 259px;
+    height: 46px;
+    background-color: #9378FF;
+    border-radius: 63px;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.regform h3 {
+    margin-left: 64px;
+    margin-bottom: 50px;
+}
+
+.regform .form-label, .regform .form-text{
+    margin-left: 64px;
+}
+
+.regform .form-check{
+    text-align: center;
+    margin: 0 130px;
+}
+
+.regform .our-button {
+    margin-left: 74px;
+}
+
+.grid-wrapper {
+    display: grid;
+    width: 870px;
+    height: 700px;
+    background-color: white;
+    border-radius: 20px;
+    /* text-align: center; */
+    margin: 20px auto;
+    vertical-align: middle;
+}
+
+.reg-icon {
+    grid-column: 2;
+    margin-top: 151px;
+    margin-right: 64px;
+}
+
+.regform label {
+    font-size: 12px;
+    color: #8F9090;
+}
+.mb-3 {
+    margin: 0 0 0 0;
+}
+
+.regform p {
+    font-size: 14px;
+    color: #8F9090;
+    margin-left: 138px;
+    /* margin-top: 33px; */
+}
