@@ -4,12 +4,17 @@
       <h2 class="text-center mt-4">Мои чеки</h2>
       <b-link class="underline mb-4" @click="syncReceipts">Синхронизировать</b-link>
 
+      <b-form @submit.prevent="updateSearch" class="mb-4 d-flex">
+        <b-form-input v-model="search" placeholder="Поиск" @change="updateSearch" class="mr-2"/>
+        <b-button variant="dark" @submit>Поиск</b-button>
+      </b-form>
+
       <div class="accordion w-100" role="tablist">
         <receipts-list-header v-for="receipt in receipts" :value="receipt"/>
       </div>
     </b-container>
 
-    <infinite-loading @infinite="infiniteHandler">
+    <infinite-loading :identifier="infiniteId" @infinite="infiniteHandler">
       <template #no-more>Нет результатов</template>
     </infinite-loading>
   </div>
@@ -31,7 +36,16 @@ import ReceiptsListHeader from "~/components/app/ReceiptsListHeader.vue";
 export default class ReceiptsListView extends Vue {
   offset = 0
   limit = 15
+  search = ''
+  infiniteId = +new Date()
+
   receipts: components['schemas']['Check'][] = []
+
+  updateSearch() {
+    this.offset = 0
+    this.receipts = [];
+    this.infiniteId += 1;
+  }
 
   async syncReceipts() {
     try {
@@ -57,7 +71,13 @@ export default class ReceiptsListView extends Vue {
 
   async infiniteHandler($state: StateChanger) {
     try {
-      const response = await this.$axios.get('/checks', {params: {offset: this.offset, limit: this.limit}})
+      const response = await this.$axios.get('/checks', {
+        params: {
+          offset: this.offset,
+          limit: this.limit,
+          search: this.search,
+        }
+      })
       const data = response.data
       if (data.results.length) {
         this.offset += this.limit;
