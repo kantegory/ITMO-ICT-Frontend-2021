@@ -17,7 +17,7 @@ export default class RequestsMixins extends Vue {
       if (axios.isAxiosError(e)) fallback = e
       else {
         error = e
-        console.log(`Unknown error on ${method} to ${url}: ${e}`)
+        console.error(`Unknown error on ${method} to ${url}: ${e}`)
       }
     }
 

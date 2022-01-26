@@ -1,6 +1,7 @@
 import { OnecallResponse } from "~/types/onecall";
 
 export type TCitiesStoreData = {
+  id: number
   country: string
   lat: number
   local_names: { [key: string]: string } & { ru: string }

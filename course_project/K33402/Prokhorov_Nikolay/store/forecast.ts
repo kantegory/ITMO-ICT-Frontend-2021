@@ -32,17 +32,12 @@ export default class ForecastModule extends VuexModule {
   async fetchForecast(cityData: TCitiesStoreData) {
     let result: TForecastStoreData | null = null
 
-    let params = new URLSearchParams()
-    params.append('lat', cityData.lat.toString())
-    params.append('lon', cityData.lon.toString())
-    params.append('units', 'metric')
-    params.append('appid', this.apikey)
 
-    await $axios.get(`https://api.openweathermap.org/data/2.5/onecall`, { params })
+    await $axios.get(`/city/${cityData.id}/forecast`)
       .then(response => {
         console.log(response)
 
-        result = response.data as TForecastStoreData
+        result = response.data[0] as TForecastStoreData
         result.city = cityData
         this.setError('')
         this.addData(result)

@@ -25,11 +25,11 @@
         </b-form>
       </b-col>
 
-      <b-col lg="5" class="mt-3 text-lg-right">
-        <h5>Информация о вашем местоположении недоступна</h5>
+      <!--      <b-col lg="5" class="mt-3 text-lg-right">-->
+      <!--        <h5>Информация о вашем местоположении недоступна</h5>-->
 
-        <b-button class="mt-1 w-100">Предоставить доступ</b-button>
-      </b-col>
+      <!--        <b-button class="mt-1 w-100">Предоставить доступ</b-button>-->
+      <!--      </b-col>-->
     </b-row>
 
     <b-row cols="1" cols-md="2" cols-xl="3" class="mt-5">
