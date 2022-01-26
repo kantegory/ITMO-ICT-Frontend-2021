@@ -1,0 +1,172 @@
+
+#wrapper {
+	max-width: 1000px;
+	margin: auto;
+}
+
+header{
+
+}
+.headerPic {
+    width: 100%;
+    height:350px;
+    margin: 0;
+    display:flex;
+    background: url(images/mainplane.png) repeat-x scroll 0 0 ;
+    background-size: cover;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+.headerPic h1{
+    border: 2px solid lightpink;
+    border-radius: 30px;
+    margin:15px;
+    padding: 7px;
+    background-color: rgba(80, 149, 239, .6);
+    color: white;
+    text-shadow: 5px 3px lightpink;
+    font-size: 100px;
+}
+
+body {
+    margin:0;
+    font-family: 'Nunito Sans', sans-serif;
+   }
+
+ nav{
+    width:40%;
+     float: left;
+    margin:10px;
+}
+
+nav ul li {
+    background: url(images/mainplane.png) repeat-x scroll 0 0 ;
+    padding: 15px;
+    display: inline-block;
+    text-align: center;
+    vertical-align: middle;
+    border: 3px solid lightpink;
+    margin: 5px;
+    height: 60px;
+    width: 65px;
+    border-radius: 50%;
+}
+nav ul li a{
+    color: whitesmoke;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+    top: 15px;
+    margin:0;
+    font-size: 18px;
+    text-decoration:none;
+    text-shadow: 1px 1px lightpink;
+}
+
+nav ul li :hover {
+    display: flex;
+    text-align: center;
+    vertical-align: middle;
+    padding: 15px;
+    margin: 3px;
+    border-radius: 50%;
+    height: 60px;
+    width: 65px;
+    background: lightpink;
+    text-decoration:none;
+}
+footer {
+    width: 100%;
+    margin-top:50px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    background-color: rgba(100, 149, 237, .5);
+}
+footer p{
+    padding:5px;
+    color: cornflowerblue;
+    text-shadow: 1px 1px lightpink;
+}
+.form {
+    margin: 20px;
+    justify-content: center;
+    display:flex;
+    flex-direction: column;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    font-size: 16px ;
+    align-items: center;
+}
+
+.form-group input,
+.form-group {
+    margin-top: 5px;
+}
+
+.submit-button {
+    margin-top: 20px;
+}
+
+button {
+    background-color: cornflowerblue;
+    color: white;
+    margin:0 auto;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    width: 25%;
+    font-size: 16px;
+}
+
+button:hover {
+    opacity: 0.8;
+    background-color: lightpink;
+}
+
+.ticket{
+    display:flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid lightpink;
+    border-radius: 30px;
+    margin-left:20px;
+    margin-right: 60px;
+    margin-top:20px;
+    background-color: lavenderblush;
+}
+
+.ticket button{
+    height: 50px;
+    width: 130px;
+    margin:0;
+}
+
+.mainTic{
+    font-size:20px;
+    font-weight: bold;
+    text-shadow: 1px 1px lightpink;
+}
+
+.difTic{
+    font-size:17px;
+}
+
+.citation{
+    display:flex;
+    justify-content: flex-end;
+    margin:42px;
+    opacity: 0.7;
+}
+.line{
+    width:90%;
+    height: 0;
+    display:block;
+    border: 2px solid lightpink;
+    margin:20px auto;
+}
+
+
