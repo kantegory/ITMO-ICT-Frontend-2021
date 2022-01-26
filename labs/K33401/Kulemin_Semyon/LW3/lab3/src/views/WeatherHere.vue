@@ -12,9 +12,9 @@
 </template>
 
 <script>
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import FullWeather from '../components/FullWeather'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import FullWeather from '@/components/FullWeather'
 
 export default {
   name: 'WeatherAtHome',
@@ -22,7 +22,13 @@ export default {
     Header,
     Footer,
     FullWeather
-  }
+  },
+  data: () => ({
+    lat: '',
+    lon: '',
+    access: false
+  })
+}
 </script>
 
 <style scoped>
