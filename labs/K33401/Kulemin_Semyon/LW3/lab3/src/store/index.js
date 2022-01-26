@@ -20,12 +20,6 @@ export const store = new Vuex.Store({
     },
     CITYFORFULL (state) {
       return state.cityForFull
-    },
-    LAT (state) {
-      return state.lat
-    },
-    LON (state) {
-      return state.lon
     }
   },
   mutations: {
@@ -37,12 +31,6 @@ export const store = new Vuex.Store({
     },
     changeCity (state, payload) {
       state.cities.splice(payload[0], 1, payload.slice(1, 4))
-    },
-    setLat (state, payload) {
-      state.lat = payload
-    },
-    setLon (state, payload) {
-      state.lon = payload
     }
   },
   actions: {
@@ -51,10 +39,6 @@ export const store = new Vuex.Store({
     },
     cityForFull (context, payload) {
       context.commit('setCityForFull', payload)
-    },
-    geo (context, payload) {
-      context.commit('setLat', payload[0])
-      context.commit('setLon', payload[1])
     }
   }
 })

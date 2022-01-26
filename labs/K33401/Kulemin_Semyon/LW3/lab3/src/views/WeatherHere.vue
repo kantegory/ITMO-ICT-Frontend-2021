@@ -26,14 +26,22 @@ export default {
   data: () => ({
     lat: '60.0',
     lon: '30.0',
-    access: true
+    access: false
   }),
   mounted () {
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(function (pos) {
-        this.$store.dispatch('geo', [pos.coords[0], pos.coords[1]])
-        this.data().access = true
-      })
+    this.geolocation()
+  },
+  methods: {
+    geolocation () {
+      navigator.geolocation.getCurrentPosition(this.geo_success, this.geo_error)
+    },
+    geo_success (pos) {
+      this.lat = pos.coords.latitude
+      this.lon = pos.coords.longitude
+      this.access = true
+    },
+    geo_error (error) {
+      console.log(error)
     }
   }
 }
