@@ -6,6 +6,7 @@ import SignUp from '../views/SignUp.vue'
 import Settings from '../views/Settings.vue'
 import Search from '../views/Search.vue'
 import AdvancedWeather from '../views/AdvancedWeather.vue'
+import WeatherHere from '../views/WeatherHere.vue'
 
 Vue.use(VueRouter)
 
@@ -37,8 +38,13 @@ const routes = [
   },
   {
     path: '/advancedweather',
-    name: 'AdvanceDWeather',
+    name: 'AdvancedWeather',
     component: AdvancedWeather
+  },
+  {
+    path: '/weatherhere',
+    name: 'WeatherHere',
+    component: WeatherHere
   }
 
 ]

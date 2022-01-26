@@ -37,6 +37,9 @@ export const store = new Vuex.Store({
     },
     cityForFull (context, payload) {
       context.commit('setCityForFull', payload)
+    },
+    getGeo (context) {
+
     }
   }
 })
