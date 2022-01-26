@@ -3,6 +3,7 @@ import { TCitiesStoreData } from "~/types/store";
 import { VuexAction } from "nuxt-property-decorator";
 import { $axios } from "~/utils/axios";
 import axios from "axios";
+import useRequests from "~/utils/useRequests";
 
 @Module({
   name: 'cities',
@@ -11,12 +12,11 @@ import axios from "axios";
 })
 export default class CitiesModule extends VuexModule {
   data: TCitiesStoreData[] = []
+  favorites: number[] = []
   error: string = ''
-  apikey: string = ''
 
-  @Mutation
-  setApiKey(key: string) {
-    this.apikey = key
+  get isCityInFavorites() {
+    return (cityID: number) => this.favorites.includes(cityID)
   }
 
   @Mutation
@@ -27,6 +27,16 @@ export default class CitiesModule extends VuexModule {
   @Mutation
   addData(data: TCitiesStoreData) {
     this.data.push(data)
+  }
+
+  @Mutation
+  addCityFavorite(cityID: number) {
+    this.favorites.push(cityID)
+  }
+
+  @Mutation
+  removeCityFavorite(cityID: number) {
+    this.favorites = this.favorites.filter(item => item !== cityID)
   }
 
   @VuexAction({ rawError: true })
@@ -70,5 +80,20 @@ export default class CitiesModule extends VuexModule {
     }
 
     return result
+  }
+
+  @VuexAction({ rawError: true })
+  async favoritesChange(cityID: number) {
+    const isAdd = !this.isCityInFavorites(cityID)
+    const method = isAdd ? 'post' : 'delete'
+    const url = `/city/${cityID}/favorite`
+
+    const result = await useRequests($axios).performRequest(method, url)
+
+    if (result.response) {
+      isAdd ? this.addCityFavorite(cityID) : this.removeCityFavorite(cityID)
+    } else if (result.fallback) {
+      this.setError(`Не удалось ${isAdd ? 'сохранить' : 'удалить'} город. Сервер вернул ${result.fallback.response?.status}`)
+    }
   }
 }

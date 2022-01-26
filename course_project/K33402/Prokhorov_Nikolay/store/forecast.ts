@@ -11,12 +11,6 @@ import { $axios } from "~/utils/axios";
 export default class ForecastModule extends VuexModule {
   data: TForecastStoreData[] = []
   error: string = ''
-  apikey: string = ''
-
-  @Mutation
-  setApiKey(key: string) {
-    this.apikey = key
-  }
 
   @Mutation
   setError(error: string) {

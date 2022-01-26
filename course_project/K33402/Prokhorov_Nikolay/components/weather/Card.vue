@@ -23,6 +23,17 @@
       </div>
     </div>
 
+
+    <div class="weather-card__button">
+      <b-button
+        variant="primary"
+        class="w-100 mt-3"
+        @click="$storets.cities.favoritesChange(forecast.city.id)"
+      >
+        {{ $storets.cities.isCityInFavorites(forecast.city.id) ? `Удалить` : `В избранное` }}
+      </b-button>
+    </div>
+
     <!--    <nuxt-link to="/" class="weather-card__link"/>-->
   </b-card>
 </template>
@@ -65,6 +76,20 @@ export default class WeatherCard extends Vue {
     padding-top: 1rem;
 
     border-top: 1px solid $border-color;
+  }
+
+  &__button {
+    transition: opacity 0.1s ease-in-out;
+
+    @include media-breakpoint-up(md) {
+      opacity: 0;
+    }
+  }
+
+  &:hover {
+    .weather-card__button {
+      opacity: 1;
+    }
   }
 
   &__link {

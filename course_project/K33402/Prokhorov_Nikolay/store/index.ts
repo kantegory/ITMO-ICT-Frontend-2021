@@ -17,11 +17,7 @@ export class StoreTypescript {
     this.$config = $config
 
     this.auth = getModule(AuthModule, $store)
-
     this.cities = getModule(CitiesModule, $store)
     this.forecast = getModule(ForecastModule, $store)
-
-    this.cities.setApiKey($config.API_KEY)
-    this.forecast.setApiKey($config.API_KEY)
   }
 }
