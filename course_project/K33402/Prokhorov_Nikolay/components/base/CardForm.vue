@@ -1,18 +1,21 @@
 <template>
   <b-card class="form-as-card">
     <b-form @submit.prevent="submit">
+      <app-form-alert v-if="alert" :errors="alert" />
       <slot />
     </b-form>
   </b-card>
 </template>
 
 <script lang="ts">
-import { Component, Emit, Vue } from 'nuxt-property-decorator'
+import { Component, Emit, Prop, Vue } from 'nuxt-property-decorator'
+import { TFormErrors } from "~/types/forms";
 
 @Component({
   name: 'BaseCardForm'
 })
 export default class BaseCardForm extends Vue {
+  @Prop() readonly alert ?: TFormErrors<any>
 
   @Emit()
   submit() {

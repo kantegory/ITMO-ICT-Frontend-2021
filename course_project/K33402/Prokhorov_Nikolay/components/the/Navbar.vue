@@ -1,7 +1,7 @@
 <template>
   <b-navbar toggleable="lg" type="light" variant="light">
     <b-container>
-      <b-navbar-brand :to="{name: 'forecast'}">SuperWeather</b-navbar-brand>
+      <b-navbar-brand :to="{name: 'index'}">SuperWeather</b-navbar-brand>
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -12,11 +12,11 @@
         </b-navbar-nav>
 
         <b-navbar-nav>
-          <b-nav-item-dropdown v-if="false" text="Аккаунт" right no-caret>
+          <b-nav-item-dropdown v-if="$auth.loggedIn" text="Аккаунт" right no-caret>
             <b-dropdown-item href="#">Профиль</b-dropdown-item>
-            <b-dropdown-item href="#">Выйти</b-dropdown-item>
+            <b-dropdown-item @click="$auth.logout('local')">Выйти</b-dropdown-item>
           </b-nav-item-dropdown>
-          <b-nav-item :to="{name: 'sign-up'}">
+          <b-nav-item v-else :to="{name: 'sign-up'}">
             Войти
           </b-nav-item>
         </b-navbar-nav>
@@ -32,7 +32,6 @@ import { Component, Vue } from 'nuxt-property-decorator'
   name: 'TheNavbar'
 })
 export default class TheNavbar extends Vue {
-
 }
 </script>
 

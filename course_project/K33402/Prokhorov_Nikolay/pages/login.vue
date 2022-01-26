@@ -1,28 +1,32 @@
 <template>
   <b-container class="d-flex justify-content-center align-items-start">
-    <base-card-form @submit="submit">
-      <b-form-group
+    <base-card-form
+      :alert="errors"
+      @submit="submit"
+    >
+      <app-input
+        v-model="form.username"
         label="Имя пользователя"
-      >
-        <b-form-input
-          v-model="form.username"
-          required
-        />
-      </b-form-group>
+        placeholder="Ваше имя пользователя"
+        :errors.sync="errors"
+        :errors-key="'username'"
+        required
+      />
 
-      <b-form-group
-        label="Пароль"
-      >
-        <b-form-input
-          v-model="form.password"
-          type="password"
-          required
-        />
+      <app-input
+        v-model="form.password"
+        label="Имя пользователя"
+        placeholder="Ваш пароль"
+        type="password"
+        :errors.sync="errors"
+        :errors-key="'password'"
+        required
+        class="mb-1"
+      />
 
-        <small class="pl-2">
-          <nuxt-link to="/">Не помню пароль</nuxt-link>
-        </small>
-      </b-form-group>
+      <small class="pl-2">
+        <nuxt-link to="/">Не помню пароль</nuxt-link>
+      </small>
 
       <b-button variant="primary"
                 type="submit"
@@ -42,9 +46,9 @@
 
 <script lang="ts">
 import { Component, Vue } from 'nuxt-property-decorator'
-import { TLoginForm } from "~/types/forms";
+import { TFormErrors, TLoginForm } from "~/types/forms";
 import CardForm from "~/components/base/CardForm.vue";
-
+import axios from "axios";
 
 @Component({
   name: 'login',
@@ -55,9 +59,17 @@ export default class Login extends Vue {
     username: null,
     password: null
   }
+  errors = <TFormErrors<TLoginForm>>{}
 
-  submit() {
-    this.$router.push({ name: 'index' })
+  async submit() {
+    try {
+      await this.$auth.loginWith('local', { data: this.form })
+    } catch (e) {
+      if (axios.isAxiosError(e)) {
+        if (e.response) this.errors = e.response.data
+        else this.errors.non_field_errors = ['Неизвестная ошибка! Попробуйте позже']
+      }
+    }
   }
 }
 </script>

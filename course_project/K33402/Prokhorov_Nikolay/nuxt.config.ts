@@ -57,12 +57,41 @@ const config: NuxtConfig = {
     '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // https://auth.nuxtjs.org/
+    '@nuxtjs/auth-next'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: '/',
+    baseURL: process.env.API_DOMAIN,
+  },
+
+  auth: {
+    redirect: {
+      login: '/my',
+      logout: '/',
+      home: '/my',
+    },
+    strategies: {
+      local: {
+        token: {
+          property: 'auth_token',
+          global: true,
+          required: true,
+          type: 'Token'
+        },
+        user: {
+          property: false,
+          autoFetch: true,
+        },
+        endpoints: {
+          login: { url: '/auth/token/login/', method: 'post' },
+          logout: { url: '/auth/token/logout/', method: 'post' },
+          user: { url: '/auth/users/me/', method: 'get' },
+        }
+      }
+    },
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
