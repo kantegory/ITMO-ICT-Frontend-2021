@@ -49,7 +49,7 @@ export default {
     methods: {
         onSubmit(form) {
             if (document.getElementById("password").value === document.getElementById("password2").value) {
-                store.dispatch('changeName', form);
+                store.dispatch('changePassword', form);
             }
         }
     }
