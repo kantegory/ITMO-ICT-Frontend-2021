@@ -9,12 +9,12 @@
 <script lang="ts">
 import { Component, mixins, Prop } from 'nuxt-property-decorator'
 import { TFormErrors } from "~/types/forms";
-import FormsMixins from "~/mixins/FormsMixin";
+import FormsMixin from "~/mixins/FormsMixin";
 
 @Component({
   name: 'FormAlert',
 })
-export default class FormAlert extends mixins(FormsMixins) {
+export default class FormAlert extends mixins(FormsMixin) {
   @Prop({
     default: () => {
       return {}

@@ -1,30 +1,31 @@
 <template>
   <b-form-group
     :label="label"
-    :state="errorsState(errors, errorKey)"
-    :invalid-feedback="errorsText(errors, errorKey)"
+    :state="errorsState(errors, errorsKey)"
+    :invalid-feedback="errorsText(errors, errorsKey)"
   >
     <b-form-input
       v-model="vmodel"
+      :type="type"
       :placeholder="placeholder"
       :required="required"
-      @change="errorReset(errors, errorKey)"
     />
+
+    <slot />
   </b-form-group>
 </template>
 
 <script lang="ts">
-import { Component, mixins, Prop, VModel } from 'nuxt-property-decorator'
+import { Component, mixins, Prop, VModel, Watch } from 'nuxt-property-decorator'
 import { TFormErrors } from "~/types/forms";
-import FormsMixins from "~/mixins/FormsMixin";
+import FormsMixin from "~/mixins/FormsMixin";
 
 @Component({
-  name: 'Input'
+  name: 'AppInput'
 })
-export default class Input extends mixins(FormsMixins) {
+export default class AppInput extends mixins(FormsMixin) {
   @VModel({ required: true })
   vmodel !: string | number | null
-
 
   @Prop() readonly label ?: string
   @Prop() readonly placeholder ?: string
@@ -37,8 +38,12 @@ export default class Input extends mixins(FormsMixins) {
       return {}
     }
   }) readonly errors !: TFormErrors<any>
-  @Prop({ type: String, default: 'fieldError' }) readonly errorKey !: string
+  @Prop({ type: String, default: 'fieldError' }) readonly errorsKey !: string
 
+  @Watch('vmodel')
+  onChange () {
+    this.errorReset(this.errors, this.errorsKey)
+  }
 }
 </script>
 

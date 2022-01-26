@@ -45,28 +45,31 @@
 </template>
 
 <script lang="ts">
-import { Component, Vue } from 'nuxt-property-decorator'
-import { TFormErrors, TLoginForm } from "~/types/forms";
+import { Component, mixins } from 'nuxt-property-decorator'
+import { TLoginForm } from "~/types/forms";
 import CardForm from "~/components/base/CardForm.vue";
 import axios from "axios";
+import FormsMixin from "~/mixins/FormsMixin";
+import RequestsMixins from "~/mixins/RequestsMixins";
+import ToastsMixin from "~/mixins/ToastsMixin";
 
 @Component({
   name: 'login',
   components: { CardForm },
 })
-export default class Login extends Vue {
+export default class Login extends mixins(FormsMixin, RequestsMixins, ToastsMixin) {
   form: TLoginForm = {
     username: null,
     password: null
   }
-  errors = <TFormErrors<TLoginForm>>{}
+  errors = this.errorsFromForm(this.form)
 
   async submit() {
     try {
       await this.$auth.loginWith('local', { data: this.form })
     } catch (e) {
       if (axios.isAxiosError(e)) {
-        if (e.response) this.errors = e.response.data
+        if (e.response) this.errorsFromResponse(this.errors, e.response.data)
         else this.errors.non_field_errors = ['Неизвестная ошибка! Попробуйте позже']
       }
     }
