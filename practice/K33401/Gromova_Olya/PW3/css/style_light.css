@@ -1,0 +1,12 @@
+:root {
+    --main-bg-img: url("../images/light.jpg");
+    --main-bg-color: #070a0c;
+    --main-text-color: #070a0c;
+    --footer-color: #E5E5E5;
+    --main-text:#d1d4d6;
+    --main-card-color:#E5E5E5;
+    --logo: url("../images/logo.png");
+    --border-color: #070a0c;
+    --close: url("../images/close_light.svg");
+  
+  }

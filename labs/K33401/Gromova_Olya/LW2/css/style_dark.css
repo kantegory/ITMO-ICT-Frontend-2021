@@ -1,0 +1,13 @@
+
+:root {
+    --main-bg-img: url("../images/dark.jpg");
+    --main-text-color: #E5E5E5;
+    --footer-color: #4a65c9;
+    --main-bg-color:#384575;
+    --main-card-color: #6074bb;
+    --main-text:#e5e5e5;
+    --logo:url("../images/logo_dark.png");
+    --border-color:#C4C4C4;
+    --close: url("../images/close_dark.svg");
+  
+  }
