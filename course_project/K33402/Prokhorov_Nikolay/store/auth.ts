@@ -1,8 +1,14 @@
 import { Module, Mutation, VuexModule } from 'vuex-module-decorators'
 
-interface payload {
+type payload = {
   key: string
   value: any
+}
+
+type TUser = {
+  id: number
+  email: string
+  username: string
 }
 
 @Module({
@@ -11,7 +17,7 @@ interface payload {
   namespaced: true,
 })
 export default class AuthModule extends VuexModule {
-  user: any = null
+  user: TUser | null = null
   loggedIn: boolean = false
 
   @Mutation

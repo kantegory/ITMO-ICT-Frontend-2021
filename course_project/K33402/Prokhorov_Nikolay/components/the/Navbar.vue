@@ -8,12 +8,17 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav class="mx-auto">
           <b-nav-item :to="{'name': 'forecast'}">Прогноз</b-nav-item>
-          <b-nav-item :to="{'name': 'my'}">Избранное</b-nav-item>
+          <b-nav-item
+            v-if="$storets.auth.loggedIn"
+            :to="{'name': 'my'}"
+          >
+            Избранное
+          </b-nav-item>
         </b-navbar-nav>
 
         <b-navbar-nav>
           <b-nav-item-dropdown v-if="$storets.auth.loggedIn" text="Аккаунт" right no-caret>
-            <b-dropdown-item href="#">Профиль</b-dropdown-item>
+            <b-dropdown-item :to="{name: 'profile'}">Профиль</b-dropdown-item>
             <b-dropdown-item @click="logout">Выйти</b-dropdown-item>
           </b-nav-item-dropdown>
           <b-nav-item v-else :to="{name: 'login'}">

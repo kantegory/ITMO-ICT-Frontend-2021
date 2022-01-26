@@ -50,14 +50,14 @@ import { TLoginForm } from "~/types/forms";
 import CardForm from "~/components/base/CardForm.vue";
 import axios from "axios";
 import FormsMixin from "~/mixins/FormsMixin";
-import RequestsMixins from "~/mixins/RequestsMixins";
+import RequestsMixin from "~/mixins/RequestsMixin";
 import ToastsMixin from "~/mixins/ToastsMixin";
 
 @Component({
   name: 'login',
   components: { CardForm },
 })
-export default class Login extends mixins(FormsMixin, RequestsMixins, ToastsMixin) {
+export default class Login extends mixins(FormsMixin, RequestsMixin, ToastsMixin) {
   form: TLoginForm = {
     username: null,
     password: null

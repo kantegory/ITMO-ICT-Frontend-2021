@@ -69,13 +69,13 @@
 import { Component, mixins } from 'nuxt-property-decorator'
 import { TSignUpForm } from "~/types/forms";
 import FormsMixin from "~/mixins/FormsMixin";
-import RequestsMixins from "~/mixins/RequestsMixins";
+import RequestsMixin from "~/mixins/RequestsMixin";
 import ToastsMixin from "~/mixins/ToastsMixin";
 
 @Component({
   name: 'sign-up'
 })
-export default class SignUp extends mixins(FormsMixin, RequestsMixins, ToastsMixin) {
+export default class SignUp extends mixins(FormsMixin, RequestsMixin, ToastsMixin) {
   form: TSignUpForm = {
     username: null,
     password: null,
