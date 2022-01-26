@@ -9,7 +9,7 @@
       </div>
     <div class="row mx-5">
       <div id='search-result' class="col">
-        <b-card class="card" img-src='@/assets/ivanovo.jpg'>
+        <b-card class="card" img-src='../assets/ivanovo.jpg'>
           <div class="d-flex flex-column h-100 p-5 pb-3 text-black text-shadow-2">
             <h2 id="townname" class="pt-5 display-6 lh-1 fw-bold">Ivanovo</h2>
             <h2 id="towndegrees" class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold">-5°C</h2>
