@@ -26,28 +26,20 @@
 </template>
 
 <script lang="ts">
-import {Component, Vue} from 'nuxt-property-decorator'
+import {Component, mixins, Vue} from 'nuxt-property-decorator'
 import {components} from "~/types/schema";
+import ErrorsMixin from "~/mixins/errors";
 
 @Component({
   name: 'RegisterView',
   auth: 'guest',
 })
-export default class RegisterView extends Vue {
+export default class RegisterView extends mixins(ErrorsMixin, Vue) {
   form: components['schemas']['RegisterRequest'] = {
     username: '',
     email: '',
     password1: '',
     password2: '',
-  }
-  errors: { [name: string]: string[] } = {}
-
-  getError(key: string) {
-    return this.errors?.[key]?.[0] !== undefined ? this.errors?.[key]?.[0] : ''
-  }
-
-  getState(key: string) {
-    return this.getError(key) === ''
   }
 
   async userRegister() {

@@ -30,28 +30,20 @@
 </template>
 
 <script lang="ts">
-import {Component, Vue} from 'nuxt-property-decorator'
+import {Component, mixins, Vue} from 'nuxt-property-decorator'
 import {components} from "~/types/schema";
 import {AxiosResponse} from "axios";
+import ErrorsMixin from "~/mixins/errors";
 
 @Component({
   name: 'ProfileView',
 })
-export default class ProfileView extends Vue {
+export default class ProfileView extends mixins(ErrorsMixin, Vue) {
   user = this.$auth.user as components['schemas']['Profile']
   form: components['schemas']['ProfileRequest'] = {
     firstName: this.user.firstName,
     lastName: this.user.lastName,
     checkScanToken: this.user.checkScanToken,
-  }
-  errors: { [name: string]: string[] } = {}
-
-  getError(key: string) {
-    return this.errors?.[key]?.[0] !== undefined ? this.errors?.[key]?.[0] : ''
-  }
-
-  getState(key: string) {
-    return this.getError(key) === ''
   }
 
   async avatarUpdate(reset: boolean) {
