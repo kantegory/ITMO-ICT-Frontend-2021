@@ -1,0 +1,4 @@
+-r base.txt
+django-debug-toolbar==1.9.1
+django-grappelli==2.14.1
+coverage==4.5.1
