@@ -69,11 +69,7 @@ const config: NuxtConfig = {
 
   auth: {
     vuex: false as any,
-    redirect: {
-      login: '/my',
-      logout: '/',
-      home: '/my',
-    },
+
     strategies: {
       local: {
         token: {

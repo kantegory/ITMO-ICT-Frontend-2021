@@ -26,7 +26,10 @@ import { Component, Vue } from 'nuxt-property-decorator'
   }
 })
 export default class Default extends Vue {
-
+  mounted() {
+    this.$storets.auth.SET({key: 'user', value: this.$auth.$state.user})
+    this.$storets.auth.SET({key: 'loggedIn', value: this.$auth.$state.loggedIn})
+  }
 }
 </script>
 

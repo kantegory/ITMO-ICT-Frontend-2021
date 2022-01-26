@@ -67,6 +67,10 @@ export default class Login extends mixins(FormsMixin, RequestsMixins, ToastsMixi
   async submit() {
     try {
       await this.$auth.loginWith('local', { data: this.form })
+      this.$storets.auth.SET({ key: 'loggedIn', value: true })
+
+      await this.$router.push({ name: 'my' })
+
     } catch (e) {
       if (axios.isAxiosError(e)) {
         if (e.response) this.errorsFromResponse(this.errors, e.response.data)

@@ -12,11 +12,11 @@
         </b-navbar-nav>
 
         <b-navbar-nav>
-          <b-nav-item-dropdown v-if="$auth.loggedIn" text="Аккаунт" right no-caret>
+          <b-nav-item-dropdown v-if="$storets.auth.loggedIn" text="Аккаунт" right no-caret>
             <b-dropdown-item href="#">Профиль</b-dropdown-item>
-            <b-dropdown-item @click="$auth.logout('local')">Выйти</b-dropdown-item>
+            <b-dropdown-item @click="logout">Выйти</b-dropdown-item>
           </b-nav-item-dropdown>
-          <b-nav-item v-else :to="{name: 'sign-up'}">
+          <b-nav-item v-else :to="{name: 'login'}">
             Войти
           </b-nav-item>
         </b-navbar-nav>
@@ -32,6 +32,11 @@ import { Component, Vue } from 'nuxt-property-decorator'
   name: 'TheNavbar'
 })
 export default class TheNavbar extends Vue {
+  async logout() {
+    await this.$auth.logout('local')
+    this.$storets.auth.SET({ key: 'loggedIn', value: false })
+    await this.$router.push({ name: 'forecast' })
+  }
 }
 </script>
 
