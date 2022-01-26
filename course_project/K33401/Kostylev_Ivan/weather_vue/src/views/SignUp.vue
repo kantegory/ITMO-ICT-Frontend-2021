@@ -119,8 +119,7 @@ export default {
       },
       confirmPassword: {
         required,
-        minLength: minLength(8),
-        equalTo: password
+        minLength: minLength(8)
       }
     }
   },

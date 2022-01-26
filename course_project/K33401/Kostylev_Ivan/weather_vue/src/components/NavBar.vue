@@ -12,6 +12,9 @@
                     <router-link class="nav-link" :to="{name: 'Weather'}">Main</router-link>
                   </li>
                   <li class="nav-item">
+                    <router-link class="nav-link" :to="{name: 'Search'}">Search</router-link>
+                  </li>
+                  <li class="nav-item">
                     <router-link class="nav-link" :to="{name: 'SignIn'}">Log out</router-link>
                   </li>
                   <li class="nav-item">
