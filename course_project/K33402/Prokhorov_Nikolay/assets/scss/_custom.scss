@@ -1,0 +1,13 @@
+@import "theme";
+
+$input-height: unset;
+$input-btn-padding-y: 0.6rem;
+$input-btn-padding-x: 1rem;
+
+$border-color: rgba(darken($body-bg, 50%), .2);
+
+$card-hover-color: #ebf1f6;
+
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
