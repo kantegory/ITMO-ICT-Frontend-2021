@@ -7,7 +7,9 @@ export const store = new Vuex.Store({
   state: {
     cities: [['Moscow', '55,7522', '37,6156'], ['LA', '34.0522', '-118.244'], ['London', '51.5058', '-0.12574'], ['NY', '40.7143', '-74.006']],
     weather: [],
-    cityForFull: [['Moscow', '55,7522', '37,6156']]
+    cityForFull: [['Moscow', '55,7522', '37,6156']],
+    lat: '',
+    lon: ''
   },
   getters: {
     CITIES (state) {
@@ -18,6 +20,12 @@ export const store = new Vuex.Store({
     },
     CITYFORFULL (state) {
       return state.cityForFull
+    },
+    LAT (state) {
+      return state.lat
+    },
+    LON (state) {
+      return state.lon
     }
   },
   mutations: {
@@ -29,6 +37,12 @@ export const store = new Vuex.Store({
     },
     changeCity (state, payload) {
       state.cities.splice(payload[0], 1, payload.slice(1, 4))
+    },
+    setLat (state, payload) {
+      state.lat = payload
+    },
+    setLon (state, payload) {
+      state.lon = payload
     }
   },
   actions: {
@@ -38,8 +52,9 @@ export const store = new Vuex.Store({
     cityForFull (context, payload) {
       context.commit('setCityForFull', payload)
     },
-    getGeo (context) {
-
+    geo (context, payload) {
+      context.commit('setLat', payload[0])
+      context.commit('setLon', payload[1])
     }
   }
 })

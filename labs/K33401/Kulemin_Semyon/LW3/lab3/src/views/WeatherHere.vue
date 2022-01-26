@@ -24,10 +24,18 @@ export default {
     FullWeather
   },
   data: () => ({
-    lat: '',
-    lon: '',
-    access: false
-  })
+    lat: '60.0',
+    lon: '30.0',
+    access: true
+  }),
+  mounted () {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(function (pos) {
+        this.$store.dispatch('geo', [pos.coords[0], pos.coords[1]])
+        this.data().access = true
+      })
+    }
+  }
 }
 </script>
 
