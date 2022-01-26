@@ -15,3 +15,10 @@ export type TCitiesStoreData = {
 export type TForecastStoreData = OnecallResponse & {
   city: TCitiesStoreData
 }
+
+
+export type TFavoritesStoreData = {
+  city: number
+  city_info: TCitiesStoreData,
+  city_weather: TForecastStoreData[]
+}

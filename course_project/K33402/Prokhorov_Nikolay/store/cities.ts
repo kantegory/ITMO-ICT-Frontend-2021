@@ -13,10 +13,15 @@ import useRequests from "~/utils/useRequests";
 export default class CitiesModule extends VuexModule {
   data: TCitiesStoreData[] = []
   favorites: number[] = []
+  search: number[] = []
   error: string = ''
 
   get isCityInFavorites() {
     return (cityID: number) => this.favorites.includes(cityID)
+  }
+
+  get searchedCitiesOnly() {
+    return this.data.filter(item => this.search.includes(item.id))
   }
 
   @Mutation
@@ -30,6 +35,11 @@ export default class CitiesModule extends VuexModule {
   }
 
   @Mutation
+  setData(data: TCitiesStoreData[]) {
+    this.data = data
+  }
+
+  @Mutation
   addCityFavorite(cityID: number) {
     this.favorites.push(cityID)
   }
@@ -39,6 +49,11 @@ export default class CitiesModule extends VuexModule {
     this.favorites = this.favorites.filter(item => item !== cityID)
   }
 
+  @Mutation
+  addCitySearch(cityID: number) {
+    this.search.push(cityID)
+  }
+
   @VuexAction({ rawError: true })
   async fetchCity(city: string | null) {
     if (city === null) {
@@ -46,9 +61,10 @@ export default class CitiesModule extends VuexModule {
       return
     }
 
-    const filtered = this.data.filter(item => (item.local_names.ru.toLowerCase() === city.toLowerCase()) || (item.query === city.toLowerCase()))
+    const filtered: TCitiesStoreData[] = this.data.filter(item => (item.local_names.ru.toLowerCase() === city.toLowerCase()) || (item.query === city.toLowerCase()))
 
     if (filtered.length !== 0) {
+      this.addCitySearch(filtered[0].id)
       return filtered[0]
     }
 
@@ -66,7 +82,7 @@ export default class CitiesModule extends VuexModule {
         let data: TCitiesStoreData = response.data[0]
         data.query = city.toLowerCase()
 
-        // FIX check for duplicate
+        this.addCitySearch(data.id)
         this.addData(data)
         this.setError('')
         result = data

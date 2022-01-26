@@ -33,7 +33,7 @@
     </b-row>
 
     <b-row cols="1" cols-md="2" cols-xl="3" class="mt-5">
-      <b-col v-for="forecast in $storets.forecast.data" :key="forecast.city.name" class="mb-4">
+      <b-col v-for="forecast in searchCitiesOnly" :key="forecast.city.name" class="mb-4">
         <weather-card :forecast="forecast" />
       </b-col>
     </b-row>
@@ -48,6 +48,10 @@ import { Component, Vue } from 'nuxt-property-decorator'
 })
 export default class Forecast extends Vue {
   cityModel: string | null = ''
+
+  get searchCitiesOnly() {
+    return this.$storets.forecast.data.filter(item => this.$storets.cities.search.includes(item.city.id))
+  }
 
   async fetchCity() {
     const city = await this.$storets.cities.fetchCity(this.cityModel)

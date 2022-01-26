@@ -2,6 +2,7 @@ import { Module, Mutation, VuexModule } from 'vuex-module-decorators'
 import { VuexAction } from "nuxt-property-decorator";
 import { TCitiesStoreData, TForecastStoreData } from "~/types/store";
 import { $axios } from "~/utils/axios";
+import useRequests from "~/utils/useRequests";
 
 @Module({
   name: 'forecast',
@@ -22,23 +23,28 @@ export default class ForecastModule extends VuexModule {
     this.data.push(data)
   }
 
+  @Mutation
+  setData(data: TForecastStoreData[]) {
+    this.data = data
+  }
+
   @VuexAction({ rawError: true })
   async fetchForecast(cityData: TCitiesStoreData) {
     let result: TForecastStoreData | null = null
 
+    let filtered: TForecastStoreData[] = this.data.filter(forecast => forecast.city.id === cityData.id)
+    if (filtered.length !== 0) return filtered[0]
 
-    await $axios.get(`/city/${cityData.id}/forecast`)
-      .then(response => {
-        console.log(response)
+    const respresult = await useRequests($axios).performRequest('get', `/city/${cityData.id}/forecast`)
 
-        result = response.data[0] as TForecastStoreData
-        result.city = cityData
-        this.setError('')
-        this.addData(result)
-      })
-      .catch(error => {
-        this.setError(`Не удалось получить прогноз погоды для города ${cityData.local_names.ru}. Сервер вернул ${error.response.status}`)
-      })
+    if (respresult.response) {
+      result = respresult.response.data[0] as TForecastStoreData
+      result.city = cityData
+      this.setError('')
+      this.addData(result)
+    } else if (respresult.fallback) {
+      this.setError(`Не удалось получить прогноз погоды для города ${cityData.local_names.ru}. Сервер вернул ${respresult.fallback.response?.status}`)
+    }
 
     return result
   }
