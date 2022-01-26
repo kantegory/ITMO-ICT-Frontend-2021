@@ -86,6 +86,9 @@ export interface paths {
   "/api/checks/{id}/items": {
     put: operations["checks_items_update"];
   };
+  "/api/checks/{id}/name": {
+    patch: operations["checks_name_partial_update"];
+  };
   "/api/checks/{id}/users": {
     put: operations["checks_users_update"];
   };
@@ -203,6 +206,10 @@ export interface components {
       /** Товар */
       item: number;
     };
+    CheckNameUpdate: {
+      /** Наименование */
+      name: string;
+    };
     CheckUsersUpdateRequest: {
       users: string[];
     };
@@ -249,6 +256,10 @@ export interface components {
     PasswordResetRequest: {
       /** Format: email */
       email: string;
+    };
+    PatchedCheckNameUpdateRequest: {
+      /** Наименование */
+      name?: string;
     };
     PatchedProfileRequest: {
       /** Имя */
@@ -611,6 +622,28 @@ export interface operations {
     requestBody: {
       content: {
         "application/json": components["schemas"]["CheckItemPartRequest"][];
+      };
+    };
+  };
+  checks_name_partial_update: {
+    parameters: {
+      path: {
+        /** A unique value identifying this Чек. */
+        id: number;
+      };
+    };
+    responses: {
+      200: {
+        content: {
+          "application/json": components["schemas"]["CheckNameUpdate"];
+        };
+      };
+    };
+    requestBody: {
+      content: {
+        "application/x-www-form-urlencoded": components["schemas"]["PatchedCheckNameUpdateRequest"];
+        "application/json": components["schemas"]["PatchedCheckNameUpdateRequest"];
+        "multipart/form-data": components["schemas"]["PatchedCheckNameUpdateRequest"];
       };
     };
   };
