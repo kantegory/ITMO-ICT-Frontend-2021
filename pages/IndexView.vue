@@ -2,6 +2,7 @@
   <b-container class="align-self-center d-flex flex-column align-items-center">
     <h2 class="text-center">CheckSplitter - учет финансов по-новому</h2>
     <b-button v-if="!$auth.loggedIn" :to="{'name': 'LoginView'}" variant="outline-dark" class="mt-3">Вход</b-button>
+    <b-button v-else :to="{'name': 'ReceiptsListView.vue'}" variant="outline-dark" class="mt-3">Мои чеки</b-button>
   </b-container>
 </template>
 
