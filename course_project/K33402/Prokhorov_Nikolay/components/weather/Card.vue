@@ -24,7 +24,7 @@
     </div>
 
 
-    <div class="weather-card__button">
+    <div v-if="$storets.auth.loggedIn" class="weather-card__button">
       <b-button
         variant="primary"
         class="w-100 mt-3"
