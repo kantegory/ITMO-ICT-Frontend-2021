@@ -29,7 +29,7 @@
                 </router-link>
               </form>
               <hr class="my-4">
-              <small class="text-muted">If you don't have an account, <router-link to="/signin">register</router-link></small>
+              <small class="text-muted">If you don't have an account, <router-link to="/signup">register</router-link></small>
             </div>
           </div>
         </div>
