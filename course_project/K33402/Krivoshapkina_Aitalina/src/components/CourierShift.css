@@ -1,0 +1,18 @@
+.courier_shift__body {
+    background-color: white;
+    border-radius: 20px;
+    padding: 28px 53px;
+    text-align: center;
+}
+
+.courier_shift__body h3 {
+    font-size: 24px;
+}
+
+.courier_shift__body__schedule {
+    padding-top: 21px;
+}
+
+.courier_shift__body_isnot {
+    color: rgba(170, 170, 173, 1);
+}
