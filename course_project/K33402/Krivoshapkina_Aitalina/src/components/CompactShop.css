@@ -1,0 +1,43 @@
+.card-img-top {
+  max-height: 185px;
+  width: auto;
+  max-width: 275px;
+  margin-left: auto;
+  margin-right: auto;
+  /* padding: 5% 0 5% 0; */
+}
+
+.text-button {
+  /* text-align: center; */
+  height: 30px;
+  border-radius: 20px; 
+  opacity: 0.8; 
+  background: #FAF9FE;
+  display: inline;
+  padding: 5px 18px 5px 18px; 
+  margin: 8px;
+  box-shadow: 0 4px 4px 0 #AAAAAD;
+}
+
+.button {
+  height:200px;
+}
+
+.shop-card {
+  transition: transform 250ms;
+  text-align: center;
+  height: 371px;
+}
+
+.shop-card:hover {
+  transform: translateY(-10px);
+}
+
+.card {
+  border-radius: 20px;
+  padding: 25px 0 0 0;
+}
+
+.card-title {
+  padding: 20px 0 0 0;
+}
