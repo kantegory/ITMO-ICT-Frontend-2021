@@ -54,6 +54,9 @@ export const store = new Vuex.Store({
     },
     SET_WEATHER_UPDATE (context, payload) {
       context.commit('SET_WEATHER_UPDATE', payload)
+    },
+    SET_USERNAME (context, payload) {
+      context.commit('SET_USERNAME', payload)
     }
   }
 })

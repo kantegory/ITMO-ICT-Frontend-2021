@@ -1,6 +1,6 @@
 <template>
      <div class="container">
-          <h2 class="fs-4">Hello, Ivan!</h2>
+          <h2 class="fs-4">Hello, {{ this.$store.getters.USERNAME }}!</h2>
           <div class="row row-cols-1 row-cols-md-3 mt-3 mb-3 text-center">
             <div class="col">
               <div class="card mb-4 rounded-3 box-shadow">
@@ -53,17 +53,17 @@ var API_KEY = 'd5bcfc52613c0f1b56495d915a4c245c'
 let weather1 = [
   { date: 'today', temp: '-', prec: '-' },
   { date: 'tomorrow', temp: '-', prec: '-' },
-  { date: '29.01', temp: '-', prec: '-' }
+  { date: 'day after tomorrow', temp: '-', prec: '-' }
 ]
 let weather2 = [
   { date: 'today', temp: '-', prec: '-' },
   { date: 'tomorrow', temp: '-', prec: '-' },
-  { date: '29.01', temp: '-', prec: '-' }
+  { date: 'day after tomorrow', temp: '-', prec: '-' }
 ]
 let weather3 = [
   { date: 'today', temp: '-', prec: '-' },
   { date: 'tomorrow', temp: '-', prec: '-' },
-  { date: '29.01', temp: '-', prec: '-' }
+  { date: 'day after tomorrow', temp: '-', prec: '-' }
 ]
 
 export default {
@@ -71,7 +71,8 @@ export default {
     return {
       weather1: weather1,
       weather2: weather2,
-      weather3: weather3
+      weather3: weather3,
+      username: this.$store.getters.USERNAME
     }
   },
   mounted () {
