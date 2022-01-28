@@ -36,15 +36,11 @@
 </template>
 
 <script>
-// import router from '@/router'
 export default {
   name: 'SignIn',
   methods: {
     onSubmit () {
-      console.log('method called')
       this.$store.dispatch('SET_USERNAME', document.getElementById('floatingNickname').value)
-      console.log(document.getElementById('floatingNickname').value)
-      // router.push('/weather')
     }
   }
 }
