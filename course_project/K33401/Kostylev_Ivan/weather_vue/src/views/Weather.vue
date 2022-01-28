@@ -1,6 +1,6 @@
 <template>
      <div class="container">
-          <h2 class="fs-4">Hello, Ivan!</h2>
+          <h2 class="fs-4">Hello, {{ this.$store.getters.USERNAME }}!</h2>
           <div class="row row-cols-1 row-cols-md-3 mt-3 mb-3 text-center">
             <div class="col">
               <div class="card mb-4 rounded-3 box-shadow">
@@ -48,23 +48,22 @@ import axios from 'axios'
 
 var API_KEY = 'd5bcfc52613c0f1b56495d915a4c245c'
 
-var PERM = { lat: 58.0, lon: 56.3167 }
-var MOSCOW = { lat: 55.751244, lon: 37.618423 }
-var SPB = { lat: 59.57, lon: 30.19 }
+// let weathers = []
+
 let weather1 = [
   { date: 'today', temp: '-', prec: '-' },
   { date: 'tomorrow', temp: '-', prec: '-' },
-  { date: '29.01', temp: '-', prec: '-' }
+  { date: 'day after tomorrow', temp: '-', prec: '-' }
 ]
 let weather2 = [
   { date: 'today', temp: '-', prec: '-' },
   { date: 'tomorrow', temp: '-', prec: '-' },
-  { date: '29.01', temp: '-', prec: '-' }
+  { date: 'day after tomorrow', temp: '-', prec: '-' }
 ]
 let weather3 = [
   { date: 'today', temp: '-', prec: '-' },
   { date: 'tomorrow', temp: '-', prec: '-' },
-  { date: '29.01', temp: '-', prec: '-' }
+  { date: 'day after tomorrow', temp: '-', prec: '-' }
 ]
 
 export default {
@@ -72,12 +71,14 @@ export default {
     return {
       weather1: weather1,
       weather2: weather2,
-      weather3: weather3
+      weather3: weather3,
+      username: this.$store.getters.USERNAME
     }
   },
   mounted () {
+    var cities = this.$store.getters.CITIES
     axios
-      .get('https://api.openweathermap.org/data/2.5/onecall?lat=' + MOSCOW.lat + '&lon=' + MOSCOW.lon + '&exclude={daily}' + '&appid=' + API_KEY + '&lang=eng&units=metric')
+      .get('https://api.openweathermap.org/data/2.5/onecall?lat=' + cities.Moscow[0] + '&lon=' + cities.Moscow[1] + '&exclude={daily}' + '&appid=' + API_KEY + '&lang=eng&units=metric')
       .then(response => response.data)
       .then(data => {
         weather2 = [
@@ -88,7 +89,7 @@ export default {
       }
       )
     axios
-      .get('https://api.openweathermap.org/data/2.5/onecall?lat=' + PERM.lat + '&lon=' + PERM.lon + '&exclude={daily}' + '&appid=' + API_KEY + '&lang=eng&units=metric')
+      .get('https://api.openweathermap.org/data/2.5/onecall?lat=' + cities.Perm[0] + '&lon=' + cities.Perm[0] + '&exclude={daily}' + '&appid=' + API_KEY + '&lang=eng&units=metric')
       .then(response => response.data)
       .then(data => {
         weather3 = [
@@ -99,7 +100,7 @@ export default {
       }
       )
     axios
-      .get('https://api.openweathermap.org/data/2.5/onecall?lat=' + SPB.lat + '&lon=' + SPB.lon + '&exclude={daily}' + '&appid=' + API_KEY + '&lang=eng&units=metric')
+      .get('https://api.openweathermap.org/data/2.5/onecall?lat=' + cities['Saint Petersburg'][0] + '&lon=' + cities['Saint Petersburg'][0] + '&exclude={daily}' + '&appid=' + API_KEY + '&lang=eng&units=metric')
       .then(response => response.data)
       .then(data => {
         weather1 = [
