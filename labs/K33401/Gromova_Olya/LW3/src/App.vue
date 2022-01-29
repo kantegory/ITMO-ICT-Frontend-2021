@@ -8,15 +8,12 @@
 
 <script>
 
-
-//import HelloWorld from './components/HelloWorld.vue'
 import Footer from './components/Footer.vue'
 import Header from './components/Header.vue'
 
 export default {
   name: 'App',
   components: {
-    //HelloWorld,
     Header,
     Footer,
   }
@@ -26,7 +23,7 @@ export default {
 <style>
   :root {
     --main-bg-img: url("../public/images/light.jpg");
-    --main-text-color: #3C3C3B;
+    --main-text-color: #00182d;
     --footer-color: #E5E5E5;
     --main-bg-color: #B4D1E8;
     --main-card-color: #E5E5E5;
@@ -125,7 +122,7 @@ export default {
   .btn {
     font: 24px "Montserrat";
     color: var(--main-text-color);
-    background-color: #379683;
+    background-color: #849fd2;
     color: white;
     height: 60px;
     width: 300px;
@@ -313,5 +310,7 @@ export default {
   .social-media {
     margin-bottom: 20px;
   }
+
+
 @import'~bootstrap/dist/css/bootstrap.css'
 </style>

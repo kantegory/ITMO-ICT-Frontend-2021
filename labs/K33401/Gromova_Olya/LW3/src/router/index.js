@@ -5,6 +5,10 @@ import StartPage from '../views/StartPage.vue'
 import LoginPage from '../views/LoginPage.vue'
 import RegisterPage from '../views/RegisterPage.vue'
 import TicketsPage from '../views/TicketsPage.vue'
+import AirportsPage from '../views/AirportsPage.vue'
+import MyTicketsPage from '../views/MyTicketsPage.vue'
+import ContactsPage from '../views/ContactsPage.vue'
+import TownsPage from '../views/TownsPage.vue'
 
 Vue.use(VueRouter)
 
@@ -20,6 +24,11 @@ const routes = [
         component: LoginPage
     },
     {
+        path: '/contacts',
+        name: 'ContactsPage',
+        component: ContactsPage
+    },
+    {
         path: '/register',
         name: 'RegisterPage',
         component: RegisterPage
@@ -28,6 +37,21 @@ const routes = [
         path: '/tickets',
         name: 'TicketsPage',
         component: TicketsPage
+    },
+    {
+        path: '/towns',
+        name: 'TownssPage',
+        component: TownsPage
+    },
+    {
+        path: '/mytickets',
+        name: 'MyTicketsPage',
+        component: MyTicketsPage
+    },
+    {
+        path: '/airports',
+        name: 'AirportsPage',
+        component: AirportsPage
     },
 ]
 

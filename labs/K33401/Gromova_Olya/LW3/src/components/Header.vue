@@ -15,16 +15,25 @@
             <a class="nav-link" href="/start">Главная</a>
           </li>
           <li class="nav-item menu_nav">
-            <a class="nav-link" href="/tickets">Мои билеты</a>
+            <a class="nav-link" href="/tickets">Билеты</a>
           </li>
           <li class="nav-item menu_nav">
-            <a class="nav-link" href="#">Контакты</a>
+            <a class="nav-link" href="/mytickets">Мои билеты</a>
+          </li>
+          <li class="nav-item menu_nav">
+            <a class="nav-link" href="/contacts">Контакты</a>
+          </li>
+          <li class="nav-item menu_nav">
+            <a class="nav-link" href="/airports">Аэропорты</a>
+          </li>
+          <li class="nav-item menu_nav">
+            <a class="nav-link" href="/towns">Города</a>
           </li>
           <li class="nav-item menu_nav log">
             <a class="nav-link"  href="/register">Регистрация</a>
           </li>
           <li class="nav-item menu_nav">
-            <a class="nav-link active" href="/login">Войти</a>
+            <a class="nav-link" href="/login">Войти</a>
           </li>
         </ul>
       </div>    
