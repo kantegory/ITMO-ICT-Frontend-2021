@@ -31,7 +31,7 @@ function convert_date(date) {
 }
 
 
-async function get_city() {
+async function get_forecast() {
     let city = city_entered();
     let city_data = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${API_key}`);
     let city_json = await city_data.json();
@@ -53,4 +53,4 @@ async function get_city() {
 }
 
 
-get_city();
+get_forecast();
