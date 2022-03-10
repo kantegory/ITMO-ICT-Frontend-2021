@@ -4,6 +4,8 @@ import HomeView from '@/views/HomeView.vue'
 import LoginView from '@/views/LoginView.vue'
 import SignUpView from '@/views/SignUpView.vue'
 import ProfileView from '@/views/ProfileView.vue'
+import FavouritesView from '@/views/FavouritesView.vue'
+import ForecastView from '@/views/ForecastView.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +29,16 @@ const routes = [
     path: '/profile',
     name: 'profile',
     component: ProfileView
+  },
+  {
+    path: '/favourites',
+    name: 'favourites',
+    component: FavouritesView
+  },
+  {
+    path: '/forecast',
+    name: 'forecast',
+    component: ForecastView
   }
   // {
   //   path: '/about',
