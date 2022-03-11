@@ -1,0 +1,64 @@
+@import 'node_modules/bootstrap/scss/bootstrap.scss';
+@import 'node_modules/bootstrap-vue/src/index.scss';
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.6.1/font/bootstrap-icons.css");
+
+body {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--light);
+
+  #app {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+
+    main {
+      flex: 1;
+    }
+  }
+}
+
+.card {
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 0 27px rgba(0, 0, 0, 0.08);
+}
+
+.registration-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100%;
+
+  .container {
+    padding-bottom: 200px;
+  }
+}
+
+.auth-card-wrapper {
+  .auth-card {
+    max-width: 500px;
+    margin: 0 auto;
+
+    .card-title {
+      text-align: center;
+    }
+
+    .card-header {
+      input {
+      }
+    }
+  }
+}
+
+.weather-card {
+  height: 100%;
+
+  .card-title {
+    text-align: center;
+  }
+
+  .weather {
+    font-size: 20px;
+  }
+}

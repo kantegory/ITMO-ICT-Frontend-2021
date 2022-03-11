@@ -1,0 +1,42 @@
+.wrapper {
+  padding: 24px;
+}
+
+.header {
+  :global(.ant-page-header-heading-title) {
+    height: 32px;
+    margin: 0;
+  }
+}
+
+.logo {
+  width: auto;
+  height: 32px;
+  fill: var(--accent-color);
+}
+
+.drawer :global(.ant-drawer-wrapper-body) {
+  display: grid;
+  grid-template-rows: 1fr auto 1fr;
+
+  :global(.ant-drawer-header) {
+    border: none;
+  }
+}
+
+@media (min-width: 1024px) {
+  .header {
+    border-bottom: 1px solid var(--border-color);
+
+    :global(.ant-page-header-heading) {
+      justify-content: center;
+    }
+  }
+
+  .wrapper {
+    width: 360px;
+    padding: 36px 24px;
+    margin: 80px auto;
+    border: 1px solid var(--ant-primary-color);
+  }
+}

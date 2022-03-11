@@ -1,0 +1,13 @@
+site_name: Axolotl
+nav:
+ - Home: index.md
+ - videos-of-user:
+     - "view": video-of-user/view.md
+     - "list": video-of-user/list.md
+ - link-of-videos:
+     - "view": videos/view.md
+     - "list": videos/list.md
+
+
+theme:
+ name: material

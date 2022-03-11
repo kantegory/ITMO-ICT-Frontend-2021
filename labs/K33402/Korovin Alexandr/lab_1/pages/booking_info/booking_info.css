@@ -1,0 +1,153 @@
+* {
+    color-scheme: light dark;
+}
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    background-color: var(--body-back);
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    padding: 10px 30px; /* устанавливает внутренние отступы/поля со всех сторон*/
+    background-color: var(--nav-back);
+    position: sticky;
+    top: 0;
+    z-index: 5;
+}
+.navbar ul {
+    list-style-type: none;
+}
+.navbar ul li a{
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+.logo {
+    color: var(--text-color);
+    letter-spacing: 2px; /*определяет межбуквенное расстояние в тексте*/
+}
+
+.hotels-container {
+    margin: 20px auto auto auto;
+    color: var(--text-color);
+    line-height: 1.5;
+    letter-spacing: 2px;
+    max-width: 1200px;
+}
+
+.banner-text{
+   text-align: center;
+}
+.cell {
+    color: var(--text-color);
+    line-height: 1.5;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cell .cell-text{
+    margin: 15px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid;
+    border-radius: 8px;
+    width: 600px;
+    height: 100px;
+    background: var(--cell-color);
+    color: var(--text-color);
+}
+.cell .cell-date{
+    color:var(--text-color);
+}
+.switcher {
+    position: fixed;
+    bottom: 36px;
+    left: 50%;
+    margin: 0;
+    margin-left: -50px;
+    padding: 2px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border: none;
+}
+
+/* Switcher Legend */
+
+.switcher__legend {
+    position: absolute;
+    opacity: 0;
+    pointer-events: none;
+}
+
+/* Switcher Radio */
+
+.switcher__radio {
+    -webkit-appearance: none;
+    appearance: none;
+    margin: 0;
+    width: 32px;
+    height: 32px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px;
+    transition: filter 0.1s ease-in;
+}
+
+.switcher__radio:focus {
+    outline: none;
+}
+
+.switcher__radio--light {
+    background-image: url('../icons/light.svg');
+}
+
+.switcher__radio--auto {
+    background-image: url('../icons/auto.svg');
+}
+
+.switcher__radio--dark {
+    background-image: url('../icons/dark.svg');
+}
+
+/* Switcher Status */
+
+.switcher__status {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    box-shadow: 0 0 0 2px rgb(0 0 0 / 0.2);
+    border-radius: 18px;
+    background-color: rgb(255 255 255 / 0.5);
+    background-repeat: no-repeat;
+    background-image: url('../icons/status.svg');
+    background-size: 32px;
+    background-position: center;
+    transition: background-position 0.1s ease-in;
+}
+
+.switcher__radio:focus-visible ~ .switcher__status {
+    box-shadow: 0 0 0 2px black;
+}
+
+.switcher__radio--light:checked ~ .switcher__status {
+    background-position: left 2px center;
+}
+
+.switcher__radio--auto:checked ~ .switcher__status {
+    background-position: center center;
+}
+
+.switcher__radio--dark:checked ~ .switcher__status {
+    background-position: right 2px center;
+}

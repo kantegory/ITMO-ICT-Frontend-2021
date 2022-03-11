@@ -1,0 +1,13 @@
+{
+    "posts": [
+      { "img": "images/17.webp", "title": "Серёжки месяц", "price": "Цена: $7" },
+      { "img": "images/24.webp", "title": "Колечкo", "price": "Цена: $5" },
+      { "img": "images/25.webp", "title": "Кулончик", "price": "Цена: $10" },
+      { "img": "images/26.webp", "title": "Кулончик", "price": "Цена: $11" },
+      { "img": "images/27.webp", "title": "Кулончик", "price": "Цена: $5" },
+      { "img": "images/22.webp", "title": "Кулончик", "price": "Цена: $6" },
+      { "img": "images/21.webp", "title": "Кулончик", "price": "Цена: $8" },
+      { "img": "images/20.webp", "title": "Кулончик", "price": "Цена: $10" },
+      { "img": "images/23.webp", "title": "Кулончик", "price": "Цена: $7" }
+    ]
+  }

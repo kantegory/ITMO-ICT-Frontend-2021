@@ -1,0 +1,43 @@
+html, 
+body {
+    height: 100%;
+}
+
+main {
+    height: 90%;
+}
+
+.main-search {
+    position: relative;
+    top: 35%
+}
+
+.search-params {
+    position: relative;
+    top: 40%
+}
+
+.title {
+    position: relative;
+    top: 25%
+}
+
+.search-button {
+    position: relative;
+    top: 45%
+}
+
+.btn {
+    background-color: #4263a2;
+    color: #f5f5f5;
+    margin: 10px auto;
+    font-size: calc(1.3rem + .6vw);
+    border-radius: 10px;
+    padding: 5px 40px;
+}
+
+.btn:hover {
+    background-color: #4247a2;
+    color: #f5f5f5;
+    
+}

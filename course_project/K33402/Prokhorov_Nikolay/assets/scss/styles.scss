@@ -1,0 +1,10 @@
+@import "~bootstrap/scss/bootstrap";
+@import 'bootswatch.scss';
+
+.page-enter-active, .page-leave-active {
+  transition: opacity 0.15s ease-in-out;
+}
+
+.page-enter, .page-leave-to {
+  opacity: 0;
+}

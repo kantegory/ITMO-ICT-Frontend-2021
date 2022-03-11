@@ -1,0 +1,80 @@
+.navbar {
+    height: 80px;
+    background-color: #659dbd;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    text-decoration: none;
+    padding: 25px;
+    font-size: 27px;
+    font-weight: 600;
+    color: #fff;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+ul li {
+    padding: 25px;
+}
+
+.button {
+    font-family: inherit;
+    background: none;
+    border: none;
+    font-size: 17px;
+    letter-spacing: 0.1rem;
+    font-weight: 600;
+    color: #fff;
+    padding: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.button:hover {
+    border-radius: 5px;
+    background: white;
+    color: black;
+}
+
+.link {
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color: #fff;
+    text-decoration: 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.link:hover {
+    color: black;
+    background: #fff;
+}
+
+.becomeHostLink {
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    color: #fff;
+    text-decoration: 0;
+    padding: 10px;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.becomeHostLink:hover {
+    color: black;
+    background: #fff;
+}

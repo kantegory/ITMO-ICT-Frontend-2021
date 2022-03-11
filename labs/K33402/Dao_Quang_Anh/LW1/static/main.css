@@ -1,0 +1,261 @@
+
+/* Universal styles */
+.logo-meetup{
+    text-align: center;
+    width:100px;
+    box-sizing: border-box;
+}
+body{
+    height: 100%;
+}
+html{
+    line-height: 1.5rem;
+    font-size: 16px;
+}
+.pa{
+    width:20%;
+    height: fit-content;
+    margin-left: 0 auto;
+    position: relative;
+}
+.pa2{
+    width:60%;
+    height: fit-content;
+    margin-left: 0 auto;
+    position: relative;
+}
+.ap{
+    height:15%;
+    position: relative;
+    margin: 0 auto;
+}
+.ap2{
+    height:70%;
+    position: relative;
+    margin: 0 auto;
+}
+.pink{
+    color: #dc3545;
+}
+.black{
+    color:black;
+}
+.a-nav{
+    width: 8rem;
+    text-align: center;
+}
+nav{
+    width:100%;
+    box-shadow:0 0.5rem 0.5rem lightgrey;
+}
+.form-container2{
+    width: 100%;
+    height: 100%;
+    padding-top: 1rem;
+}
+.footer-container{
+    width: 800px;
+    height: 100%;
+    padding-top: 1rem; 
+}
+footer{
+    background-color: rgb(29, 29, 29);
+    color: white;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.button1{
+    padding: 10px 15px;
+    font-size: 1.25rem;
+    line-height: 24px;
+    height: fit-content;
+    width: fit-content;
+    border-radius: 8px;
+    color: #fff;
+    background-color: #f65858;
+    border:1px solid #f65858;
+}
+
+.button1:hover{
+    opacity: 0.7;
+}
+.button3{
+    padding: 10px 15px;
+    font-size: 1.25rem;
+    line-height: 24px;
+    height: fit-content;
+    width: fit-content;
+    border-top-right-radius: 1rem;
+    border-bottom-right-radius: 1rem;
+    color: #fff;
+    fill: #fff;
+    background-color: #f65858;
+    border:1px solid #f65858;
+}
+.button3:hover{
+    opacity: 0.7;
+}
+
+
+.text-viridian {
+    --tw-text-opacity: 1;
+    color: rgba(0,130,148,var(--tw-text-opacity));
+}
+.-padding{
+    padding: 1rem 1rem 1rem 0;
+}
+/* Login & Register */
+.login-icon{
+    width:1.75rem;
+    height: 1.75rem;
+}
+.login-orline{
+    color: solid #dbdbdb;
+    opacity: 0.5;
+}
+.login-container{
+    border: 1px solid #dbdbdb;
+    width: 600px;
+    height: 100%;
+    margin: 50px auto;
+    border-radius: 6px;
+    padding: 4%;  
+}
+.login-button2{
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    padding: 8px 12px;
+    font-size: 1.25rem;
+    line-height: 24px;
+    height: 3rem;
+    background-color: white;
+    border: 1px solid #dbdbdb;
+}
+.register-container{
+    border: 1px solid #dbdbdb;
+    width: 550px;
+    height: 100%;
+    margin: 1rem auto;
+    border-radius: 6px;
+    padding: 4%;  
+    box-sizing: border-box;
+}
+/* Search-Calendar */
+.wrapper{
+    margin-left: 1rem;
+    display: inline-flex;
+    background: #fff;
+    height: 100px;
+    width: 300px;
+    align-items: space-between;
+    border-radius: 5px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.wrapper .option{
+    background: #fff;
+    height: 50px;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border:1px solid lightgrey;
+}
+input[type="radio"]{
+    display: none;
+}
+#option-1:checked:checked ~ .option-1,
+#option-2:checked:checked ~ .option-2{
+    background-color: #dc3545;
+}
+.main-form{
+    width:800px;
+    border: 1px solid lightgrey;
+    border-radius: 20px;
+    padding: 0.5rem;
+
+}
+.dd-l{
+    background: #fff;
+    height: 50px;
+    width: 120px;
+    margin-right: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    border: 1px solid lightgrey;
+    text-align: center;
+}
+.type-event{
+    background-color: lightgray;
+    padding: 1px;
+    border: 0px solid;
+    border-radius: 5px;
+    width: 150px;
+}
+.e-image{
+    width: 17rem;
+    height: 9rem;
+    border-radius: 10px;
+}
+
+
+.button2{
+    padding: 8px 12px;
+    font-size: 1rem;
+    line-height: 24px;
+    border-radius: 8px;
+    border: 3px solid white;
+    background-color:rgb(29, 29, 29);
+    color: #ffffff;
+}
+/* Organization Page */
+.i-s{
+    width: 400px;
+    height: 300px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+.i-s2{
+    border-radius: 5px;
+}
+.b4{
+    background-color: #f65858;
+    width: 14rem;
+    height: 3rem;
+    color: white;
+    border-radius: 0.5rem;
+    border: 1px solid #f65858;
+
+}
+/* User */
+.b5{
+    margin-right: 0.3rem;
+    color:white;
+    padding: 0.1rem 0.5rem 0.1rem 0.5rem ;
+    border-radius: 50%;
+    width:fit-content;
+    height: fit-content;
+    background-color: #00455d;
+}
+.g-box{
+    border-radius: 0.75rem;
+    border:0.1rem solid;
+    width:fit-content;
+    height: fit-content;
+    color: rgb(158, 157, 157);
+    padding: 0.5rem;
+}
+.b6{
+    margin-right: 0.3rem;
+    color:white;
+    padding: 0.1rem 0.5rem 0.1rem 0.5rem ;
+    border-radius: 0.5rem;
+    width:fit-content;
+    height: fit-content;
+    background-color: #0c7ca1;
+}

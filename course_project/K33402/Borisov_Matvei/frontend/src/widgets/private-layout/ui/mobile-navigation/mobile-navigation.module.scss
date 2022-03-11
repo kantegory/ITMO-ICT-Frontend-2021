@@ -1,0 +1,18 @@
+.drawer {
+  :global(.ant-drawer-header) {
+    height: 73px;
+  }
+
+  :global(.ant-drawer-close) {
+    padding: 0;
+    color: var(--text-color);
+  }
+
+  :global(.ant-drawer-title) {
+    font-size: 20px;
+  }
+}
+
+.logout {
+  margin-top: 56px;
+}

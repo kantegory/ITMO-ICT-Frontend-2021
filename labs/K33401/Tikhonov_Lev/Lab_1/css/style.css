@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap" rel="stylesheet');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
+
+body,
+html {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    background-color: #fafafa;
+    font-family: 'Acme', sans-serif;
+}
+
+/* Шапка сайта */
+
+header {
+    width: 100%;
+    padding: 10px 0.5% 0px 0.5%;
+    background: transparent;
+    float: left;
+    position: static;
+}
+
+header #logo {
+    color: rgb(255, 0, 0);
+    cursor: pointer;
+}
+
+header #logo span {
+    font-size: 1.7em;
+    line-height: 45px;
+    margin-left: 40px;
+    font-family: 'Acme', sans-serif;
+}
+
+@media (min-width: 701px) {
+    #logo {
+        float: left;
+        width: 30%;
+        font-size: 1.1em;
+    }
+
+    #about {
+        float: right;
+        width: 67%;
+    }
+}
+
+@media (max-width: 700px) {
+    #logo {
+        margin-top: 15px;
+        width: 100%;
+        font-size: 1.5em;
+    }
+
+    #about {
+        float: right;
+        width: 100%;
+    }
+}
+
+#about {
+    text-align: right;
+    font-size: 1em;
+    line-height: 40px;
+    margin-bottom: 10px;
+    margin-right: 30px;
+}
+
+#about>a {
+    color: rgb(0, 0, 0)
+}
+
+#about>a:hover {
+    color: #b0b0b0;
+}
+
+#about>a:not(:last-child) {
+    margin-right: 7%;
+}
+
+/* Стили для фиксированной шапки */
+
+.fixed {
+    z-index: 5000;
+    background-color: #fff;
+    border-bottom: 1px solid silver;
+}
+
+header.fixed #logo {
+    color: #ff0000;
+}
+
+.fixed #about a {
+    color: #343434
+}
+
+.fixed #about a:hover {
+    color: #ffffff
+}
+
+/* Главный блок на сайте */
+
+#top {
+    width: 100%;
+    background-image: url(https://secure.meetup.com/_next/image?url=%2Fimages%2Fshared%2Fonline_events.svg&w=640&q=75);
+    background-position: right center;
+    background-color: #ffffff;
+    background-size: 67%;
+    text-align: left;
+    background-repeat: no-repeat;
+    color: rgb(0, 0, 0);
+}
+
+
+@media (min-width: 1001px) {
+    #top {
+        font-size: 3em;
+        height: 1000px;
+    }
+}
+
+#top h1 {
+    padding-top: 20%;
+}
+
+#top h3 {
+    color: rgb(8, 8, 8);
+    width: 35%;
+}
+
+
+#overview {
+    display: flex;
+    justify-content: space-between;
+    background-blend-mode: multiply;
+    background-color: #9e999e;
+    background-size: cover;
+    background-attachment: fixed;
+
+    padding: 100px 0;
+    width: 100%;
+    text-align: center;
+    color: #fff;
+}
+
+#overview h2 {
+    font-size: 4em
+}
+
+#overview h4 {
+    color: #ccc;
+    font-size: 1.5em
+}
+
+@media (min-width: 561px) {
+    #overview h2 {
+        font-size: 4em
+    }
+}
+
+@media (max-width: 560px) {
+    #overview h2 {
+        font-size: 2em
+    }
+}
+
+#overview .img {
+    width: 30%;
+    margin-top: 50px;
+}
+
+#overview .img:nth-child(odd) {
+    margin-left: 10%;
+}
+
+#overview span {
+    width: 100%;
+    font-size: 2em;
+    margin-top: 10px;
+}
+
+@media (max-width: 700px) {
+    #overview {
+        width: 80% !important;
+        margin-right: 0 !important;
+        margin-left: 10% !important;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Acme', sans-serif;
+    font-weight: lighter;
+}
+
+
+.footer {
+    background: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+.footer-container {
+    width: 85vw;
+    margin: 0 auto;
+    padding: 30px 0;
+}
+
+.footer-container p,
+.footer-container a,
+.footer-container span {
+    opacity: 0.8;
+}
+
+.footer a {
+    display: block;
+    color: #fff;
+    text-decoration: none;
+}
+
+.social-icons li {
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.icon {
+    fill: rgb(68, 0, 255);
+    background: white;
+    display: block;
+    margin: 0 5px 0 0;
+    width: 50px;
+    height: 50px;
+    border-radius:47%;
+    transition: var(--transition);
+    cursor: pointer;
+}
+
+.icon:hover {
+    fill: rgb(8, 50, 129);
+}
+
+
+@media(min-width:900px) {
+    .footer-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 20px;
+    }
+}
+
+@media(min-width: 1170px) {
+    .footer {
+        text-align: left;
+    }
+
+    .footer-container {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .footer-container div:nth-child(1) p {
+        padding-right: 20px;
+    }
+}

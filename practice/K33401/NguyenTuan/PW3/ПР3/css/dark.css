@@ -1,0 +1,23 @@
+/* Sky */
+
+:root {
+    --back-color: #00000070;
+    --back-color1: rgba(0, 0, 0, 0);
+    --sky-image: url('/lap1/img/bg-img-1.jpg');
+    --tab-color: #fff;
+    --vien-color: #fff;
+    --body-shadow: rgb(222 168 33 / 0.4);
+    --body-glow: rgb(70 130 180 / 0.4);
+}
+
+.switcher__radio {
+    filter: invert(1);
+}
+
+.switcher__radio:checked {
+    filter: invert(0);
+}
+
+.switcher__status {
+    filter: invert(1);
+}

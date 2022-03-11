@@ -1,0 +1,13 @@
+
+:root {
+    --main-bg-img: url("../images/travel_dark.jpg");
+    --main-text-color: #E5E5E5;
+    --footer-color: #303D6C;
+    --main-bg-color:#1F2849;
+    --main-card-color: #303D6C;
+    --main-text:#e5e5e5;
+    --logo:url("../images/logo_dark.png");
+    --border-color:#C4C4C4;
+    --close: url("../images/close_dark.svg");
+  
+  }

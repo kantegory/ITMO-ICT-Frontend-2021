@@ -1,0 +1,20 @@
+site_name: Job Classified Docs
+nav:
+ - Home: index.md
+ - Api:
+     - "/api/company/get[GET]": api/company_get.md
+     - "/api/company/new[POST]": api/company_new.md
+     - "/api/industry/get[GET]": api/industry_get.md
+     - "/api/industry/new[POST]": api/industry_new.md
+     - "/api/jobs/get[GET]": api/job_get.md
+     - "/api/jobs/new[POST]": api/job_new.md
+     - "/api/jobs-response/get[GET]": api/job_response_get.md
+     - "/api/jobs-response/new[POST]": api/job_response_new.md
+     - "/api/region/get[GET]": api/region_get.md
+     - "/api/region/new[POST]": api/region_new.md
+ - User:
+     - "auth/users[POST]": user/sign_up.md
+     - "auth/token/login[POST]": user/sign_in.md
+
+theme:
+ name: material

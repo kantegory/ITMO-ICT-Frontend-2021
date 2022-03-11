@@ -1,0 +1,11 @@
+.check-splitter-navbar {
+  .navbar-toggler {
+    border: none;
+  }
+
+  .navbar-nav {
+      &.disabled {
+        opacity: 0.35;
+      }
+  }
+}

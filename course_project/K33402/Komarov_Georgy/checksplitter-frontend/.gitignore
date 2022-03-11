@@ -1,0 +1,9 @@
+.idea
+.nuxt
+dist
+node_modules
+
+assets/scss/*.css*
+
+.env
+npm-debug.log

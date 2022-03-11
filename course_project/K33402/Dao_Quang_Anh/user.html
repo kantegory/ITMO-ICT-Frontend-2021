@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="User Profile">
+    <meta name="theme-color" content="#f65858">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>D Bep | Meetup</title>
+    <link rel="icon" href="/static/images/626px-Meetup_Logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="/static/css/light.css" rel="stylesheet" id="theme-link">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+</head>
+<body>
+    <header width="100%" class="sticky-top">
+        <nav class="navbar navbar-expand nav ">
+            <div class="sections d-flex align-items-center">
+                <div class="d-flex container-fluid justify-content-start align-items-center pt-1">
+                    <a class="logo-meetup me-3 mt-2" href="organizer.html">
+                        <img class="logo-meetup"src="static/images/meetup-1.svg" alt="logo">
+                    </a>
+                    <button class="btn-toggle me-3" aria-label="Dark-Light mode">
+                        <svg style="fill:#dc3545" class="svg svg-nav-mode">
+                            <use xlink:href="/sprite.svg#mode"></use>
+                        </svg>
+                    </button>
+                    <script src="static/js/theme.js"></script>  
+                </div>
+                <a class="text-decoration-none black"href="user.html">
+                    <div class="nav-profile-container d-flex align-items-center justify-content-center">                
+                        <img class="nav-profile bounce" src="static/images/avatar.jpg">
+                    </div>
+                </a>
+                <a class="text-decoration-none pt-1 a-nav-1">
+                    <svg style="fill:#dc3545" class="svg svg-nav-noti">
+                        <use xlink:href="/sprite.svg#noti"></use>
+                    </svg>                            
+                </a>
+                <a class="text-decoration-none pt-1 a-nav-1" href="/search-calendar.html">
+                    <svg style="fill:#dc3545" class="svg svg-nav-noti">
+                        <use  xlink:href="/sprite.svg#search"></use>
+                    </svg>   
+                </a>
+                <a class="text-decoration-none pt-1 a-nav-1" href="login.html">
+                    <svg style="fill:#dc3545" class="svg svg-nav-noti">
+                        <use  xlink:href="/sprite.svg#logout"></use>
+                    </svg>
+                </a>
+            </div>
+        </nav>
+    </header>
+    <main class="mode">
+        <div class="d-flex justify-content-center align-items-center">
+            <div class="pt-5 pb-2">            
+                <img class="user-avatar"src="/static/images/avatar.jpg" alt="avatar">
+            </div>
+            <div class="d-flex flex-column p-3">
+                <h1 class="fw-bold pb-2 user-text">D Bep</h1>
+                <span class="h3 fw-bold pb-3 user-text"> Member since September 2021</span>
+                <div style="color:grey" class="d-flex">
+                    <svg class="pa-1 me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                        <path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/>
+                    </svg>
+                    <span class="pa-1">St. Petersburg</span>
+                </div>
+                <div style="color:grey" class="d-flex">
+                    <svg class="pa-1 me-2" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
+                        <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
+                        <path fill-rule="evenodd" d="M5.216 14A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216z"/>
+                        <path d="M4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5z"/>
+                    </svg>
+                    <span>Attended 0 Events</span>
+                </div>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex">
+            <div class="d-flex sections bd-highlight align-items-center">
+                <div class="d-flex bd-highlight me-auto">
+                    <div class="d-flex align-items-center">
+                        <span class="h6 b5">2</span>
+                        <span class="h6 fw-normal">Groups</span>
+                    </div>
+                    <div class="m-3"></div>
+                    <div class=" d-flex align-items-center">
+                        <span class="h6 b5">5</span>
+                        <span class="h6 fw-normal">Interests</span>
+                    </div>
+                </div>
+                <span class="bd-highlight edit-profile-btn">
+                    <svg style="fill:#dc3545" class="svg svg-user-gear">
+                        <use xlink:href="/sprite.svg#gear">
+                        </use>
+                    </svg>  
+                </span>
+            </div>
+        </div>
+        <hr>
+        <div class="d-flex">
+            <div class="d-flex flex-column sections pb-5 fw-bold">
+                <h2 class=" mt-5 mb-3">Groups</h2>
+                <div class="d-flex fw-bold flex-wrap">
+                    <div class="d-flex g-box me-2 mb-2">
+                        <img class="group-photo" src="/static/images/group1.jpg" alt="group-photo1">
+                        <span class="h5 align-self-center he2 hiddy">Piter International </span>
+                    </div>
+                    <div class="d-flex g-box me-2 mb-2">
+                        <img class="group-photo" src="/static/images/group2.jpg" alt="group-photo1">
+                        <span class="h5 align-self-center he2 hiddy">Robonomics network Meetup Group </span>
+                    </div>
+                </div>
+                <span class="h2 my-3">Interests</span>
+                <div class="d-flex fw-normal flex-wrap">
+                    <span class="b6 me-2 mb-2">Photography</span>
+                    <span class="b6 me-2 mb-2">Web Design</span>
+                    <span class="b6 me-2 mb-2">Python</span>
+                    <span class="b6 me-2 mb-2">Online Marketing</span>
+                    <span class="b6 me-2 mb-2">Nature Photography</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div style="width:100%" class="d-flex">
+            <div class="footer">
+                <form  class="d-flex flex-column form-container2">
+                    <div class="d-flex align-items-center">
+                        <div style="padding-right: 15px;">Create your own Meetup group.</div>
+                        <button class="button2" href="group.html">Get Started</button>
+                    </div>
+                    <hr>
+                    <div class="d-flex justify-content-between text-decoration-none">
+                        <div class="d-flex flex-column align-items-stretch fs-6 w0-3">
+                        <span class="h5">Your Account</span>  
+                        <div style="color: rgb(158, 158, 158);" class="d-flex flex-column justify-content-center fs-6 p-2">
+                            <span>Sign up</span>
+                            <span>Log in</span>
+                            <span>Help</span>
+                        </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-stretch fs-6 w0-3">
+                        <span class="h5">Discover</span>
+                        <div style="color: rgb(158, 158, 158);" class="d-flex flex-column fs-6 p-2">
+                            <span>Groups</span>
+                            <span>Topics</span>
+                            <span>Online Events</span>
+                            <span>Local Guides</span>
+                        </div>
+                        </div>
+                        <div class="d-flex flex-column align-items-stretch fs-6 w0-3">
+                        <span class="h5">Meetup</span>
+                        <div style="color: rgb(158, 158, 158)" class="d-flex flex-column fs-6 p-2">
+                            <span>About</span>
+                            <span>Blog</span>
+                            <span>Meetup Pro</span>
+                            <span>Apps</span>
+                        </div>
+                        </div>
+                    </div>
+                    <div style="padding-bottom:0.5rem;" class="h5">Follow us</div>
+                    <div class="d-flex">
+                        <svg style="fill:rgb(168, 161, 161)" class="svg svg-footer-facebook">
+                          <use xlink:href="/sprite.svg#fb"></use>
+                        </svg>                            
+                        <svg style="fill:rgb(168, 161, 161)" class="svg svg-footer-twitter">
+                          <use xlink:href="/sprite.svg#twitter"></use>
+                        </svg>                                            
+                        <svg style="fill:rgb(168, 161, 161)" class="svg svg-footer-youtube">
+                          <use xlink:href="/sprite.svg#youtube"></use>
+                        </svg>                                              
+                        <svg style="fill:rgb(168, 161, 161)" class="svg svg-footer-ig">
+                          <use xlink:href="/sprite.svg#ig"></use>
+                        </svg>                                          
+                    </div>
+                    <div class="d-flex justify-content-start">
+                        <div class="py-4 pe-3"><i class="fa fa-copyright"></i> 2021 Meetup</div>
+                        <div class="py-4 pe-3">Terms of Service</div>
+                        <div class="py-4 pe-3">Privacy Policy</div>
+                        <div class="py-4 pe-3">Cookie Policy</div>
+                        <div class="py-4 pe-3">Help</div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,23 @@
+/* Sky */
+
+:root {
+    --back-color: #ffffffb0;
+    --sky-image: url('/lap1/img/bg-login.jpg');
+    --body-color: #fff566;
+    --tab-color: #000;
+    --vien-color: #000;
+    --body-shadow: rgb(222 168 33 / 0.4);
+    --body-glow: rgb(70 130 180 / 0.4);
+}
+
+.switcher__radio {
+    filter: invert(0);
+}
+
+.switcher__radio:checked {
+    filter: invert(1);
+}
+
+.switcher__status {
+    filter: invert(0);
+}

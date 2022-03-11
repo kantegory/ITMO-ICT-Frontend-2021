@@ -1,0 +1,10 @@
+:root {
+    --nav-bg: rgb(18, 23, 27);
+    --brand-color: white;
+	--back-color: #1E272E;
+    --text-color: white;
+    --footer-color: rgb(18, 23, 27);
+    --btn-color: white;
+    --btn-border-color: white;
+    --card-bg: rgb(18, 23, 27);
+}
