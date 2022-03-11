@@ -5,8 +5,8 @@
         <div class="container pt-4">
             <div class="row mx-auto">
                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-between align-items-center">
-                    <h2 class="text-primary mb-3 mb-sm-0 city_header">{{ CityHeader }}</h2>
-                    <button type="button" class="btn btn-primary btn-lg">Add to Favourites</button>
+                    <h2 class="text-primary mb-3 mb-sm-0">{{ CityHeader }}</h2>
+                    <a class="btn btn-primary btn-lg" href="favourites" role="button">Add to Favourites</a>
                 </div>
             </div>
             <div class="row mt-4 mx-auto justify-content-center">

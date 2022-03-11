@@ -19,7 +19,6 @@ export default {
 
   methods: {
     search () {
-      // this.event.preventDefault()
       const city = document.getElementById('city').value
       const response = `forecast?city=${city}`
       window.location.href = response
@@ -29,5 +28,4 @@ export default {
 </script>
 
 <style>
-
 </style>
