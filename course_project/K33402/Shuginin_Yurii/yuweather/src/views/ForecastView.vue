@@ -45,10 +45,13 @@ export default {
   }),
 
   methods: {
-    city_entered () {
+    data_entered () {
       const url = new URLSearchParams(window.location.search)
-      const city = url.get('city')
-      return city
+      const data = Object
+      data.city = url.get('city')
+      data.lat = url.get('lat')
+      data.lon = url.get('lon')
+      return data
     },
 
     capitalizeFirstLetter (string) {
@@ -74,14 +77,25 @@ export default {
 
     async getForecasts () {
       try {
-        const city = this.city_entered()
-        const response = await this.axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${city}&limit=1&appid=${apiKey}`)
-        if (response.status !== 200) {
-          throw new Error(response.error)
-        }
+        let cityData = this.data_entered()
 
-        const cityData = await response.data[0]
-        this.CityHeader = cityData.name + ', ' + cityData.country
+        if (cityData.lat && cityData.lon) {
+          const response = await this.axios.get(`http://api.openweathermap.org/geo/1.0/reverse?lat=${cityData.lat}&lon=${cityData.lon}&limit=1&appid=${apiKey}`)
+          if (response.status !== 200) {
+            throw new Error(response.error)
+          }
+
+          cityData.city = await response.data[0].name
+          this.CityHeader = cityData.city + ' (' + cityData.lat + ', ' + cityData.lon + ')'
+        } else if (cityData.city) {
+          const response = await this.axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${cityData.city}&limit=1&appid=${apiKey}`)
+          if (response.status !== 200) {
+            throw new Error(response.error)
+          }
+
+          cityData = await response.data[0]
+          this.CityHeader = cityData.name + ', ' + cityData.country
+        }
 
         const response1 = await this.axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${cityData.lat}&lon=${cityData.lon}&exclude=current,minutely,hourly,alerts&units=metric&appid=${apiKey}`)
         if (response1.status !== 200) {
