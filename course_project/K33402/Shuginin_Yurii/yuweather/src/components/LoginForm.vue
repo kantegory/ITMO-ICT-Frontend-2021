@@ -12,7 +12,7 @@
                                 <input class="form-check-input border-primary me-2" type="checkbox" id="gridCheck1">
                                 <label class="form-check-label" for="gridCheck1">Remember me</label>
                             </div>
-                            <a href="#" class="text-decoration-none text-center mt-1 mt-sm-0">Forgot password</a>
+                            <a href="password_reset" class="text-decoration-none text-center mt-1 mt-sm-0">Forgot password</a>
                         </div>
                         <button type="submit" class="btn btn-primary mt-3 mb-2">Log in</button>
                         <a class="btn btn-outline-primary mb-1" href="registration" role="button">Create a new account</a>

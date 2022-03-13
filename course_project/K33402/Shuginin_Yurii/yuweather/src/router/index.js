@@ -6,6 +6,8 @@ import SignUpView from '@/views/SignUpView.vue'
 import ProfileView from '@/views/ProfileView.vue'
 import FavouritesView from '@/views/FavouritesView.vue'
 import ForecastView from '@/views/ForecastView.vue'
+import PassResetView1 from '@/views/PassResetView1.vue'
+import PassResetView2 from '@/views/PassResetView2.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +41,16 @@ const routes = [
     path: '/forecast',
     name: 'forecast',
     component: ForecastView
+  },
+  {
+    path: '/password_reset',
+    name: 'password_reset',
+    component: PassResetView1
+  },
+  {
+    path: '/new_password',
+    name: 'new_password',
+    component: PassResetView2
   }
 ]
 

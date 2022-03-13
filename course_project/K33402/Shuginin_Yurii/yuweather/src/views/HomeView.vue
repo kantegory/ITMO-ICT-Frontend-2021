@@ -4,15 +4,14 @@
     <main>
       <div class="container py-5">
         <Search />
-        <div class="row mt-4">
+        <div class="row mt-2">
           <div class="col-12 d-flex justify-content-center">
-            <!-- <a class="btn btn-primary btn-lg" href="/" role="button">Geolocation forecast</a> -->
             <button type="button" class="btn btn-primary btn-lg" v-on:click="get_loc">Geolocation forecast</button>
           </div>
         </div>
       </div>
     </main>
-    <Footer />
+    <Footer :bottom="BottomFooter" />
     <LogoutModal />
   </div>
 </template>
@@ -25,6 +24,10 @@ import LogoutModal from '@/components/LogoutModal.vue'
 
 export default {
   name: 'HomeView',
+  data: () => ({
+    BottomFooter: 'bottom'
+  }),
+
   components: {
     Header,
     Footer,

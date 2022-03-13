@@ -1,22 +1,24 @@
 <template>
-  <div class="login">
+  <div class="passreset2">
     <Header />
     <main>
       <div class="container py-4">
-        <LoginForm />
+        <PassReset2 />
       </div>
     </main>
     <Footer :bottom="BottomFooter" />
+    <PassRenewModal />
   </div>
 </template>
 
 <script>
 import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
-import LoginForm from '@/components/LoginForm.vue'
+import PassReset2 from '@/components/PassReset2.vue'
+import PassRenewModal from '@/components/PassRenewModal.vue'
 
 export default {
-  name: 'LoginView',
+  name: 'PassResetView2',
   data: () => ({
     BottomFooter: 'bottom'
   }),
@@ -24,7 +26,8 @@ export default {
   components: {
     Header,
     Footer,
-    LoginForm
+    PassReset2,
+    PassRenewModal
   }
 }
 </script>
