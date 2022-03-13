@@ -8,6 +8,7 @@ import FavouritesView from '@/views/FavouritesView.vue'
 import ForecastView from '@/views/ForecastView.vue'
 import PassResetView1 from '@/views/PassResetView1.vue'
 import PassResetView2 from '@/views/PassResetView2.vue'
+import ErrorView from '@/views/ErrorView.vue'
 
 Vue.use(VueRouter)
 
@@ -51,6 +52,11 @@ const routes = [
     path: '/new_password',
     name: 'new_password',
     component: PassResetView2
+  },
+  {
+    path: '/error',
+    name: 'error',
+    component: ErrorView
   }
 ]
 

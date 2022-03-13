@@ -95,6 +95,8 @@ export default {
 
           cityData = await response.data[0]
           this.CityHeader = cityData.name + ', ' + cityData.country
+        } else {
+          window.location.href = '/error'
         }
 
         const response1 = await this.axios.get(`https://api.openweathermap.org/data/2.5/onecall?lat=${cityData.lat}&lon=${cityData.lon}&exclude=current,minutely,hourly,alerts&units=metric&appid=${apiKey}`)
@@ -119,6 +121,7 @@ export default {
         this.Forecasts = Forecasts
       } catch (e) {
         console.error('AN API ERROR', e)
+        window.location.href = '/error'
       }
     }
   },
