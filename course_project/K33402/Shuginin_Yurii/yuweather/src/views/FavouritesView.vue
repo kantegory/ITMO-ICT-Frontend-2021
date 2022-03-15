@@ -13,9 +13,12 @@
                 </div>
             </div>
             <div class="row mt-4 mx-auto">
-                <FavouritesCard />
-                <FavouritesCard />
-                <FavouritesCard />
+                <FavouritesCard
+                    v-for="Forecast in todayWeather"
+                    :key="Forecast.id"
+                    :Forecast="Forecast"
+                    @click="del(Forecast.city)"
+                />
             </div>
             <div class="row">
                 <div class="col-12 d-flex justify-content-center">
@@ -34,6 +37,7 @@ import Header from '@/components/Header.vue'
 import Footer from '@/components/Footer.vue'
 import FavouritesCard from '@/components/FavouritesCard.vue'
 import LogoutModal from '@/components/LogoutModal.vue'
+import { mapGetters, mapActions } from 'vuex'
 
 export default {
   name: 'FavouritesView',
@@ -42,6 +46,21 @@ export default {
     Footer,
     FavouritesCard,
     LogoutModal
+  },
+
+  computed: mapGetters(['getCities', 'todayWeather']),
+
+  methods: {
+    ...mapActions(['getTodayWeather', 'deleteCity']),
+
+    del (city) {
+      this.deleteCity(city)
+      this.getTodayWeather(this.getCities)
+    }
+  },
+
+  created () {
+    this.getTodayWeather(this.getCities)
   }
 }
 </script>

@@ -38,7 +38,11 @@ export default {
   methods: {
     getCoordinates () {
       return new Promise(function (resolve, reject) {
-        navigator.geolocation.getCurrentPosition(resolve, reject)
+        const giveUp = 1000 * 30
+        const options = {
+          timeout: giveUp
+        }
+        navigator.geolocation.getCurrentPosition(resolve, reject, options)
       })
     },
 

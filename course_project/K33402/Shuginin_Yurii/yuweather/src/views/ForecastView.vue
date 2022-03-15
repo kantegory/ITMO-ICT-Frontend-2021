@@ -6,7 +6,8 @@
             <div class="row mx-auto">
                 <div class="col-12 d-flex flex-sm-row flex-column justify-content-between align-items-center">
                     <h2 class="text-primary mb-3 mb-sm-0">{{ getHeader }}</h2>
-                    <a class="btn btn-primary btn-lg" href="favourites" role="button">Add to Favourites</a>
+                    <button v-if="not_added(getCityName)" class="btn btn-primary btn-lg" type="button" @click="addCity(getCityName)">Add to Favourites</button>
+                    <button v-else class="btn btn-success btn-lg" type="button" disabled>Favourite</button>
                 </div>
             </div>
             <div class="row mt-4 mx-auto justify-content-center">
@@ -39,15 +40,16 @@ export default {
     LogoutModal
   },
 
-  data: () => ({
-    CityHeader: String,
-    Forecasts: []
-  }),
-
-  computed: mapGetters(['allForecasts', 'getHeader']),
+  computed: mapGetters(['allForecasts', 'getHeader', 'getCityName', 'getCities']),
 
   methods: {
-    ...mapActions(['getForecasts']),
+    ...mapActions(['getForecasts', 'addCity']),
+
+    not_added (city = '') {
+      if (city) {
+        return !this.getCities.includes(city)
+      }
+    },
 
     data_entered () {
       const url = new URLSearchParams(window.location.search)

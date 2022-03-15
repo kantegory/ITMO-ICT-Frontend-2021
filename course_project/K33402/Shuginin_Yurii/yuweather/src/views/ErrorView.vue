@@ -19,7 +19,7 @@
             </div>
             <div class="row">
                 <div class="col-12 d-flex justify-content-center">
-                    <button type="button" class="btn btn-primary btn-lg" @click="$router.go(-1)"><span class="m-3">Back</span></button>
+                    <button type="button" class="btn btn-primary btn-lg" @click="$router.go(-2)"><span class="m-3">Back</span></button>
                 </div>
             </div>
         </div>

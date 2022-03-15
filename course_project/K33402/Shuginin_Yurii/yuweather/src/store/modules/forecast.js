@@ -34,6 +34,7 @@ export default {
 
           cityData.city = await response.data[0].name
           ctx.commit('updateHeader', cityData.city + ' (' + cityData.lat + ', ' + cityData.lon + ')')
+          ctx.commit('updateName', cityData.city)
         } else if (cityData.city) {
           const response = await axios.get(`http://api.openweathermap.org/geo/1.0/direct?q=${cityData.city}&limit=1&appid=${apiKey}`)
           if (response.status !== 200) {
@@ -42,6 +43,7 @@ export default {
 
           cityData = await response.data[0]
           ctx.commit('updateHeader', cityData.name + ', ' + cityData.country)
+          ctx.commit('updateName', cityData.name)
         } else {
           window.location.href = '/error'
         }
@@ -80,12 +82,17 @@ export default {
 
     updateHeader (state, header) {
       state.CityHeader = header
+    },
+
+    updateName (state, city) {
+      state.CityName = city
     }
   },
 
   state: {
     forecasts: [],
-    CityHeader: String
+    CityHeader: String,
+    CityName: String
   },
 
   getters: {
@@ -95,6 +102,10 @@ export default {
 
     getHeader (state) {
       return state.CityHeader
+    },
+
+    getCityName (state) {
+      return state.CityName
     }
   }
 }
