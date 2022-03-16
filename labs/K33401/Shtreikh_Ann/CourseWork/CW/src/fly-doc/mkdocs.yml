@@ -1,0 +1,14 @@
+site_name: Airlines
+nav:
+  - Home: index.md
+  - F:
+      - "api/planes": planes.md
+      - "api/flights": flights.md
+      - "api/Log out": logout.md
+      - "api/Log In": login.md
+      - "api/Sign Up": signup.md
+      - "api/Tickets": tickets.md
+      - "api/Passengers": passengers.md
+
+theme:
+  name: cinder
