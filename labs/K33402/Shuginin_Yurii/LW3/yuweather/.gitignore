@@ -1,5 +1,8 @@
 .DS_Store
 node_modules
+/dist
+config.js
+
 
 # local env files
 .env.local
@@ -19,9 +22,3 @@ pnpm-debug.log*
 *.njsproj
 *.sln
 *.sw?
-
-# Vim files
-*~
-*.swp
-
-*.docx
