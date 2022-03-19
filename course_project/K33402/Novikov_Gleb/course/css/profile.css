@@ -1,0 +1,12 @@
+.card {
+    border-radius: 15px;
+}
+
+.img-fluid {
+    width: 180px;
+    border-radius: 10px;
+}
+
+.statistics {
+    background-color: #efefef;
+}

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.css' rel='stylesheet' />
+    <title>Карта</title>
+</head>
+<body>
+<section class="d-flex flex-row vh-100">
+    <div class="w-25 p-3">
+        <ul class="nav flex-column nav-pills ">
+            <li class="nav-item mt-4">
+                <a class="nav-link" href="profile.html">
+                    <i class="bi bi-person-fill me-3"></i>
+                    Профиль
+                </a>
+            </li>
+            <li class="nav-item mt-4">
+                <a class="nav-link active" href="#">
+                    <i class="bi bi-map-fill me-3"></i>
+                    Карта
+                </a>
+            </li>
+            <li class="nav-item mt-4">
+                <a class="nav-link" href="notes.html">
+                    <i class="bi bi-sticky-fill me-3"></i>
+                    Заметки
+                </a>
+            </li>
+            <li class="nav-item mt-4">
+                <a class="nav-link" href="weather.html">
+                    <i class="bi bi-cloud-fill me-3"></i>
+                    Погода
+                </a>
+            </li>
+            <li class="nav-item mt-4">
+                <a class="nav-link" href="settings.html">
+                    <i class="bi bi-gear-fill me-3"></i>
+                    Настройки
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="w-75">
+        <div id='map' class="vh-100"></div>
+    </div>
+</section>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"></script>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.7.0/mapbox-gl.js'></script>
+<script src='js/map.js'></script>
+</body>
+</html>
