@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Личный кабинет</title>
+</head>
+<body class="body-patch">
+    <header class="nav-bg">
+        <ul class="nav-group" align="center">
+            <li style="display:inline">
+                <object type="image/svg+xml" data="./images/main.svg" width="45" height="45"> 
+                </object>
+            </li>
+            <li style="display:inline" class="nav-text" onclick="window.location.href='./index.html'">Главная</li>
+            <li style="display:inline" class="nav-text" onclick="window.location.href='./personal.html'">Личный кабинет</li>
+            <li style="display:inline" class="nav-text" onclick="window.location.href='./sign-in.html'">Вход</li>
+            
+        </ul>
+    </header>
+
+    <main class="main-bg">
+        <h1 class="main-h1">
+            Выберите ваш населенный пункт:
+        </h1>
+      
+        <select class="input">
+            <option selected>Санкт-Петербург</option>
+            <option>Москва</option>
+        </select>
+
+        <h1 class="main-h1">
+            Вашего города нет в списке? Добавьте его:
+        </h1>
+        <input type="text" class="input"></input>
+        <button class="button">Добавить</button>
+
+        <h1 class="main-h1">
+            Показать прогноз:
+        </h1>
+        <div>
+            <button class="button">Сейчас</button>
+            <button class="button">На 5 дней</button>
+        </div>
+       
+
+    </main>
+</body>
+</html>

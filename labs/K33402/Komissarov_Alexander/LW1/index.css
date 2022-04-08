@@ -1,0 +1,142 @@
+.nav-text{  
+    height: 45px;
+    left: 0px;
+    font-family: "Verdana";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 45px;
+    padding-left: 50px;
+    color: #E4E4E4;
+    cursor: pointer;
+}
+
+.nav-bg{
+display: flex;
+padding: 0% 20%;
+margin: 0px 0px;
+background: #001769;
+}
+
+.nav-group{
+display: flex;
+flex-direction: row;
+height: 45px;
+vertical-align: middle;
+padding: 0px 0px;
+}
+
+.main-bg{
+display: flex;
+flex-direction: column;
+padding: 0% 20%;
+height: 1000px;
+background: #001B51;
+}
+
+.body-patch{
+        margin: 0px;
+       padding: 0px;
+}
+
+.main-h1{
+height: 24px;
+font-family: 'Verdana';
+font-style: normal;
+font-weight: 400;
+font-size: 24px;
+line-height: 24px;
+color: #E4E4E4;
+}
+
+.input{
+font-family: 'Verdana';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 28px;
+color: #E4E4E4;
+width: 750px;
+height: 30px;
+background: #001B51;
+border: 2px solid #E4E4E4;
+box-sizing: border-box;
+border-radius: 25px;
+margin-bottom: 15px;
+padding: 20px;
+}
+
+.input-user{
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #E4E4E4;
+    width: 500px;
+    height: 30px;
+    background: #001B51;
+    border: 2px solid #E4E4E4;
+    box-sizing: border-box;
+    border-radius: 25px;
+    margin-bottom: 15px;
+    padding: 20px;
+    }
+
+.button-row{
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+padding: 16px 31px;
+}
+
+.button{
+font-family: 'Verdana';
+font-style: normal;
+font-weight: 400;
+font-size: 20px;
+line-height: 28px;
+color: #E4E4E4;
+position: static;
+width: 170px;
+height: 40px;
+background: #001B51;
+border: 2px solid #E4E4E4;
+box-sizing: border-box;
+border-radius: 25px;
+margin-right: 30px;
+}
+
+.button-user{
+    font-family: 'Verdana';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 28px;
+    color: #E4E4E4;
+    position: static;
+    width: 170px;
+    height: 40px;
+    background: #001B51;
+    border: 2px solid #E4E4E4;
+    box-sizing: border-box;
+    border-radius: 25px;
+    margin-right: 30px;
+    margin-left: 165px;
+    margin-top: 20px
+    }
+
+.button:hover {
+    background-color: #002bc5;
+}
+.button-user:hover {
+    background-color: #002bc5;
+}
+
+.link-patch{
+    text-decoration: none;
+}
+
+.pointer-patch{
+    cursor: pointer;
+}

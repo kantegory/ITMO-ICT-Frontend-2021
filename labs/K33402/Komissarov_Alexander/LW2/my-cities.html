@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <script src="my-cities.js"></script>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./index.css">
+    <title>Личный кабинет</title>
+</head>
+<body class="body-patch">
+    <header class="nav-bg">
+        <ul class="nav-group" align="center">
+            <li style="display:inline">
+                <object type="image/svg+xml" data="./images/main.svg" width="45" height="45"> 
+                </object>
+            </li>
+            <li style="display:inline" class="nav-text" onclick="window.location.href='./index.html'">Главная</li>
+            <li style="display:inline" class="nav-text" onclick="window.location.href='./my-cities.html'">Мои города</li>
+            <li style="display:inline" class="nav-text" onclick="window.location.href='./cabinet.html'">Личный кабинет</li>
+            <li style="display:inline" class="nav-text" onclick="window.location.href='./sign-in.html'">Вход</li>
+            <li style="display:inline" class="nav-text" onclick="window.location.href='./sign-up.html'">Регистрация</li>
+            
+        </ul>
+    </header>
+
+    <main class="main-bg">
+        <h1 class="main-h1">
+            Выберите ваш населенный пункт:
+        </h1>
+      
+        <select id="city-input">   
+        <!---class=input--->
+            <option value="Saint-Petersburg">Saint-Petersburg</option>
+            <option value="Moscow">Moscow</option>
+        </select>
+
+        <h1 class="main-h1">
+            Вашего города нет в списке? Добавьте его:
+        </h1>
+        <input type="text" class="input"></input>
+        <button class="button">Добавить</button>
+
+
+        <h1 class="main-h1">
+            Показать прогноз:
+        </h1>
+        <div>
+            <button class="button" onclick="search_now()">Сейчас</button>
+            <button class="button" onclick="search_5days()">На 5 дней</button>
+        </div>
+
+
+        <div class="today" id="today">
+            <div class="t1" id="i1">
+                <h3 class="date" align="center">
+                    Дата: 
+                </h3>
+                <h3 class="max">
+                    Макс: 
+                </h3>
+                <h3 class="min">
+                    Мин: 
+                </h3>
+                <h3 class="wind">
+                    Ветер: 
+                </h3>
+
+            </div>
+        </div>
+        <div class="fourdays" id="fourdays">
+            <div class="t2" id="i2">
+                <h3 class="date" align="center">
+                    Дата: 
+                </h3>
+                <h3 class="max">
+                    Макс: 
+                </h3>
+                <h3 class="min">
+                    Мин: 
+                </h3>
+                <h3 class="wind">
+                    Ветер: 
+                </h3>
+            </div>
+            <div class="t2" id="i3">
+                <h3 class="date" align="center">
+                    Дата: 
+                </h3>
+                <h3 class="max">
+                    Макс: 
+                </h3>
+                <h3 class="min">
+                    Мин: 
+                </h3>
+                <h3 class="wind">
+                    Ветер: 
+                </h3>
+            </div>
+            <div class="t2" id="i4">
+                <h3 class="date" align="center">
+                    Дата: 
+                </h3>
+                <h3 class="max">
+                    Макс: 
+                </h3>
+                <h3 class="min">
+                    Мин: 
+                </h3>
+                <h3 class="wind">
+                    Ветер: 
+                </h3>
+            </div>
+            <div class="t2" id="i5">
+                <h3 class="date" align="center">
+                    Дата: 
+                </h3>
+                <h3 class="max">
+                    Макс: 
+                </h3>
+                <h3 class="min">
+                    Мин: 
+                </h3>
+                <h3 class="wind">
+                    Ветер: 
+                </h3>
+            </div>
+        </div>
+        
+
+    </main>
+
+    <footer class="footer-bg">
+        <ul class="footer-group" align="center">
+            
+            <li style="display:inline" class="nav-text" onclick="window.location.href='./about-site.html'">О сайте</li>
+            <li style="display:inline" class="nav-text" onclick="window.location.href='./about-author.html'">Об авторе</li>
+            
+            
+        </ul>
+    </footer>
+</body>
+</html>
