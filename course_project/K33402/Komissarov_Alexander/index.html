@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <script src="my-cities.js"></script>
+    <script src="index.js"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./index.css">
-    <title>Личный кабинет</title>
+    <title>Meteo</title>
 </head>
 <body class="body-patch">
     <header class="nav-bg">
@@ -20,36 +20,23 @@
             <li style="display:inline" class="nav-text" onclick="window.location.href='./cabinet.html'">Личный кабинет</li>
             <li style="display:inline" class="nav-text" onclick="window.location.href='./sign-in.html'">Вход</li>
             <li style="display:inline" class="nav-text" onclick="window.location.href='./sign-up.html'">Регистрация</li>
-            
         </ul>
     </header>
-
     <main class="main-bg">
         <h1 class="main-h1">
-            Выберите ваш населенный пункт:
+            Введите название населенного пункта:
         </h1>
       
-        <select id="city-input" class="input">   
-        <!---class=input--->
-            <option value="Saint-Petersburg">Saint-Petersburg</option>
-            <option value="Moscow">Moscow</option>
-        </select>
-
-        <h1 class="main-h1">
-            Вашего города нет в списке? Добавьте его:
-        </h1>
-        <input type="text" class="input"></input>
-        <button class="button">Добавить</button>
-
+        <input type="text" class="input" id="city-input"></input>
 
         <h1 class="main-h1">
             Показать прогноз:
         </h1>
         <div>
-            <button class="button" onclick="search_now()">Сейчас</button>
-            <button class="button" onclick="search_5days()">На 5 дней</button>
+            <button class="button" id="search-now" onclick="search_now()">Сейчас</button>
+            <button class="button" id="search-5days" onclick="search_5days()">На 5 дней</button>
         </div>
-
+       
 
         <div class="today" id="today">
             <div class="t1" id="i1">
@@ -126,10 +113,8 @@
                 </h3>
             </div>
         </div>
-        
 
     </main>
-
     <footer class="footer-bg">
         <ul class="footer-group" align="center">
             
