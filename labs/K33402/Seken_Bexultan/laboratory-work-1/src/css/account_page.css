@@ -1,0 +1,43 @@
+html, body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    margin-top: 5rem;
+    justify-content: center;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    top: 0;
+}
+
+.navbar {
+    background-color: rgb(19, 152, 96);
+}
+
+.card-location {
+    color: black;
+    font-size: 1.5rem;
+}
+.card-body {
+    line-height: 2rem;
+}
+
+.card-block {
+    margin: 2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-field {
+    padding-top: 0.5rem;
+}
+
+.form-control {
+    margin: 2px;
+}
